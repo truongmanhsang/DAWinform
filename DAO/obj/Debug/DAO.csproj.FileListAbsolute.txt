@@ -1,0 +1,7 @@
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DAO.dll
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DAO.pdb
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DTO.dll
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DTO.pdb
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.dll
+D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.pdb
