@@ -25,3 +25,27 @@ D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.pdb
 D:\GIT\DAWinform\GUI\bin\Debug\GUI.exe.config
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.exe
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe.config
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.exe
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\BUS.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DAO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\BUS.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DAO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.frmMain.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBanHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoHanh.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucDangNhap.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucHangHoa.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucMain.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhanVien.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThuChi.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache

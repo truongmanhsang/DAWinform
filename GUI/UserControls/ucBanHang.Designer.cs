@@ -245,7 +245,7 @@
             this.colSoLuong.DataPropertyName = "SoLuong";
             this.colSoLuong.HeaderText = "Số lượng";
             this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.Width = 97;
+            this.colSoLuong.Width = 89;
             // 
             // colGiaTien
             // 
@@ -255,7 +255,7 @@
             this.colGiaTien.DefaultCellStyle = dataGridViewCellStyle1;
             this.colGiaTien.HeaderText = "Giá tiền";
             this.colGiaTien.Name = "colGiaTien";
-            this.colGiaTien.Width = 89;
+            this.colGiaTien.Width = 82;
             // 
             // dgvKhachHang
             // 

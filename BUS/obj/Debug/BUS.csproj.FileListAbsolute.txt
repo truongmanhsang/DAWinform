@@ -7,3 +7,12 @@ D:\Development\Projects\Winform\[DA]_WinformNC\BUS\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\BUS.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\BUS.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\DAO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\DAO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.pdb

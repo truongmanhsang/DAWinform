@@ -10,7 +10,7 @@ namespace DAO
 {
     public class ThaoTacDuLieu
     {
-        public static string strConnection = "Data Source=.;Initial Catalog=QLBH;Integrated Security=True";
+        public static string strConnection = @"Data Source=FPT-PC\SQLEXPRESS;Initial Catalog=QLBH;Integrated Security=True";
         public static SqlConnection TaoVaMoKetNoi()
         {
             try
@@ -37,6 +37,24 @@ namespace DAO
             da.Fill(dt);
             DongKetNoi(conn);
             return dt;
+        }
+        public static bool ThucThi(string query)
+        {
+            SqlConnection conn = TaoVaMoKetNoi();
+            SqlCommand cmd = new SqlCommand(query,conn);
+            int thucthi = cmd.ExecuteNonQuery();
+            DongKetNoi(conn);
+            return thucthi == 1;
+        }
+        public static int DemSoDongCuaBang(string strTenBang)
+        {
+            int iSoPhieu = 0;
+            SqlConnection conn = TaoVaMoKetNoi();
+            string sql =string.Format("select count(*) from {0} where TrangThai = 1", strTenBang);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            iSoPhieu = Convert.ToInt16(cmd.ExecuteScalar());
+            DongKetNoi(conn);
+            return iSoPhieu;
         }
     }
 }

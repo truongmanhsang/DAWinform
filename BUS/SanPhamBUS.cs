@@ -15,5 +15,9 @@ namespace BUS
         {
             return dao.LayBangSanPham();
         }
+        public bool ThemSoLuongSP(string strMaSP, int SL)
+        {
+            return dao.ThemSoLuongSP(strMaSP,SL);
+        }
     }
 }
