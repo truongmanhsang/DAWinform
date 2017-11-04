@@ -1,5 +1,0 @@
-D:\Development\Projects\Winform\DAWinform\Util\bin\Debug\Util.dll
-D:\Development\Projects\Winform\DAWinform\Util\bin\Debug\Util.pdb
-D:\Development\Projects\Winform\DAWinform\Util\obj\Debug\OTHER.csprojResolveAssemblyReference.cache
-D:\Development\Projects\Winform\DAWinform\Util\obj\Debug\Util.dll
-D:\Development\Projects\Winform\DAWinform\Util\obj\Debug\Util.pdb

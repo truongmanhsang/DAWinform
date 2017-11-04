@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OTHER
+namespace ClassLibrary
 {
-    public static class Utilities
+    public class Utilities
     {
         public static string GenerateSerial(int iLength)
         {

@@ -1,0 +1,5 @@
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb

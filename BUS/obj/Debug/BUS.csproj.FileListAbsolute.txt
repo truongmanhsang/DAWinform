@@ -20,10 +20,10 @@ D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DAO.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DTO.dll
-D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\Util.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DAO.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DTO.pdb
-D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\Util.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\DAWinform\BUS\obj\Debug\BUS.dll
 D:\Development\Projects\Winform\DAWinform\BUS\obj\Debug\BUS.pdb
+D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\ClassLibrary.dll
+D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\ClassLibrary.pdb
