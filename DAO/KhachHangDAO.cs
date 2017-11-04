@@ -20,23 +20,13 @@ namespace DAO
         }
         public string ThemKhachHang(KhachHangDTO khachHang) // thêm và lấy id kh về để thêm vào hoá đơn
         {
-            string strMaKH = "KH" + (DemSoLuongKH() + 1);
+            string strMaKH = "KH" + (ThaoTacDuLieu.DemSoDongCuaBang("KhachHang") + 1);
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
             string query = string.Format("insert into KhachHang values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}','{6}')", strMaKH, khachHang.TenKhachHang, khachHang.CMND, khachHang.SoDT, khachHang.DiaChi, khachHang.GhiChu, 1);
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
             ThaoTacDuLieu.DongKetNoi(conn);
             return strMaKH;
-        }
-        public int DemSoLuongKH()
-        {
-            int iSL = 0;
-            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
-            string query = "select count(*) from KhachHang";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            iSL = Convert.ToInt16(cmd.ExecuteScalar());
-            ThaoTacDuLieu.DongKetNoi(conn);
-            return iSL;
         }
     }
 }

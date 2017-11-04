@@ -9,7 +9,8 @@ namespace DAO
 {
     public class SerialDAO
     {
-        public string LayMaSerial(string strMaSP, int iSoThangBH)
+        SanPhamDAO _SanPhamDAO = new SanPhamDAO();
+        public string LayMaSerial(string strMaSP, int iSoThangBH) // Lấy mã serial cùng với update số tháng bảo hành
         {
             string strSerial = string.Empty;
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
@@ -27,6 +28,30 @@ namespace DAO
             ThaoTacDuLieu.DongKetNoi(conn);
 
             return strSerial;
+        }
+        public void BatDauBaoHanh(string strMaSP, int iSL, string strMaPhieu)
+        {
+            int iThangBaoHanh = _SanPhamDAO.LaySoThangBaoHanh(strMaSP);
+            string strThoiHanHetBH = DateTime.Now.AddMonths(iThangBaoHanh).ToString("dd/MM/yyyy");
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            for (int i = 0; i < iSL; i++)
+            {
+                string strMaSerial = LayMaSerialTrong(strMaSP);
+                string query = string.Format("update Serial set ThoiHanBaoHanh='{0}', MaPhieuXuat='{1}' where MaSerial='{2}'",strThoiHanHetBH, strMaPhieu, strMaSerial);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+            }
+            ThaoTacDuLieu.DongKetNoi(conn);
+        }
+        private string LayMaSerialTrong(string strMaSP) // lấy mã serial còn trống của mã sp
+        {
+            string strMaSerial = "";
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string query = string.Format("select top 1 MaSerial from Serial where MaSanPham='{0}' and ThoiHanBaoHanh is NULL", strMaSP);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            strMaSerial = Convert.ToString(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return strMaSerial;
         }
     }
 }

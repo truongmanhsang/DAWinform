@@ -49,3 +49,30 @@ D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThuChi.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.exe.config
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.exe
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\BUS.dll
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DTO.dll
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DAO.dll
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\Util.dll
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\BUS.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DTO.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DAO.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\Util.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmMain.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBanHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoHanh.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucDangNhap.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucHangHoa.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucMain.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhanVien.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucThuChi.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.exe
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources

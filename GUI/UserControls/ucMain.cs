@@ -16,14 +16,19 @@ namespace GUI
         public event XuLyDangXuat xuLyDangXuat;
         private static ucMain _instance = null;
 
-        // Cac UC chinh
-        private ucBanHang _ucBanHang;
-        private ucNhapHang _ucNhapHang;
-        private ucHangHoa _ucHangHoa;
-        private ucBaoHanh _ucBaoHanh;
-        private ucThuChi _ucThuChi;
-        private ucNhanVien _ucNhanVien;
-        private ucThongKe _ucThongKe;
+        // khai báo image cho close button tabpage
+        Image imgCloseButtonActive;
+        Image imgCloseButton;
+
+        // Enum Chức năng
+        enum ChucNang
+        {
+            BanHang, KhachHang
+        }
+
+        // khai báo tất cả tabpage chức năng
+        TabPage tabBanHang;
+        TabPage tabKhachHang;
 
         public static ucMain GetInstance
         {
@@ -41,76 +46,158 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void tbtnBanHang_Click(object sender, EventArgs e)
-        {
-            _ucBanHang = ucBanHang.GetInstance;
-            panelMain.Controls.Add(_ucBanHang);
-            _ucBanHang.Dock = DockStyle.Fill;
-            _ucBanHang.BringToFront();
-        }
-
-        private void tbtnDangXuat_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                xuLyDangXuat();
-        }
-
         private void ucMain_Load(object sender, EventArgs e)
         {
+            // lấy thông tin cho phần thông tin panel trái
+            picHinhDaiDien.Image = new Bitmap(Program.HINH_NV);
+            lblTenNV.Text = Program.TEN_NV;
+            if (Program.QUYEN == 1)
+                lblQuyen.Text = "Quản lý";
+            else
+                lblQuyen.Text = "Nhân viên";
+            // ===
+
+            // Cài đặt tabpage close button size
+            Size mySize = new Size(20, 20);
+            Bitmap bmp = new Bitmap(GUI.Properties.Resources.tabpage_close_button_active, mySize);
+            imgCloseButtonActive = bmp;
+
+            Bitmap bmp2 = new Bitmap(GUI.Properties.Resources.tabpage_close_button, mySize);
+            imgCloseButton = bmp2;
+            tabControlMain.Padding = new Point(50);
+            // ==
+
         }
 
-        private void tbtnNhapHang_Click(object sender, EventArgs e)
+        private void tabControlMenu_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            _ucNhapHang = ucNhapHang.GetInstance;
-            panelMain.Controls.Add(_ucNhapHang);
-            _ucNhapHang.Dock = DockStyle.Fill;
-            _ucNhapHang.BringToFront();
+            Rectangle rect = new Rectangle();
+            for (int i = 0; i < tabControlMenu.TabCount; i++)
+            {
+                if (tabControlMenu.SelectedTab == tabControlMenu.TabPages[i])
+                {
+                    rect = tabControlMenu.GetTabRect(i);
+                }
+            }
+            if (rect.Contains(e.Location))
+            {
+                if (tabControlMenu.Height > 25)
+                {
+                    tabControlMenu.Height = 25;
+                }
+                else
+                {
+                    tabControlMenu.Height = 130;
+                }
+            }
         }
 
-        private void tbtnHangHoa_Click(object sender, EventArgs e)
+        private void tabControlMain_DrawItem(object sender, DrawItemEventArgs e)
         {
-            _ucHangHoa = ucHangHoa.GetInstance;
-            panelMain.Controls.Add(_ucHangHoa);
-            _ucHangHoa.Dock = DockStyle.Fill;
-            _ucHangHoa.BringToFront();
+            // lấy rect của tabpage
+            Rectangle rect = tabControlMain.GetTabRect(e.Index);
+            // tính toán image rect của button
+            Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width,
+                rect.Top + (rect.Height - imgCloseButton.Height) / 2,
+                imgCloseButton.Width, imgCloseButton.Height);
+            rect.Size = new Size(rect.Width + 20, 38);
+
+            Font f;
+            Brush br = Brushes.Black;
+            StringFormat strF = new StringFormat(StringFormat.GenericDefault);
+            if (tabControlMain.SelectedTab == tabControlMain.TabPages[e.Index]) // tab được chọn
+            {
+                // vẽ button
+                e.Graphics.DrawImage(imgCloseButtonActive, imageRec);
+                f = new Font("Arial", 12, FontStyle.Bold);
+                // vẽ tên chữ
+                e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
+                    f, br, rect, strF);
+            }
+            else
+            {
+                // vẽ button
+                e.Graphics.DrawImage(imgCloseButton, imageRec);
+                f = new Font("Arial", 12, FontStyle.Regular);
+                // vẽ tên chữ
+                e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
+                    f, br, rect, strF);
+            }
         }
 
-        private void tbtnBaoHanh_Click(object sender, EventArgs e)
+        private void tabControlMain_MouseClick(object sender, MouseEventArgs e)
         {
-            _ucBaoHanh = ucBaoHanh.GetInstance;
-            panelMain.Controls.Add(_ucBaoHanh);
-            _ucBaoHanh.Dock = DockStyle.Fill;
-            _ucBaoHanh.BringToFront();
+            for (int i = 0; i < tabControlMain.TabCount; i++)
+            {
+                // giống trên
+                Rectangle rect = tabControlMain.GetTabRect(i);
+                Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width,
+                    rect.Top + (rect.Height - imgCloseButton.Height) / 2,
+                    imgCloseButton.Width, imgCloseButton.Height);
+
+                if (imageRec.Contains(e.Location))
+                    tabControlMain.TabPages.Remove(tabControlMain.SelectedTab);
+            }
         }
 
-        private void tbtnThuChi_Click(object sender, EventArgs e)
+        private void btnBanHang_Click(object sender, EventArgs e)
         {
-            _ucThuChi = ucThuChi.GetInstance;
-            panelMain.Controls.Add(_ucThuChi);
-            _ucThuChi.Dock = DockStyle.Fill;
-            _ucThuChi.BringToFront();
+            TaoTabpage(ChucNang.BanHang);
         }
 
-        private void tbtnNhanVien_Click(object sender, EventArgs e)
+        private void TaoTabpage(ChucNang cn)
         {
-            _ucNhanVien = ucNhanVien.GetInstance;
-            panelMain.Controls.Add(_ucNhanVien);
-            _ucNhanVien.Dock = DockStyle.Fill;
-            _ucNhanVien.BringToFront();
+            if (cn == ChucNang.BanHang)
+            {
+                string strTenTabpage = "Bán Hàng";
+                if (!tabControlMain.Contains(tabBanHang))
+                {
+                    tabBanHang = new TabPage(strTenTabpage);
+                    ucBanHang _ucBanHang = new ucBanHang();
+                    tabBanHang.Controls.Add(_ucBanHang);
+                    _ucBanHang.Dock = DockStyle.Fill;
+
+                    tabControlMain.TabPages.Add(tabBanHang);
+                    tabControlMain.SelectedTab = tabBanHang;
+                }
+                else
+                {
+                    tabControlMain.SelectedTab = tabBanHang;
+                }
+
+            }
+            if (cn == ChucNang.KhachHang)
+            {
+                string strTenTabpage = "Khách Hàng";
+                if (!tabControlMain.Contains(tabKhachHang))
+                {
+                    tabKhachHang = new TabPage(strTenTabpage);
+                    ucKhachHang _ucKhachHang = new ucKhachHang();
+                    tabKhachHang.Controls.Add(_ucKhachHang);
+                    _ucKhachHang.Dock = DockStyle.Fill;
+
+
+                    tabControlMain.TabPages.Add(tabKhachHang);
+                    tabControlMain.SelectedTab = tabKhachHang;
+                }
+                else
+                {
+                    tabControlMain.SelectedTab = tabKhachHang;
+                }
+
+            }
         }
 
-        private void tbtnThongKe_Click(object sender, EventArgs e)
+        private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            _ucThongKe = ucThongKe.GetInstance;
-            panelMain.Controls.Add(_ucThongKe);
-            _ucThongKe.Dock = DockStyle.Fill;
-            _ucThongKe.BringToFront();
+            TaoTabpage(ChucNang.KhachHang);
         }
 
-        private void tbtnThoat_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            
+            DialogResult result = MessageBox.Show("Bạn chắc chắn muốn đăng xuất chứ?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                xuLyDangXuat();
         }
     }
 }

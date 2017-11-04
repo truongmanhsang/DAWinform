@@ -1,6 +1,8 @@
-﻿using System;
+﻿using OTHER;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace DAO
                 int SoDong = 0;
                 for(int i = 0; i < SL; i++)
                 {
-                    string SoSR = GenerateSerial(12);
+                    string SoSR = Utilities.GenerateSerial(12);
                     SoDong = ThaoTacDuLieu.DemSoDongCuaBang("Serial");
                     string MaSR = "SER" + (SoDong+1);
                     ThaoTacDuLieu.ThucThi(string.Format("insert into Serial values('{0}','{1}',NULL,'{2}',NULL,{3})", MaSR,SoSR,strMaSP,1));
@@ -39,17 +41,33 @@ namespace DAO
             }
             
         }
-        public string GenerateSerial(int iLength)
+        public int LaySoThangBaoHanh(string strMaSP)
         {
-            StringBuilder strSerial = new StringBuilder();
-            string strTemp = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            Random rand = new Random();
-            for (int i = 0; i < iLength; i++)
-            {
-                char c = strTemp[rand.Next(0, strTemp.Length)];
-                strSerial.Append(c);
-            }
-            return strSerial.ToString();
+            int iSoThangBH = 0;
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string query = string.Format("select BaoHanh from SanPham where MaSanPham='{0}'",strMaSP);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            iSoThangBH = Convert.ToInt16(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return iSoThangBH;
+        }
+        public void DatLaiSoLuongSP(string strMaSP, int iSL)
+        {
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string sql = string.Format("update SanPham set SoLuong={0} where MaSanPham='{1}'", iSL, strMaSP);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            ThaoTacDuLieu.DongKetNoi(conn);
+        }
+        public int LaySoLuongSP(string strMaSP)
+        {
+            int iSL = 0;
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string sql = string.Format("select SoLuong from SanPham where MaSanPham='{0}'", strMaSP);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            iSL = Convert.ToInt16(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return iSL;
         }
     }
 }

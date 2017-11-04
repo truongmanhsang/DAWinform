@@ -11,9 +11,9 @@ namespace BUS
     public class PhieuXuatBUS
     {
         PhieuXuatDAO dao = new PhieuXuatDAO();
-        public int TaoPhieuXuat(PhieuXuatDTO phieuXuat, List<ChiTietPhieuXuatDTO> dsChiTiet)
+        public string TaoPhieuXuat(PhieuXuatDTO phieuXuat)
         {
-            return dao.TaoPhieuXuat(phieuXuat, dsChiTiet);
+            return dao.TaoPhieuXuat(phieuXuat);
         }
     }
 }

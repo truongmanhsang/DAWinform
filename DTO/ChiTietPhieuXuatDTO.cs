@@ -12,7 +12,6 @@ namespace DTO
         private string _maSanPham;
         private int _soLuong;
         private long _gia;
-        private string _maSerial;
 
         public string MaPhieuXuat
         {
@@ -63,19 +62,6 @@ namespace DTO
             set
             {
                 _gia = value;
-            }
-        }
-
-        public string MaSerial
-        {
-            get
-            {
-                return _maSerial;
-            }
-
-            set
-            {
-                _maSerial = value;
             }
         }
     }

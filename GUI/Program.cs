@@ -31,6 +31,10 @@ namespace GUI
             MessageBoxManager.Unregister();
         }
 
+        // Thông tin nhân viên
         public static string MA_NV = "";
+        public static string HINH_NV = "";
+        public static string TEN_NV = "";
+        public static int QUYEN = 0;
     }
 }

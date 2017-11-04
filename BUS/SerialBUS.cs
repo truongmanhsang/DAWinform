@@ -14,5 +14,9 @@ namespace BUS
         {
             return dao.LayMaSerial(strMaSP, iSoThangBH);
         }
+        public void BatDauBaoHanh(string strMaSP, int iSL, string strMaPhieuXuat)
+        {
+            dao.BatDauBaoHanh(strMaSP, iSL, strMaPhieuXuat);
+        }
     }
 }

@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,6 +80,12 @@
     </Compile>
     <Compile Include="UserControls\ucHangHoa.Designer.cs">
       <DependentUpon>ucHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucKhachHang.Designer.cs">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucMain.cs">
       <SubType>UserControl</SubType>
@@ -133,6 +142,9 @@
     <EmbeddedResource Include="UserControls\ucHangHoa.resx">
       <DependentUpon>ucHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucKhachHang.resx">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +185,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DangXuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabpage-cloe-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabpage-cloe-button-active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KhachHang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

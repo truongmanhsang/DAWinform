@@ -37,6 +37,10 @@ namespace GUI
             if (dtNV.Rows.Count > 0)
             {
                 Program.MA_NV = dtNV.Rows[0]["MaNhanVien"].ToString(); // Lấy mã nv làm biến tĩnh toàn chương trình
+                Program.TEN_NV = dtNV.Rows[0]["TenNhanVien"].ToString();
+                Program.HINH_NV = dtNV.Rows[0]["HinhDaiDien"].ToString();
+                Program.QUYEN = Convert.ToInt16(dtNV.Rows[0]["Quyen"].ToString());
+
                 xuLyDangNhap(); // gọi hàm xử lý đăng nhập đã đc định nghĩa ở form main
 
                 lblTinNhan.Text = "Vui lòng nhập mật khẩu để tiếp tục!";

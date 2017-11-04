@@ -15,12 +15,12 @@ namespace GUI
 {
     public partial class ucBanHang : UserControl
     {
-        private static ucBanHang _instance = null;
         // các bus cần thiết
         private KhachHangBUS _KhachHangBUS = new KhachHangBUS();
         private SanPhamBUS _SanPhamBUS = new SanPhamBUS();
         private SerialBUS _SerialBUS = new SerialBUS();
         private PhieuXuatBUS _PhieuXuatBUS = new PhieuXuatBUS();
+        private ChiTietPhieuXuatBUS _ChiTietPhieuXuatBUS = new ChiTietPhieuXuatBUS();
 
         string strMaSP = string.Empty; // Mã để nhận biết có đang chọn 1 sản phẩm ko
         string strMaKH = string.Empty; // Mã để nhận biết có đang chọn 1 sản phẩm ko
@@ -36,17 +36,7 @@ namespace GUI
         Hashtable htSanPham;
 
         bool bThemKH = false; // Mặc định không thêm khách hàng
-        public static ucBanHang GetInstance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ucBanHang();
-                }
-                return _instance;
-            }
-        }
+
         public ucBanHang()
         {
             InitializeComponent();
@@ -135,7 +125,7 @@ namespace GUI
         {
             if (txtTenSP.Text != string.Empty)
             {
-                if (txtSL.Text != string.Empty && Convert.ToInt16(txtSL.Text.Replace(".","").Replace("VNĐ","")) > 0)
+                if (txtSL.Text != string.Empty && Convert.ToInt16(txtSL.Text.Replace(".", "").Replace("VNĐ", "")) > 0)
                 {
                     ThemSanPhamVaoHoaDon();
                     TinhTongTien();
@@ -164,7 +154,7 @@ namespace GUI
 
             if (iSoLuong > iSoLuongConLai)
             {
-                MessageBox.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}",iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}", iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -241,7 +231,7 @@ namespace GUI
             {
                 ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
             }
-            txtTongCong.Text = string.Format("{0:#,###} VNĐ",ltongTien);
+            txtTongCong.Text = string.Format("{0:#,###} VNĐ", ltongTien);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -270,19 +260,21 @@ namespace GUI
             {
                 if (dgvBanHang.Rows.Count > 0)
                 {
-                    XuatHoaDon();
+                    TaoPhieuXuat();
 
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Vui lòng chọn sản phẩm để mua, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }else
+            }
+            else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void XuatHoaDon()
+        private void TaoPhieuXuat()
         {
             if (bThemKH) // nếu đúng thì thêm khách hàng này vào csdl trước rồi lập hoá đơn
             {
@@ -294,14 +286,16 @@ namespace GUI
                 strMaKH = _KhachHangBUS.ThemKhachHang(khachHang);
             }
 
-            // Thêm hoá đơn xuất
+            //=== Thêm phiếu xuất
             PhieuXuatDTO phieuXuat = new PhieuXuatDTO();
             phieuXuat.MaKhachHang = strMaKH;
             phieuXuat.TongTien = Convert.ToInt64(txtTongCong.Text.Replace(",", "").Replace("VNĐ", ""));
             phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             phieuXuat.MaNVLap = Program.MA_NV;
 
-            // Thêm chi tiết hoá đơn xuất
+            string strMaPhieuXuat = _PhieuXuatBUS.TaoPhieuXuat(phieuXuat); // tạo phiếu xuất và lấy mã
+
+            //== Thêm chi tiết phiếu xuất
             List<ChiTietPhieuXuatDTO> dsChiTietSP = new List<ChiTietPhieuXuatDTO>(); // danh sách các sản phẩm trong hoá đơn
             foreach (DataGridViewRow dgvRow in dgvBanHang.Rows)
             {
@@ -311,21 +305,18 @@ namespace GUI
                 chitiet.MaSanPham = dgvRow.Cells[0].Value.ToString();
                 chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
                 chitiet.Gia = Convert.ToInt64(dgvRow.Cells[2].Value.ToString());
-                chitiet.MaSerial = _SerialBUS.LayMaSerial(drSP["MaSanPham"].ToString(),Convert.ToUInt16(drSP["BaoHanh"]));
+
+                // Update mã serial với số tháng bảo hành
+                _SerialBUS.BatDauBaoHanh(chitiet.MaSanPham, chitiet.SoLuong, strMaPhieuXuat);
 
                 dsChiTietSP.Add(chitiet);
             }
 
-            // xuất hoá đơn
-            if (_PhieuXuatBUS.TaoPhieuXuat(phieuXuat, dsChiTietSP) == 1)
-            {
-                MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LamSach(); // làm sạch controls
-                LoadDatabase(); // tải lại dữ liệu
-            }else
-            {
-                MessageBox.Show("Lưu thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            _ChiTietPhieuXuatBUS.TaoChiTieuPhieuXuat(dsChiTietSP, strMaPhieuXuat);
+
+            MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LamSach(); // làm sạch controls
+            LoadDatabase(); // tải lại dữ liệu
         }
 
         private void dgvBanHang_KeyUp(object sender, KeyEventArgs e)
