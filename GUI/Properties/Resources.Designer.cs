@@ -63,9 +63,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _default {
+        internal static System.Drawing.Bitmap AnhMacDinh {
             get {
-                object obj = ResourceManager.GetObject("default", resourceCulture);
+                object obj = ResourceManager.GetObject("AnhMacDinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,49 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cart {
+        internal static System.Drawing.Bitmap BanHang {
             get {
-                object obj = ResourceManager.GetObject("cart", resourceCulture);
+                object obj = ResourceManager.GetObject("BanHang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BaoCao {
+            get {
+                object obj = ResourceManager.GetObject("BaoCao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close {
+            get {
+                object obj = ResourceManager.GetObject("Close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CloseActive {
+            get {
+                object obj = ResourceManager.GetObject("CloseActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CongNo {
+            get {
+                object obj = ResourceManager.GetObject("CongNo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,6 +133,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HangHoa {
+            get {
+                object obj = ResourceManager.GetObject("HangHoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KhachHang {
             get {
                 object obj = ResourceManager.GetObject("KhachHang", resourceCulture);
@@ -103,9 +153,9 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tabpage_close_button {
+        internal static System.Drawing.Bitmap NhaCungCap {
             get {
-                object obj = ResourceManager.GetObject("tabpage-close-button", resourceCulture);
+                object obj = ResourceManager.GetObject("NhaCungCap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +163,19 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tabpage_close_button_active {
+        internal static System.Drawing.Bitmap NhapHang {
             get {
-                object obj = ResourceManager.GetObject("tabpage-close-button-active", resourceCulture);
+                object obj = ResourceManager.GetObject("NhapHang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TonKho {
+            get {
+                object obj = ResourceManager.GetObject("TonKho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

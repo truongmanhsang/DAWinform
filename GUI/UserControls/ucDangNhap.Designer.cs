@@ -43,7 +43,7 @@
             // picAnh
             // 
             this.picAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picAnh.Image = global::GUI.Properties.Resources._default;
+            this.picAnh.Image = global::GUI.Properties.Resources.AnhMacDinh;
             this.picAnh.Location = new System.Drawing.Point(263, 5);
             this.picAnh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picAnh.Name = "picAnh";

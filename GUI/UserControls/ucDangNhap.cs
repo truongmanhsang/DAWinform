@@ -77,7 +77,7 @@ namespace GUI
             }
             else
             {
-                picAnh.Image = GUI.Properties.Resources._default;
+                picAnh.Image = GUI.Properties.Resources.AnhMacDinh;
                 lblTinNhan.Text = txtTaiKhoan.Text == "" ? "" : "Tên tài khoản không tồn tại!";
                 BatTatControls(false);
                 lblTinNhan.ForeColor = Color.Red;

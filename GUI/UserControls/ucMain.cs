@@ -58,11 +58,11 @@ namespace GUI
             // ===
 
             // Cài đặt tabpage close button size
-            Size mySize = new Size(20, 20);
-            Bitmap bmp = new Bitmap(GUI.Properties.Resources.tabpage_close_button_active, mySize);
+            Size mySize = new Size(15, 15);
+            Bitmap bmp = new Bitmap(GUI.Properties.Resources.CloseActive, mySize);
             imgCloseButtonActive = bmp;
 
-            Bitmap bmp2 = new Bitmap(GUI.Properties.Resources.tabpage_close_button, mySize);
+            Bitmap bmp2 = new Bitmap(GUI.Properties.Resources.Close, mySize);
             imgCloseButton = bmp2;
             tabControlMain.Padding = new Point(50);
             // ==
@@ -97,7 +97,7 @@ namespace GUI
             // lấy rect của tabpage
             Rectangle rect = tabControlMain.GetTabRect(e.Index);
             // tính toán image rect của button
-            Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width,
+            Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width - 5,
                 rect.Top + (rect.Height - imgCloseButton.Height) / 2,
                 imgCloseButton.Width, imgCloseButton.Height);
             rect.Size = new Size(rect.Width + 20, 38);
@@ -131,7 +131,7 @@ namespace GUI
             {
                 // giống trên
                 Rectangle rect = tabControlMain.GetTabRect(i);
-                Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width,
+                Rectangle imageRec = new Rectangle(rect.Right - imgCloseButton.Width - 5,
                     rect.Top + (rect.Height - imgCloseButton.Height) / 2,
                     imgCloseButton.Width, imgCloseButton.Height);
 
