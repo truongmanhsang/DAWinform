@@ -39,19 +39,18 @@
             this.tabPageNhanVien = new System.Windows.Forms.TabPage();
             this.tabPageThongKe = new System.Windows.Forms.TabPage();
             this.panInfo = new System.Windows.Forms.Panel();
+            this.btnAnHien = new System.Windows.Forms.Button();
             this.lblQuyen = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.panMain = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBaoCaoBanHang = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnBanHang = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBaoCaoNhapHang = new System.Windows.Forms.Button();
+            this.btnNhaCungCap = new System.Windows.Forms.Button();
             this.btnNhapHang = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -115,8 +114,7 @@
             // 
             // tabPageBanHang
             // 
-            this.tabPageBanHang.Controls.Add(this.button4);
-            this.tabPageBanHang.Controls.Add(this.button2);
+            this.tabPageBanHang.Controls.Add(this.btnBaoCaoBanHang);
             this.tabPageBanHang.Controls.Add(this.btnKhachHang);
             this.tabPageBanHang.Controls.Add(this.btnBanHang);
             this.tabPageBanHang.Location = new System.Drawing.Point(4, 27);
@@ -130,9 +128,8 @@
             // 
             // tabPageNhapHang
             // 
-            this.tabPageNhapHang.Controls.Add(this.button5);
-            this.tabPageNhapHang.Controls.Add(this.button3);
-            this.tabPageNhapHang.Controls.Add(this.button1);
+            this.tabPageNhapHang.Controls.Add(this.btnBaoCaoNhapHang);
+            this.tabPageNhapHang.Controls.Add(this.btnNhaCungCap);
             this.tabPageNhapHang.Controls.Add(this.btnNhapHang);
             this.tabPageNhapHang.Location = new System.Drawing.Point(4, 27);
             this.tabPageNhapHang.Margin = new System.Windows.Forms.Padding(4);
@@ -205,8 +202,8 @@
             // 
             // panInfo
             // 
-            this.panInfo.BackColor = System.Drawing.Color.White;
             this.panInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panInfo.Controls.Add(this.btnAnHien);
             this.panInfo.Controls.Add(this.btnDangXuat);
             this.panInfo.Controls.Add(this.lblQuyen);
             this.panInfo.Controls.Add(this.lblTenNV);
@@ -216,6 +213,17 @@
             this.panInfo.Name = "panInfo";
             this.panInfo.Size = new System.Drawing.Size(196, 441);
             this.panInfo.TabIndex = 5;
+            // 
+            // btnAnHien
+            // 
+            this.btnAnHien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnHien.Location = new System.Drawing.Point(-1, -1);
+            this.btnAnHien.Name = "btnAnHien";
+            this.btnAnHien.Size = new System.Drawing.Size(17, 36);
+            this.btnAnHien.TabIndex = 4;
+            this.btnAnHien.Text = "<";
+            this.btnAnHien.UseVisualStyleBackColor = false;
+            this.btnAnHien.Click += new System.EventHandler(this.btnAnHien_Click);
             // 
             // lblQuyen
             // 
@@ -231,27 +239,27 @@
             // 
             this.lblTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.Location = new System.Drawing.Point(-1, -1);
+            this.lblTenNV.Location = new System.Drawing.Point(14, -1);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(196, 35);
+            this.lblTenNV.Size = new System.Drawing.Size(181, 35);
             this.lblTenNV.TabIndex = 1;
             this.lblTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControlMain
             // 
+            this.tabControlMain.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(800, 439);
+            this.tabControlMain.Size = new System.Drawing.Size(802, 441);
             this.tabControlMain.TabIndex = 6;
             this.tabControlMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControlMain_DrawItem);
             this.tabControlMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControlMain_MouseClick);
             // 
             // panMain
             // 
-            this.panMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panMain.Controls.Add(this.tabControlMain);
             this.panMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panMain.Location = new System.Drawing.Point(196, 130);
@@ -285,35 +293,21 @@
             this.picHinhDaiDien.TabIndex = 0;
             this.picHinhDaiDien.TabStop = false;
             // 
-            // button4
+            // btnBaoCaoBanHang
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::GUI.Properties.Resources.CongNo;
-            this.button4.Location = new System.Drawing.Point(293, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(81, 85);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Công Nợ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::GUI.Properties.Resources.BaoCao;
-            this.button2.Location = new System.Drawing.Point(207, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 85);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Báo Cáo";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBaoCaoBanHang.FlatAppearance.BorderSize = 0;
+            this.btnBaoCaoBanHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCaoBanHang.Image = global::GUI.Properties.Resources.BaoCao;
+            this.btnBaoCaoBanHang.Location = new System.Drawing.Point(207, 7);
+            this.btnBaoCaoBanHang.Name = "btnBaoCaoBanHang";
+            this.btnBaoCaoBanHang.Size = new System.Drawing.Size(80, 85);
+            this.btnBaoCaoBanHang.TabIndex = 2;
+            this.btnBaoCaoBanHang.Text = "Báo Cáo";
+            this.btnBaoCaoBanHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBaoCaoBanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBaoCaoBanHang.UseVisualStyleBackColor = true;
+            this.btnBaoCaoBanHang.Click += new System.EventHandler(this.btnBaoCaoBanHang_Click);
             // 
             // btnKhachHang
             // 
@@ -347,50 +341,37 @@
             this.btnBanHang.UseVisualStyleBackColor = true;
             this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
-            // button5
+            // btnBaoCaoNhapHang
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::GUI.Properties.Resources.CongNo;
-            this.button5.Location = new System.Drawing.Point(322, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 85);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Công Nợ";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnBaoCaoNhapHang.FlatAppearance.BorderSize = 0;
+            this.btnBaoCaoNhapHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoNhapHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCaoNhapHang.Image = global::GUI.Properties.Resources.BaoCao;
+            this.btnBaoCaoNhapHang.Location = new System.Drawing.Point(234, 7);
+            this.btnBaoCaoNhapHang.Name = "btnBaoCaoNhapHang";
+            this.btnBaoCaoNhapHang.Size = new System.Drawing.Size(82, 85);
+            this.btnBaoCaoNhapHang.TabIndex = 3;
+            this.btnBaoCaoNhapHang.Text = "Báo Cáo";
+            this.btnBaoCaoNhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBaoCaoNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBaoCaoNhapHang.UseVisualStyleBackColor = true;
+            this.btnBaoCaoNhapHang.Click += new System.EventHandler(this.btnBaoCaoNhapHang_Click);
             // 
-            // button3
+            // btnNhaCungCap
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::GUI.Properties.Resources.BaoCao;
-            this.button3.Location = new System.Drawing.Point(234, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 85);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Báo Cáo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::GUI.Properties.Resources.NhaCungCap;
-            this.button1.Location = new System.Drawing.Point(107, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 85);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Nhà Cung Cấp";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
+            this.btnNhaCungCap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhaCungCap.Image = global::GUI.Properties.Resources.NhaCungCap;
+            this.btnNhaCungCap.Location = new System.Drawing.Point(107, 7);
+            this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Size = new System.Drawing.Size(121, 85);
+            this.btnNhaCungCap.TabIndex = 2;
+            this.btnNhaCungCap.Text = "Nhà Cung Cấp";
+            this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNhaCungCap.UseVisualStyleBackColor = true;
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // btnNhapHang
             // 
@@ -610,11 +591,9 @@
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Panel panMain;
         private System.Windows.Forms.Button btnNhapHang;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnNhaCungCap;
+        private System.Windows.Forms.Button btnBaoCaoBanHang;
+        private System.Windows.Forms.Button btnBaoCaoNhapHang;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
@@ -625,5 +604,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnAnHien;
     }
 }

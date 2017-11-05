@@ -62,6 +62,18 @@
     <Compile Include="UserControls\ucBanHang.Designer.cs">
       <DependentUpon>ucBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucBaoCaoBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBaoCaoBanHang.Designer.cs">
+      <DependentUpon>ucBaoCaoBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucBaoCaoNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucBaoCaoNhapHang.Designer.cs">
+      <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucBaoHanh.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="UserControls\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucNhaCungCap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNhaCungCap.Designer.cs">
+      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -132,6 +150,12 @@
     <EmbeddedResource Include="UserControls\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucBaoCaoBanHang.resx">
+      <DependentUpon>ucBaoCaoBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucBaoCaoNhapHang.resx">
+      <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucBaoHanh.resx">
       <DependentUpon>ucBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucNhaCungCap.resx">
+      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucNhanVien.resx">
       <DependentUpon>ucNhanVien.cs</DependentUpon>

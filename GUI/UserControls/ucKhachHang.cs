@@ -25,5 +25,9 @@ namespace GUI
         private void CaiDat()
         {
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
