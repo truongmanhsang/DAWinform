@@ -188,6 +188,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\LoiNhuan.png" />
+    <None Include="Resources\DoanhSo.png" />
+    <None Include="Resources\DoanhThu.png" />
+    <None Include="Resources\NhanVien.png" />
+    <None Include="Resources\ThuChi.png" />
+    <None Include="Resources\GuiBaoHanh.png" />
+    <None Include="Resources\NhanBaoHanh.png" />
     <None Include="Resources\TonKho.png" />
     <None Include="Resources\HangHoa.png" />
     <None Include="Resources\CongNo.png" />

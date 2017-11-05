@@ -55,11 +55,23 @@
             this.btnNhapHang = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.tabControlMenu.SuspendLayout();
             this.tabPageBanHang.SuspendLayout();
             this.tabPageNhapHang.SuspendLayout();
             this.tabPageHangHoa.SuspendLayout();
+            this.tabPageBaoHanh.SuspendLayout();
+            this.tabPageThuChi.SuspendLayout();
+            this.tabPageNhanVien.SuspendLayout();
+            this.tabPageThongKe.SuspendLayout();
             this.panInfo.SuspendLayout();
             this.panMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
@@ -145,6 +157,9 @@
             // 
             // tabPageBaoHanh
             // 
+            this.tabPageBaoHanh.Controls.Add(this.button11);
+            this.tabPageBaoHanh.Controls.Add(this.button9);
+            this.tabPageBaoHanh.Controls.Add(this.button8);
             this.tabPageBaoHanh.Location = new System.Drawing.Point(4, 27);
             this.tabPageBaoHanh.Name = "tabPageBaoHanh";
             this.tabPageBaoHanh.Padding = new System.Windows.Forms.Padding(3);
@@ -155,6 +170,7 @@
             // 
             // tabPageThuChi
             // 
+            this.tabPageThuChi.Controls.Add(this.button10);
             this.tabPageThuChi.Location = new System.Drawing.Point(4, 27);
             this.tabPageThuChi.Name = "tabPageThuChi";
             this.tabPageThuChi.Padding = new System.Windows.Forms.Padding(3);
@@ -165,6 +181,7 @@
             // 
             // tabPageNhanVien
             // 
+            this.tabPageNhanVien.Controls.Add(this.button12);
             this.tabPageNhanVien.Location = new System.Drawing.Point(4, 27);
             this.tabPageNhanVien.Name = "tabPageNhanVien";
             this.tabPageNhanVien.Padding = new System.Windows.Forms.Padding(3);
@@ -175,6 +192,9 @@
             // 
             // tabPageThongKe
             // 
+            this.tabPageThongKe.Controls.Add(this.button15);
+            this.tabPageThongKe.Controls.Add(this.button14);
+            this.tabPageThongKe.Controls.Add(this.button13);
             this.tabPageThongKe.Location = new System.Drawing.Point(4, 27);
             this.tabPageThongKe.Name = "tabPageThongKe";
             this.tabPageThongKe.Padding = new System.Windows.Forms.Padding(3);
@@ -224,13 +244,14 @@
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(802, 441);
+            this.tabControlMain.Size = new System.Drawing.Size(800, 439);
             this.tabControlMain.TabIndex = 6;
             this.tabControlMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControlMain_DrawItem);
             this.tabControlMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControlMain_MouseClick);
             // 
             // panMain
             // 
+            this.panMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panMain.Controls.Add(this.tabControlMain);
             this.panMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panMain.Location = new System.Drawing.Point(196, 130);
@@ -416,6 +437,126 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // button11
+            // 
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = global::GUI.Properties.Resources.BaoCao;
+            this.button11.Location = new System.Drawing.Point(260, 8);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(82, 85);
+            this.button11.TabIndex = 9;
+            this.button11.Text = "Báo Cáo";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = global::GUI.Properties.Resources.GuiBaoHanh;
+            this.button9.Location = new System.Drawing.Point(137, 8);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(117, 85);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Gửi Bảo Hành";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = global::GUI.Properties.Resources.NhanBaoHanh;
+            this.button8.Location = new System.Drawing.Point(6, 8);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(125, 85);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Nhận Bảo Hành";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = global::GUI.Properties.Resources.ThuChi;
+            this.button10.Location = new System.Drawing.Point(6, 8);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(80, 85);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "Thu - Chi";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Image = global::GUI.Properties.Resources.NhanVien;
+            this.button12.Location = new System.Drawing.Point(6, 6);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(88, 85);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "Nhân Viên";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Image = global::GUI.Properties.Resources.LoiNhuan;
+            this.button15.Location = new System.Drawing.Point(198, 8);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(88, 85);
+            this.button15.TabIndex = 7;
+            this.button15.Text = "Lợi Nhuận";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Image = global::GUI.Properties.Resources.DoanhSo;
+            this.button14.Location = new System.Drawing.Point(104, 8);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(88, 85);
+            this.button14.TabIndex = 6;
+            this.button14.Text = "Doanh Số";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = global::GUI.Properties.Resources.DoanhThu;
+            this.button13.Location = new System.Drawing.Point(6, 8);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(95, 85);
+            this.button13.TabIndex = 5;
+            this.button13.Text = "Doanh Thu";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // ucMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -436,6 +577,10 @@
             this.tabPageBanHang.ResumeLayout(false);
             this.tabPageNhapHang.ResumeLayout(false);
             this.tabPageHangHoa.ResumeLayout(false);
+            this.tabPageBaoHanh.ResumeLayout(false);
+            this.tabPageThuChi.ResumeLayout(false);
+            this.tabPageNhanVien.ResumeLayout(false);
+            this.tabPageThongKe.ResumeLayout(false);
             this.panInfo.ResumeLayout(false);
             this.panMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
@@ -472,5 +617,13 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
     }
 }

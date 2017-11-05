@@ -21,5 +21,9 @@ namespace GUI
         {
 
         }
+
+        private void CaiDat()
+        {
+        }
     }
 }

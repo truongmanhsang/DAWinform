@@ -101,27 +101,37 @@ namespace GUI
                 rect.Top + (rect.Height - imgCloseButton.Height) / 2,
                 imgCloseButton.Width, imgCloseButton.Height);
             rect.Size = new Size(rect.Width + 20, 38);
+            // tính toán fill tabpage
+            Rectangle rectFill = new Rectangle(rect.Left, rect.Top, rect.Width - 20, rect.Height - 16);
+            // rect dùng để vẽ chữ
+            Rectangle rectString = new Rectangle(rect.Left + 3, rect.Top + 3, rect.Width, rect.Height);
 
             Font f;
+            Brush brAct = Brushes.Black;
             Brush br = Brushes.Black;
             StringFormat strF = new StringFormat(StringFormat.GenericDefault);
+            // Brush dùng để vẽ màu tab
+            Brush brTabAct = Brushes.White;
+            Brush brTab = Brushes.DarkGray;
             if (tabControlMain.SelectedTab == tabControlMain.TabPages[e.Index]) // tab được chọn
             {
+                e.Graphics.FillRectangle(brTabAct, rectFill);
                 // vẽ button
                 e.Graphics.DrawImage(imgCloseButtonActive, imageRec);
                 f = new Font("Arial", 12, FontStyle.Bold);
                 // vẽ tên chữ
                 e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
-                    f, br, rect, strF);
+                    f, brAct, rectString, strF);
             }
             else
             {
+                e.Graphics.FillRectangle(brTab, rectFill);
                 // vẽ button
                 e.Graphics.DrawImage(imgCloseButton, imageRec);
                 f = new Font("Arial", 12, FontStyle.Regular);
                 // vẽ tên chữ
                 e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
-                    f, br, rect, strF);
+                    f, br, rectString, strF);
             }
         }
 
