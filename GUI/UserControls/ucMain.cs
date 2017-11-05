@@ -38,6 +38,7 @@ namespace GUI
         TabPage tabNhaCungCap;
         TabPage tabBaoCaoBanHang;
         TabPage tabBaoCaoNhapHang;
+        TabPage tabTonKho;
 
         public static ucMain GetInstance
         {
@@ -258,6 +259,42 @@ namespace GUI
                         tabControlMain.SelectedTab = tabBaoCaoNhapHang;
                     }
                     break;
+                case ChucNang.HangHoa:
+                    strTenTabpage = "Hàng Hoá";
+                    if (!tabControlMain.Contains(tabPageHangHoa))
+                    {
+                        tabPageHangHoa = new TabPage(strTenTabpage);
+                        ucHangHoa _ucHangHoa = new ucHangHoa();
+                        tabPageHangHoa.Controls.Add(_ucHangHoa);
+                        _ucHangHoa.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabPageHangHoa);
+                        tabControlMain.SelectedTab = tabPageHangHoa;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabPageHangHoa;
+                    }
+                    break;
+                case ChucNang.TonKho:
+                    strTenTabpage = "Tồn Kho";
+                    if (!tabControlMain.Contains(tabTonKho))
+                    {
+                        tabTonKho = new TabPage(strTenTabpage);
+                        ucTonKho _ucTonKho = new ucTonKho();
+                        tabTonKho.Controls.Add(_ucTonKho);
+                        _ucTonKho.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabTonKho);
+                        tabControlMain.SelectedTab = tabTonKho;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabTonKho;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -297,6 +334,16 @@ namespace GUI
         private void btnBaoCaoNhapHang_Click(object sender, EventArgs e)
         {
             TaoTabpage(ChucNang.BaoCaoNhapHang);
+        }
+
+        private void btnHangHoa_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.HangHoa);
+        }
+
+        private void btnTonKho_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.TonKho);
         }
     }
 }
