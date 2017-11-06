@@ -328,13 +328,13 @@ namespace GUI
             if (panInfo.Width > 16)
             {
                 panInfo.Width = 16;
-                btnAnHien.Width = 16;
+                btnAnHien.Width = 17;
             }
 
             else
             {
                 panInfo.Width = 196;
-                btnAnHien.Width = 196;
+                btnAnHien.Width = 197;
 
             }
 
