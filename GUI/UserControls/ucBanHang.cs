@@ -125,7 +125,7 @@ namespace GUI
         {
             if (txtTenSP.Text != string.Empty)
             {
-                if (txtSL.Text != string.Empty && Convert.ToInt16(txtSL.Text.Replace(".", "").Replace("VNĐ", "")) > 0)
+                if (txtSL.Text != string.Empty && Convert.ToInt64(txtSL.Text.Replace(".", "").Replace("VNĐ", "")) > 0)
                 {
                     ThemSanPhamVaoHoaDon();
                     TinhTongTien();
@@ -148,8 +148,8 @@ namespace GUI
 
             string strTenSP = txtTenSP.Text;
             long iDonGia = Convert.ToInt64(dr["GiaBan"]);
-            int iSoLuong = Convert.ToInt16(txtSL.Text);
-            int iSoLuongConLai = Convert.ToInt16(dr["SoLuong"]);
+            long iSoLuong = Convert.ToInt64(txtSL.Text);
+            long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
             long iThanhTien = iDonGia * iSoLuong;
 
             if (iSoLuong > iSoLuongConLai)

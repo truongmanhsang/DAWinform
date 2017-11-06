@@ -79,3 +79,9 @@ D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources

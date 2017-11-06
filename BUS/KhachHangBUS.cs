@@ -20,5 +20,10 @@ namespace BUS
         {
             return dao.ThemKhachHang(khachHang);
         }
+        public DataTable TimKiemKhachHang(string query)
+        {
+           
+            return dao.TimKiemKhachHang(query);
+        }
     }
 }
