@@ -28,5 +28,14 @@ namespace DAO
             ThaoTacDuLieu.DongKetNoi(conn);
             return strMaKH;
         }
+        public DataTable TimKiemKhachHang(string query)
+        {
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return dt;
+        }
     }
 }

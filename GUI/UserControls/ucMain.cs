@@ -326,9 +326,18 @@ namespace GUI
         {
             btnAnHien.Text = btnAnHien.Text == "<" ? ">" : "<";
             if (panInfo.Width > 16)
+            {
                 panInfo.Width = 16;
+                btnAnHien.Width = 16;
+            }
+
             else
+            {
                 panInfo.Width = 196;
+                btnAnHien.Width = 196;
+
+            }
+
         }
 
         private void btnBaoCaoNhapHang_Click(object sender, EventArgs e)

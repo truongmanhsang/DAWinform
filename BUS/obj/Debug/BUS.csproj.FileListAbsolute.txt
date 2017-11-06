@@ -27,3 +27,5 @@ D:\Development\Projects\Winform\DAWinform\BUS\obj\Debug\BUS.dll
 D:\Development\Projects\Winform\DAWinform\BUS\obj\Debug\BUS.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\ClassLibrary.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\ClassLibrary.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\ClassLibrary.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\ClassLibrary.pdb

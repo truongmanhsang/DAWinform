@@ -37,12 +37,12 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbSDT = new System.Windows.Forms.CheckBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.cbCMND = new System.Windows.Forms.CheckBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.cbTenKH = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -94,6 +94,7 @@
             // colTenKhachHang
             // 
             this.colTenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenKhachHang.DataPropertyName = "TenKhachHang";
             this.colTenKhachHang.HeaderText = "Tên Khách Hàng";
             this.colTenKhachHang.Name = "colTenKhachHang";
             this.colTenKhachHang.ReadOnly = true;
@@ -101,6 +102,7 @@
             // colCMND
             // 
             this.colCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colCMND.DataPropertyName = "CMND";
             this.colCMND.HeaderText = "CMND";
             this.colCMND.Name = "colCMND";
             this.colCMND.ReadOnly = true;
@@ -109,6 +111,7 @@
             // colSoDT
             // 
             this.colSoDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoDT.DataPropertyName = "SoDT";
             this.colSoDT.HeaderText = "Số ĐT";
             this.colSoDT.Name = "colSoDT";
             this.colSoDT.ReadOnly = true;
@@ -117,6 +120,7 @@
             // colDiaChi
             // 
             this.colDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDiaChi.DataPropertyName = "DiaChi";
             this.colDiaChi.HeaderText = "Địa Chỉ";
             this.colDiaChi.Name = "colDiaChi";
             this.colDiaChi.ReadOnly = true;
@@ -174,12 +178,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.btnTimKiem);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.cbSDT);
+            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtCMND);
+            this.groupBox1.Controls.Add(this.cbCMND);
+            this.groupBox1.Controls.Add(this.txtTenKH);
+            this.groupBox1.Controls.Add(this.cbTenKH);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -201,62 +205,63 @@
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // checkBox3
+            // cbSDT
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 106);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(72, 22);
-            this.checkBox3.TabIndex = 5;
-            this.checkBox3.Text = "Số ĐT";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbSDT.AutoSize = true;
+            this.cbSDT.Location = new System.Drawing.Point(7, 106);
+            this.cbSDT.Name = "cbSDT";
+            this.cbSDT.Size = new System.Drawing.Size(72, 22);
+            this.cbSDT.TabIndex = 5;
+            this.cbSDT.Text = "Số ĐT";
+            this.cbSDT.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtSDT
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(149, 102);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(291, 26);
-            this.textBox6.TabIndex = 4;
+            this.txtSDT.Location = new System.Drawing.Point(149, 102);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(291, 26);
+            this.txtSDT.TabIndex = 4;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
-            // textBox5
+            // txtCMND
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCMND.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(149, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(291, 26);
-            this.textBox5.TabIndex = 3;
+            this.txtCMND.Location = new System.Drawing.Point(149, 68);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(291, 26);
+            this.txtCMND.TabIndex = 3;
             // 
-            // checkBox2
+            // cbCMND
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 71);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(75, 22);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "CMND";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbCMND.AutoSize = true;
+            this.cbCMND.Location = new System.Drawing.Point(7, 71);
+            this.cbCMND.Name = "cbCMND";
+            this.cbCMND.Size = new System.Drawing.Size(75, 22);
+            this.cbCMND.TabIndex = 2;
+            this.cbCMND.Text = "CMND";
+            this.cbCMND.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txtTenKH
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTenKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(149, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(291, 26);
-            this.textBox4.TabIndex = 1;
+            this.txtTenKH.Location = new System.Drawing.Point(149, 34);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(291, 26);
+            this.txtTenKH.TabIndex = 1;
             // 
-            // checkBox1
+            // cbTenKH
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 36);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 22);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Tên khách hàng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbTenKH.AutoSize = true;
+            this.cbTenKH.Location = new System.Drawing.Point(7, 36);
+            this.cbTenKH.Name = "cbTenKH";
+            this.cbTenKH.Size = new System.Drawing.Size(136, 22);
+            this.cbTenKH.TabIndex = 0;
+            this.cbTenKH.Text = "Tên khách hàng";
+            this.cbTenKH.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -277,7 +282,11 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(3, 4);
             this.groupBox2.Name = "groupBox2";
+<<<<<<< HEAD
+            this.groupBox2.Size = new System.Drawing.Size(464, 208);
+=======
             this.groupBox2.Size = new System.Drawing.Size(466, 236);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -289,7 +298,11 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(129, 126);
             this.richTextBox1.Name = "richTextBox1";
+<<<<<<< HEAD
+            this.richTextBox1.Size = new System.Drawing.Size(248, 71);
+=======
             this.richTextBox1.Size = new System.Drawing.Size(250, 71);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -299,7 +312,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(129, 94);
             this.textBox3.Name = "textBox3";
+<<<<<<< HEAD
+            this.textBox3.Size = new System.Drawing.Size(248, 26);
+=======
             this.textBox3.Size = new System.Drawing.Size(250, 26);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
@@ -308,7 +325,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(129, 62);
             this.textBox2.Name = "textBox2";
+<<<<<<< HEAD
+            this.textBox2.Size = new System.Drawing.Size(248, 26);
+=======
             this.textBox2.Size = new System.Drawing.Size(250, 26);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox2.TabIndex = 8;
             // 
             // textBox1
@@ -317,7 +338,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(129, 30);
             this.textBox1.Name = "textBox1";
+<<<<<<< HEAD
+            this.textBox1.Size = new System.Drawing.Size(248, 26);
+=======
             this.textBox1.Size = new System.Drawing.Size(250, 26);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox1.TabIndex = 7;
             // 
             // label4
@@ -359,7 +384,11 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
+            this.button3.Location = new System.Drawing.Point(383, 109);
+=======
             this.button3.Location = new System.Drawing.Point(385, 109);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 34);
             this.button3.TabIndex = 2;
@@ -369,7 +398,11 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
+            this.button2.Location = new System.Drawing.Point(383, 69);
+=======
             this.button2.Location = new System.Drawing.Point(385, 69);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 1;
@@ -379,7 +412,11 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
+            this.button1.Location = new System.Drawing.Point(383, 29);
+=======
             this.button1.Location = new System.Drawing.Point(385, 29);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 0;
@@ -419,10 +456,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBox3;
@@ -436,11 +469,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbSDT;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtCMND;
+        private System.Windows.Forms.CheckBox cbCMND;
+        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.CheckBox cbTenKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
     }
 }
