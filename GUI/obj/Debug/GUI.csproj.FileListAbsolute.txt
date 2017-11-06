@@ -79,9 +79,17 @@ D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
+<<<<<<< HEAD
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.dll
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
+=======
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucSanPham.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmThemSuaSanPham.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucLoai.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucHangSanXuat.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37

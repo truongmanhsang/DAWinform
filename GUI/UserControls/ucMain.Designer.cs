@@ -40,8 +40,13 @@
             this.btnNhaCungCap = new System.Windows.Forms.Button();
             this.btnNhapHang = new System.Windows.Forms.Button();
             this.tabPageHangHoa = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+=======
+            this.btnTonKho = new System.Windows.Forms.Button();
+            this.btnHangHoa = new System.Windows.Forms.Button();
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.tabPageBaoHanh = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -237,8 +242,13 @@
             // 
             // tabPageHangHoa
             // 
+<<<<<<< HEAD
             this.tabPageHangHoa.Controls.Add(this.button7);
             this.tabPageHangHoa.Controls.Add(this.button6);
+=======
+            this.tabPageHangHoa.Controls.Add(this.btnTonKho);
+            this.tabPageHangHoa.Controls.Add(this.btnHangHoa);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.tabPageHangHoa.Location = new System.Drawing.Point(4, 27);
             this.tabPageHangHoa.Name = "tabPageHangHoa";
             this.tabPageHangHoa.Padding = new System.Windows.Forms.Padding(3);
@@ -247,6 +257,7 @@
             this.tabPageHangHoa.Text = "Hàng Hoá";
             this.tabPageHangHoa.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // button7
             // 
             this.button7.FlatAppearance.BorderSize = 0;
@@ -276,6 +287,52 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = true;
+=======
+            // btnTonKho
+            // 
+            this.btnTonKho.FlatAppearance.BorderSize = 0;
+            this.btnTonKho.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnTonKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTonKho.Image = global::GUI.Properties.Resources.TonKho;
+            this.btnTonKho.Location = new System.Drawing.Point(99, 6);
+            this.btnTonKho.Name = "btnTonKho";
+            this.btnTonKho.Size = new System.Drawing.Size(75, 85);
+            this.btnTonKho.TabIndex = 6;
+            this.btnTonKho.Text = "Tồn Kho";
+            this.btnTonKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTonKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTonKho.UseVisualStyleBackColor = true;
+            this.btnTonKho.Click += new System.EventHandler(this.btnTonKho_Click);
+            // 
+            // btnHangHoa
+            // 
+            this.btnHangHoa.FlatAppearance.BorderSize = 0;
+            this.btnHangHoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnHangHoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHangHoa.Image = global::GUI.Properties.Resources.HangHoa;
+            this.btnHangHoa.Location = new System.Drawing.Point(6, 6);
+            this.btnHangHoa.Name = "btnHangHoa";
+            this.btnHangHoa.Size = new System.Drawing.Size(87, 85);
+            this.btnHangHoa.TabIndex = 5;
+            this.btnHangHoa.Text = "Hàng Hoá";
+            this.btnHangHoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHangHoa.UseVisualStyleBackColor = true;
+            this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
+            // 
+            // tabPageBaoHanh
+            // 
+            this.tabPageBaoHanh.Controls.Add(this.button11);
+            this.tabPageBaoHanh.Controls.Add(this.button9);
+            this.tabPageBaoHanh.Controls.Add(this.button8);
+            this.tabPageBaoHanh.Location = new System.Drawing.Point(4, 27);
+            this.tabPageBaoHanh.Name = "tabPageBaoHanh";
+            this.tabPageBaoHanh.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBaoHanh.Size = new System.Drawing.Size(990, 99);
+            this.tabPageBaoHanh.TabIndex = 3;
+            this.tabPageBaoHanh.Text = "Bảo Hành";
+            this.tabPageBaoHanh.UseVisualStyleBackColor = true;
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             // 
             // tabPageBaoHanh
             // 
@@ -462,9 +519,15 @@
             // btnAnHien
             // 
             this.btnAnHien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnAnHien.Location = new System.Drawing.Point(-1, -2);
             this.btnAnHien.Name = "btnAnHien";
             this.btnAnHien.Size = new System.Drawing.Size(196, 36);
+=======
+            this.btnAnHien.Location = new System.Drawing.Point(-2, -1);
+            this.btnAnHien.Name = "btnAnHien";
+            this.btnAnHien.Size = new System.Drawing.Size(17, 36);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.btnAnHien.TabIndex = 4;
             this.btnAnHien.Text = "<";
             this.btnAnHien.UseVisualStyleBackColor = false;
@@ -490,7 +553,11 @@
             // 
             this.lblQuyen.BackColor = System.Drawing.SystemColors.WindowText;
             this.lblQuyen.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.lblQuyen.Location = new System.Drawing.Point(14, 250);
+=======
+            this.lblQuyen.Location = new System.Drawing.Point(14, 214);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.Size = new System.Drawing.Size(165, 23);
             this.lblQuyen.TabIndex = 2;
@@ -500,16 +567,26 @@
             // 
             this.lblTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lblTenNV.Location = new System.Drawing.Point(-1, 33);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(196, 35);
+=======
+            this.lblTenNV.Location = new System.Drawing.Point(14, -1);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(181, 35);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.lblTenNV.TabIndex = 1;
             this.lblTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picHinhDaiDien
             // 
             this.picHinhDaiDien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.picHinhDaiDien.Location = new System.Drawing.Point(14, 84);
+=======
+            this.picHinhDaiDien.Location = new System.Drawing.Point(14, 48);
+>>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.picHinhDaiDien.Name = "picHinhDaiDien";
             this.picHinhDaiDien.Size = new System.Drawing.Size(165, 165);
             this.picHinhDaiDien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -594,8 +671,8 @@
         private System.Windows.Forms.Button btnNhaCungCap;
         private System.Windows.Forms.Button btnBaoCaoBanHang;
         private System.Windows.Forms.Button btnBaoCaoNhapHang;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnHangHoa;
+        private System.Windows.Forms.Button btnTonKho;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;

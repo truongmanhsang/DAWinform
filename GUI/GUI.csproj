@@ -54,6 +54,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemSuaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemSuaSanPham.Designer.cs">
+      <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\ucBanHang.cs">
@@ -92,11 +98,23 @@
     <Compile Include="UserControls\ucHangHoa.Designer.cs">
       <DependentUpon>ucHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHangSanXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHangSanXuat.Designer.cs">
+      <DependentUpon>ucHangSanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucKhachHang.Designer.cs">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucLoai.Designer.cs">
+      <DependentUpon>ucLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucMain.cs">
       <SubType>UserControl</SubType>
@@ -122,6 +140,12 @@
     <Compile Include="UserControls\ucNhapHang.Designer.cs">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSanPham.Designer.cs">
+      <DependentUpon>ucSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,8 +158,17 @@
     <Compile Include="UserControls\ucThuChi.Designer.cs">
       <DependentUpon>ucThuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTonKho.Designer.cs">
+      <DependentUpon>ucTonKho.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemSuaSanPham.resx">
+      <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,8 +198,14 @@
     <EmbeddedResource Include="UserControls\ucHangHoa.resx">
       <DependentUpon>ucHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHangSanXuat.resx">
+      <DependentUpon>ucHangSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucKhachHang.resx">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucLoai.resx">
+      <DependentUpon>ucLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
@@ -180,11 +219,17 @@
     <EmbeddedResource Include="UserControls\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSanPham.resx">
+      <DependentUpon>ucSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThuChi.resx">
       <DependentUpon>ucThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTonKho.resx">
+      <DependentUpon>ucTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
