@@ -1,95 +1,35 @@
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\GUI.exe.config
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\GUI.exe
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\GUI.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\BUS.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\DTO.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\DAO.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\BUS.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\DTO.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\bin\Debug\DAO.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.frmMain.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.Properties.Resources.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucBanHang.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucBaoHanh.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucDangNhap.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucHangHoa.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucMain.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucNhanVien.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucNhapHang.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucThongKe.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.ucThuChi.resources
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.exe
-D:\Development\Projects\Winform\[DA]_WinformNC\GUI\obj\Debug\GUI.pdb
-D:\GIT\DAWinform\GUI\bin\Debug\GUI.exe.config
-D:\GIT\DAWinform\GUI\obj\Debug\GUI.exe
-D:\GIT\DAWinform\GUI\obj\Debug\GUI.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe.config
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.exe
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\BUS.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DTO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DAO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\BUS.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DTO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\DAO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.frmMain.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.Properties.Resources.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBanHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoHanh.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucDangNhap.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucHangHoa.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucMain.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhanVien.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThuChi.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.exe.config
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.exe
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\GUI.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\BUS.dll
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.dll
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DAO.dll
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\BUS.pdb
+D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\DAO.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmMain.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmThemSuaSanPham.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBanHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoHanh.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucDangNhap.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucHangHoa.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucHangSanXuat.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucLoai.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucMain.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhanVien.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucSanPham.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucThuChi.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.exe
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.pdb
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources
-D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.dll
-D:\Development\Projects\Winform\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
-<<<<<<< HEAD
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\ClassLibrary.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucKhachHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucNhaCungCap.resources
-=======
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucSanPham.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmThemSuaSanPham.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucLoai.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucHangSanXuat.resources
-D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37

@@ -282,11 +282,8 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(3, 4);
             this.groupBox2.Name = "groupBox2";
-<<<<<<< HEAD
             this.groupBox2.Size = new System.Drawing.Size(464, 208);
-=======
             this.groupBox2.Size = new System.Drawing.Size(466, 236);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -298,11 +295,8 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Location = new System.Drawing.Point(129, 126);
             this.richTextBox1.Name = "richTextBox1";
-<<<<<<< HEAD
             this.richTextBox1.Size = new System.Drawing.Size(248, 71);
-=======
             this.richTextBox1.Size = new System.Drawing.Size(250, 71);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -312,11 +306,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(129, 94);
             this.textBox3.Name = "textBox3";
-<<<<<<< HEAD
             this.textBox3.Size = new System.Drawing.Size(248, 26);
-=======
             this.textBox3.Size = new System.Drawing.Size(250, 26);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox3.TabIndex = 9;
             // 
             // textBox2
@@ -325,11 +316,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(129, 62);
             this.textBox2.Name = "textBox2";
-<<<<<<< HEAD
             this.textBox2.Size = new System.Drawing.Size(248, 26);
-=======
             this.textBox2.Size = new System.Drawing.Size(250, 26);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox2.TabIndex = 8;
             // 
             // textBox1
@@ -338,11 +326,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(129, 30);
             this.textBox1.Name = "textBox1";
-<<<<<<< HEAD
             this.textBox1.Size = new System.Drawing.Size(248, 26);
-=======
             this.textBox1.Size = new System.Drawing.Size(250, 26);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.textBox1.TabIndex = 7;
             // 
             // label4
@@ -384,11 +369,8 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(383, 109);
-=======
             this.button3.Location = new System.Drawing.Point(385, 109);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 34);
             this.button3.TabIndex = 2;
@@ -398,11 +380,8 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(383, 69);
-=======
             this.button2.Location = new System.Drawing.Point(385, 69);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 1;
@@ -412,11 +391,8 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(383, 29);
-=======
             this.button1.Location = new System.Drawing.Point(385, 29);
->>>>>>> 853b6d1cfaacc1fe4b9a4663518275aa0c94ec37
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 0;
