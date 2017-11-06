@@ -55,8 +55,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -289,15 +290,6 @@
             this.panel1.Size = new System.Drawing.Size(661, 54);
             this.panel1.TabIndex = 50;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(428, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(542, 8);
@@ -307,12 +299,31 @@
             this.button2.Text = "Huỷ";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(428, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 38);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Lưu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(87, 261);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 18);
+            this.label16.TabIndex = 51;
+            this.label16.Text = "0";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmThemSuaSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(661, 461);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label15);
@@ -342,7 +353,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThemSuaSanPham";
@@ -386,5 +397,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label16;
     }
 }
