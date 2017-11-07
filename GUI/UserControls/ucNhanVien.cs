@@ -28,5 +28,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmThemSuaNV frm = new frmThemSuaNV();
+            frm.ShowDialog();
+        }
     }
 }

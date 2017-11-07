@@ -36,6 +36,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuXuat = new System.Windows.Forms.DataGridView();
+            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -50,11 +55,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPhieuXuat)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -162,6 +162,39 @@
             this.dgvPhieuXuat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhieuXuat.Size = new System.Drawing.Size(588, 388);
             this.dgvPhieuXuat.TabIndex = 0;
+            // 
+            // colNgayLap
+            // 
+            this.colNgayLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNgayLap.HeaderText = "Ngày";
+            this.colNgayLap.Name = "colNgayLap";
+            this.colNgayLap.Width = 69;
+            // 
+            // colNhanVien
+            // 
+            this.colNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNhanVien.HeaderText = "Nhân Viên";
+            this.colNhanVien.Name = "colNhanVien";
+            // 
+            // colKhachHang
+            // 
+            this.colKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colKhachHang.HeaderText = "Nhà Cung Cấp";
+            this.colKhachHang.Name = "colKhachHang";
+            // 
+            // colNo
+            // 
+            this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNo.HeaderText = "Nợ";
+            this.colNo.Name = "colNo";
+            this.colNo.Width = 55;
+            // 
+            // colTongTien
+            // 
+            this.colTongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTongTien.HeaderText = "Tổng Tiền";
+            this.colTongTien.Name = "colTongTien";
+            this.colTongTien.Width = 93;
             // 
             // button1
             // 
@@ -271,8 +304,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Location = new System.Drawing.Point(434, 3);
@@ -315,46 +346,13 @@
             this.splitContainer1.SplitterDistance = 600;
             this.splitContainer1.TabIndex = 2;
             // 
-            // colNgayLap
-            // 
-            this.colNgayLap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colNgayLap.HeaderText = "Ngày";
-            this.colNgayLap.Name = "colNgayLap";
-            this.colNgayLap.Width = 69;
-            // 
-            // colNhanVien
-            // 
-            this.colNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNhanVien.HeaderText = "Nhân Viên";
-            this.colNhanVien.Name = "colNhanVien";
-            // 
-            // colKhachHang
-            // 
-            this.colKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colKhachHang.HeaderText = "Nhà Cung Cấp";
-            this.colKhachHang.Name = "colKhachHang";
-            // 
-            // colNo
-            // 
-            this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colNo.HeaderText = "Nợ";
-            this.colNo.Name = "colNo";
-            this.colNo.Width = 55;
-            // 
-            // colTongTien
-            // 
-            this.colTongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colTongTien.HeaderText = "Tổng Tiền";
-            this.colTongTien.Name = "colTongTien";
-            this.colTongTien.Width = 101;
-            // 
             // ucBaoCaoNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucBaoCaoNhapHang";
             this.Size = new System.Drawing.Size(957, 586);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPhieuXuat)).EndInit();

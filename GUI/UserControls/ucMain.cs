@@ -39,6 +39,13 @@ namespace GUI
         TabPage tabBaoCaoBanHang;
         TabPage tabBaoCaoNhapHang;
         TabPage tabTonKho;
+        TabPage tabNhanBaoHanh;
+        TabPage tabGuiBaoHanh;
+        TabPage tabBaoCaoBaoHanh;
+        TabPage tabNhanVien;
+        TabPage tabDoanhthu;
+        TabPage tabLoiNhuan;
+        TabPage tabNhapHang;
 
         public static ucMain GetInstance
         {
@@ -223,6 +230,24 @@ namespace GUI
                         tabControlMain.SelectedTab = tabBaoCaoBanHang;
                     }
                     break;
+                case ChucNang.NhapHang:
+                    strTenTabpage = "Nhập Hàng";
+                    if (!tabControlMain.Contains(tabNhapHang))
+                    {
+                        tabNhapHang = new TabPage(strTenTabpage);
+                        ucNhapHang _ucNhapHang = new ucNhapHang();
+                        tabNhapHang.Controls.Add(_ucNhapHang);
+                        _ucNhapHang.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabNhapHang);
+                        tabControlMain.SelectedTab = tabNhapHang;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabNhapHang;
+                    }
+                    break;
                 case ChucNang.NhaCungCap:
                     strTenTabpage = "Nhà Cung Cấp";
                     if (!tabControlMain.Contains(tabNhaCungCap))
@@ -295,6 +320,114 @@ namespace GUI
                         tabControlMain.SelectedTab = tabTonKho;
                     }
                     break;
+                case ChucNang.NhanBaoHanh:
+                    strTenTabpage = "Nhận Bảo Hành";
+                    if (!tabControlMain.Contains(tabNhanBaoHanh))
+                    {
+                        tabNhanBaoHanh = new TabPage(strTenTabpage);
+                        ucNhanBaoHanh _ucNhanBaoHanh = new ucNhanBaoHanh();
+                        tabNhanBaoHanh.Controls.Add(_ucNhanBaoHanh);
+                        _ucNhanBaoHanh.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabNhanBaoHanh);
+                        tabControlMain.SelectedTab = tabNhanBaoHanh;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabNhanBaoHanh;
+                    }
+                    break;
+                case ChucNang.GuiBaoHanh:
+                    strTenTabpage = "Gửi Bảo Hành";
+                    if (!tabControlMain.Contains(tabGuiBaoHanh))
+                    {
+                        tabGuiBaoHanh = new TabPage(strTenTabpage);
+                        ucGuiBaoHanh _ucGuiBaoHanh = new ucGuiBaoHanh();
+                        tabGuiBaoHanh.Controls.Add(_ucGuiBaoHanh);
+                        _ucGuiBaoHanh.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabGuiBaoHanh);
+                        tabControlMain.SelectedTab = tabGuiBaoHanh;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabGuiBaoHanh;
+                    }
+                    break;
+                case ChucNang.BaoCaoBaoHanh:
+                    strTenTabpage = "Báo Cáo Bảo Hành";
+                    if (!tabControlMain.Contains(tabBaoCaoBaoHanh))
+                    {
+                        tabBaoCaoBaoHanh = new TabPage(strTenTabpage);
+                        ucBaoCaoBaoHanh _ucBaoCaoBaoHanh = new ucBaoCaoBaoHanh();
+                        tabBaoCaoBaoHanh.Controls.Add(_ucBaoCaoBaoHanh);
+                        _ucBaoCaoBaoHanh.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabBaoCaoBaoHanh);
+                        tabControlMain.SelectedTab = tabBaoCaoBaoHanh;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabBaoCaoBaoHanh;
+                    }
+                    break;
+                case ChucNang.NhanVien:
+                    strTenTabpage = "Nhân Viên";
+                    if (!tabControlMain.Contains(tabNhanVien))
+                    {
+                        tabNhanVien = new TabPage(strTenTabpage);
+                        ucNhanVien _ucNhanVien = new ucNhanVien();
+                        tabNhanVien.Controls.Add(_ucNhanVien);
+                        _ucNhanVien.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabNhanVien);
+                        tabControlMain.SelectedTab = tabNhanVien;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabNhanVien;
+                    }
+                    break;
+                case ChucNang.DoanhThu:
+                    strTenTabpage = "Doanh Thu";
+                    if (!tabControlMain.Contains(tabDoanhthu))
+                    {
+                        tabDoanhthu = new TabPage(strTenTabpage);
+                        ucDoanhThu _ucDoanhThu = new ucDoanhThu();
+                        tabDoanhthu.Controls.Add(_ucDoanhThu);
+                        _ucDoanhThu.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabDoanhthu);
+                        tabControlMain.SelectedTab = tabDoanhthu;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabDoanhthu;
+                    }
+                    break;
+                case ChucNang.LoiNhuan:
+                    strTenTabpage = "Lợi Nhuận";
+                    if (!tabControlMain.Contains(tabLoiNhuan))
+                    {
+                        tabLoiNhuan = new TabPage(strTenTabpage);
+                        ucLoiNhuan _ucLoiNhuan = new ucLoiNhuan();
+                        tabLoiNhuan.Controls.Add(_ucLoiNhuan);
+                        _ucLoiNhuan.Dock = DockStyle.Fill;
+
+
+                        tabControlMain.TabPages.Add(tabLoiNhuan);
+                        tabControlMain.SelectedTab = tabLoiNhuan;
+                    }
+                    else
+                    {
+                        tabControlMain.SelectedTab = tabLoiNhuan;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -353,6 +486,41 @@ namespace GUI
         private void btnTonKho_Click(object sender, EventArgs e)
         {
             TaoTabpage(ChucNang.TonKho);
+        }
+
+        private void btnNhanBaoHanh_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.NhanBaoHanh);
+        }
+
+        private void btnGuiBaoHanh_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.GuiBaoHanh);
+        }
+
+        private void btnBaoCaoBaoHanh_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.BaoCaoBaoHanh);
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.NhanVien);
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.DoanhThu);
+        }
+
+        private void btnLoiNhuan_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.LoiNhuan);
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.NhapHang);
         }
     }
 }
