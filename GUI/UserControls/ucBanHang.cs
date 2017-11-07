@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BUS;
 using DTO;
 using System.Collections;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -44,18 +45,15 @@ namespace GUI
 
         private void ucBanHang_Load(object sender, EventArgs e)
         {
-            Setup();
-            LoadDatabase();
+            CaiDat();
+            TaiDuLieu();
         }
 
-        private void Setup()
+        private void CaiDat()
         {
             // cài đặt datagrid
             dgvKhachHang.AutoGenerateColumns = false;
-            dgvKhachHang.AllowUserToAddRows = false;
             dgvSanPham.AutoGenerateColumns = false;
-            dgvSanPham.AllowUserToAddRows = false;
-            dgvBanHang.AllowUserToAddRows = false;
 
             // ẩn cột không cần thiết
             dgvSanPham.Columns["colMaSP"].Visible = false;
@@ -67,7 +65,7 @@ namespace GUI
             cboHinhThucTra.SelectedIndex = 0;
         }
 
-        private void LoadDatabase()
+        private void TaiDuLieu()
         {
             dtKhachHang = _KhachHangBUS.LayBangKhachHang();
             dvKhachHang = new DataView(dtKhachHang);
@@ -75,10 +73,10 @@ namespace GUI
             dtSanPham = _SanPhamBUS.LayBangSanPham();
             dvSanPham = new DataView(dtSanPham);
             dgvSanPham.DataSource = dvSanPham;
-            LoadHashTableSP();
+            TaiHashTableSP();
         }
 
-        private void LoadHashTableSP()
+        private void TaiHashTableSP()
         {
             htSanPham = new Hashtable();
             foreach (DataRow dr in dtSanPham.Rows)
@@ -116,7 +114,7 @@ namespace GUI
                 txtSL.Text = "1";
                 txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaTien"].Value.ToString());
-                txtDonGia.Text = string.Format("{0:#,###} VNĐ", lDonGia);
+                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
                 strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
@@ -125,7 +123,7 @@ namespace GUI
         {
             if (txtTenSP.Text != string.Empty)
             {
-                if (txtSL.Text != string.Empty && Convert.ToInt64(txtSL.Text.Replace(".", "").Replace("VNĐ", "")) > 0)
+                if (txtSL.Text != string.Empty && Utilities.ChuyenVNDSangSo(txtSL.Text) > 0)
                 {
                     ThemSanPhamVaoHoaDon();
                     TinhTongTien();
@@ -188,7 +186,7 @@ namespace GUI
             {
                 txtTenSP.Text = dgvBanHang.Rows[e.RowIndex].Cells[1].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvBanHang.Rows[e.RowIndex].Cells[2].Value.ToString());
-                txtDonGia.Text = string.Format("{0:#,###} VNĐ", lDonGia);
+                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
                 txtSL.Text = dgvBanHang.Rows[e.RowIndex].Cells[3].Value.ToString();
                 strMaSP = dgvBanHang.SelectedRows[0].Cells[0].Value.ToString();
             }
@@ -231,7 +229,7 @@ namespace GUI
             {
                 ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
             }
-            txtTongCong.Text = string.Format("{0:#,###} VNĐ", ltongTien);
+            txtTongCong.Text = Utilities.ChuyenSoSangVND(ltongTien);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -289,7 +287,7 @@ namespace GUI
             //=== Thêm phiếu xuất
             PhieuXuatDTO phieuXuat = new PhieuXuatDTO();
             phieuXuat.MaKhachHang = strMaKH;
-            phieuXuat.TongTien = Convert.ToInt64(txtTongCong.Text.Replace(",", "").Replace("VNĐ", ""));
+            phieuXuat.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             phieuXuat.MaNVLap = Program.MA_NV;
 
@@ -316,7 +314,7 @@ namespace GUI
 
             MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LamSach(); // làm sạch controls
-            LoadDatabase(); // tải lại dữ liệu
+            TaiDuLieu(); // tải lại dữ liệu
         }
 
         private void dgvBanHang_KeyUp(object sender, KeyEventArgs e)

@@ -42,8 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.colTenHangSanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,6 +56,8 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -62,7 +66,7 @@
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 201);
+            this.groupBox2.Location = new System.Drawing.Point(4, 201);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(300, 313);
             this.groupBox2.TabIndex = 1;
@@ -71,28 +75,28 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(9, 98);
+            this.label4.BackColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(10, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 1);
+            this.label4.Size = new System.Drawing.Size(280, 1);
             this.label4.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(72, 62);
+            this.textBox2.Location = new System.Drawing.Point(75, 62);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 26);
+            this.textBox2.Size = new System.Drawing.Size(217, 26);
             this.textBox2.TabIndex = 8;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(72, 30);
+            this.textBox1.Location = new System.Drawing.Point(75, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 26);
+            this.textBox1.Size = new System.Drawing.Size(217, 26);
             this.textBox1.TabIndex = 7;
             // 
             // label2
@@ -115,27 +119,27 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(72, 189);
+            this.button3.Location = new System.Drawing.Point(75, 188);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 34);
+            this.button3.Size = new System.Drawing.Size(217, 34);
             this.button3.TabIndex = 2;
             this.button3.Text = "Sửa";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(72, 149);
+            this.button2.Location = new System.Drawing.Point(75, 148);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 34);
+            this.button2.Size = new System.Drawing.Size(217, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Xoá";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 109);
+            this.button1.Location = new System.Drawing.Point(75, 108);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 34);
+            this.button1.Size = new System.Drawing.Size(217, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
@@ -148,9 +152,9 @@
             this.dgvKhachHang.BackgroundColor = System.Drawing.Color.White;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colTenHangSanXuat,
+            this.colTenLoai,
             this.colGhiChu});
-            this.dgvKhachHang.Location = new System.Drawing.Point(310, 4);
+            this.dgvKhachHang.Location = new System.Drawing.Point(311, 4);
             this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhachHang.MultiSelect = false;
             this.dgvKhachHang.Name = "dgvKhachHang";
@@ -159,7 +163,7 @@
             this.dgvKhachHang.RowTemplate.ReadOnly = true;
             this.dgvKhachHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(498, 510);
+            this.dgvKhachHang.Size = new System.Drawing.Size(497, 510);
             this.dgvKhachHang.TabIndex = 2;
             // 
             // groupBox1
@@ -168,7 +172,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -190,9 +194,9 @@
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimKiem.Location = new System.Drawing.Point(72, 66);
+            this.btnTimKiem.Location = new System.Drawing.Point(75, 66);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(219, 34);
+            this.btnTimKiem.Size = new System.Drawing.Size(217, 34);
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -201,17 +205,17 @@
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(72, 34);
+            this.textBox4.Location = new System.Drawing.Point(76, 34);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 26);
+            this.textBox4.Size = new System.Drawing.Size(217, 26);
             this.textBox4.TabIndex = 1;
             // 
-            // colTenHangSanXuat
+            // colTenLoai
             // 
-            this.colTenHangSanXuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenHangSanXuat.HeaderText = "Tên Hãng Sản Xuất";
-            this.colTenHangSanXuat.Name = "colTenHangSanXuat";
-            this.colTenHangSanXuat.ReadOnly = true;
+            this.colTenLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenLoai.HeaderText = "Tên Hãng Sản Xuất";
+            this.colTenLoai.Name = "colTenLoai";
+            this.colTenLoai.ReadOnly = true;
             // 
             // colGhiChu
             // 
@@ -220,6 +224,24 @@
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.ReadOnly = true;
             this.colGhiChu.Width = 89;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(75, 228);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 34);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Lưu";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(188, 228);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 34);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Huỷ";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // ucHangSanXuat
             // 
@@ -253,11 +275,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenHangSanXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ChiTietPhieuXuatDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
+    <Compile Include="NhaCungCapDTO.cs" />
     <Compile Include="PhieuXuatDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

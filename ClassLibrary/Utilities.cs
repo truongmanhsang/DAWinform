@@ -20,5 +20,13 @@ namespace ClassLibrary
             }
             return strSerial.ToString();
         }
+        public static string ChuyenSoSangVND(long iSo)
+        {
+            return string.Format("{0:#,###} VNĐ", iSo);
+        }
+        public static long ChuyenVNDSangSo(string strVND)
+        {
+            return Convert.ToInt64(strVND.Replace(".", "").Replace(",", "").Replace("VNĐ",""));
+        }
     }
 }

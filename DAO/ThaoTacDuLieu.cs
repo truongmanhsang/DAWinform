@@ -13,16 +13,16 @@ namespace DAO
         public static string strConnection = @"Data Source=.;Initial Catalog=QLBH;Integrated Security=True";
         public static SqlConnection TaoVaMoKetNoi()
         {
-            try
+            //try
             {
                 SqlConnection conn = new SqlConnection(strConnection);
                 conn.Open();
                 return conn;
             }
-            catch
-            {
-                return null;
-            }
+            //catch
+            //{
+            //    return null;
+            //}
         }
         public static void DongKetNoi(SqlConnection conn)
         {

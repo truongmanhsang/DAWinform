@@ -30,7 +30,6 @@
         {
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.cbCMND = new System.Windows.Forms.CheckBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbTenKH = new System.Windows.Forms.CheckBox();
@@ -51,8 +49,8 @@
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.colTenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
@@ -63,7 +61,7 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(250, 323);
+            this.button5.Location = new System.Drawing.Point(250, 304);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(92, 34);
             this.button5.TabIndex = 12;
@@ -73,20 +71,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 97);
+            this.label3.Location = new System.Drawing.Point(6, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Số ĐT";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CMND";
             // 
             // label1
             // 
@@ -100,7 +89,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(149, 283);
+            this.button3.Location = new System.Drawing.Point(149, 264);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(193, 34);
             this.button3.TabIndex = 2;
@@ -110,7 +99,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(149, 243);
+            this.button2.Location = new System.Drawing.Point(149, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 34);
             this.button2.TabIndex = 1;
@@ -120,7 +109,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(149, 203);
+            this.button1.Location = new System.Drawing.Point(149, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 34);
             this.button1.TabIndex = 0;
@@ -185,15 +174,6 @@
             this.txtTenKH.Size = new System.Drawing.Size(193, 26);
             this.txtTenKH.TabIndex = 1;
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(149, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 26);
-            this.textBox2.TabIndex = 8;
-            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -206,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 129);
+            this.label4.Location = new System.Drawing.Point(6, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 18);
             this.label4.TabIndex = 6;
@@ -225,7 +205,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(149, 323);
+            this.button4.Location = new System.Drawing.Point(149, 304);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 34);
             this.button4.TabIndex = 11;
@@ -237,7 +217,7 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(149, 126);
+            this.richTextBox1.Location = new System.Drawing.Point(149, 94);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(193, 71);
             this.richTextBox1.TabIndex = 10;
@@ -271,7 +251,6 @@
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenKhachHang,
-            this.colCMND,
             this.colSoDT,
             this.colDiaChi});
             this.dgvKhachHang.Location = new System.Drawing.Point(360, 3);
@@ -290,7 +269,7 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(149, 94);
+            this.textBox3.Location = new System.Drawing.Point(149, 62);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(193, 26);
             this.textBox3.TabIndex = 9;
@@ -300,15 +279,14 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
@@ -320,6 +298,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin / Chức năng";
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(6, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(336, 1);
+            this.label5.TabIndex = 14;
+            // 
             // colTenKhachHang
             // 
             this.colTenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -327,15 +313,6 @@
             this.colTenKhachHang.HeaderText = "Tên Nhà Cung Cấp";
             this.colTenKhachHang.Name = "colTenKhachHang";
             this.colTenKhachHang.ReadOnly = true;
-            // 
-            // colCMND
-            // 
-            this.colCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colCMND.DataPropertyName = "CMND";
-            this.colCMND.HeaderText = "CMND";
-            this.colCMND.Name = "colCMND";
-            this.colCMND.ReadOnly = true;
-            this.colCMND.Width = 81;
             // 
             // colSoDT
             // 
@@ -380,7 +357,6 @@
 
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
@@ -391,7 +367,6 @@
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.CheckBox cbCMND;
         private System.Windows.Forms.TextBox txtTenKH;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbTenKH;
@@ -401,8 +376,8 @@
         private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
     }
