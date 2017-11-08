@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGhiSP = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -99,8 +99,8 @@
             // colThanhTien
             // 
             this.colThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle7.Format = "#,### VNĐ";
-            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Format = "#,### VNĐ";
+            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle4;
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
@@ -109,7 +109,7 @@
             // btnGhiSP
             // 
             this.btnGhiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGhiSP.Location = new System.Drawing.Point(415, 28);
+            this.btnGhiSP.Location = new System.Drawing.Point(422, 28);
             this.btnGhiSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhiSP.Name = "btnGhiSP";
             this.btnGhiSP.Size = new System.Drawing.Size(142, 60);
@@ -136,7 +136,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(155, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(162, 26);
             this.txtDonGia.TabIndex = 5;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -148,7 +148,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(320, 26);
+            this.txtTenSP.Size = new System.Drawing.Size(327, 26);
             this.txtTenSP.TabIndex = 1;
             // 
             // label9
@@ -194,7 +194,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(566, 129);
+            this.groupBox3.Size = new System.Drawing.Size(573, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông nhà cung cấp";
@@ -202,7 +202,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(417, 26);
+            this.btnThem.Location = new System.Drawing.Point(424, 26);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 60);
@@ -229,7 +229,7 @@
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.ReadOnly = true;
-            this.txtTenNCC.Size = new System.Drawing.Size(271, 26);
+            this.txtTenNCC.Size = new System.Drawing.Size(278, 26);
             this.txtTenNCC.TabIndex = 1;
             // 
             // txtDiaChi
@@ -240,7 +240,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(278, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -261,7 +261,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(271, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(278, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -363,7 +363,7 @@
             this.groupBox4.Controls.Add(this.txtSL);
             this.groupBox4.Location = new System.Drawing.Point(5, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(566, 95);
+            this.groupBox4.Size = new System.Drawing.Size(573, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thêm sản phẩm vào đơn hàng";
@@ -518,8 +518,8 @@
             // colGiaMua
             // 
             this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle8.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle6;
             this.colGiaMua.HeaderText = "Giá mua";
             this.colGiaMua.Name = "colGiaMua";
             this.colGiaMua.ReadOnly = true;
@@ -534,7 +534,7 @@
             this.groupBox2.Controls.Add(this.dgvNhaCungCap);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(482, 295);
+            this.groupBox2.Size = new System.Drawing.Size(482, 293);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm nhà cung cấp";
@@ -573,7 +573,7 @@
             this.dgvNhaCungCap.RowTemplate.ReadOnly = true;
             this.dgvNhaCungCap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 228);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 226);
             this.dgvNhaCungCap.TabIndex = 2;
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             // 
@@ -616,7 +616,7 @@
             this.groupBox5.Controls.Add(this.dgvNhapHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 238);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(568, 326);
+            this.groupBox5.Size = new System.Drawing.Size(572, 326);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách sản phẩm mua";
@@ -643,9 +643,10 @@
             this.dgvNhapHang.RowTemplate.ReadOnly = true;
             this.dgvNhapHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhapHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhapHang.Size = new System.Drawing.Size(562, 301);
+            this.dgvNhapHang.Size = new System.Drawing.Size(566, 301);
             this.dgvNhapHang.TabIndex = 6;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
+            this.dgvNhapHang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgvNhapHang_KeyUp);
             // 
             // colMaSanPham
             // 
@@ -663,8 +664,8 @@
             // colDonGia
             // 
             this.colDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.Format = "#,### VNĐ";
-            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Format = "#,### VNĐ";
+            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle5;
             this.colDonGia.HeaderText = "Đơn giá";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.ReadOnly = true;

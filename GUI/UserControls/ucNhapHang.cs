@@ -144,12 +144,6 @@ namespace GUI
             long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
             long iThanhTien = iDonGia * iSoLuong;
 
-            if (iSoLuong > iSoLuongConLai)
-            {
-                MessageBox.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}", iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             if (dgvNhapHang.Rows.Count > 0)
             {
                 foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
@@ -246,8 +240,8 @@ namespace GUI
                 chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
                 chitiet.Gia = Convert.ToInt64(dgvRow.Cells[2].Value.ToString());
 
-                // Update mã serial với số tháng bảo hành
-                //_SerialBUS.BatDauBaoHanh(chitiet.MaSanPham, chitiet.SoLuong, strMaPhieuXuat);
+                // Thêm số serial
+                _SerialBUS.ThemSoSerial(chitiet.MaSanPham, chitiet.SoLuong, strMaPhieuXuat);
 
                 dsChiTietSP.Add(chitiet);
             }
@@ -276,6 +270,16 @@ namespace GUI
             txtTongCong.Text = "";
 
             dgvNhapHang.Rows.Clear();
+        }
+
+        private void dgvNhapHang_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (dgvNhapHang.Rows.Count == 0)
+                txtTongCong.Text = "";
+            if (e.KeyCode == Keys.Delete && dgvNhapHang.Rows.Count > 0)
+            {
+                TinhTongTien();
+            }
         }
     }
 }

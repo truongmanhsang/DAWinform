@@ -18,5 +18,9 @@ namespace BUS
         {
             dao.BatDauBaoHanh(strMaSP, iSL, strMaPhieuXuat);
         }
+        public void ThemSoSerial(string strMaSP, int iSL, string strMaPhieu)
+        {
+            dao.ThemSoSerial(strMaSP, iSL, strMaPhieu);
+        }
     }
 }
