@@ -8,9 +8,9 @@ using System.Data;
 
 namespace BUS
 {
-    public class NhanVienBUS
+    public class clsNhanVien_BUS
     {
-        NhanVienDAO dao = new NhanVienDAO();
+        clsNhanVien_DAO dao = new clsNhanVien_DAO();
         public DataTable LayThongTinNV(string strTenDN)
         {
             return dao.LayThongTinNV(strTenDN);

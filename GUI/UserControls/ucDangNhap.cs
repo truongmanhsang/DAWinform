@@ -15,7 +15,7 @@ namespace GUI
     {
         public delegate void XuLyDangNhap();
         public event XuLyDangNhap xuLyDangNhap;
-        NhanVienBUS _NhanVienBUS = new NhanVienBUS();
+        clsNhanVien_BUS _NhanVienBUS = new clsNhanVien_BUS();
         public ucDangNhap()
         {
             InitializeComponent();

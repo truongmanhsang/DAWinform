@@ -9,14 +9,14 @@ using DTO;
 
 namespace BUS
 {
-    public class KhachHangBUS
+    public class clsKhachHang_BUS
     {
-        KhachHangDAO dao = new KhachHangDAO();
+        clsKhachHang_DAO dao = new clsKhachHang_DAO();
         public DataTable LayBangKhachHang()
         {
             return dao.LayBangKhachHang();
         }
-        public string ThemKhachHang(KhachHangDTO khachHang)
+        public string ThemKhachHang(clsKhachHang_DTO khachHang)
         {
             return dao.ThemKhachHang(khachHang);
         }

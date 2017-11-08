@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using BUS;
 using System.Collections;
 using ClassLibrary;
+using DTO;
 
 namespace GUI
 {
     public partial class ucNhapHang : UserControl
     {
-        SanPhamBUS _SanPhamBUS = new SanPhamBUS();
-        NhaCungCapBUS _NhaCungCapBUS = new NhaCungCapBUS();
+        clsSanPham_BUS _SanPhamBUS = new clsSanPham_BUS();
+        clsNhaCungCap_BUS _NhaCungCapBUS = new clsNhaCungCap_BUS();
+        clsPhieuNhap_BUS _PhieuNhapBUS = new clsPhieuNhap_BUS();
+        clsChiTietPhieuNhap_BUS _ChiTietPhieuNhapBUS = new clsChiTietPhieuNhap_BUS();
+        clsSerial_BUS _SerialBUS = new clsSerial_BUS();
 
         DataTable dtNhaCungCap;
         DataTable dtSanPham;
@@ -24,6 +28,8 @@ namespace GUI
         Hashtable htSanPham;
         private string strMaNCC;
         private string strMaSP;
+
+        bool bThemNCC = false;
 
         public ucNhapHang()
         {
@@ -171,6 +177,105 @@ namespace GUI
                 ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
             }
             txtTongCong.Text = Utilities.ChuyenSoSangVND(ltongTien);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            btnThem.Text = btnThem.Text == "Thêm" ? "Huỷ" : "Thêm";
+            txtTenNCC.Focus();
+            txtTenNCC.Text = "";
+            txtSoDT.Text = "";
+            txtDiaChi.Text = "";
+
+            txtTenNCC.ReadOnly = !txtTenNCC.ReadOnly;
+            txtSoDT.ReadOnly = !txtSoDT.ReadOnly;
+            txtDiaChi.ReadOnly = !txtDiaChi.ReadOnly;
+
+            bThemNCC = !bThemNCC;
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (txtTenNCC.Text != "" && txtSoDT.Text != "" && txtDiaChi.Text != "")
+            {
+                if (dgvNhapHang.Rows.Count > 0)
+                {
+                    TaoPhieuNhap();
+
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn sản phẩm để nhập, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin nhà cung cấp, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void TaoPhieuNhap()
+        {
+            if (bThemNCC) // nếu đúng thì thêm nhà cung cấp này vào csdl trước rồi lập hoá đơn
+            {
+                clsNhaCungCap_DTO nhaCungCap = new clsNhaCungCap_DTO();
+                nhaCungCap.TenNhaCungCap = txtTenNCC.Text;
+                nhaCungCap.SoDT = txtSoDT.Text;
+                nhaCungCap.DiaChi = txtDiaChi.Text;
+
+                strMaNCC = _NhaCungCapBUS.ThemNCC(nhaCungCap);
+            }
+
+            //=== Thêm phiếu nhập
+            clsPhieuNhap_DTO phieuNhap = new clsPhieuNhap_DTO();
+            phieuNhap.MaNhaCungCap = strMaNCC;
+            phieuNhap.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
+            phieuNhap.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
+            phieuNhap.MaNVLap = Program.MA_NV;
+
+            string strMaPhieuXuat = _PhieuNhapBUS.TaoPhieuNhap(phieuNhap); // tạo phiếu nhập và lấy mã
+
+            //== Thêm chi tiết phiếu nhập
+            List<clsChiTietPhieuNhap_DTO> dsChiTietSP = new List<clsChiTietPhieuNhap_DTO>(); // danh sách các sản phẩm trong hoá đơn
+            foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
+            {
+                DataRow drSP = (DataRow)htSanPham[dgvRow.Cells[0].Value.ToString()]; // lấy mã sp của từng dòng trong dgvBanHang
+
+                clsChiTietPhieuNhap_DTO chitiet = new clsChiTietPhieuNhap_DTO();
+                chitiet.MaSanPham = dgvRow.Cells[0].Value.ToString();
+                chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
+                chitiet.Gia = Convert.ToInt64(dgvRow.Cells[2].Value.ToString());
+
+                // Update mã serial với số tháng bảo hành
+                //_SerialBUS.BatDauBaoHanh(chitiet.MaSanPham, chitiet.SoLuong, strMaPhieuXuat);
+
+                dsChiTietSP.Add(chitiet);
+            }
+
+            _ChiTietPhieuNhapBUS.TaoChiTieuPhieuNhap(dsChiTietSP, strMaPhieuXuat);
+
+            MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LamSach(); // làm sạch controls
+            TaiDuLieu(); // tải lại dữ liệu
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            LamSach();
+        }
+        private void LamSach()
+        {
+            txtTenNCC.Text = "";
+            txtSoDT.Text = "";
+            txtDiaChi.Text = "";
+
+            txtTenSP.Text = "";
+            txtDonGia.Text = "";
+            txtSL.Text = "1";
+
+            txtTongCong.Text = "";
+
+            dgvNhapHang.Rows.Clear();
         }
     }
 }

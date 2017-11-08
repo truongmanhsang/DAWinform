@@ -6,52 +6,38 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class KhachHangDTO
+    public class clsNhaCungCap_DTO
     {
-        private string _maKhachHang;
-        private string _tenKhachHang;
-        private string _cMND;
+        private string _maNhaCungCap;
+        private string _tenNhaCungCap;
         private string _soDT;
         private string _diaChi;
         private string _ghiChu;
         private string _trangThai;
 
-        public string MaKhachHang
+        public string MaNhaCungCap
         {
             get
             {
-                return _maKhachHang;
+                return _maNhaCungCap;
             }
 
             set
             {
-                _maKhachHang = value;
+                _maNhaCungCap = value;
             }
         }
 
-        public string TenKhachHang
+        public string TenNhaCungCap
         {
             get
             {
-                return _tenKhachHang;
+                return _tenNhaCungCap;
             }
 
             set
             {
-                _tenKhachHang = value;
-            }
-        }
-
-        public string CMND
-        {
-            get
-            {
-                return _cMND;
-            }
-
-            set
-            {
-                _cMND = value;
+                _tenNhaCungCap = value;
             }
         }
 

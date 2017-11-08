@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class SanPhamDAO
+    public class clsSanPham_DAO
     {
         public DataTable LayBangSanPham()
         {

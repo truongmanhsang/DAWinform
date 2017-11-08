@@ -8,9 +8,9 @@ using System.Data;
 
 namespace BUS
 {
-    public class SanPhamBUS
+    public class clsSanPham_BUS
     {
-        SanPhamDAO dao = new SanPhamDAO();
+        clsSanPham_DAO dao = new clsSanPham_DAO();
         public DataTable LayBangSanPham()
         {
             return dao.LayBangSanPham();

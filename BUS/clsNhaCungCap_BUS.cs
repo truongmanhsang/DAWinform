@@ -5,15 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using System.Data;
+using DTO;
 
 namespace BUS
 {
-    public class NhaCungCapBUS
+    public class clsNhaCungCap_BUS
     {
-        NhaCungCapDAO dao = new NhaCungCapDAO();
+        clsNhaCungCap_DAO dao = new clsNhaCungCap_DAO();
         public DataTable LayBangNhaCungCap()
         {
             return dao.LayBangNhaCungCap();
+        }
+        public string ThemNCC(clsNhaCungCap_DTO NCC)
+        {
+            return dao.ThemNCC(NCC);
         }
     }
 }

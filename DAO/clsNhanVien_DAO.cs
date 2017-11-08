@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class NhanVienDAO
+    public class clsNhanVien_DAO
     {
         public DataTable LayThongTinNV(string strTenDN)
         {

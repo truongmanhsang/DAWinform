@@ -8,10 +8,10 @@ using DTO;
 
 namespace BUS
 {
-    public class PhieuXuatBUS
+    public class clsPhieuXuat_BUS
     {
-        PhieuXuatDAO dao = new PhieuXuatDAO();
-        public string TaoPhieuXuat(PhieuXuatDTO phieuXuat)
+        clsPhieuXuat_DAO dao = new clsPhieuXuat_DAO();
+        public string TaoPhieuXuat(clsPhieuXuat_DTO phieuXuat)
         {
             return dao.TaoPhieuXuat(phieuXuat);
         }

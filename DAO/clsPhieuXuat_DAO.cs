@@ -8,9 +8,9 @@ using DTO;
 
 namespace DAO
 {
-    public class PhieuXuatDAO
+    public class clsPhieuXuat_DAO
     {
-        public string TaoPhieuXuat(PhieuXuatDTO phieuXuat)
+        public string TaoPhieuXuat(clsPhieuXuat_DTO phieuXuat)
         {
             int iResult = 0;
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();

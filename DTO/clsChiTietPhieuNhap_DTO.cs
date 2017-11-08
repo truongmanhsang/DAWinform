@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChiTietPhieuXuatDTO
+    public class clsChiTietPhieuNhap_DTO
     {
-        private string _maPhieuXuat;
+        private string _maPhieuNhap;
         private string _maSanPham;
         private int _soLuong;
         private long _gia;
 
-        public string MaPhieuXuat
+        public string MaPhieuNhap
         {
             get
             {
-                return _maPhieuXuat;
+                return _maPhieuNhap;
             }
 
             set
             {
-                _maPhieuXuat = value;
+                _maPhieuNhap = value;
             }
         }
 

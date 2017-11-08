@@ -8,13 +8,13 @@ using DTO;
 
 namespace DAO
 {
-    public class ChiTietPhieuXuatDAO
+    public class clsChiTietPhieuXuat_DAO
     {
-        SanPhamDAO _SanPhamDAO = new SanPhamDAO();
-        public void TaoChiTieuPhieuXuat(List<ChiTietPhieuXuatDTO> dsChiTiet, string strMaPhieuXuat)
+        clsSanPham_DAO _SanPhamDAO = new clsSanPham_DAO();
+        public void TaoChiTieuPhieuXuat(List<clsChiTietPhieuXuat_DTO> dsChiTiet, string strMaPhieuXuat)
         {
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
-            foreach (ChiTietPhieuXuatDTO chiTiet in dsChiTiet)
+            foreach (clsChiTietPhieuXuat_DTO chiTiet in dsChiTiet)
             {
                 string sqlInsertChitiet = string.Format("insert into ChiTietPhieuXuat values ('{0}','{1}','{2}','{3}')", strMaPhieuXuat, chiTiet.MaSanPham, chiTiet.SoLuong, chiTiet.Gia);
 

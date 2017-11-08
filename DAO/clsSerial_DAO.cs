@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 
 namespace DAO
 {
-    public class SerialDAO
+    public class clsSerial_DAO
     {
-        SanPhamDAO _SanPhamDAO = new SanPhamDAO();
+        clsSanPham_DAO _SanPhamDAO = new clsSanPham_DAO();
         public string LayMaSerial(string strMaSP, int iSoThangBH) // Lấy mã serial cùng với update số tháng bảo hành
         {
             string strSerial = string.Empty;

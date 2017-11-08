@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class ucKhachHang : UserControl
     {
-        KhachHangBUS bus = new KhachHangBUS();
+        clsKhachHang_BUS bus = new clsKhachHang_BUS();
         DataTable dt = new DataTable();
         DataView dav;
         public ucKhachHang()

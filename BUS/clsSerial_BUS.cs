@@ -7,9 +7,9 @@ using DAO;
 
 namespace BUS
 {
-    public class SerialBUS
+    public class clsSerial_BUS
     {
-        SerialDAO dao = new SerialDAO();
+        clsSerial_DAO dao = new clsSerial_DAO();
         public string LayMaSerial(string strMaSP, int iSoThangBH)
         {
             return dao.LayMaSerial(strMaSP, iSoThangBH);

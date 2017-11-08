@@ -40,15 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChiTietPhieuXuatDAO.cs" />
-    <Compile Include="NhaCungCapDAO.cs" />
-    <Compile Include="PhieuXuatDAO.cs" />
+    <Compile Include="clsChiTietPhieuNhap_DAO.cs" />
+    <Compile Include="clsChiTietPhieuXuat_DAO.cs" />
+    <Compile Include="clsNhaCungCap_DAO.cs" />
+    <Compile Include="clsPhieuNhap_DAO.cs" />
+    <Compile Include="clsPhieuXuat_DAO.cs" />
     <Compile Include="ThaoTacDuLieu.cs" />
-    <Compile Include="KhachHangDAO.cs" />
-    <Compile Include="NhanVienDAO.cs" />
+    <Compile Include="clsKhachHang_DAO.cs" />
+    <Compile Include="clsNhanVien_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanPhamDAO.cs" />
-    <Compile Include="SerialDAO.cs" />
+    <Compile Include="clsSanPham_DAO.cs" />
+    <Compile Include="clsSerial_DAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">

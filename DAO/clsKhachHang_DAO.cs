@@ -10,7 +10,7 @@ using DTO;
 
 namespace DAO
 {
-    public class KhachHangDAO
+    public class clsKhachHang_DAO
     {
         public DataTable LayBangKhachHang()
         {
@@ -18,7 +18,7 @@ namespace DAO
             DataTable dt = ThaoTacDuLieu.LayBang(query);
             return dt;
         }
-        public string ThemKhachHang(KhachHangDTO khachHang) // thêm và lấy id kh về để thêm vào hoá đơn
+        public string ThemKhachHang(clsKhachHang_DTO khachHang) // thêm và lấy id kh về để thêm vào hoá đơn
         {
             string strMaKH = "KH" + (ThaoTacDuLieu.DemSoDongCuaBang("KhachHang") + 1);
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();

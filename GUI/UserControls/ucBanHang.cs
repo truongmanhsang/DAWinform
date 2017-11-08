@@ -17,11 +17,11 @@ namespace GUI
     public partial class ucBanHang : UserControl
     {
         // các bus cần thiết
-        private KhachHangBUS _KhachHangBUS = new KhachHangBUS();
-        private SanPhamBUS _SanPhamBUS = new SanPhamBUS();
-        private SerialBUS _SerialBUS = new SerialBUS();
-        private PhieuXuatBUS _PhieuXuatBUS = new PhieuXuatBUS();
-        private ChiTietPhieuXuatBUS _ChiTietPhieuXuatBUS = new ChiTietPhieuXuatBUS();
+        private clsKhachHang_BUS _KhachHangBUS = new clsKhachHang_BUS();
+        private clsSanPham_BUS _SanPhamBUS = new clsSanPham_BUS();
+        private clsSerial_BUS _SerialBUS = new clsSerial_BUS();
+        private clsPhieuXuat_BUS _PhieuXuatBUS = new clsPhieuXuat_BUS();
+        private clsChiTietPhieuXuat_BUS _ChiTietPhieuXuatBUS = new clsChiTietPhieuXuat_BUS();
 
         string strMaSP = string.Empty; // Mã để nhận biết có đang chọn 1 sản phẩm ko
         string strMaKH = string.Empty; // Mã để nhận biết có đang chọn 1 sản phẩm ko
@@ -276,7 +276,7 @@ namespace GUI
         {
             if (bThemKH) // nếu đúng thì thêm khách hàng này vào csdl trước rồi lập hoá đơn
             {
-                KhachHangDTO khachHang = new KhachHangDTO();
+                clsKhachHang_DTO khachHang = new clsKhachHang_DTO();
                 khachHang.TenKhachHang = txtTenKH.Text;
                 khachHang.SoDT = txtSoDT.Text;
                 khachHang.DiaChi = txtDiaChi.Text;
@@ -285,7 +285,7 @@ namespace GUI
             }
 
             //=== Thêm phiếu xuất
-            PhieuXuatDTO phieuXuat = new PhieuXuatDTO();
+            clsPhieuXuat_DTO phieuXuat = new clsPhieuXuat_DTO();
             phieuXuat.MaKhachHang = strMaKH;
             phieuXuat.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
@@ -294,12 +294,12 @@ namespace GUI
             string strMaPhieuXuat = _PhieuXuatBUS.TaoPhieuXuat(phieuXuat); // tạo phiếu xuất và lấy mã
 
             //== Thêm chi tiết phiếu xuất
-            List<ChiTietPhieuXuatDTO> dsChiTietSP = new List<ChiTietPhieuXuatDTO>(); // danh sách các sản phẩm trong hoá đơn
+            List<clsChiTietPhieuXuat_DTO> dsChiTietSP = new List<clsChiTietPhieuXuat_DTO>(); // danh sách các sản phẩm trong hoá đơn
             foreach (DataGridViewRow dgvRow in dgvBanHang.Rows)
             {
                 DataRow drSP = (DataRow)htSanPham[dgvRow.Cells[0].Value.ToString()]; // lấy mã sp của từng dòng trong dgvBanHang
 
-                ChiTietPhieuXuatDTO chitiet = new ChiTietPhieuXuatDTO();
+                clsChiTietPhieuXuat_DTO chitiet = new clsChiTietPhieuXuat_DTO();
                 chitiet.MaSanPham = dgvRow.Cells[0].Value.ToString();
                 chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
                 chitiet.Gia = Convert.ToInt64(dgvRow.Cells[2].Value.ToString());
