@@ -19,5 +19,9 @@ namespace BUS
         {
             return dao.LayThongTinNV(strTenDN, strMatKhau);
         }
+        public DataTable LayBangNhanVien()
+        {
+            return dao.LayBangNhanVien();
+        }
     }
 }

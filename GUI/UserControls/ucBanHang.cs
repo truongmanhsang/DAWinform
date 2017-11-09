@@ -287,6 +287,10 @@ namespace GUI
             //=== Thêm phiếu xuất
             clsPhieuXuat_DTO phieuXuat = new clsPhieuXuat_DTO();
             phieuXuat.MaKhachHang = strMaKH;
+            if (cboHinhThucTra.SelectedIndex == 1) // 0 là tiền mặt, 1 là công nợ
+            {
+                phieuXuat.TienNo = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
+            }
             phieuXuat.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             phieuXuat.MaNVLap = Program.MA_NV;

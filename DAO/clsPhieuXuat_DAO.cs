@@ -5,11 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DTO;
+using System.Data;
 
 namespace DAO
 {
     public class clsPhieuXuat_DAO
     {
+        public DataTable LayBangPhieuXuat()
+        {
+            string query = "select * from PhieuXuat where TrangThai=1";
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
+        }
         public string TaoPhieuXuat(clsPhieuXuat_DTO phieuXuat)
         {
             int iResult = 0;
@@ -20,6 +27,16 @@ namespace DAO
             iResult = cmd.ExecuteNonQuery();
             ThaoTacDuLieu.DongKetNoi(conn);
             return strMaPhieu;
+        }
+        public bool TraTienNo(string strMaPhieu)
+        {
+            string query = string.Format("update PhieuXuat set TienNo=0 where MaPhieuXuat='{0}'",strMaPhieu);
+            return ThaoTacDuLieu.ThucThi(query);
+        }
+        public bool XoaPhieuXuat(string strMaPhieu)
+        {
+            string query = string.Format("update PhieuXuat set TrangThai=0 where MaPhieuXuat='{0}'", strMaPhieu);
+            return ThaoTacDuLieu.ThucThi(query);
         }
     }
 }
