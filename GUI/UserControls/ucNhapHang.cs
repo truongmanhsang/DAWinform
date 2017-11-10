@@ -46,6 +46,8 @@ namespace GUI
         {
             dgvNhaCungCap.AutoGenerateColumns = false;
             dgvSanPham.AutoGenerateColumns = false;
+
+            cboHinhThucTra.SelectedIndex = 0;
         }
 
         private void TaiDuLieu()
@@ -95,7 +97,7 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                txtSL.Text = "1";
+                numSL.Value = 1;
                 txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaMua"].Value.ToString());
                 txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
@@ -110,7 +112,7 @@ namespace GUI
                 txtTenSP.Text = dgvNhapHang.Rows[e.RowIndex].Cells[1].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvNhapHang.Rows[e.RowIndex].Cells[2].Value.ToString());
                 txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
-                txtSL.Text = dgvNhapHang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                numSL.Value = Convert.ToDecimal(dgvNhapHang.Rows[e.RowIndex].Cells[3].Value.ToString());
                 strMaSP = dgvNhapHang.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
@@ -119,7 +121,7 @@ namespace GUI
         {
             if (txtTenSP.Text != string.Empty)
             {
-                if (txtSL.Text != string.Empty && Utilities.ChuyenVNDSangSo(txtSL.Text) > 0)
+                if (numSL.Value > 0)
                 {
                     ThemSanPhamVaoHoaDon();
                     TinhTongTien();
@@ -140,9 +142,9 @@ namespace GUI
 
             string strTenSP = txtTenSP.Text;
             long iDonGia = Convert.ToInt64(dr["GiaBan"]);
-            long iSoLuong = Convert.ToInt64(txtSL.Text);
+            decimal iSoLuong = numSL.Value;
             long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
-            long iThanhTien = iDonGia * iSoLuong;
+            decimal iThanhTien = iDonGia * iSoLuong;
 
             if (dgvNhapHang.Rows.Count > 0)
             {
@@ -223,6 +225,8 @@ namespace GUI
             //=== Thêm phiếu nhập
             clsPhieuNhap_DTO phieuNhap = new clsPhieuNhap_DTO();
             phieuNhap.MaNhaCungCap = strMaNCC;
+            if (cboHinhThucTra.SelectedIndex == 1)
+                phieuNhap.TienNo = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuNhap.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuNhap.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             phieuNhap.MaNVLap = Program.MA_NV;
@@ -265,7 +269,7 @@ namespace GUI
 
             txtTenSP.Text = "";
             txtDonGia.Text = "";
-            txtSL.Text = "1";
+            numSL.Value = 1;
 
             txtTongCong.Text = "";
 

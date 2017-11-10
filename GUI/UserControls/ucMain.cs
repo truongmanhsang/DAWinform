@@ -522,5 +522,14 @@ namespace GUI
         {
             TaoTabpage(ChucNang.NhapHang);
         }
+
+        private void tabControlMain_TabIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
+        {       
+        }
     }
 }

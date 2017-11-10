@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace DAO
 {
@@ -16,6 +17,22 @@ namespace DAO
             string query = string.Format("insert into PhieuNhap values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',1,1)", strMaPhieu, phieuNhap.MaNhaCungCap, phieuNhap.TongTien, phieuNhap.TienNo, phieuNhap.ChietKhau, phieuNhap.Thue, phieuNhap.NgayLap, phieuNhap.MaNVLap, phieuNhap.GhiChu);
             ThaoTacDuLieu.ThucThi(query);
             return strMaPhieu;
+        }
+        public DataTable LayBangPhieuNhap()
+        {
+            string query = "select * from PhieuNhap where TrangThai=1";
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
+        }
+        public bool TraTienNo(string strMaPhieu)
+        {
+            string query = string.Format("update PhieuNhap set TienNo=0 where MaPhieuNhap='{0}'", strMaPhieu);
+            return ThaoTacDuLieu.ThucThi(query);
+        }
+        public bool XoaPhieuNhap(string strMaPhieu)
+        {
+            string query = string.Format("update PhieuNhap set TrangThai=0 where MaPhieuNhap='{0}'", strMaPhieu);
+            return ThaoTacDuLieu.ThucThi(query);
         }
     }
 }

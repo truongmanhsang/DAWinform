@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace DAO
                 int iSLMoi = _SanPhamDAO.LaySoLuongSP(chiTiet.MaSanPham) + chiTiet.SoLuong;
                 _SanPhamDAO.DatLaiSoLuongSP(chiTiet.MaSanPham, iSLMoi);
             }
+        }
+        public DataTable LayChiTietPhieu(string strMaPhieu)
+        {
+            string query = string.Format("select * from ChiTietPhieuNhap ct,SanPham sp where ct.MaSanPham = sp.MaSanPham and ct.MaPhieuNhap = '{0}'", strMaPhieu);
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
         }
     }
 }
