@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHangSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHangSanXuat.Designer.cs">
+      <DependentUpon>frmHangSanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     <Compile Include="UserControls\ucTonKho.Designer.cs">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmHangSanXuat.resx">
+      <DependentUpon>frmHangSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </EmbeddedResource>

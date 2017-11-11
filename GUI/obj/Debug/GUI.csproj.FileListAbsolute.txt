@@ -40,3 +40,4 @@ D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResou
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.exe
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.pdb
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmLoai.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmHangSanXuat.resources
