@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -99,7 +100,7 @@ namespace GUI
                 {
                     strTruyVan += " and ";
                 }
-                strTruyVan += string.Format("GiaMua >= {0} and GiaMua <= {1}",txtGiaMuaTu.Text,txtGiaMuaDen.Text);
+                strTruyVan += string.Format("GiaMua >= {0} and GiaMua <= {1}",Utilities.HuyDinhDangSo(txtGiaMuaTu.Text), Utilities.HuyDinhDangSo(txtGiaMuaDen.Text));
             }
             if (chkGiaBan.Checked)
             {
@@ -107,7 +108,7 @@ namespace GUI
                 {
                     strTruyVan += " and ";
                 }
-                strTruyVan += string.Format("GiaBan >= {0} and GiaBan <= {1}", txtGiaMuaTu.Text, txtGiaMuaDen.Text);
+                strTruyVan += string.Format("GiaBan >= {0} and GiaBan <= {1}", Utilities.HuyDinhDangSo(txtGiaMuaTu.Text), Utilities.HuyDinhDangSo(txtGiaMuaDen.Text));
             }
             if (chkLoaiSP.Checked)
             {
@@ -166,11 +167,61 @@ namespace GUI
 
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void dgvSanPham_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvSanPham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             if (dgvSanPham.SelectedRows[0].Index != -1)
             {
                 string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
                 frmThemSuaSanPham frm = new frmThemSuaSanPham(strMaSP);
                 frm.ShowDialog();
+            }
+        }
+
+        private void txtGiaMuaTu_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaMuaTu);
+        }
+
+        private void txtGiaMuaDen_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaMuaDen);
+        }
+
+        private void txtGiaBanTu_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaBanTu);
+        }
+
+        private void txtGiaBanDen_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaBanDen);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvSanPham.SelectedRows[0].Index != -1)
+            {
+                string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                if (MessageBox.Show("Bạn chắc chắn muốn xoá sản phẩm này?","Xác nhận xoá",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (_SanPhamBUS.XoaSanPham(strMaSP))
+                    {
+                        MessageBox.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TaiDuLieu();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

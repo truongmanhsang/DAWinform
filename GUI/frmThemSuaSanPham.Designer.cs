@@ -165,10 +165,12 @@
             // txtGiaBan
             // 
             this.txtGiaBan.Location = new System.Drawing.Point(365, 111);
+            this.txtGiaBan.MaxLength = 20;
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(228, 26);
             this.txtGiaBan.TabIndex = 32;
             this.txtGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaBan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaBan_KeyUp);
             // 
             // label4
             // 
@@ -182,10 +184,12 @@
             // txtGiaMua
             // 
             this.txtGiaMua.Location = new System.Drawing.Point(365, 77);
+            this.txtGiaMua.MaxLength = 20;
             this.txtGiaMua.Name = "txtGiaMua";
             this.txtGiaMua.Size = new System.Drawing.Size(228, 26);
             this.txtGiaMua.TabIndex = 30;
             this.txtGiaMua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMua.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMua_KeyUp);
             // 
             // label3
             // 
@@ -248,7 +252,7 @@
             this.label13.Location = new System.Drawing.Point(12, 261);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(137, 42);
-            this.label13.TabIndex = 45;
+            this.label13.TabIndex = 0;
             this.label13.Text = "Số lượng tồn: ";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -301,7 +305,7 @@
             this.btnHuy.Location = new System.Drawing.Point(542, 8);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(108, 38);
-            this.btnHuy.TabIndex = 1;
+            this.btnHuy.TabIndex = 0;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -324,7 +328,7 @@
             this.lblSL.Location = new System.Drawing.Point(145, 261);
             this.lblSL.Name = "lblSL";
             this.lblSL.Size = new System.Drawing.Size(98, 42);
-            this.lblSL.TabIndex = 51;
+            this.lblSL.TabIndex = 5;
             this.lblSL.Text = "0";
             this.lblSL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 

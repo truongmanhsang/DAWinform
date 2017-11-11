@@ -12,6 +12,11 @@ namespace DAO
 {
     public class clsSanPham_DAO
     {
+        public bool XoaSanPham(string strMaSP)
+        {
+            string query = string.Format("update SanPham set TrangThai=0 where MaSanPham='{0}'",strMaSP);
+            return ThaoTacDuLieu.ThucThi(query);
+        }
         public bool SuaSanPham(clsSanPham_DTO sanPham)
         {
             string query = string.Format("update SanPham set TenSanPham=N'{0}',Hinh='{1}',GiaMua='{2}',GiaBan='{3}',KhuyenMai='{4}',MoTa=N'{5}',BaoHanh='{6}',SoLuong='{7}',DonViTinh='{8}',MaLoaiSanPham='{9}',MaHangSanXuat='{10}',GhiChu=N'{11}',TrangThai='{12}' where MaSanPham='{13}'", sanPham.TenSanPham, sanPham.Hinh, sanPham.GiaMua, sanPham.GiaBan, sanPham.KhuyenMai, sanPham.MoTa, sanPham.BaoHanh, sanPham.SoLuong, sanPham.DonViTinh, sanPham.MaLoaiSanPham, sanPham.MaHangSanXuat, sanPham.GhiChu, 1, sanPham.MaSanPham);

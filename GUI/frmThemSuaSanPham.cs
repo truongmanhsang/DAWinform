@@ -1,4 +1,5 @@
 ﻿using BUS;
+using ClassLibrary;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace GUI
         public frmThemSuaSanPham()
         {
             InitializeComponent();
-            this.Focus();
+            btnHuy.Focus();
         }
 
         public frmThemSuaSanPham(string strMaSP)
@@ -44,6 +45,7 @@ namespace GUI
 
         private void frmThemSuaSanPham_Load(object sender, EventArgs e)
         {
+
             if (themSanPham != null)
             {
                 Text = "Thêm sản phẩm";
@@ -71,6 +73,7 @@ namespace GUI
                 cboLoaiSP.Enabled = false;
                 btnThemLuu.Visible = false;
                 btnHuy.Text = "Đồng ý";
+
             }
             TaiDuLieu();
         }
@@ -94,6 +97,8 @@ namespace GUI
                 numBH.Value = Convert.ToInt16(dtSanPham.Rows[0]["BaoHanh"].ToString());
                 txtGiaMua.Text = dtSanPham.Rows[0]["GiaMua"].ToString();
                 txtGiaBan.Text = dtSanPham.Rows[0]["GiaBan"].ToString();
+                Utilities.DinhDangSoTextBox(txtGiaBan);
+                Utilities.DinhDangSoTextBox(txtGiaMua);
                 txtKhuyenMai.Text = dtSanPham.Rows[0]["KhuyenMai"].ToString();
                 cboLoaiSP.SelectedValue = dtSanPham.Rows[0]["MaLoaiSanPham"].ToString();
                 cboHSX.SelectedValue = dtSanPham.Rows[0]["MaHangSanXuat"].ToString();
@@ -155,8 +160,8 @@ namespace GUI
             sanPham.MaSanPham = strMaSP;
             sanPham.TenSanPham = txtTenSP.Text;
             sanPham.DonViTinh = txtDonViTinh.Text;
-            sanPham.GiaMua = Convert.ToDecimal(txtGiaMua.Text);
-            sanPham.GiaBan = Convert.ToDecimal(txtGiaBan.Text);
+            sanPham.GiaMua = Convert.ToDecimal(Utilities.HuyDinhDangSo(txtGiaMua.Text));
+            sanPham.GiaBan = Convert.ToDecimal(Utilities.HuyDinhDangSo(txtGiaBan.Text));
             sanPham.BaoHanh = Convert.ToInt16(numBH.Value);
             sanPham.KhuyenMai = Convert.ToDecimal(txtKhuyenMai.Text == "" ? "0" : txtKhuyenMai.Text);
             sanPham.MaLoaiSanPham = cboLoaiSP.SelectedValue.ToString();
@@ -190,8 +195,8 @@ namespace GUI
             clsSanPham_DTO sanPham = new clsSanPham_DTO();
             sanPham.TenSanPham = txtTenSP.Text;
             sanPham.DonViTinh = txtDonViTinh.Text;
-            sanPham.GiaMua = Convert.ToDecimal(txtGiaMua.Text);
-            sanPham.GiaBan = Convert.ToDecimal(txtGiaBan.Text);
+            sanPham.GiaMua = Convert.ToDecimal(Utilities.HuyDinhDangSo(txtGiaMua.Text));
+            sanPham.GiaBan = Convert.ToDecimal(Utilities.HuyDinhDangSo(txtGiaBan.Text));
             sanPham.BaoHanh = Convert.ToInt16(numBH.Value);
             sanPham.KhuyenMai = Convert.ToDecimal(txtKhuyenMai.Text == "" ? "0" : txtKhuyenMai.Text);
             sanPham.MaLoaiSanPham = cboLoaiSP.SelectedValue.ToString();
@@ -209,7 +214,7 @@ namespace GUI
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
-       + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+       + "Tất cả định dạng ảnh|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
             openFileDialog.FilterIndex = 6;
             openFileDialog.Multiselect = false;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -235,6 +240,16 @@ namespace GUI
 
         private void frmThemSuaSanPham_KeyUp(object sender, KeyEventArgs e)
         {
+        }
+
+        private void txtGiaMua_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaMua);
+        }
+
+        private void txtGiaBan_KeyUp(object sender, KeyEventArgs e)
+        {
+            Utilities.DinhDangSoTextBox(txtGiaBan);
         }
     }
 }
