@@ -102,6 +102,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucHangHoa";
             this.Size = new System.Drawing.Size(885, 542);
+            this.Load += new System.EventHandler(this.ucHangHoa_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
