@@ -168,6 +168,7 @@ namespace GUI
             sanPham.MaHangSanXuat = cboHSX.SelectedValue.ToString();
             sanPham.MoTa = rtbMota.Text;
             sanPham.GhiChu = txtGhiChu.Text;
+            sanPham.SoLuong = Convert.ToInt16(lblSL.Text);
 
             suaSanPham(sanPham);
 

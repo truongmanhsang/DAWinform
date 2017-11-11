@@ -43,6 +43,7 @@
     <Compile Include="clsChiTietPhieuNhap_DTO.cs" />
     <Compile Include="clsChiTietPhieuXuat_DTO.cs" />
     <Compile Include="clsKhachHang_DTO.cs" />
+    <Compile Include="clsLoai_DTO.cs" />
     <Compile Include="clsNhaCungCap_DTO.cs" />
     <Compile Include="clsPhieuNhap_DTO.cs" />
     <Compile Include="clsPhieuXuat_DTO.cs" />
