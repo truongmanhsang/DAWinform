@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -16,6 +17,7 @@ namespace GUI
         clsKhachHang_BUS bus = new clsKhachHang_BUS();
         DataTable dt = new DataTable();
         DataView dav;
+        string MaKH = "";
         public ucKhachHang()
         {
             InitializeComponent();
@@ -23,10 +25,14 @@ namespace GUI
 
         private void ucKhachHang_Load(object sender, EventArgs e)
         {
+            loaddgvKhachHang();
+        }
+        private void loaddgvKhachHang()
+        {
             dt = bus.LayBangKhachHang();
             dav = new DataView(dt);
+            dgvKhachHang.DataSource = dav;
             dgvKhachHang.AutoGenerateColumns = false;
-
         }
 
         private void CaiDat()
@@ -86,5 +92,86 @@ namespace GUI
             }
         }
 
+        private void btnThemKhachHang_Click(object sender, EventArgs e)
+        {
+            if (txtCNTenKhachHang.Text != "")
+            {
+                clsKhachHang_DTO khdto = new clsKhachHang_DTO();
+                khdto.MaKhachHang = MaKH;
+                khdto.TenKhachHang = txtCNTenKhachHang.Text;
+                khdto.CMND = txtCNCMND.Text;
+                khdto.SoDT = txtCNSDT.Text;
+                khdto.DiaChi = txtCNDiaChi.Text;
+                if (bus.ThemKhachHang(khdto) != "")
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+                if (e.RowIndex != -1)
+                {
+                    MaKH = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value.ToString();
+                    txtCNTenKhachHang.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colTenKhachHang"].Value.ToString();
+                    txtCNCMND.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colCMND"].Value.ToString();
+                    txtCNSDT.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colSoDT"].Value.ToString();
+                    txtCNDiaChi.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colDiaChi"].Value.ToString();
+                }
+           
+           
+        }
+
+        private void btnSuaKhachHang_Click(object sender, EventArgs e)
+        {
+            clsKhachHang_DTO khdto = new clsKhachHang_DTO();
+            khdto.MaKhachHang = MaKH;
+            khdto.TenKhachHang = txtCNTenKhachHang.Text;
+            khdto.CMND = txtCNCMND.Text;
+            khdto.SoDT = txtCNSDT.Text;
+            khdto.DiaChi = txtCNDiaChi.Text;
+            if (bus.SuaKhachHang(khdto))
+            {
+                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loaddgvKhachHang();
+                
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoaKhachHang_Click(object sender, EventArgs e)
+        {
+            if (bus.XoaKhachHang(MaKH))
+            {
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtTenKH.Text = "";
+            txtSDT.Text = "";
+            txtCMND.Text = "";
+            //------------------
+            txtCNTenKhachHang.Text="";
+            txtCNSDT.Text = "";
+            txtCNCMND.Text = "";
+            txtCNDiaChi.Text = "";
+            MaKH = "";
+        }
     }
 }

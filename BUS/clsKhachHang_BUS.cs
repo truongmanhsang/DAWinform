@@ -25,5 +25,14 @@ namespace BUS
            
             return dao.TimKiemKhachHang(query);
         }
+        public bool SuaKhachHang(clsKhachHang_DTO khdto)
+        {
+          
+            return dao.SuaKhachHang(khdto);
+        }
+        public bool XoaKhachHang(string MaKH)
+        {
+            return dao.XoaKhachHang(MaKH);
+        }
     }
 }
