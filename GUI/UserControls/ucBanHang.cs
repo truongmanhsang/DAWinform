@@ -111,7 +111,7 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                txtSL.Text = "1";
+                numSL.Value = 1;
                 txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaTien"].Value.ToString());
                 txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
@@ -123,7 +123,7 @@ namespace GUI
         {
             if (txtTenSP.Text != string.Empty)
             {
-                if (txtSL.Text != string.Empty && Utilities.ChuyenVNDSangSo(txtSL.Text) > 0)
+                if (numSL.Value > 0)
                 {
                     ThemSanPhamVaoHoaDon();
                     TinhTongTien();
@@ -146,9 +146,9 @@ namespace GUI
 
             string strTenSP = txtTenSP.Text;
             long iDonGia = Convert.ToInt64(dr["GiaBan"]);
-            long iSoLuong = Convert.ToInt64(txtSL.Text);
+            decimal iSoLuong = numSL.Value;
             long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
-            long iThanhTien = iDonGia * iSoLuong;
+            decimal iThanhTien = iDonGia * iSoLuong;
 
             if (iSoLuong > iSoLuongConLai)
             {
@@ -187,7 +187,7 @@ namespace GUI
                 txtTenSP.Text = dgvBanHang.Rows[e.RowIndex].Cells[1].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvBanHang.Rows[e.RowIndex].Cells[2].Value.ToString());
                 txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
-                txtSL.Text = dgvBanHang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                numSL.Value = Convert.ToDecimal(dgvBanHang.Rows[e.RowIndex].Cells[3].Value.ToString());
                 strMaSP = dgvBanHang.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
@@ -245,7 +245,7 @@ namespace GUI
 
             txtTenSP.Text = "";
             txtDonGia.Text = "";
-            txtSL.Text = "1";
+            numSL.Value = 1;
 
             txtTongCong.Text = "";
 
@@ -287,6 +287,10 @@ namespace GUI
             //=== Thêm phiếu xuất
             clsPhieuXuat_DTO phieuXuat = new clsPhieuXuat_DTO();
             phieuXuat.MaKhachHang = strMaKH;
+            if (cboHinhThucTra.SelectedIndex == 1) // 0 là tiền mặt, 1 là công nợ
+            {
+                phieuXuat.TienNo = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
+            }
             phieuXuat.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             phieuXuat.MaNVLap = Program.MA_NV;

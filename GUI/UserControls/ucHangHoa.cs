@@ -43,5 +43,13 @@ namespace GUI
             panMain.Controls.Add(_ucHangSanXuat);
             _ucHangSanXuat.Dock = DockStyle.Fill;
         }
+
+        private void ucHangHoa_Load(object sender, EventArgs e)
+        {
+            panMain.Controls.Clear();
+            _ucSanPham = new ucSanPham();
+            panMain.Controls.Add(_ucSanPham);
+            _ucSanPham.Dock = DockStyle.Fill;
+        }
     }
 }

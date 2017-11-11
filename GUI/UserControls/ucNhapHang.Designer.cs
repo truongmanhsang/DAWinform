@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGhiSP = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -38,7 +38,6 @@
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSL = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.colMaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numSL = new System.Windows.Forms.NumericUpDown();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -94,13 +94,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).BeginInit();
             this.SuspendLayout();
             // 
             // colThanhTien
             // 
             this.colThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Format = "#,### VNĐ";
-            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "#,### VNĐ";
+            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle1;
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
@@ -109,12 +110,12 @@
             // btnGhiSP
             // 
             this.btnGhiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGhiSP.Location = new System.Drawing.Point(422, 28);
+            this.btnGhiSP.Location = new System.Drawing.Point(418, 28);
             this.btnGhiSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhiSP.Name = "btnGhiSP";
             this.btnGhiSP.Size = new System.Drawing.Size(142, 60);
             this.btnGhiSP.TabIndex = 6;
-            this.btnGhiSP.Text = "Ghi";
+            this.btnGhiSP.Text = "Mua";
             this.btnGhiSP.UseVisualStyleBackColor = true;
             this.btnGhiSP.Click += new System.EventHandler(this.btnGhiSP_Click);
             // 
@@ -136,7 +137,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(162, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(158, 26);
             this.txtDonGia.TabIndex = 5;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -148,7 +149,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(327, 26);
+            this.txtTenSP.Size = new System.Drawing.Size(323, 26);
             this.txtTenSP.TabIndex = 1;
             // 
             // label9
@@ -171,16 +172,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Số lượng";
             // 
-            // txtSL
-            // 
-            this.txtSL.Location = new System.Drawing.Point(91, 61);
-            this.txtSL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(69, 26);
-            this.txtSL.TabIndex = 3;
-            this.txtSL.Text = "1";
-            this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -194,7 +185,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(573, 129);
+            this.groupBox3.Size = new System.Drawing.Size(569, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông nhà cung cấp";
@@ -202,7 +193,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(424, 26);
+            this.btnThem.Location = new System.Drawing.Point(420, 26);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 60);
@@ -229,7 +220,7 @@
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.ReadOnly = true;
-            this.txtTenNCC.Size = new System.Drawing.Size(278, 26);
+            this.txtTenNCC.Size = new System.Drawing.Size(274, 26);
             this.txtTenNCC.TabIndex = 1;
             // 
             // txtDiaChi
@@ -240,7 +231,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(278, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(274, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -261,7 +252,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(278, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(274, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -354,16 +345,16 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.numSL);
             this.groupBox4.Controls.Add(this.btnGhiSP);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.txtDonGia);
             this.groupBox4.Controls.Add(this.txtTenSP);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.txtSL);
             this.groupBox4.Location = new System.Drawing.Point(5, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(573, 95);
+            this.groupBox4.Size = new System.Drawing.Size(569, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thêm sản phẩm vào đơn hàng";
@@ -518,8 +509,8 @@
             // colGiaMua
             // 
             this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle6.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle2;
             this.colGiaMua.HeaderText = "Giá mua";
             this.colGiaMua.Name = "colGiaMua";
             this.colGiaMua.ReadOnly = true;
@@ -534,7 +525,7 @@
             this.groupBox2.Controls.Add(this.dgvNhaCungCap);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(482, 293);
+            this.groupBox2.Size = new System.Drawing.Size(482, 289);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm nhà cung cấp";
@@ -573,7 +564,7 @@
             this.dgvNhaCungCap.RowTemplate.ReadOnly = true;
             this.dgvNhaCungCap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 226);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 222);
             this.dgvNhaCungCap.TabIndex = 2;
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             // 
@@ -616,7 +607,7 @@
             this.groupBox5.Controls.Add(this.dgvNhapHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 238);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(572, 326);
+            this.groupBox5.Size = new System.Drawing.Size(568, 326);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách sản phẩm mua";
@@ -643,7 +634,7 @@
             this.dgvNhapHang.RowTemplate.ReadOnly = true;
             this.dgvNhapHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhapHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhapHang.Size = new System.Drawing.Size(566, 301);
+            this.dgvNhapHang.Size = new System.Drawing.Size(562, 301);
             this.dgvNhapHang.TabIndex = 6;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
             this.dgvNhapHang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgvNhapHang_KeyUp);
@@ -664,12 +655,24 @@
             // colDonGia
             // 
             this.colDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Format = "#,### VNĐ";
-            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Format = "#,### VNĐ";
+            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle3;
             this.colDonGia.HeaderText = "Đơn giá";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.ReadOnly = true;
             this.colDonGia.Width = 90;
+            // 
+            // numSL
+            // 
+            this.numSL.Location = new System.Drawing.Point(91, 61);
+            this.numSL.Name = "numSL";
+            this.numSL.Size = new System.Drawing.Size(85, 26);
+            this.numSL.TabIndex = 7;
+            this.numSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ucNhapHang
             // 
@@ -703,6 +706,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,7 +720,6 @@
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label5;
@@ -755,5 +758,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhaCungCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoDT;
+        private System.Windows.Forms.NumericUpDown numSL;
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="clsNhaCungCap_DTO.cs" />
     <Compile Include="clsPhieuNhap_DTO.cs" />
     <Compile Include="clsPhieuXuat_DTO.cs" />
+    <Compile Include="clsSanPham_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

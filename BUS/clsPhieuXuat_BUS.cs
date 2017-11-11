@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using DTO;
+using System.Data;
 
 namespace BUS
 {
@@ -14,6 +15,18 @@ namespace BUS
         public string TaoPhieuXuat(clsPhieuXuat_DTO phieuXuat)
         {
             return dao.TaoPhieuXuat(phieuXuat);
+        }
+        public DataTable LayBangPhieuXuat()
+        {
+            return dao.LayBangPhieuXuat();
+        }
+        public bool TraTienNo(string strMaPhieu)
+        {
+            return dao.TraTienNo(strMaPhieu);
+        }
+        public bool XoaPhieuXuat(string strMaPhieu)
+        {
+            return dao.XoaPhieuXuat(strMaPhieu);
         }
     }
 }

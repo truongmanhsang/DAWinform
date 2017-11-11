@@ -21,5 +21,11 @@ namespace DAO
             DataTable dt = ThaoTacDuLieu.LayBang(query);
             return dt;
         }
+        public DataTable LayBangNhanVien()
+        {
+            string query = "select * from NhanVien where TrangThai = 1";
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
+        }
     }
 }
