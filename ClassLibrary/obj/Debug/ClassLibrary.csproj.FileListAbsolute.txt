@@ -1,8 +1,3 @@
-D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
-D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.dll
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
