@@ -37,5 +37,23 @@ namespace DAO
             ThaoTacDuLieu.DongKetNoi(conn);
             return dt;
         }
+        public bool SuaKhachHang(clsKhachHang_DTO khdto)
+        {
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string query = string.Format("update KhachHang set TenKhachHang='{0}',CMND={1},SoDT={2},DiaChi='{3}' where MaKhachHang='{4}'",khdto.TenKhachHang,khdto.CMND,khdto.SoDT,khdto.DiaChi,khdto.MaKhachHang);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            int thucthi = cmd.ExecuteNonQuery();
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return thucthi == 1;
+        }
+        public bool XoaKhachHang(string MaKH)
+        {
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            string query = string.Format("delete from KhachHang where MaKhachHang='{0}'", MaKH);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            int thucthi = cmd.ExecuteNonQuery();
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return thucthi==1;
+        }
     }
 }
