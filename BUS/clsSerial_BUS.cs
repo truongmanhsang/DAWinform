@@ -27,5 +27,14 @@ namespace BUS
         {
             dao.ThemSoSerial(strMaSP, iSL, strMaPhieu);
         }
+
+        public string LayTenSanPhamConBH(string strSoSerial)
+        {
+            return dao.LayTenSanPhamConBH(strSoSerial);
+        }
+        public string LayMaSerial(string strSoSerial)
+        {
+            return dao.LayMaSerial(strSoSerial);
+        }
     }
 }

@@ -42,5 +42,12 @@ namespace ClassLibrary
         {
             return str.Replace(",", "").Replace(".", "");
         }
+        public static void BuocNhapSo(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

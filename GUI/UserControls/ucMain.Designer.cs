@@ -44,7 +44,6 @@
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.tabPageBaoHanh = new System.Windows.Forms.TabPage();
             this.btnBaoCaoBaoHanh = new System.Windows.Forms.Button();
-            this.btnGuiBaoHanh = new System.Windows.Forms.Button();
             this.btnNhanBaoHanh = new System.Windows.Forms.Button();
             this.tabPageNhanVien = new System.Windows.Forms.TabPage();
             this.btnNhanVien = new System.Windows.Forms.Button();
@@ -278,7 +277,6 @@
             // tabPageBaoHanh
             // 
             this.tabPageBaoHanh.Controls.Add(this.btnBaoCaoBaoHanh);
-            this.tabPageBaoHanh.Controls.Add(this.btnGuiBaoHanh);
             this.tabPageBaoHanh.Controls.Add(this.btnNhanBaoHanh);
             this.tabPageBaoHanh.Location = new System.Drawing.Point(4, 27);
             this.tabPageBaoHanh.Name = "tabPageBaoHanh";
@@ -294,7 +292,7 @@
             this.btnBaoCaoBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnBaoCaoBaoHanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCaoBaoHanh.Image = global::GUI.Properties.Resources.BaoCao;
-            this.btnBaoCaoBaoHanh.Location = new System.Drawing.Point(260, 8);
+            this.btnBaoCaoBaoHanh.Location = new System.Drawing.Point(137, 8);
             this.btnBaoCaoBaoHanh.Name = "btnBaoCaoBaoHanh";
             this.btnBaoCaoBaoHanh.Size = new System.Drawing.Size(82, 85);
             this.btnBaoCaoBaoHanh.TabIndex = 9;
@@ -303,22 +301,6 @@
             this.btnBaoCaoBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBaoCaoBaoHanh.UseVisualStyleBackColor = true;
             this.btnBaoCaoBaoHanh.Click += new System.EventHandler(this.btnBaoCaoBaoHanh_Click);
-            // 
-            // btnGuiBaoHanh
-            // 
-            this.btnGuiBaoHanh.FlatAppearance.BorderSize = 0;
-            this.btnGuiBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnGuiBaoHanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuiBaoHanh.Image = global::GUI.Properties.Resources.GuiBaoHanh;
-            this.btnGuiBaoHanh.Location = new System.Drawing.Point(137, 8);
-            this.btnGuiBaoHanh.Name = "btnGuiBaoHanh";
-            this.btnGuiBaoHanh.Size = new System.Drawing.Size(117, 85);
-            this.btnGuiBaoHanh.TabIndex = 8;
-            this.btnGuiBaoHanh.Text = "Gửi Bảo Hành";
-            this.btnGuiBaoHanh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuiBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGuiBaoHanh.UseVisualStyleBackColor = true;
-            this.btnGuiBaoHanh.Click += new System.EventHandler(this.btnGuiBaoHanh_Click);
             // 
             // btnNhanBaoHanh
             // 
@@ -558,7 +540,6 @@
         private System.Windows.Forms.Button btnHangHoa;
         private System.Windows.Forms.Button btnTonKho;
         private System.Windows.Forms.Button btnNhanBaoHanh;
-        private System.Windows.Forms.Button btnGuiBaoHanh;
         private System.Windows.Forms.Button btnBaoCaoBaoHanh;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnLoiNhuan;

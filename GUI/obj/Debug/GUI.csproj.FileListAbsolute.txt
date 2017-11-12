@@ -44,3 +44,4 @@ D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmHangSanXuat.resou
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucSerial.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucTimKiemKH.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucTimKiemNCC.resources
+D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.frmTim.resources

@@ -92,5 +92,25 @@ namespace DAO
             ThaoTacDuLieu.DongKetNoi(conn);
             return strMaSerial;
         }
+        public string LayTenSanPhamConBH(string strSoSerial)
+        {
+            string strTen = string.Empty;
+            string query = string.Format("select sp.TenSanPham from Serial sr, SanPham sp where sr.MaSanPham = sp.MaSanPham and sr.ThoiHanBaoHanh is not null and GETDATE() <= sr.ThoiHanBaoHanh and SoSerial='{0}'", strSoSerial);
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            strTen = Convert.ToString(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return strTen;
+        }
+        public string LayMaSerial(string strSoSerial)
+        {
+            string strMa = string.Empty;
+            string query = string.Format("select MaSerial from Serial where SoSerial='{0}'", strSoSerial);
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            strMa = Convert.ToString(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return strMa;
+        }
     }
 }
