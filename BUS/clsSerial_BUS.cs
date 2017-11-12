@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using System.Data;
 
 namespace BUS
 {
     public class clsSerial_BUS
     {
         clsSerial_DAO dao = new clsSerial_DAO();
+        public DataTable LayBangSerial()
+        {
+            return dao.LayBangSerial();
+        }
         public string LayMaSerial(string strMaSP, int iSoThangBH)
         {
             return dao.LayMaSerial(strMaSP, iSoThangBH);

@@ -33,6 +33,7 @@
             this.btnHangSanXuat = new System.Windows.Forms.Button();
             this.btnLoai = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
+            this.btnSerial = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.btnSerial);
             this.groupBox1.Controls.Add(this.btnHangSanXuat);
             this.groupBox1.Controls.Add(this.btnLoai);
             this.groupBox1.Controls.Add(this.btnSanPham);
@@ -91,6 +93,16 @@
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
+            // btnSerial
+            // 
+            this.btnSerial.Location = new System.Drawing.Point(6, 139);
+            this.btnSerial.Name = "btnSerial";
+            this.btnSerial.Size = new System.Drawing.Size(188, 32);
+            this.btnSerial.TabIndex = 3;
+            this.btnSerial.Text = "Serial";
+            this.btnSerial.UseVisualStyleBackColor = true;
+            this.btnSerial.Click += new System.EventHandler(this.btnSerial_Click);
+            // 
             // ucHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.Button btnHangSanXuat;
         private System.Windows.Forms.Button btnLoai;
         private System.Windows.Forms.Button btnSanPham;
+        private System.Windows.Forms.Button btnSerial;
     }
 }

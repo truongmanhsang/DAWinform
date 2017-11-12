@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
+    public delegate void XuLyTimSoSerial();
     public partial class ucNhanBaoHanh : UserControl
     {
+        public event XuLyTimSoSerial timSoSerial;
         public ucNhanBaoHanh()
         {
             InitializeComponent();
@@ -20,6 +22,11 @@ namespace GUI
         private void ucNhanBaoHanh_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTimSoSerial_Click(object sender, EventArgs e)
+        {
+            timSoSerial();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace GUI
         ucSanPham _ucSanPham;
         ucLoai _ucLoai;
         ucHangSanXuat _ucHangSanXuat;
+        ucSerial _ucSerial;
         public ucHangHoa()
         {
             InitializeComponent();
@@ -50,6 +51,19 @@ namespace GUI
             _ucSanPham = new ucSanPham();
             panMain.Controls.Add(_ucSanPham);
             _ucSanPham.Dock = DockStyle.Fill;
+        }
+
+        private void btnSerial_Click(object sender, EventArgs e)
+        {
+            panMain.Controls.Clear();
+            _ucSerial = new ucSerial();
+            panMain.Controls.Add(_ucSerial);
+            _ucSerial.Dock = DockStyle.Fill;
+        }
+
+        public void BatUCSerial()
+        {
+            btnSerial_Click(null, null);
         }
     }
 }

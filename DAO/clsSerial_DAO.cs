@@ -5,12 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ClassLibrary;
+using System.Data;
 
 namespace DAO
 {
     public class clsSerial_DAO
     {
         clsSanPham_DAO _SanPhamDAO = new clsSanPham_DAO();
+        public DataTable LayBangSerial()
+        {
+            string query = @"select * 
+                                from Serial as sr
+                                    left join PhieuXuat as px on px.MaPhieuXuat = sr.MaPhieuXuat
+                                    left join PhieuNhap as pn on pn.MaPhieuNhap = sr.MaPhieuNhap
+                                    left join SanPham as sp on sp.MaSanPham = sr.MaSanPham";
+            return ThaoTacDuLieu.LayBang(query);
+        }
         public string LayMaSerial(string strMaSP, int iSoThangBH) // Lấy mã serial cùng với update số tháng bảo hành
         {
             string strSerial = string.Empty;

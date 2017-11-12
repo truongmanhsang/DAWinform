@@ -200,11 +200,29 @@
     <Compile Include="UserControls\ucSanPham.Designer.cs">
       <DependentUpon>ucSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSerial.Designer.cs">
+      <DependentUpon>ucSerial.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucThongKe.Designer.cs">
       <DependentUpon>ucThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemKH.Designer.cs">
+      <DependentUpon>ucTimKiemKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemNCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemNCC.Designer.cs">
+      <DependentUpon>ucTimKiemNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucTonKho.cs">
       <SubType>UserControl</SubType>
@@ -297,8 +315,17 @@
     <EmbeddedResource Include="UserControls\ucSanPham.resx">
       <DependentUpon>ucSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSerial.resx">
+      <DependentUpon>ucSerial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTimKiemKH.resx">
+      <DependentUpon>ucTimKiemKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTimKiemNCC.resx">
+      <DependentUpon>ucTimKiemNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTonKho.resx">
       <DependentUpon>ucTonKho.cs</DependentUpon>
