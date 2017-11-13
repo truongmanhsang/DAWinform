@@ -161,7 +161,7 @@ namespace GUI
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "BMP|*.bmp|GIF|*.gif|JPG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*.tiff|"
-       + "All Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";//loc ra nhung file can hien thi
+       + "tat ca Graphics Types|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";//loc ra nhung file can hien thi
             openFileDialog.FilterIndex = 6;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -169,6 +169,8 @@ namespace GUI
                 DuongDanHinh = openFileDialog.FileName;
                 TenHinh = openFileDialog.SafeFileName;
             }
+            
+            picHinhAnh.ImageLocation =DuongDanHinh;
         }
     }
 }

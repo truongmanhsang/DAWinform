@@ -25,6 +25,7 @@ namespace GUI
         {
             MessageBoxManager.Yes = "Có";
             MessageBoxManager.No = "Không";
+            MessageBoxManager.OK = "Đồng ý";
             MessageBoxManager.Register();
         }
         public static void UnregisterMessageBoxManager()

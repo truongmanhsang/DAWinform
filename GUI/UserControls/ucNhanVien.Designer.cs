@@ -113,6 +113,8 @@
             // 
             // dgvNhanVien
             // 
+            this.dgvNhanVien.AllowUserToAddRows = false;
+            this.dgvNhanVien.AllowUserToDeleteRows = false;
             this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -127,58 +129,71 @@
             this.colEmail,
             this.colQuyen});
             this.dgvNhanVien.Location = new System.Drawing.Point(309, 3);
+            this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersVisible = false;
+            this.dgvNhanVien.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(559, 518);
             this.dgvNhanVien.TabIndex = 1;
+            this.dgvNhanVien.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNhanVien_CellFormatting);
             // 
             // colTenNhanVien
             // 
             this.colTenNhanVien.DataPropertyName = "TenNhanVien";
             this.colTenNhanVien.HeaderText = "Tên Nhân Viên";
             this.colTenNhanVien.Name = "colTenNhanVien";
+            this.colTenNhanVien.ReadOnly = true;
             // 
             // colTenDangNhap
             // 
             this.colTenDangNhap.DataPropertyName = "TenDangNhap";
             this.colTenDangNhap.HeaderText = "Tên Đăng Nhập";
             this.colTenDangNhap.Name = "colTenDangNhap";
+            this.colTenDangNhap.ReadOnly = true;
             // 
             // colMatKhau
             // 
             this.colMatKhau.DataPropertyName = "MatKhau";
             this.colMatKhau.HeaderText = "Mật khẩu";
             this.colMatKhau.Name = "colMatKhau";
+            this.colMatKhau.ReadOnly = true;
             // 
             // colDiaChi
             // 
             this.colDiaChi.DataPropertyName = "DiaChi";
             this.colDiaChi.HeaderText = "Địa Chỉ";
             this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
             // 
             // colCMND
             // 
             this.colCMND.DataPropertyName = "CMND";
             this.colCMND.HeaderText = "CMND";
             this.colCMND.Name = "colCMND";
+            this.colCMND.ReadOnly = true;
             // 
             // colSoDT
             // 
             this.colSoDT.DataPropertyName = "SoDT";
             this.colSoDT.HeaderText = "Số ĐT";
             this.colSoDT.Name = "colSoDT";
+            this.colSoDT.ReadOnly = true;
             // 
             // colEmail
             // 
             this.colEmail.DataPropertyName = "Email";
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
             // 
             // colQuyen
             // 
             this.colQuyen.DataPropertyName = "Quyen";
             this.colQuyen.HeaderText = "Chức Vụ";
             this.colQuyen.Name = "colQuyen";
+            this.colQuyen.ReadOnly = true;
             // 
             // groupBox2
             // 

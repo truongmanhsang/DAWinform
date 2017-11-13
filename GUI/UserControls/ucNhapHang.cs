@@ -100,7 +100,7 @@ namespace GUI
                 numSL.Value = 1;
                 txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaMua"].Value.ToString());
-                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
+                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
                 strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
@@ -111,7 +111,7 @@ namespace GUI
             {
                 txtTenSP.Text = dgvNhapHang.Rows[e.RowIndex].Cells[1].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvNhapHang.Rows[e.RowIndex].Cells[2].Value.ToString());
-                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
+                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
                 numSL.Value = Convert.ToDecimal(dgvNhapHang.Rows[e.RowIndex].Cells[3].Value.ToString());
                 strMaSP = dgvNhapHang.SelectedRows[0].Cells[0].Value.ToString();
             }
@@ -172,7 +172,7 @@ namespace GUI
             {
                 ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
             }
-            txtTongCong.Text = Utilities.ChuyenSoSangVND(ltongTien);
+            txtTongCong.Text = TienIch.ChuyenSoSangVND(ltongTien);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -226,9 +226,9 @@ namespace GUI
             clsPhieuNhap_DTO phieuNhap = new clsPhieuNhap_DTO();
             phieuNhap.MaNhaCungCap = strMaNCC;
             if (cboHinhThucTra.SelectedIndex == 1)
-                phieuNhap.TienNo = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
-            phieuNhap.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
-            phieuNhap.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
+                phieuNhap.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
+            phieuNhap.TongTien = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
+            phieuNhap.NgayLap = DateTime.Now.ToString("MM/dd/yyyy");
             phieuNhap.MaNVLap = Program.MA_NV;
 
             string strMaPhieuXuat = _PhieuNhapBUS.TaoPhieuNhap(phieuNhap); // tạo phiếu nhập và lấy mã

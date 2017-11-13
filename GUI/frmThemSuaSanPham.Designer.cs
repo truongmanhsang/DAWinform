@@ -189,6 +189,8 @@
             this.txtGiaMua.Size = new System.Drawing.Size(228, 26);
             this.txtGiaMua.TabIndex = 30;
             this.txtGiaMua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMua.TextChanged += new System.EventHandler(this.txtGiaMua_TextChanged);
+            this.txtGiaMua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaMua_KeyPress);
             this.txtGiaMua.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMua_KeyUp);
             // 
             // label3

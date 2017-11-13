@@ -68,15 +68,15 @@ namespace GUI
                     dgvRow.Cells[0].Value = txtTenHang.Text;
                     dgvRow.Cells[1].Value = txtSerial.Text;
                     dgvRow.Cells[2].Value = txtMoTaLoi.Text;
-                    dgvRow.Cells[3].Value = txtGiaSua.Text == "" ? "0" : txtGiaSua.Text;
-                    dgvRow.Cells[4].Value = dtpNgayHenTra.Value.ToString("MM/dd/yyyy");
+                    dgvRow.Cells[3].Value = Convert.ToDecimal(txtGiaSua.Text == "" ? "0" : txtGiaSua.Text);
+                    dgvRow.Cells[4].Value = dtpNgayHenTra.Value.ToString();
                     dgvRow.Cells[5].Value = txtGhiChu.Text;
                     TinhTongCong();
                     return;
                 }
             }
 
-            dgvChiTietBH.Rows.Add(txtTenHang.Text, txtSerial.Text, txtMoTaLoi.Text, txtGiaSua.Text == "" ? "0" : txtGiaSua.Text, dtpNgayHenTra.Value.ToString("MM/dd/yyyy"), txtGhiChu.Text);
+            dgvChiTietBH.Rows.Add(txtTenHang.Text, txtSerial.Text, txtMoTaLoi.Text,Convert.ToDecimal(txtGiaSua.Text == "" ? "0" : txtGiaSua.Text), dtpNgayHenTra.Value.ToString(), txtGhiChu.Text);
             TinhTongCong();
         }
 
@@ -138,8 +138,8 @@ namespace GUI
             clsBaoHanh_DTO baoHanh = new clsBaoHanh_DTO();
             baoHanh.MaKhachHang = strMaKH;
             baoHanh.MaNhanVien = Program.MA_NV;
-            baoHanh.NgayBaoHanh = DateTime.Now.ToString("MM/dd/yyyy");
-            baoHanh.TongTien = Convert.ToDecimal(Utilities.HuyDinhDangSo(txtTongCong.Text));
+            baoHanh.NgayBaoHanh = TienIch.LayNgayThangHienTaiQuocTe();
+            baoHanh.TongTien = Convert.ToDecimal(TienIch.HuyDinhDangSo(txtTongCong.Text));
             baoHanh.LoaiBaoHanh = 0;
             string strMaBH = _BaoHanhBUS.ThemBaoHanh(baoHanh);
 
@@ -149,8 +149,8 @@ namespace GUI
                 clsChiTietBaoHanh_DTO chiTiet = new clsChiTietBaoHanh_DTO();
                 chiTiet.MaBaoHanh = strMaBH;
                 chiTiet.MaSerial = _SerialBUS.LayMaSerial(dgvRow.Cells[1].Value.ToString());
-                chiTiet.NgayHenTra = dgvRow.Cells[4].Value.ToString();
-                chiTiet.GiaSuaChua = Convert.ToDecimal(Utilities.HuyDinhDangSo(dgvRow.Cells[3].Value.ToString()));
+                chiTiet.NgayHenTra = TienIch.LayNgayThangQuocTe(Convert.ToDateTime(dgvRow.Cells[4].Value.ToString()));
+                chiTiet.GiaSuaChua = Convert.ToDecimal(TienIch.HuyDinhDangSo(dgvRow.Cells[3].Value.ToString()));
                 chiTiet.TraHang = 0;
                 chiTiet.MotaLoi = dgvRow.Cells[2].Value.ToString();
                 chiTiet.GhiChu = dgvRow.Cells[5].Value.ToString();
@@ -178,7 +178,7 @@ namespace GUI
         {
             if (e.ColumnIndex == 4)
             {
-                e.Value = Convert.ToDateTime(e.Value.ToString()).ToString("dd/MM/yyyy");
+                e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
             }
         }
         private void TinhTongCong()
@@ -201,17 +201,17 @@ namespace GUI
 
         private void txtGiaSua_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utilities.BuocNhapSo(e);
+            TienIch.BuocNhapSo(e);
         }
 
         private void txtGiaSua_TextChanged(object sender, EventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtGiaSua);
+            TienIch.DinhDangSoTextBox(txtGiaSua);
         }
 
         private void txtTongCong_TextChanged(object sender, EventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtTongCong);
+            TienIch.DinhDangSoTextBox(txtTongCong);
         }
     }
 }

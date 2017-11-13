@@ -100,7 +100,7 @@ namespace GUI
                 {
                     strTruyVan += " and ";
                 }
-                strTruyVan += string.Format("GiaMua >= {0} and GiaMua <= {1}",Utilities.HuyDinhDangSo(txtGiaMuaTu.Text), Utilities.HuyDinhDangSo(txtGiaMuaDen.Text));
+                strTruyVan += string.Format("GiaMua >= {0} and GiaMua <= {1}",TienIch.HuyDinhDangSo(txtGiaMuaTu.Text), TienIch.HuyDinhDangSo(txtGiaMuaDen.Text));
             }
             if (chkGiaBan.Checked)
             {
@@ -108,7 +108,7 @@ namespace GUI
                 {
                     strTruyVan += " and ";
                 }
-                strTruyVan += string.Format("GiaBan >= {0} and GiaBan <= {1}", Utilities.HuyDinhDangSo(txtGiaMuaTu.Text), Utilities.HuyDinhDangSo(txtGiaMuaDen.Text));
+                strTruyVan += string.Format("GiaBan >= {0} and GiaBan <= {1}", TienIch.HuyDinhDangSo(txtGiaMuaTu.Text), TienIch.HuyDinhDangSo(txtGiaMuaDen.Text));
             }
             if (chkLoaiSP.Checked)
             {
@@ -187,22 +187,22 @@ namespace GUI
 
         private void txtGiaMuaTu_KeyUp(object sender, KeyEventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtGiaMuaTu);
+            TienIch.DinhDangSoTextBox(txtGiaMuaTu);
         }
 
         private void txtGiaMuaDen_KeyUp(object sender, KeyEventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtGiaMuaDen);
+            TienIch.DinhDangSoTextBox(txtGiaMuaDen);
         }
 
         private void txtGiaBanTu_KeyUp(object sender, KeyEventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtGiaBanTu);
+            TienIch.DinhDangSoTextBox(txtGiaBanTu);
         }
 
         private void txtGiaBanDen_KeyUp(object sender, KeyEventArgs e)
         {
-            Utilities.DinhDangSoTextBox(txtGiaBanDen);
+            TienIch.DinhDangSoTextBox(txtGiaBanDen);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

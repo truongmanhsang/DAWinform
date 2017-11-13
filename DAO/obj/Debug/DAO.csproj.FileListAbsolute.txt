@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DAO.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DAO.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DTO.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DTO.pdb
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.dll
-D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.pdb
-=======
->>>>>>> 9d557e16410b488b24f749c27505869c9bcc4b60
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.dll
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.pdb
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\ClassLibrary.dll
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DTO.dll
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\ClassLibrary.pdb
-D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DTO.pdb
-D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
-D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.dll
-D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.dll
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\ClassLibrary.dll

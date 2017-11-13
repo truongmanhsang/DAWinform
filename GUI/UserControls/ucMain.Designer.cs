@@ -108,6 +108,7 @@
             // 
             // tabPageBanHang
             // 
+            this.tabPageBanHang.BackColor = System.Drawing.Color.White;
             this.tabPageBanHang.Controls.Add(this.btnBaoCaoBanHang);
             this.tabPageBanHang.Controls.Add(this.btnKhachHang);
             this.tabPageBanHang.Controls.Add(this.btnBanHang);
@@ -118,7 +119,6 @@
             this.tabPageBanHang.Size = new System.Drawing.Size(990, 99);
             this.tabPageBanHang.TabIndex = 0;
             this.tabPageBanHang.Text = "Bán Hàng";
-            this.tabPageBanHang.UseVisualStyleBackColor = true;
             // 
             // btnBaoCaoBanHang
             // 

@@ -114,7 +114,7 @@ namespace GUI
                 numSL.Value = 1;
                 txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaTien"].Value.ToString());
-                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
+                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
                 strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
@@ -186,7 +186,7 @@ namespace GUI
             {
                 txtTenSP.Text = dgvBanHang.Rows[e.RowIndex].Cells[1].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvBanHang.Rows[e.RowIndex].Cells[2].Value.ToString());
-                txtDonGia.Text = Utilities.ChuyenSoSangVND(lDonGia);
+                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
                 numSL.Value = Convert.ToDecimal(dgvBanHang.Rows[e.RowIndex].Cells[3].Value.ToString());
                 strMaSP = dgvBanHang.SelectedRows[0].Cells[0].Value.ToString();
             }
@@ -229,7 +229,7 @@ namespace GUI
             {
                 ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
             }
-            txtTongCong.Text = Utilities.ChuyenSoSangVND(ltongTien);
+            txtTongCong.Text = TienIch.ChuyenSoSangVND(ltongTien);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -289,10 +289,10 @@ namespace GUI
             phieuXuat.MaKhachHang = strMaKH;
             if (cboHinhThucTra.SelectedIndex == 1) // 0 là tiền mặt, 1 là công nợ
             {
-                phieuXuat.TienNo = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
+                phieuXuat.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
             }
-            phieuXuat.TongTien = Utilities.ChuyenVNDSangSo(txtTongCong.Text);
-            phieuXuat.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
+            phieuXuat.TongTien = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
+            phieuXuat.NgayLap = TienIch.LayNgayThangHienTaiQuocTe();
             phieuXuat.MaNVLap = Program.MA_NV;
 
             string strMaPhieuXuat = _PhieuXuatBUS.TaoPhieuXuat(phieuXuat); // tạo phiếu xuất và lấy mã

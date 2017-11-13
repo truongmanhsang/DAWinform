@@ -32,7 +32,7 @@ namespace DAO
 
 
             DateTime dtHanBaoHanh = DateTime.Now.AddMonths(iSoThangBH);
-            string sqlUpdate = string.Format("update Serial set ThoiHanBaoHanh='{0}' where MaSerial='{1}'", dtHanBaoHanh.ToString("dd/MM/yyyy"), strSerial);// update số serial đó với thời hạn bảo hành
+            string sqlUpdate = string.Format("update Serial set ThoiHanBaoHanh='{0}' where MaSerial='{1}'", dtHanBaoHanh.ToString("MM/dd/yyyy"), strSerial);// update số serial đó với thời hạn bảo hành
             cmd = new SqlCommand(sqlUpdate, conn);
             cmd.ExecuteNonQuery();
 
@@ -59,7 +59,9 @@ namespace DAO
             SqlDataReader dr = null;
             do
             {
-                strSoSerial = Utilities.GenerateSerial(12);
+                if (dr != null)
+                    dr.Close();
+                strSoSerial = TienIch.GenerateSerial(12);
                 string query = string.Format("select * from Serial where SoSerial='{0}'", strSoSerial);
                 SqlCommand cmd = new SqlCommand(query, conn);
                 dr = cmd.ExecuteReader();
@@ -71,7 +73,7 @@ namespace DAO
         public void BatDauBaoHanh(string strMaSP, int iSL, string strMaPhieu)
         {
             int iThangBaoHanh = _SanPhamDAO.LaySoThangBaoHanh(strMaSP);
-            string strThoiHanHetBH = DateTime.Now.AddMonths(iThangBaoHanh).ToString("dd/MM/yyyy");
+            string strThoiHanHetBH = DateTime.Now.AddMonths(iThangBaoHanh).ToString("MM/dd/yyyy");
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
             for (int i = 0; i < iSL; i++)
             {

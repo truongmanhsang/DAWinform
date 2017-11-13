@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -163,7 +164,7 @@ namespace GUI
         {
             if (dgvPhieuNhap.Columns[e.ColumnIndex].Name == "colNgayLap")
             {
-                e.Value = Convert.ToDateTime(e.Value).ToString("dd/MM/yyyy");
+                e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
             }
         }
     }

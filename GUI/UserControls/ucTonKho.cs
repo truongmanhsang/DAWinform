@@ -51,7 +51,7 @@ namespace GUI
             }
 
             txtTongSL.Text = lSL.ToString();
-            txtTongTriGia.Text = Utilities.ChuyenSoSangVND(lTongTriGia);
+            txtTongTriGia.Text = TienIch.ChuyenSoSangVND(lTongTriGia);
 
             dgvTonKho.DataSource = dtSanPham;
         }

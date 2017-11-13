@@ -48,17 +48,21 @@ namespace GUI
             col = new DataColumn();
             col.DataType = System.Type.GetType("System.String");
             col.ColumnName = "TenQuyen";
-            dt.Columns.Add(col);
+            dtTemp.Columns.Add(col);
             col = new DataColumn();
             col.DataType = System.Type.GetType("System.String");
             col.ColumnName = "MaQuyen";
-            dt.Columns.Add(col);
-            row = dt.NewRow();
+            dtTemp.Columns.Add(col);
+            row = dtTemp.NewRow();
             row["TenQuyen"] = "Nhân viên";
+            row["MaQuyen"] = "0";
+            dtTemp.Rows.Add(row);
+            row = dtTemp.NewRow();
+            row["TenQuyen"] = "Quản lý";
             row["MaQuyen"] = "1";
-            dt.Rows.Add(row);
+            dtTemp.Rows.Add(row);
 
-            cbbChucVu.DataSource = dt;
+            cbbChucVu.DataSource = dtTemp;
             cbbChucVu.DisplayMember = "TenQuyen";
             cbbChucVu.ValueMember = "MaQuyen";
         }
@@ -138,6 +142,19 @@ namespace GUI
             return lenh;
         }
 
-       
+        private void dgvNhanVien_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvNhanVien.Columns[e.ColumnIndex].Name == "colQuyen")
+            {
+                if (e.Value.ToString() == "1")
+                {
+                    e.Value = "Quản lý";
+                }
+                else
+                {
+                    e.Value = "Nhân viên";
+                }
+            }
+        }
     }
 }

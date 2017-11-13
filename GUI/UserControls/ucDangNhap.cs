@@ -34,24 +34,32 @@ namespace GUI
         private void DangNhap()
         {
             DataTable dtNV = _NhanVienBUS.LayThongTinNV(txtTaiKhoan.Text, txtMatKhau.Text);
-            if (dtNV.Rows.Count > 0)
+            if (dtNV != null)
             {
-                Program.MA_NV = dtNV.Rows[0]["MaNhanVien"].ToString(); // Lấy mã nv làm biến tĩnh toàn chương trình
-                Program.TEN_NV = dtNV.Rows[0]["TenNhanVien"].ToString();
-                Program.HINH_NV = dtNV.Rows[0]["HinhDaiDien"].ToString();
-                Program.QUYEN = Convert.ToInt16(dtNV.Rows[0]["Quyen"].ToString());
+                if (dtNV.Rows.Count > 0)
+                {
+                    Program.MA_NV = dtNV.Rows[0]["MaNhanVien"].ToString(); // Lấy mã nv làm biến tĩnh toàn chương trình
+                    Program.TEN_NV = dtNV.Rows[0]["TenNhanVien"].ToString();
+                    Program.HINH_NV = dtNV.Rows[0]["HinhDaiDien"].ToString();
+                    Program.QUYEN = Convert.ToInt16(dtNV.Rows[0]["Quyen"].ToString());
 
-                xuLyDangNhap(); // gọi hàm xử lý đăng nhập đã đc định nghĩa ở form main
+                    xuLyDangNhap(); // gọi hàm xử lý đăng nhập đã đc định nghĩa ở form main
 
-                lblTinNhan.Text = "Vui lòng nhập mật khẩu để tiếp tục!";
-                lblTinNhan.ForeColor = Color.Green;
-                BatTatControls(true);
-                txtMatKhau.Text = "";
-                txtMatKhau.Focus();
+                    lblTinNhan.Text = "Vui lòng nhập mật khẩu để tiếp tục!";
+                    lblTinNhan.ForeColor = Color.Green;
+                    BatTatControls(true);
+                    txtMatKhau.Text = "";
+                    txtMatKhau.Focus();
+                }
+                else
+                {
+                    lblTinNhan.Text = "Mật khẩu không đúng, vui lòng thử lại!";
+                    lblTinNhan.ForeColor = Color.Red;
+                }
             }
             else
             {
-                lblTinNhan.Text = "Mật khẩu không đúng, vui lòng thử lại!";
+                lblTinNhan.Text = "Không thể hack vào hệ thống!";
                 lblTinNhan.ForeColor = Color.Red;
             }
         }

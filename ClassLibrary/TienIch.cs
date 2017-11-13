@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ClassLibrary
 {
-    public class Utilities
+    public class TienIch
     {
         public static string GenerateSerial(int iLength)
         {
@@ -49,5 +49,18 @@ namespace ClassLibrary
                 e.Handled = true;
             }
         }
+        public static string LayNgayThangHienTaiQuocTe()
+        {
+            return DateTime.Now.ToString("MM/dd/yyyy");
+        }
+        public static string LayNgayThangQuocTe(DateTime dt)
+        {
+            return dt.ToString("MM/dd/yyyy");
+        }
+        public static string LayNgayThangVN(DateTime dt)
+        {
+            return dt.ToString("dd/MM/yyyy");
+        }
+        
     }
 }

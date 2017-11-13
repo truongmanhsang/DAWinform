@@ -45,7 +45,7 @@ namespace GUI
             if (dgvSerial.Columns[e.ColumnIndex].Name == "colNgayHetBH")
             {
                 if (e.Value.ToString() != "")
-                    e.Value = Convert.ToDateTime(e.Value.ToString()).ToString("dd/MM/yyyy");
+                    e.Value = Convert.ToDateTime(e.Value.ToString()).ToString("MM/dd/yyyy");
             }
         }
 

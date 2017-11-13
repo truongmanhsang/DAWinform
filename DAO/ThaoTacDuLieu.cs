@@ -10,7 +10,7 @@ namespace DAO
 {
     public class ThaoTacDuLieu
     {
-        public static string strConnection = @"Data Source=.;Initial Catalog=QLBH;Integrated Security=True";
+        public static string strConnection = @"Data Source=FPT-PC\SQLEXPRESS;Initial Catalog=QLBH;Integrated Security=True";
         public static SqlConnection TaoVaMoKetNoi()
         {
             try
@@ -32,11 +32,18 @@ namespace DAO
         public static DataTable LayBang(string query)
         {
             DataTable dt = new DataTable();
-            SqlConnection conn = TaoVaMoKetNoi();
-            SqlDataAdapter da = new SqlDataAdapter(query, conn);
-            da.Fill(dt);
-            DongKetNoi(conn);
-            return dt;
+            try
+            {
+                SqlConnection conn = TaoVaMoKetNoi();
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                da.Fill(dt);
+                DongKetNoi(conn);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static bool ThucThi(string query)
         {

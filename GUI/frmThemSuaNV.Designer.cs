@@ -102,9 +102,11 @@
             // picHinhAnh
             // 
             this.picHinhAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picHinhAnh.Image = global::GUI.Properties.Resources.ThemHinhAnh;
             this.picHinhAnh.Location = new System.Drawing.Point(12, 5);
             this.picHinhAnh.Name = "picHinhAnh";
             this.picHinhAnh.Size = new System.Drawing.Size(231, 249);
+            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinhAnh.TabIndex = 52;
             this.picHinhAnh.TabStop = false;
             this.picHinhAnh.Click += new System.EventHandler(this.picHinhAnh_Click);
@@ -216,10 +218,11 @@
             // 
             // cbbChucVu
             // 
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Items.AddRange(new object[] {
-            "Quanly",
-            "nv"});
+            "Quản lý",
+            "Nhân viên"});
             this.cbbChucVu.Location = new System.Drawing.Point(364, 229);
             this.cbbChucVu.Name = "cbbChucVu";
             this.cbbChucVu.Size = new System.Drawing.Size(284, 26);

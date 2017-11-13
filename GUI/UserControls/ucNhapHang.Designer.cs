@@ -53,6 +53,7 @@
             this.txtTongCong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numSL = new System.Windows.Forms.NumericUpDown();
             this.colSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -76,10 +77,10 @@
             this.colMaSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numSL = new System.Windows.Forms.NumericUpDown();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSL)).BeginInit();
             this.SuspendLayout();
             // 
             // colThanhTien
@@ -110,12 +110,12 @@
             // btnGhiSP
             // 
             this.btnGhiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGhiSP.Location = new System.Drawing.Point(418, 28);
+            this.btnGhiSP.Location = new System.Drawing.Point(416, 28);
             this.btnGhiSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhiSP.Name = "btnGhiSP";
             this.btnGhiSP.Size = new System.Drawing.Size(142, 60);
             this.btnGhiSP.TabIndex = 6;
-            this.btnGhiSP.Text = "Mua";
+            this.btnGhiSP.Text = "Ghi";
             this.btnGhiSP.UseVisualStyleBackColor = true;
             this.btnGhiSP.Click += new System.EventHandler(this.btnGhiSP_Click);
             // 
@@ -137,7 +137,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(158, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(156, 26);
             this.txtDonGia.TabIndex = 5;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -149,7 +149,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(323, 26);
+            this.txtTenSP.Size = new System.Drawing.Size(321, 26);
             this.txtTenSP.TabIndex = 1;
             // 
             // label9
@@ -185,7 +185,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(569, 129);
+            this.groupBox3.Size = new System.Drawing.Size(567, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông nhà cung cấp";
@@ -193,7 +193,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(420, 26);
+            this.btnThem.Location = new System.Drawing.Point(418, 26);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 60);
@@ -220,7 +220,7 @@
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.ReadOnly = true;
-            this.txtTenNCC.Size = new System.Drawing.Size(274, 26);
+            this.txtTenNCC.Size = new System.Drawing.Size(272, 26);
             this.txtTenNCC.TabIndex = 1;
             // 
             // txtDiaChi
@@ -231,7 +231,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(274, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(272, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -252,7 +252,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(274, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(272, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -354,10 +354,22 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(5, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(569, 95);
+            this.groupBox4.Size = new System.Drawing.Size(567, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thêm sản phẩm vào đơn hàng";
+            // 
+            // numSL
+            // 
+            this.numSL.Location = new System.Drawing.Point(91, 61);
+            this.numSL.Name = "numSL";
+            this.numSL.Size = new System.Drawing.Size(85, 26);
+            this.numSL.TabIndex = 7;
+            this.numSL.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // colSL
             // 
@@ -525,7 +537,7 @@
             this.groupBox2.Controls.Add(this.dgvNhaCungCap);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(482, 289);
+            this.groupBox2.Size = new System.Drawing.Size(482, 287);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm nhà cung cấp";
@@ -564,7 +576,7 @@
             this.dgvNhaCungCap.RowTemplate.ReadOnly = true;
             this.dgvNhaCungCap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 222);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 220);
             this.dgvNhaCungCap.TabIndex = 2;
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             // 
@@ -607,7 +619,7 @@
             this.groupBox5.Controls.Add(this.dgvNhapHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 238);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(568, 326);
+            this.groupBox5.Size = new System.Drawing.Size(566, 326);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách sản phẩm mua";
@@ -634,7 +646,7 @@
             this.dgvNhapHang.RowTemplate.ReadOnly = true;
             this.dgvNhapHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhapHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhapHang.Size = new System.Drawing.Size(562, 301);
+            this.dgvNhapHang.Size = new System.Drawing.Size(560, 301);
             this.dgvNhapHang.TabIndex = 6;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
             this.dgvNhapHang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgvNhapHang_KeyUp);
@@ -662,18 +674,6 @@
             this.colDonGia.ReadOnly = true;
             this.colDonGia.Width = 90;
             // 
-            // numSL
-            // 
-            this.numSL.Location = new System.Drawing.Point(91, 61);
-            this.numSL.Name = "numSL";
-            this.numSL.Size = new System.Drawing.Size(85, 26);
-            this.numSL.TabIndex = 7;
-            this.numSL.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // ucNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -690,6 +690,7 @@
             this.panel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -706,7 +707,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSL)).EndInit();
             this.ResumeLayout(false);
 
         }
