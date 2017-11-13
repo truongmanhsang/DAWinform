@@ -17,20 +17,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            RegisterMessageBoxManager();
             Application.Run(new frmMain());
-            UnregisterMessageBoxManager();
-        }
-        public static void RegisterMessageBoxManager()
-        {
-            MessageBoxManager.Yes = "Có";
-            MessageBoxManager.No = "Không";
-            MessageBoxManager.OK = "Đồng ý";
-            MessageBoxManager.Register();
-        }
-        public static void UnregisterMessageBoxManager()
-        {
-            MessageBoxManager.Unregister();
         }
 
         // Thông tin nhân viên

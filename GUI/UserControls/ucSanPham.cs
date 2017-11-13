@@ -79,7 +79,7 @@ namespace GUI
             if (chkTenSP.Checked || chkGiaMua.Checked || chkGiaBan.Checked || chkLoaiSP.Checked || chkHSX.Checked)
             {
                 dvSanPham.RowFilter = TaoTruyVan();
-                MessageBox.Show(string.Format("Đã tìm thấy {0} sản phẩm!",dvSanPham.Count), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show(string.Format("Đã tìm thấy {0} sản phẩm!",dvSanPham.Count), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -133,24 +133,24 @@ namespace GUI
         {
             if (_SanPhamBUS.ThemSanPham(sanPham))
             {
-                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void XuLySuaSanPham(clsSanPham_DTO sanPham)
         {
             if (_SanPhamBUS.SuaSanPham(sanPham))
             {
-                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -210,16 +210,16 @@ namespace GUI
             if (dgvSanPham.SelectedRows[0].Index != -1)
             {
                 string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
-                if (MessageBox.Show("Bạn chắc chắn muốn xoá sản phẩm này?","Xác nhận xoá",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                if (FormMessage.Show("Bạn chắc chắn muốn xoá sản phẩm này?","Xác nhận xoá",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (_SanPhamBUS.XoaSanPham(strMaSP))
                     {
-                        MessageBox.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormMessage.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TaiDuLieu();
                     }
                     else
                     {
-                        MessageBox.Show("Xoá thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FormMessage.Show("Xoá thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

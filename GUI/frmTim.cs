@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,7 +57,7 @@ namespace GUI
         {
             if (strMa == null)
             {
-                MessageBox.Show("Vui lòng chọn 1 KH", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng chọn 1 KH", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else

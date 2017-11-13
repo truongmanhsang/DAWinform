@@ -110,12 +110,6 @@
     <Compile Include="UserControls\ucBaoCaoNhapHang.Designer.cs">
       <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucBaoHanh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucBaoHanh.Designer.cs">
-      <DependentUpon>ucBaoHanh.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucDangNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,9 +269,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucBaoCaoNhapHang.resx">
       <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucBaoHanh.resx">
-      <DependentUpon>ucBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDangNhap.resx">
       <DependentUpon>ucDangNhap.cs</DependentUpon>

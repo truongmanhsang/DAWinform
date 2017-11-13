@@ -1,4 +1,5 @@
 ﻿using BUS;
+using ClassLibrary;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -74,14 +75,14 @@ namespace GUI
         {
             if (txtTenHSX.Text == "")
             {
-                MessageBox.Show("Bạn chưa nhập tên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Bạn chưa nhập tên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (_HangSanXuatBUS.KiemTraTen(txtTenHSX.Text).Rows.Count > 0)
             {
 
-                MessageBox.Show("Tên này đã tồn tại, vui lòng chọn 1 tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Tên này đã tồn tại, vui lòng chọn 1 tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -97,7 +98,7 @@ namespace GUI
         {
             if (txtTenHSX.Text == "")
             {
-                MessageBox.Show("Bạn chưa nhập tên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Bạn chưa nhập tên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -105,7 +106,7 @@ namespace GUI
             {
                 if (_HangSanXuatBUS.KiemTraTen(txtTenHSX.Text).Rows.Count > 0)
                 {
-                    MessageBox.Show("Tên này đã tồn tại, vui lòng chọn 1 tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormMessage.Show("Tên này đã tồn tại, vui lòng chọn 1 tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

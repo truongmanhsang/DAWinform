@@ -128,12 +128,12 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FormMessage.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void ThemSanPhamVaoHoaDon()
@@ -201,12 +201,12 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn sản phẩm để nhập, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FormMessage.Show("Vui lòng chọn sản phẩm để nhập, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin nhà cung cấp, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin nhà cung cấp, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -252,7 +252,7 @@ namespace GUI
 
             _ChiTietPhieuNhapBUS.TaoChiTieuPhieuNhap(dsChiTietSP, strMaPhieuXuat);
 
-            MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LamSach(); // làm sạch controls
             TaiDuLieu(); // tải lại dữ liệu
         }

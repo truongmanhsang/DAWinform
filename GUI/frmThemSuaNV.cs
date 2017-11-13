@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 using System.IO;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -110,7 +111,7 @@ namespace GUI
         {
             if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             clsNhanVien_DTO nhanvien = new clsNhanVien_DTO();
@@ -131,7 +132,7 @@ namespace GUI
         {
             if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text=="")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);

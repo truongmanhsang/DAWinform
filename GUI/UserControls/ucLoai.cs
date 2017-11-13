@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -57,12 +58,12 @@ namespace GUI
         {
             if (_LoaiBUS.ThemLoai(loai))
             {
-                MessageBox.Show("Thêm loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Thêm loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Thêm loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Thêm loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -70,12 +71,12 @@ namespace GUI
         {
             if (_LoaiBUS.SuaLoai(loai))
             {
-                MessageBox.Show("Sửa loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Sửa loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Sửa loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Sửa loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -95,16 +96,16 @@ namespace GUI
             if (dgvLoaiSP.SelectedRows[0].Index != -1)
             {
                 string strMaLoai = dgvLoaiSP.SelectedRows[0].Cells["colMaLoai"].Value.ToString();
-                if (MessageBox.Show("Bạn chắc chắn muốn xoá loại này?","Xác nhận xoá",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                if (FormMessage.Show("Bạn chắc chắn muốn xoá loại này?","Xác nhận xoá",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (_LoaiBUS.XoaLoai(strMaLoai))
                     {
-                        MessageBox.Show("Xoá loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormMessage.Show("Xoá loại sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TaiDuLieu();
                     }
                     else
                     {
-                        MessageBox.Show("Xoá loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FormMessage.Show("Xoá loại sản phẩm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

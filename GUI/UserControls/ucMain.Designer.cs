@@ -405,6 +405,7 @@
             // 
             // btnAnHien
             // 
+            this.btnAnHien.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAnHien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnHien.Location = new System.Drawing.Point(-2, -1);
             this.btnAnHien.Name = "btnAnHien";
@@ -417,6 +418,8 @@
             // btnDangXuat
             // 
             this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDangXuat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Image = global::GUI.Properties.Resources.DangXuat;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

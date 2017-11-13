@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -49,12 +50,12 @@ namespace GUI
         {
             if (_HangSanXuatBUS.ThemHSX(hsx))
             {
-                MessageBox.Show("Thêm hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Thêm hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Thêm hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Thêm hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -62,12 +63,12 @@ namespace GUI
         {
             if (_HangSanXuatBUS.SuaHSX(hsx))
             {
-                MessageBox.Show("Sửa hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMessage.Show("Sửa hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDuLieu();
             }
             else
             {
-                MessageBox.Show("Sửa hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Sửa hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -94,16 +95,16 @@ namespace GUI
             if (dgvHSX.SelectedRows[0].Index != -1)
             {
                 string strMaHSX = dgvHSX.SelectedRows[0].Cells["colMaLoai"].Value.ToString();
-                if (MessageBox.Show("Bạn chắc chắn muốn xoá hãng sản xuất này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (FormMessage.Show("Bạn chắc chắn muốn xoá hãng sản xuất này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (_HangSanXuatBUS.XoaHSX(strMaHSX))
                     {
-                        MessageBox.Show("Xoá hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormMessage.Show("Xoá hãng sản xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TaiDuLieu();
                     }
                     else
                     {
-                        MessageBox.Show("Xoá hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FormMessage.Show("Xoá hãng sản xuất không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

@@ -54,7 +54,7 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Số serial không đúng hoặc hết bảo hành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Số serial không đúng hoặc hết bảo hành", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -106,6 +106,11 @@ namespace GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            LamSach();
+        }
+
+        private void LamSach()
+        {
             dgvChiTietBH.Rows.Clear();
             txtTenKH.Text = "";
             txtSoDT.Text = "";
@@ -116,13 +121,14 @@ namespace GUI
             txtGhiChu.Text = "";
             txtGiaSua.Text = "";
             txtSerial.Text = "";
+            txtTongCong.Text = "0 VNĐ";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (dgvChiTietBH.Rows.Count == 0 || txtTenKH.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -139,7 +145,7 @@ namespace GUI
             baoHanh.MaKhachHang = strMaKH;
             baoHanh.MaNhanVien = Program.MA_NV;
             baoHanh.NgayBaoHanh = TienIch.LayNgayThangHienTaiQuocTe();
-            baoHanh.TongTien = Convert.ToDecimal(TienIch.HuyDinhDangSo(txtTongCong.Text));
+            baoHanh.TongTien = Convert.ToDecimal(TienIch.ChuyenVNDSangSo(txtTongCong.Text));
             baoHanh.LoaiBaoHanh = 0;
             string strMaBH = _BaoHanhBUS.ThemBaoHanh(baoHanh);
 
@@ -158,7 +164,8 @@ namespace GUI
                 dsChiTiet.Add(chiTiet);
             }
             _ChiTietBaoHanhBUS.ThemChiTietBaoHanh(dsChiTiet, strMaBH);
-            MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LamSach();
         }
 
         private void dgvChiTietBH_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -188,7 +195,7 @@ namespace GUI
             {
                 dTongCong += Convert.ToDecimal(dgvRow.Cells[3].Value.ToString());
             }
-            txtTongCong.Text = dTongCong.ToString();
+            txtTongCong.Text = TienIch.ChuyenSoSangVND(dTongCong);
         }
 
         private void dgvChiTietBH_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
@@ -211,7 +218,6 @@ namespace GUI
 
         private void txtTongCong_TextChanged(object sender, EventArgs e)
         {
-            TienIch.DinhDangSoTextBox(txtTongCong);
         }
     }
 }
