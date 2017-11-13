@@ -49,7 +49,7 @@ namespace DAO
         public bool XoaKhachHang(string MaKH)
         {
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
-            string query = string.Format("delete from KhachHang where MaKhachHang='{0}'", MaKH);
+            string query = string.Format("update KhachHang set TrangThai=0");
             SqlCommand cmd = new SqlCommand(query, conn);
             int thucthi = cmd.ExecuteNonQuery();
             ThaoTacDuLieu.DongKetNoi(conn);

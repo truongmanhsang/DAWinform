@@ -3,13 +3,13 @@ D:\Development\Projects\Winform\[DA]_WinformNC\DTO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
-D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
-D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

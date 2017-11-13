@@ -5,15 +5,6 @@ D:\Development\Projects\Winform\[DA]_WinformNC\DAO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\DAO\obj\Debug\DAO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DTO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DTO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.pdb
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\ClassLibrary.dll
-D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\ClassLibrary.pdb
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.dll
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.pdb
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\ClassLibrary.dll
@@ -23,3 +14,12 @@ D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.dll
 D:\Development\Projects\Winform\DAWinform\DAO\obj\Debug\DAO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DAO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\ClassLibrary.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\ClassLibrary.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.pdb

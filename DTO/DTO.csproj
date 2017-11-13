@@ -44,6 +44,7 @@
     <Compile Include="clsChiTietPhieuXuat_DTO.cs" />
     <Compile Include="clsKhachHang_DTO.cs" />
     <Compile Include="clsNhaCungCap_DTO.cs" />
+    <Compile Include="clsNhanVien_DTO.cs" />
     <Compile Include="clsPhieuNhap_DTO.cs" />
     <Compile Include="clsPhieuXuat_DTO.cs" />
     <Compile Include="clsSanPham_DTO.cs" />

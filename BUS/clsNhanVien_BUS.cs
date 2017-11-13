@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using System.Data;
+using DTO;
 
 namespace BUS
 {
@@ -22,6 +23,18 @@ namespace BUS
         public DataTable LayBangNhanVien()
         {
             return dao.LayBangNhanVien();
+        }
+        public DataTable LayBangChucVu()
+        {
+            return dao.LayBangChucVu();
+        }
+        public bool ThemNhanVien(clsNhanVien_DTO nhanvien)
+        { 
+            return dao.ThemNhanVien(nhanvien);
+        }
+        public bool SuaNhanVien(clsNhanVien_DTO nhanvien)
+        {
+            return dao.SuaNhanVien(nhanvien);
         }
     }
 }

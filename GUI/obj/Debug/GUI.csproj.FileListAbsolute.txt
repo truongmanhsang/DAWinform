@@ -40,8 +40,6 @@ D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucDoanhThu.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucLoiNhuan.resources
 D:\Development\Projects\Winform\DAWinform\GUI\obj\Debug\GUI.ucLoiNhuanTongQuan.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe.config
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.exe
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.exe
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\GUI.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\bin\Debug\BUS.dll
@@ -80,3 +78,5 @@ D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucSanPham.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.exe
+D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.pdb
