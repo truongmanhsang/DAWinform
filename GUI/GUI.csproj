@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHangSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHangSanXuat.Designer.cs">
+      <DependentUpon>frmHangSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoai.Designer.cs">
+      <DependentUpon>frmLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,12 @@
     </Compile>
     <Compile Include="frmThemSuaSanPham.Designer.cs">
       <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTim.Designer.cs">
+      <DependentUpon>frmTim.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,11 +206,29 @@
     <Compile Include="UserControls\ucSanPham.Designer.cs">
       <DependentUpon>ucSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSerial.Designer.cs">
+      <DependentUpon>ucSerial.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucThongKe.Designer.cs">
       <DependentUpon>ucThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemKH.Designer.cs">
+      <DependentUpon>ucTimKiemKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemNCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiemNCC.Designer.cs">
+      <DependentUpon>ucTimKiemNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucTonKho.cs">
       <SubType>UserControl</SubType>
@@ -200,6 +236,12 @@
     <Compile Include="UserControls\ucTonKho.Designer.cs">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmHangSanXuat.resx">
+      <DependentUpon>frmHangSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoai.resx">
+      <DependentUpon>frmLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemSuaSanPham.resx">
       <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTim.resx">
+      <DependentUpon>frmTim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -279,8 +324,17 @@
     <EmbeddedResource Include="UserControls\ucSanPham.resx">
       <DependentUpon>ucSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSerial.resx">
+      <DependentUpon>ucSerial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTimKiemKH.resx">
+      <DependentUpon>ucTimKiemKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTimKiemNCC.resx">
+      <DependentUpon>ucTimKiemNCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTonKho.resx">
       <DependentUpon>ucTonKho.cs</DependentUpon>

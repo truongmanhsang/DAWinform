@@ -5,12 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ClassLibrary;
+using System.Data;
 
 namespace DAO
 {
     public class clsSerial_DAO
     {
         clsSanPham_DAO _SanPhamDAO = new clsSanPham_DAO();
+        public DataTable LayBangSerial()
+        {
+            string query = @"select * 
+                                from Serial as sr
+                                    left join PhieuXuat as px on px.MaPhieuXuat = sr.MaPhieuXuat
+                                    left join PhieuNhap as pn on pn.MaPhieuNhap = sr.MaPhieuNhap
+                                    left join SanPham as sp on sp.MaSanPham = sr.MaSanPham";
+            return ThaoTacDuLieu.LayBang(query);
+        }
         public string LayMaSerial(string strMaSP, int iSoThangBH) // Lấy mã serial cùng với update số tháng bảo hành
         {
             string strSerial = string.Empty;
@@ -81,6 +91,26 @@ namespace DAO
             strMaSerial = Convert.ToString(cmd.ExecuteScalar());
             ThaoTacDuLieu.DongKetNoi(conn);
             return strMaSerial;
+        }
+        public string LayTenSanPhamConBH(string strSoSerial)
+        {
+            string strTen = string.Empty;
+            string query = string.Format("select sp.TenSanPham from Serial sr, SanPham sp where sr.MaSanPham = sp.MaSanPham and sr.ThoiHanBaoHanh is not null and GETDATE() <= sr.ThoiHanBaoHanh and SoSerial='{0}'", strSoSerial);
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            strTen = Convert.ToString(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return strTen;
+        }
+        public string LayMaSerial(string strSoSerial)
+        {
+            string strMa = string.Empty;
+            string query = string.Format("select MaSerial from Serial where SoSerial='{0}'", strSoSerial);
+            SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            strMa = Convert.ToString(cmd.ExecuteScalar());
+            ThaoTacDuLieu.DongKetNoi(conn);
+            return strMa;
         }
     }
 }

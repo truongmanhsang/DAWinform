@@ -54,7 +54,7 @@
             this.chkTenSP = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSua = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.colHinh = new System.Windows.Forms.DataGridViewImageColumn();
@@ -201,16 +201,22 @@
             // txtGiaBanDen
             // 
             this.txtGiaBanDen.Location = new System.Drawing.Point(168, 149);
+            this.txtGiaBanDen.MaxLength = 20;
             this.txtGiaBanDen.Name = "txtGiaBanDen";
             this.txtGiaBanDen.Size = new System.Drawing.Size(110, 26);
             this.txtGiaBanDen.TabIndex = 10;
+            this.txtGiaBanDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaBanDen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaBanDen_KeyUp);
             // 
             // txtGiaBanTu
             // 
             this.txtGiaBanTu.Location = new System.Drawing.Point(168, 118);
+            this.txtGiaBanTu.MaxLength = 20;
             this.txtGiaBanTu.Name = "txtGiaBanTu";
             this.txtGiaBanTu.Size = new System.Drawing.Size(110, 26);
             this.txtGiaBanTu.TabIndex = 9;
+            this.txtGiaBanTu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaBanTu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaBanTu_KeyUp);
             // 
             // label4
             // 
@@ -243,16 +249,22 @@
             // txtGiaMuaDen
             // 
             this.txtGiaMuaDen.Location = new System.Drawing.Point(168, 87);
+            this.txtGiaMuaDen.MaxLength = 20;
             this.txtGiaMuaDen.Name = "txtGiaMuaDen";
             this.txtGiaMuaDen.Size = new System.Drawing.Size(110, 26);
             this.txtGiaMuaDen.TabIndex = 5;
+            this.txtGiaMuaDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMuaDen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMuaDen_KeyUp);
             // 
             // txtGiaMuaTu
             // 
             this.txtGiaMuaTu.Location = new System.Drawing.Point(168, 56);
+            this.txtGiaMuaTu.MaxLength = 20;
             this.txtGiaMuaTu.Name = "txtGiaMuaTu";
             this.txtGiaMuaTu.Size = new System.Drawing.Size(110, 26);
             this.txtGiaMuaTu.TabIndex = 4;
+            this.txtGiaMuaTu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMuaTu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMuaTu_KeyUp);
             // 
             // label1
             // 
@@ -295,7 +307,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.btnSua);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Location = new System.Drawing.Point(3, 298);
             this.groupBox2.Name = "groupBox2";
@@ -314,14 +326,15 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button2
+            // btnXoa
             // 
-            this.button2.Location = new System.Drawing.Point(6, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(333, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Xoá";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(6, 107);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(333, 35);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -368,6 +381,8 @@
             this.dgvSanPham.Size = new System.Drawing.Size(627, 580);
             this.dgvSanPham.TabIndex = 0;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
+            this.dgvSanPham.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellDoubleClick);
+            this.dgvSanPham.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellEndEdit);
             this.dgvSanPham.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSanPham_CellFormatting);
             // 
             // colHinh
@@ -517,7 +532,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label6;

@@ -16,6 +16,10 @@ namespace BUS
         {
             return dao.LayBangKhachHang();
         }
+        public DataTable LayBangKhachHang(string strMaKH)
+        {
+            return dao.LayBangKhachHang(strMaKH);
+        }
         public string ThemKhachHang(clsKhachHang_DTO khachHang)
         {
             return dao.ThemKhachHang(khachHang);

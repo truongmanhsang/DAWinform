@@ -12,6 +12,10 @@ namespace BUS
     public class clsSanPham_BUS
     {
         clsSanPham_DAO dao = new clsSanPham_DAO();
+        public bool XoaSanPham(string strMaSP)
+        {
+            return dao.XoaSanPham(strMaSP);
+        }
         public bool SuaSanPham(clsSanPham_DTO sanPham)
         {
             return dao.SuaSanPham(sanPham);

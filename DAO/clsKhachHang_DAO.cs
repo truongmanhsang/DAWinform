@@ -18,6 +18,13 @@ namespace DAO
             DataTable dt = ThaoTacDuLieu.LayBang(query);
             return dt;
         }
+
+        public DataTable LayBangKhachHang(string strMaKH)
+        {
+            string query = string.Format("select * from KhachHang where TrangThai=1 and MaKhachHang='{0}'", strMaKH);
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
+        }
         public string ThemKhachHang(clsKhachHang_DTO khachHang) // thêm và lấy id kh về để thêm vào hoá đơn
         {
             string strMaKH = "KH" + (ThaoTacDuLieu.DemSoDongCuaBang("KhachHang") + 1);

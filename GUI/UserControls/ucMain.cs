@@ -326,6 +326,7 @@ namespace GUI
                     {
                         tabNhanBaoHanh = new TabPage(strTenTabpage);
                         ucNhanBaoHanh _ucNhanBaoHanh = new ucNhanBaoHanh();
+                        _ucNhanBaoHanh.timSoSerial += BatTabTimSoSerial;
                         tabNhanBaoHanh.Controls.Add(_ucNhanBaoHanh);
                         _ucNhanBaoHanh.Dock = DockStyle.Fill;
 
@@ -530,6 +531,32 @@ namespace GUI
 
         private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {       
+        }
+
+        private void BatTabTimSoSerial()
+        {
+            string strTenTabpage = "Hàng Hoá";
+            ucHangHoa _ucHangHoa = new ucHangHoa();
+            if (!tabControlMain.Contains(tabPageHangHoa))
+            {
+                tabPageHangHoa = new TabPage(strTenTabpage);
+                tabPageHangHoa.Controls.Add(_ucHangHoa);
+                _ucHangHoa.Dock = DockStyle.Fill;
+
+
+                tabControlMain.TabPages.Add(tabPageHangHoa);
+                tabControlMain.SelectedTab = tabPageHangHoa;
+            }
+            else
+            {
+                tabPageHangHoa.Controls.Clear();
+                tabPageHangHoa.Controls.Add(_ucHangHoa);
+                _ucHangHoa.Dock = DockStyle.Fill;
+
+
+                tabControlMain.SelectedTab = tabPageHangHoa;
+            }
+            _ucHangHoa.BatUCSerial();
         }
     }
 }

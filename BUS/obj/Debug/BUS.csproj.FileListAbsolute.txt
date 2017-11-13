@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\bin\Debug\BUS.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\bin\Debug\BUS.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\bin\Debug\DAO.dll
@@ -7,6 +8,8 @@ D:\Development\Projects\Winform\[DA]_WinformNC\BUS\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\BUS\obj\Debug\BUS.pdb
+=======
+>>>>>>> 9d557e16410b488b24f749c27505869c9bcc4b60
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DAO.dll

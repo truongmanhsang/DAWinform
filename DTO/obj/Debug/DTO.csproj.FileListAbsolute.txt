@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\bin\Debug\DTO.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.dll
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.pdb
 D:\Development\Projects\Winform\[DA]_WinformNC\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> 9d557e16410b488b24f749c27505869c9bcc4b60
 D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
