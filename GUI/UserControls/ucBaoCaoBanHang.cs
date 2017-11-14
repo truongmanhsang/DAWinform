@@ -169,5 +169,12 @@ namespace GUI
                 }
             }
         }
+
+        private void llblTim_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmTim frm = new frmTim(frmTim.Loai.KhachHang);
+            frm.ShowDialog();
+            txtMaKH.Text = frm.LayMa();
+        }
     }
 }

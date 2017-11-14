@@ -14,7 +14,7 @@ namespace DAO
         {
             foreach (clsChiTietBaoHanh_DTO chiTiet in dsChiTiet)
             {
-                string query = string.Format("insert into ChiTietBaoHanh values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",strMaBH,chiTiet.MaSerial,chiTiet.NgayHenTra,chiTiet.GiaSuaChua,chiTiet.TraHang,chiTiet.MotaLoi,chiTiet.GhiChu);
+                string query = string.Format("insert into ChiTietBaoHanh values('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')",strMaBH,chiTiet.MaSerial,chiTiet.NgayHenTra,chiTiet.GiaSuaChua,chiTiet.TraHang,chiTiet.MotaLoi,chiTiet.GhiChu);
                 ThaoTacDuLieu.ThucThi(query);
             }
         }

@@ -6,3 +6,4 @@ D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\DTO\bin\Debug\DTO.pdb
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.dll
 D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.pdb
+D:\Development\Projects\Winform\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

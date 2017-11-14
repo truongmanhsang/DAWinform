@@ -20,7 +20,7 @@ namespace DAO
         }
         public DataTable LayBangPhieuNhap()
         {
-            string query = "select * from PhieuNhap where TrangThai=1";
+            string query = "select * from PhieuNhap pn, NhanVien nv, NhaCungCap ncc where pn.NhanVienLap = nv.MaNhanVien and pn.MaNhaCungCap = ncc.MaNhaCungCap and pn.TrangThai=1";
             DataTable dt = ThaoTacDuLieu.LayBang(query);
             return dt;
         }

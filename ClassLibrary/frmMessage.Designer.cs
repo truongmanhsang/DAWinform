@@ -96,6 +96,7 @@
             // 
             // lblNoiDung
             // 
+            this.lblNoiDung.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoiDung.Location = new System.Drawing.Point(99, 12);
             this.lblNoiDung.Name = "lblNoiDung";
             this.lblNoiDung.Size = new System.Drawing.Size(265, 83);
@@ -111,7 +112,7 @@
             this.picBieuTuong.TabIndex = 81;
             this.picBieuTuong.TabStop = false;
             // 
-            // frmMessageBox
+            // frmMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +127,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMessageBox";
+            this.Name = "frmMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMessageBox";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMessageBox_FormClosing);

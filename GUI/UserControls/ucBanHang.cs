@@ -14,8 +14,13 @@ using ClassLibrary;
 
 namespace GUI
 {
-    public partial class ucBanHang : UserControl
+    public partial class ucBanHang : UserControl, IDieuKhien
     {
+        public void TaiLaiDuLieu()
+        {
+            TaiDuLieu();
+        }
+
         // các bus cần thiết
         private clsKhachHang_BUS _KhachHangBUS = new clsKhachHang_BUS();
         private clsSanPham_BUS _SanPhamBUS = new clsSanPham_BUS();
@@ -318,7 +323,7 @@ namespace GUI
 
             FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LamSach(); // làm sạch controls
-            TaiDuLieu(); // tải lại dữ liệu
+            Program.TaiLaiDuLieu(); // tải lại toàn bộ dữ liệu
         }
 
         private void dgvBanHang_KeyUp(object sender, KeyEventArgs e)
@@ -330,6 +335,5 @@ namespace GUI
                 TinhTongTien();
             }
         }
-
     }
 }

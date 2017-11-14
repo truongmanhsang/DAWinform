@@ -48,6 +48,8 @@ namespace GUI
         TabPage tabLoiNhuan;
         TabPage tabNhapHang;
 
+
+
         public static ucMain GetInstance
         {
             get
@@ -85,6 +87,26 @@ namespace GUI
             tabControlMain.Padding = new Point(50);
             // ==
 
+
+            // Cài đặt hàm tải lại toàn bộ dữ liệu
+            Program.xuLyTaiLaiDuLieu += TaiLaiDuLieu;
+        }
+
+        private void TaiLaiDuLieu()
+        {
+            if (tabControlMain.TabCount > 0)
+            {
+                for (int i = 0; i < tabControlMain.TabCount; i++)
+                {
+                    foreach (Control c in tabControlMain.TabPages[i].Controls)
+                    {
+                        if (c is IDieuKhien)
+                        {
+                            ((IDieuKhien)c).TaiLaiDuLieu();
+                        }
+                    }
+                }
+            }
         }
 
         private void tabControlMenu_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -444,7 +466,10 @@ namespace GUI
         {
             DialogResult result = FormMessage.Show("Bạn chắc chắn muốn đăng xuất chứ?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
+            {
+                tabControlMain.Controls.Clear();
                 xuLyDangXuat();
+            }
         }
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)

@@ -40,6 +40,12 @@ namespace GUI
                 uc.guiMa += NhanMa;
                 panMain.Controls.Add(uc);
                 uc.Dock = DockStyle.Fill;
+            }else if (loai == Loai.NhaCungCap)
+            {
+                ucTimKiemNCC uc = new ucTimKiemNCC();
+                uc.guiMa += NhanMa;
+                panMain.Controls.Add(uc);
+                uc.Dock = DockStyle.Fill;
             }
         }
 
@@ -57,7 +63,10 @@ namespace GUI
         {
             if (strMa == null)
             {
-                FormMessage.Show("Vui lòng chọn 1 KH", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (loai == Loai.KhachHang)
+                    FormMessage.Show("Vui lòng chọn 1 khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (loai == Loai.NhaCungCap)
+                    FormMessage.Show("Vui lòng chọn 1 nhà cung cấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
