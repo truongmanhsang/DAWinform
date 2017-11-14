@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvChiTietBH = new System.Windows.Forms.DataGridView();
             this.colTenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +38,7 @@
             this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.dtpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnGhi = new System.Windows.Forms.Button();
@@ -65,8 +66,6 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.txtTongCong = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietBH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -99,7 +98,7 @@
             this.dgvChiTietBH.RowTemplate.ReadOnly = true;
             this.dgvChiTietBH.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvChiTietBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChiTietBH.Size = new System.Drawing.Size(808, 203);
+            this.dgvChiTietBH.Size = new System.Drawing.Size(808, 199);
             this.dgvChiTietBH.TabIndex = 0;
             this.dgvChiTietBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietBH_CellClick);
             this.dgvChiTietBH.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvChiTietBH_CellFormatting);
@@ -131,8 +130,8 @@
             // colGiaSuaChua
             // 
             this.colGiaSuaChua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.Format = "#,##0 VNĐ";
-            this.colGiaSuaChua.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Format = "#,##0 VNĐ";
+            this.colGiaSuaChua.DefaultCellStyle = dataGridViewCellStyle3;
             this.colGiaSuaChua.HeaderText = "Giá Sữa Chữa";
             this.colGiaSuaChua.Name = "colGiaSuaChua";
             this.colGiaSuaChua.ReadOnly = true;
@@ -198,6 +197,16 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản phẩm bảo hành";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(351, 155);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 18);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "VNĐ";
             // 
             // dtpNgayHenTra
             // 
@@ -458,11 +467,14 @@
             // txtTongCong
             // 
             this.txtTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTongCong.Location = new System.Drawing.Point(587, 480);
+            this.txtTongCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTongCong.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongCong.Location = new System.Drawing.Point(587, 476);
             this.txtTongCong.Name = "txtTongCong";
             this.txtTongCong.ReadOnly = true;
-            this.txtTongCong.Size = new System.Drawing.Size(172, 26);
+            this.txtTongCong.Size = new System.Drawing.Size(224, 32);
             this.txtTongCong.TabIndex = 15;
+            this.txtTongCong.Text = "0 VNĐ";
             this.txtTongCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtTongCong.TextChanged += new System.EventHandler(this.txtTongCong_TextChanged);
             // 
@@ -470,38 +482,19 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(500, 483);
+            this.label10.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Maroon;
+            this.label10.Location = new System.Drawing.Point(462, 479);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 18);
+            this.label10.Size = new System.Drawing.Size(119, 24);
             this.label10.TabIndex = 17;
             this.label10.Text = "Tổng cộng";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(351, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 18);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "VNĐ";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(765, 483);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 18);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "VNĐ";
             // 
             // ucNhanBaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTongCong);
             this.Controls.Add(this.btnHuy);
@@ -566,6 +559,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayHenTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
     }
 }

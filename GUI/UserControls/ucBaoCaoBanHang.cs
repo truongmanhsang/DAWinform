@@ -138,32 +138,32 @@ namespace GUI
                 if (lTienNo > 0)
                 {
                     string strMaPhieu = dgvPhieuXuat.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
-                    if (MessageBox.Show("Bạn chắc chắn muốn trả tiền nợ cho hoá đơn này?", "Xác nhận trả tiền", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (FormMessage.Show("Bạn chắc chắn muốn trả tiền nợ cho hoá đơn này?", "Xác nhận trả tiền", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (_PhieuXuatBUS.TraTienNo(strMaPhieu))
                         {
-                            MessageBox.Show("Trả tiền thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FormMessage.Show("Trả tiền thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TaiDuLieu();
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Hoá đơn này không nợ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormMessage.Show("Hoá đơn này không nợ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn xoá hoá đơn này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (FormMessage.Show("Bạn chắc chắn muốn xoá hoá đơn này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (dgvPhieuXuat.SelectedRows[0].Index != -1)
                 {
                     string strMaPhieu = dgvPhieuXuat.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
                     if (_PhieuXuatBUS.XoaPhieuXuat(strMaPhieu))
                     {
-                        MessageBox.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormMessage.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TaiDuLieu();
                     }
                 }

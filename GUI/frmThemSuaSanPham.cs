@@ -130,17 +130,17 @@ namespace GUI
         {
             if (txtTenSP.Text == "" || txtDonViTinh.Text == "" || txtGiaMua.Text == "" || txtGiaBan.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (numBH.Value == 0)
             {
-                MessageBox.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (picHinh.Image == null)
             {
-                MessageBox.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -156,7 +156,7 @@ namespace GUI
                 }
                 catch
                 {
-                    MessageBox.Show("Hình này đang được sử dụng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FormMessage.Show("Hình này đang được sử dụng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -186,17 +186,17 @@ namespace GUI
         {
             if (txtTenSP.Text == "" || txtDonViTinh.Text == "" || txtGiaMua.Text == "" || txtGiaBan.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (numBH.Value == 0)
             {
-                MessageBox.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (picHinh.Image == null)
             {
-                MessageBox.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -236,7 +236,7 @@ namespace GUI
                 }
                 catch
                 {
-                    MessageBox.Show("Hình lỗi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FormMessage.Show("Hình lỗi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }

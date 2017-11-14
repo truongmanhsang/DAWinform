@@ -130,12 +130,12 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FormMessage.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -152,7 +152,7 @@ namespace GUI
 
             if (iSoLuong > iSoLuongConLai)
             {
-                MessageBox.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}", iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}", iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -263,12 +263,12 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn sản phẩm để mua, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    FormMessage.Show("Vui lòng chọn sản phẩm để mua, bạn có thể chọn ở mục bên trái nhập số lượng và nhấn ghi!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin khách hàng, bạn có thể chọn ở mục bên trái hoặc thêm!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -316,7 +316,7 @@ namespace GUI
 
             _ChiTietPhieuXuatBUS.TaoChiTieuPhieuXuat(dsChiTietSP, strMaPhieuXuat);
 
-            MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LamSach(); // làm sạch controls
             TaiDuLieu(); // tải lại dữ liệu
         }

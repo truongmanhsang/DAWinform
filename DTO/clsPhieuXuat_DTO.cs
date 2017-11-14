@@ -10,8 +10,8 @@ namespace DTO
     {
         private string _maPhieuXuat;
         private string _maKhachHang;
-        private long _tongTien;
-        private long _tienNo;
+        private decimal _tongTien;
+        private decimal _tienNo;
         private float _chietKhau;
         private float _thue;
         private string _ngayLap;
@@ -46,7 +46,7 @@ namespace DTO
             }
         }
 
-        public long TongTien
+        public decimal TongTien
         {
             get
             {
@@ -59,7 +59,7 @@ namespace DTO
             }
         }
 
-        public long TienNo
+        public decimal TienNo
         {
             get
             {

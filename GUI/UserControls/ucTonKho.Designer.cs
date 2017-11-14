@@ -66,16 +66,18 @@
             this.dgvTonKho.RowTemplate.ReadOnly = true;
             this.dgvTonKho.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTonKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTonKho.Size = new System.Drawing.Size(801, 476);
+            this.dgvTonKho.Size = new System.Drawing.Size(801, 470);
             this.dgvTonKho.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(255, 488);
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(119, 484);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 18);
+            this.label1.Size = new System.Drawing.Size(151, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tổng số lượng:";
             // 
@@ -83,31 +85,35 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(523, 488);
+            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(440, 484);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
+            this.label2.Size = new System.Drawing.Size(120, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tổng trị giá:";
             // 
             // txtTongSL
             // 
             this.txtTongSL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTongSL.BackColor = System.Drawing.Color.Moccasin;
-            this.txtTongSL.Location = new System.Drawing.Point(375, 485);
+            this.txtTongSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTongSL.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongSL.Location = new System.Drawing.Point(276, 479);
             this.txtTongSL.Name = "txtTongSL";
             this.txtTongSL.ReadOnly = true;
-            this.txtTongSL.Size = new System.Drawing.Size(120, 26);
+            this.txtTongSL.Size = new System.Drawing.Size(120, 32);
             this.txtTongSL.TabIndex = 3;
             this.txtTongSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtTongTriGia
             // 
             this.txtTongTriGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTongTriGia.BackColor = System.Drawing.Color.Moccasin;
-            this.txtTongTriGia.Location = new System.Drawing.Point(619, 485);
+            this.txtTongTriGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTongTriGia.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTriGia.Location = new System.Drawing.Point(566, 479);
             this.txtTongTriGia.Name = "txtTongTriGia";
             this.txtTongTriGia.ReadOnly = true;
-            this.txtTongTriGia.Size = new System.Drawing.Size(185, 26);
+            this.txtTongTriGia.Size = new System.Drawing.Size(238, 32);
             this.txtTongTriGia.TabIndex = 4;
             this.txtTongTriGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -141,6 +147,7 @@
             // 
             this.colGiaMua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGiaMua.DataPropertyName = "GiaMua";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.Format = "#,### VNĐ";
             this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle1;
             this.colGiaMua.HeaderText = "Giá Mua Vào";
@@ -152,6 +159,7 @@
             // 
             this.colTriGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colTriGia.DataPropertyName = "TongTriGia";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "#,##0 VNĐ";
             this.colTriGia.DefaultCellStyle = dataGridViewCellStyle2;
             this.colTriGia.HeaderText = "Trị Giá";
