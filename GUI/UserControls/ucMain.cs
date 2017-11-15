@@ -27,7 +27,7 @@ namespace GUI
             BanHang, KhachHang, CongNoBanHang, BaoCaoBanHang,
             NhapHang, NhaCungCap, CongNoNhapHang, BaoCaoNhapHang,
             HangHoa, TonKho,
-            NhanBaoHanh, GuiBaoHanh, BaoCaoBaoHanh,
+            NhanBaoHanh, GuiBaoHanh, BaoCaoBaoHanh, KhoBaoHanh,
             ThuChi,
             NhanVien,
             DoanhThu,DoanhSo,LoiNhuan
@@ -47,6 +47,7 @@ namespace GUI
         TabPage tabDoanhthu;
         TabPage tabLoiNhuan;
         TabPage tabNhapHang;
+        TabPage tabKhoBaoHanh;
 
 
 
@@ -173,6 +174,7 @@ namespace GUI
                 e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
                     f, br, rectString, strF);
             }
+           
         }
 
         private void tabControlMain_MouseClick(object sender, MouseEventArgs e)
@@ -344,7 +346,7 @@ namespace GUI
                     }
                     break;
                 case ChucNang.NhanBaoHanh:
-                    strTenTabpage = "Nhận Bảo Hành";
+                    strTenTabpage = "Bảo Hành";
                     if (!tabControlMain.Contains(tabNhanBaoHanh))
                     {
                         tabNhanBaoHanh = new TabPage(strTenTabpage);
@@ -362,22 +364,22 @@ namespace GUI
                         tabControlMain.SelectedTab = tabNhanBaoHanh;
                     }
                     break;
-                case ChucNang.GuiBaoHanh:
-                    strTenTabpage = "Gửi Bảo Hành";
-                    if (!tabControlMain.Contains(tabGuiBaoHanh))
+                case ChucNang.KhoBaoHanh:
+                    strTenTabpage = "Kho Bảo Hành";
+                    if (!tabControlMain.Contains(tabKhoBaoHanh))
                     {
-                        tabGuiBaoHanh = new TabPage(strTenTabpage);
-                        ucGuiBaoHanh _ucGuiBaoHanh = new ucGuiBaoHanh();
-                        tabGuiBaoHanh.Controls.Add(_ucGuiBaoHanh);
-                        _ucGuiBaoHanh.Dock = DockStyle.Fill;
+                        tabKhoBaoHanh = new TabPage(strTenTabpage);
+                        ucKhoBaoHanh _ucKhoBaoHanh = new ucKhoBaoHanh();
+                        tabKhoBaoHanh.Controls.Add(_ucKhoBaoHanh);
+                        _ucKhoBaoHanh.Dock = DockStyle.Fill;
 
 
-                        tabControlMain.TabPages.Add(tabGuiBaoHanh);
-                        tabControlMain.SelectedTab = tabGuiBaoHanh;
+                        tabControlMain.TabPages.Add(tabKhoBaoHanh);
+                        tabControlMain.SelectedTab = tabKhoBaoHanh;
                     }
                     else
                     {
-                        tabControlMain.SelectedTab = tabGuiBaoHanh;
+                        tabControlMain.SelectedTab = tabKhoBaoHanh;
                     }
                     break;
                 case ChucNang.BaoCaoBaoHanh:
@@ -583,6 +585,11 @@ namespace GUI
                 tabControlMain.SelectedTab = tabPageHangHoa;
             }
             _ucHangHoa.BatUCSerial();
+        }
+
+        private void btnKhoBaoHanh_Click(object sender, EventArgs e)
+        {
+            TaoTabpage(ChucNang.KhoBaoHanh);
         }
     }
 }

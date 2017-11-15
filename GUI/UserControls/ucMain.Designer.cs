@@ -43,6 +43,7 @@
             this.btnTonKho = new System.Windows.Forms.Button();
             this.btnHangHoa = new System.Windows.Forms.Button();
             this.tabPageBaoHanh = new System.Windows.Forms.TabPage();
+            this.btnKhoBaoHanh = new System.Windows.Forms.Button();
             this.btnBaoCaoBaoHanh = new System.Windows.Forms.Button();
             this.btnNhanBaoHanh = new System.Windows.Forms.Button();
             this.tabPageNhanVien = new System.Windows.Forms.TabPage();
@@ -276,6 +277,7 @@
             // 
             // tabPageBaoHanh
             // 
+            this.tabPageBaoHanh.Controls.Add(this.btnKhoBaoHanh);
             this.tabPageBaoHanh.Controls.Add(this.btnBaoCaoBaoHanh);
             this.tabPageBaoHanh.Controls.Add(this.btnNhanBaoHanh);
             this.tabPageBaoHanh.Location = new System.Drawing.Point(4, 27);
@@ -286,13 +288,29 @@
             this.tabPageBaoHanh.Text = "Bảo Hành";
             this.tabPageBaoHanh.UseVisualStyleBackColor = true;
             // 
+            // btnKhoBaoHanh
+            // 
+            this.btnKhoBaoHanh.FlatAppearance.BorderSize = 0;
+            this.btnKhoBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnKhoBaoHanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoBaoHanh.Image = global::GUI.Properties.Resources.TonKho;
+            this.btnKhoBaoHanh.Location = new System.Drawing.Point(137, 8);
+            this.btnKhoBaoHanh.Name = "btnKhoBaoHanh";
+            this.btnKhoBaoHanh.Size = new System.Drawing.Size(118, 85);
+            this.btnKhoBaoHanh.TabIndex = 10;
+            this.btnKhoBaoHanh.Text = "Kho Bảo Hành";
+            this.btnKhoBaoHanh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnKhoBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnKhoBaoHanh.UseVisualStyleBackColor = true;
+            this.btnKhoBaoHanh.Click += new System.EventHandler(this.btnKhoBaoHanh_Click);
+            // 
             // btnBaoCaoBaoHanh
             // 
             this.btnBaoCaoBaoHanh.FlatAppearance.BorderSize = 0;
             this.btnBaoCaoBaoHanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
             this.btnBaoCaoBaoHanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCaoBaoHanh.Image = global::GUI.Properties.Resources.BaoCao;
-            this.btnBaoCaoBaoHanh.Location = new System.Drawing.Point(137, 8);
+            this.btnBaoCaoBaoHanh.Location = new System.Drawing.Point(261, 8);
             this.btnBaoCaoBaoHanh.Name = "btnBaoCaoBaoHanh";
             this.btnBaoCaoBaoHanh.Size = new System.Drawing.Size(82, 85);
             this.btnBaoCaoBaoHanh.TabIndex = 9;
@@ -312,7 +330,7 @@
             this.btnNhanBaoHanh.Name = "btnNhanBaoHanh";
             this.btnNhanBaoHanh.Size = new System.Drawing.Size(125, 85);
             this.btnNhanBaoHanh.TabIndex = 7;
-            this.btnNhanBaoHanh.Text = "Nhận Bảo Hành";
+            this.btnNhanBaoHanh.Text = "Bảo Hành";
             this.btnNhanBaoHanh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNhanBaoHanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhanBaoHanh.UseVisualStyleBackColor = true;
@@ -405,7 +423,9 @@
             // 
             // btnAnHien
             // 
-            this.btnAnHien.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAnHien.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnAnHien.FlatAppearance.BorderSize = 0;
+            this.btnAnHien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnHien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnHien.Location = new System.Drawing.Point(-2, -1);
             this.btnAnHien.Name = "btnAnHien";
@@ -447,7 +467,7 @@
             // 
             this.lblTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.Location = new System.Drawing.Point(-2, 34);
+            this.lblTenNV.Location = new System.Drawing.Point(-2, 35);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(197, 35);
             this.lblTenNV.TabIndex = 1;
@@ -465,6 +485,7 @@
             // 
             // tabControlMain
             // 
+            this.tabControlMain.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -548,5 +569,6 @@
         private System.Windows.Forms.Button btnLoiNhuan;
         private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button btnAnHien;
+        private System.Windows.Forms.Button btnKhoBaoHanh;
     }
 }

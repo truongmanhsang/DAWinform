@@ -57,7 +57,7 @@ namespace DAO
         {
             int iSoDong = 0;
             SqlConnection conn = TaoVaMoKetNoi();
-            string sql =string.Format("select count(*) from {0} where TrangThai = 1", strTenBang);
+            string sql =string.Format("select count(*) from {0}", strTenBang);
             SqlCommand cmd = new SqlCommand(sql, conn);
             iSoDong = Convert.ToInt16(cmd.ExecuteScalar());
             DongKetNoi(conn);
