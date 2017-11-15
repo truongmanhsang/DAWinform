@@ -47,8 +47,14 @@ namespace DAO
         }
         public bool SuaNhanVien(clsNhanVien_DTO nhanvien)
         {
-            string query = string.Format("update NhanVien set TenNhanVien='{0}',TenDangNhap='{1}',MatKhau='{2}',HinhDaiDien='{3}',DiaChi='{4}',CMND='{5}',SoDT='{6}',Email='{7}',Quyen={8},GhiChu='{9}',TrangThai={10} where MaNV='{11}'",nhanvien.TenNV, nhanvien.TenDangNhap, nhanvien.MatKhau, nhanvien.Hinh, nhanvien.DiaChi, nhanvien.CMND, nhanvien.SDT, nhanvien.Email, nhanvien.Quyen, "", nhanvien.TrangThai,nhanvien.MaNV);
+            string query = string.Format("update NhanVien set TenNhanVien='{0}',TenDangNhap='{1}',MatKhau='{2}',HinhDaiDien='{3}',DiaChi='{4}',CMND='{5}',SoDT='{6}',Email='{7}',Quyen={8},GhiChu='{9}',TrangThai={10} where MaNhanVien='{11}'",nhanvien.TenNV, nhanvien.TenDangNhap, nhanvien.MatKhau, nhanvien.Hinh, nhanvien.DiaChi, nhanvien.CMND, nhanvien.SDT, nhanvien.Email, nhanvien.Quyen, "", nhanvien.TrangThai,nhanvien.MaNV);
             return ThaoTacDuLieu.ThucThi(query);
+        }
+        public DataTable LayNVTheoMaNV(string MaNV)
+        {
+            string query = "select * from NhanVien where TrangThai = 1 and MaNhanVien='"+ MaNV + "'";
+            DataTable dt = ThaoTacDuLieu.LayBang(query);
+            return dt;
         }
     }
 }

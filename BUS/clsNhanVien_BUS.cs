@@ -40,5 +40,9 @@ namespace BUS
         {
             return dao.XoaNhanVien(MaNV);
         }
+        public DataTable LayNVTheoMaNV(string MaNV)
+        {
+            return dao.LayNVTheoMaNV(MaNV);
+        }
     }
 }

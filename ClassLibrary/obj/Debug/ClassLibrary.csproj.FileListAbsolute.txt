@@ -15,3 +15,10 @@ D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.Ge
 =======
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 >>>>>>> 669dc121d4bf9f5305165eb45e914655829b47c1
+D:\GIT\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\GIT\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.frmMessage.resources
+D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb

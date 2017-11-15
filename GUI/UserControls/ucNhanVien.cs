@@ -100,7 +100,8 @@ namespace GUI
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            frmThemSuaNV frm = new frmThemSuaNV();
+            string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
+            frmThemSuaNV frm = new frmThemSuaNV(MaNV);
             frm.suanhanvien += XuLySuaNhanVien;
             frm.ShowDialog();
         }
@@ -159,19 +160,28 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dgvNhanVien.SelectedRows.Count > 0)
-            {
-                string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
-                if (bus.XoaNhanVien(MaNV))
+           
+                if (dgvNhanVien.SelectedRows.Count > 0)
                 {
-                    FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (FormMessage.Show("Ban co muon xoa", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
+                    if (bus.XoaNhanVien(MaNV))
+                    {
+                        FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                else
-                {
-                    FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            else
+            {
+                FormMessage.Show("Vui long chon nhan vien", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void dgvNhanVien_Click(object sender, EventArgs e)
