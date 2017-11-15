@@ -9,6 +9,17 @@ D:\tai lieu hoc tap\DoAn\DAWinform\BUS\bin\Debug\ClassLibrary.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.dll
 D:\tai lieu hoc tap\DoAn\DAWinform\BUS\obj\Debug\BUS.pdb
+D:\GIT\DAWinform\BUS\bin\Debug\BUS.dll
+D:\GIT\DAWinform\BUS\bin\Debug\BUS.pdb
+D:\GIT\DAWinform\BUS\bin\Debug\DAO.dll
+D:\GIT\DAWinform\BUS\bin\Debug\DTO.dll
+D:\GIT\DAWinform\BUS\bin\Debug\ClassLibrary.dll
+D:\GIT\DAWinform\BUS\bin\Debug\DAO.pdb
+D:\GIT\DAWinform\BUS\bin\Debug\DTO.pdb
+D:\GIT\DAWinform\BUS\bin\Debug\ClassLibrary.pdb
+D:\GIT\DAWinform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\GIT\DAWinform\BUS\obj\Debug\BUS.dll
+D:\GIT\DAWinform\BUS\obj\Debug\BUS.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.dll
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\BUS.pdb
 D:\Development\Projects\Winform\DAWinform\BUS\bin\Debug\DAO.dll

@@ -7,6 +7,15 @@ D:\tai lieu hoc tap\DoAn\DAWinform\DAO\bin\Debug\DTO.pdb
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.dll
 D:\tai lieu hoc tap\DoAn\DAWinform\DAO\obj\Debug\DAO.pdb
+D:\GIT\DAWinform\DAO\bin\Debug\DAO.dll
+D:\GIT\DAWinform\DAO\bin\Debug\DAO.pdb
+D:\GIT\DAWinform\DAO\bin\Debug\ClassLibrary.dll
+D:\GIT\DAWinform\DAO\bin\Debug\DTO.dll
+D:\GIT\DAWinform\DAO\bin\Debug\ClassLibrary.pdb
+D:\GIT\DAWinform\DAO\bin\Debug\DTO.pdb
+D:\GIT\DAWinform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\GIT\DAWinform\DAO\obj\Debug\DAO.dll
+D:\GIT\DAWinform\DAO\obj\Debug\DAO.pdb
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.dll
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\DAO.pdb
 D:\Development\Projects\Winform\DAWinform\DAO\bin\Debug\ClassLibrary.dll

@@ -36,7 +36,7 @@ namespace GUI
             InitializeComponent();
             MaNV = strMaNV;
         }
-
+        
        
 
         private void frmThemSuaNV_Load(object sender, EventArgs e)
@@ -54,6 +54,7 @@ namespace GUI
                 {
                     Text = "Sửa nhân viên";
                     btnLuu.Text = "Sửa";
+                    loadNV();
                 }
                 else
                 {
@@ -74,22 +75,25 @@ namespace GUI
             loadDuLieu();
         }
 
+        private void loadNV()
+        {
+            if (MaNV != null)
+            {
+                dt = _NhanVienBUS.LayNVTheoMaNV(MaNV);
+                txtTenDangNhap.Text = dt.Rows[0]["TenDangNhap"].ToString();
+                txtTenNV.Text = dt.Rows[0]["TenNhanVien"].ToString();
+                txtMK.Text = dt.Rows[0]["MatKhau"].ToString();
+                txtSoDT.Text = dt.Rows[0]["SoDT"].ToString();
+                txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
+                txtCMND.Text = dt.Rows[0]["CMND"].ToString();
+            }
+        }
+
         private void loadDuLieu()
         {
            cbbChucVu.SelectedIndex=0;
-            DataTable table = new DataTable();
-            table.Columns.Add("MaQuyen", typeof(int));
-            table.Columns.Add("TenQuyen", typeof(char));
-
-         
-            table.Rows.Add(1, "Nhân viên");
-            table.Rows.Add(2, "f");
-
           
-
-            cbbChucVu.DataSource = table;
-            cbbChucVu.DisplayMember = "TenQuyen";
-            cbbChucVu.ValueMember = "MaQuyen";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -135,7 +139,8 @@ namespace GUI
                 FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);
+         
+            
             clsNhanVien_DTO nhanvien = new clsNhanVien_DTO();
             nhanvien.TenNV = txtTenNV.Text;
             nhanvien.TenDangNhap = txtTenDangNhap.Text;
@@ -146,7 +151,15 @@ namespace GUI
             nhanvien.DiaChi = txtDiaChi.Text;
 
             nhanvien.Quyen = cbbChucVu.SelectedIndex==0 ? 1: 0;
-            nhanvien.Hinh = @"\data\images\users\" + TenHinh;
+            try
+            {
+                File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);
+                nhanvien.Hinh = @"\data\images\users\" + TenHinh;
+            }
+            catch
+            {
+
+            }
 
             themnhanvien(nhanvien);
             this.Close();
