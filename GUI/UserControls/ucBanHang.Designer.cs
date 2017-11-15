@@ -259,7 +259,7 @@
             this.groupBox2.Controls.Add(this.dgvKhachHang);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(482, 299);
+            this.groupBox2.Size = new System.Drawing.Size(482, 295);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm khách hàng";
@@ -300,7 +300,7 @@
             this.dgvKhachHang.RowTemplate.ReadOnly = true;
             this.dgvKhachHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(467, 232);
+            this.dgvKhachHang.Size = new System.Drawing.Size(467, 228);
             this.dgvKhachHang.TabIndex = 2;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
@@ -343,7 +343,7 @@
             this.groupBox5.Controls.Add(this.dgvBanHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 238);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(566, 327);
+            this.groupBox5.Size = new System.Drawing.Size(562, 327);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách sản phẩm mua";
@@ -370,7 +370,7 @@
             this.dgvBanHang.RowTemplate.ReadOnly = true;
             this.dgvBanHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBanHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBanHang.Size = new System.Drawing.Size(560, 302);
+            this.dgvBanHang.Size = new System.Drawing.Size(556, 302);
             this.dgvBanHang.TabIndex = 6;
             this.dgvBanHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBanHang_CellClick);
             this.dgvBanHang.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBanHang_CellValueChanged);
@@ -430,7 +430,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(5, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(567, 95);
+            this.groupBox4.Size = new System.Drawing.Size(563, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thêm sản phẩm vào đơn hàng";
@@ -453,7 +453,7 @@
             // 
             this.btnGhiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGhiSP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGhiSP.Location = new System.Drawing.Point(416, 28);
+            this.btnGhiSP.Location = new System.Drawing.Point(412, 28);
             this.btnGhiSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhiSP.Name = "btnGhiSP";
             this.btnGhiSP.Size = new System.Drawing.Size(144, 60);
@@ -482,7 +482,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(156, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(152, 26);
             this.txtDonGia.TabIndex = 5;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDonGia.TextChanged += new System.EventHandler(this.txtDonGia_TextChanged);
@@ -496,7 +496,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(321, 26);
+            this.txtTenSP.Size = new System.Drawing.Size(317, 26);
             this.txtTenSP.TabIndex = 1;
             // 
             // label9
@@ -534,7 +534,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(567, 129);
+            this.groupBox3.Size = new System.Drawing.Size(563, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin khách hàng";
@@ -543,12 +543,12 @@
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(418, 26);
+            this.btnThem.Location = new System.Drawing.Point(414, 26);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 60);
             this.btnThem.TabIndex = 9;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "Khách mới";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -572,7 +572,7 @@
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.ReadOnly = true;
-            this.txtTenKH.Size = new System.Drawing.Size(285, 26);
+            this.txtTenKH.Size = new System.Drawing.Size(281, 26);
             this.txtTenKH.TabIndex = 1;
             // 
             // txtDiaChi
@@ -584,7 +584,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(285, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(281, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -607,7 +607,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(285, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(281, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -643,7 +643,7 @@
             this.cboHinhThucTra.FormattingEnabled = true;
             this.cboHinhThucTra.Items.AddRange(new object[] {
             "Tiền mặt",
-            "Công nợ"});
+            "Trả sau"});
             this.cboHinhThucTra.Location = new System.Drawing.Point(252, 42);
             this.cboHinhThucTra.Margin = new System.Windows.Forms.Padding(4);
             this.cboHinhThucTra.Name = "cboHinhThucTra";

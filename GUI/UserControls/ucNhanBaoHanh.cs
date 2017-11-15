@@ -48,7 +48,7 @@ namespace GUI
 
         private void btnGhi_Click(object sender, EventArgs e)
         {
-            if (txtSerial.Text != "")
+            if (txtTenHang.Text != "")
             {
                 XuLyThem();
             }

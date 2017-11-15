@@ -13,7 +13,7 @@ namespace DAO
     {
         public DataTable LayBangPhieuXuat()
         {
-            string query = "select * from PhieuXuat where TrangThai=1";
+            string query = "select * from PhieuXuat px, NhanVien nv, KhachHang kh where px.NhanVienLap = nv.MaNhanVien and px.MaKhachHang = kh.MaKhachHang and px.TrangThai=1";
             DataTable dt = ThaoTacDuLieu.LayBang(query);
             return dt;
         }

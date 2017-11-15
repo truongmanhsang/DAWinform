@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,7 @@ namespace ClassLibrary
     {
         MessageBoxButtons msbButtons;
         DialogResult result;
+        string strNoiDung;
         public frmMessage()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace ClassLibrary
         public frmMessage(string strNoiDung, string strTieuDe, MessageBoxButtons msbButtons, Bitmap bmpBieuTuong)
         {
             InitializeComponent();
-            lblNoiDung.Text = strNoiDung;
+            this.strNoiDung = strNoiDung;
             Text = strTieuDe;
             picBieuTuong.Image = new Bitmap( bmpBieuTuong, new Size(45,45));
             this.msbButtons = msbButtons;
@@ -41,7 +43,7 @@ namespace ClassLibrary
 
         private void frmMessageBox_Load(object sender, EventArgs e)
         {
-
+            ChayChu();
         }
 
         public DialogResult LayDialogResult()
@@ -83,6 +85,29 @@ namespace ClassLibrary
                 else
                     result = DialogResult.No;                  
             }
+        }
+
+        private void ChayChu()
+        {
+            Thread t = new Thread(new ThreadStart(() => {
+                for (int i = 0; i < strNoiDung.Length; i++)
+                {
+                    try
+                    {
+                        Invoke((Action)delegate
+                        {
+                            lblNoiDung.Text += strNoiDung[i];
+                        });
+                    }
+                    catch
+                    {
+                        break;
+                    }
+
+                    Thread.Sleep(5);
+                }
+            }));
+            t.Start();
         }
     }
 }

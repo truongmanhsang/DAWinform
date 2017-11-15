@@ -167,5 +167,12 @@ namespace GUI
                 e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
             }
         }
+
+        private void llblTim_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmTim frm = new frmTim(frmTim.Loai.NhaCungCap);
+            frm.ShowDialog();
+            txtMaNCC.Text = frm.LayMa();
+        }
     }
 }

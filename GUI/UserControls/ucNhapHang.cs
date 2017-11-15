@@ -14,8 +14,13 @@ using DTO;
 
 namespace GUI
 {
-    public partial class ucNhapHang : UserControl
+    public partial class ucNhapHang : UserControl, IDieuKhien
     {
+        public void TaiLaiDuLieu()
+        {
+            TaiDuLieu();
+        }
+
         clsSanPham_BUS _SanPhamBUS = new clsSanPham_BUS();
         clsNhaCungCap_BUS _NhaCungCapBUS = new clsNhaCungCap_BUS();
         clsPhieuNhap_BUS _PhieuNhapBUS = new clsPhieuNhap_BUS();
@@ -254,7 +259,7 @@ namespace GUI
 
             FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LamSach(); // làm sạch controls
-            TaiDuLieu(); // tải lại dữ liệu
+            Program.TaiLaiDuLieu(); // tải lại dữ liệu toàn bộ
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
+    public delegate void XuLyTaiLaiDuLieu();
     static class Program
     {
         /// <summary>
@@ -18,6 +19,14 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
+        }
+
+        public static event XuLyTaiLaiDuLieu xuLyTaiLaiDuLieu;
+
+        public static void TaiLaiDuLieu()
+        {
+            if (xuLyTaiLaiDuLieu != null)
+                xuLyTaiLaiDuLieu();
         }
 
         // Thông tin nhân viên

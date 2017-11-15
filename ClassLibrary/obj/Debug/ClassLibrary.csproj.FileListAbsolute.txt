@@ -9,5 +9,9 @@ D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.fr
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb
+<<<<<<< HEAD
 D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.frmMessage.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+=======
+D:\Development\Projects\Winform\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+>>>>>>> 669dc121d4bf9f5305165eb45e914655829b47c1

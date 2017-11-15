@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -45,7 +46,7 @@ namespace GUI
             if (dgvSerial.Columns[e.ColumnIndex].Name == "colNgayHetBH")
             {
                 if (e.Value.ToString() != "")
-                    e.Value = Convert.ToDateTime(e.Value.ToString()).ToString("MM/dd/yyyy");
+                    e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
             }
         }
 
