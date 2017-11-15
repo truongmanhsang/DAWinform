@@ -42,7 +42,7 @@ namespace DAO
         }
         public bool XoaNhanVien(string MaNV)
         { 
-            string query = string.Format("update NhanVien set TrangThai=0 where MaNV='{0}'",MaNV);
+            string query = string.Format("update NhanVien set TrangThai=0 where MaNhanVien='{0}'",MaNV);
             return ThaoTacDuLieu.ThucThi(query);
         }
         public bool SuaNhanVien(clsNhanVien_DTO nhanvien)

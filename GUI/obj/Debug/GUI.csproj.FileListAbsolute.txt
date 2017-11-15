@@ -21,7 +21,6 @@ D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBanHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBanHang.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoBaoHanh.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoCaoNhapHang.resources
-D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucBaoHanh.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucDangNhap.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucDoanhThu.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucGuiBaoHanh.resources

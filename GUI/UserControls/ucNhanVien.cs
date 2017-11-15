@@ -17,7 +17,7 @@ namespace GUI
     {
         private static ucNhanVien _instance = null;
         clsNhanVien_BUS bus = new clsNhanVien_BUS();
-        DataTable dt = new DataTable();
+        DataTable dt ;
         DataView dav;
         public static ucNhanVien GetInstance
         {
@@ -38,6 +38,7 @@ namespace GUI
         {
             loadDataViewNV();
             loadTimKiem();
+            loaddgvNhanVien();
         }
 
         private void loadTimKiem()
@@ -116,17 +117,11 @@ namespace GUI
                 FormMessage.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            dav.RowFilter = string.Format(LenhTimKiem());
-            loaddgvNhanVien();
-        }
-        private string LenhTimKiem()
+        protected string LenhTimKiem()
         {
 
             string lenh = "TrangThai=1";
-            if (cbChucVu.Checked == true)
+            if (cbTenNV.Checked == true)
             {
                 lenh += string.Format(" and TenNhanVien like '%{0}%'", txtTenNV.Text);
             }
@@ -134,15 +129,19 @@ namespace GUI
 
             if (cbChucVu.Checked == true)
             {
-                if (cbTenNV.Checked == true)
-                {
-                    lenh += " and ";
-                }
-                lenh += string.Format(" Quyen='{0}'",cbbChucVu.SelectedValue.ToString());
+              
+                lenh += string.Format("and  Quyen='{0}'", cbbChucVu.SelectedValue.ToString());
             }
             return lenh;
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string len = LenhTimKiem();
+            dav.RowFilter = string.Format(len);
+            loaddgvNhanVien();
+        }
+      
         private void dgvNhanVien_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvNhanVien.Columns[e.ColumnIndex].Name == "colQuyen")
@@ -156,6 +155,28 @@ namespace GUI
                     e.Value = "Nhân viên";
                 }
             }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvNhanVien.SelectedRows.Count > 0)
+            {
+                string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
+                if (bus.XoaNhanVien(MaNV))
+                {
+                    FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgvNhanVien_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -36,5 +36,9 @@ namespace BUS
         {
             return dao.SuaNhanVien(nhanvien);
         }
+        public bool XoaNhanVien(string MaNV)
+        {
+            return dao.XoaNhanVien(MaNV);
+        }
     }
 }
