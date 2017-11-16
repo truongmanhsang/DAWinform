@@ -39,6 +39,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.colHinhDaiDien = new System.Windows.Forms.DataGridViewImageColumn();
             this.colTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +100,7 @@
             // 
             // cbbChucVu
             // 
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbChucVu.FormattingEnabled = true;
             this.cbbChucVu.Location = new System.Drawing.Point(91, 55);
             this.cbbChucVu.Name = "cbbChucVu";
@@ -119,8 +121,10 @@
             this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colHinhDaiDien,
             this.colTenNhanVien,
             this.colMaNhanVien,
             this.colTenDangNhap,
@@ -135,6 +139,7 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersVisible = false;
+            this.dgvNhanVien.RowTemplate.Height = 50;
             this.dgvNhanVien.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVien.Size = new System.Drawing.Size(559, 518);
@@ -185,6 +190,16 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // colHinhDaiDien
+            // 
+            this.colHinhDaiDien.DataPropertyName = "HinhDaiDien";
+            this.colHinhDaiDien.HeaderText = "";
+            this.colHinhDaiDien.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colHinhDaiDien.Name = "colHinhDaiDien";
+            this.colHinhDaiDien.ReadOnly = true;
+            this.colHinhDaiDien.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colHinhDaiDien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colTenNhanVien
             // 
@@ -299,6 +314,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridViewImageColumn colHinhDaiDien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenDangNhap;

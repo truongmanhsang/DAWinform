@@ -74,9 +74,10 @@
             this.Controls.Add(this.panMain);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucLoiNhuan";
             this.Size = new System.Drawing.Size(807, 591);
+            this.Load += new System.EventHandler(this.ucLoiNhuan_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

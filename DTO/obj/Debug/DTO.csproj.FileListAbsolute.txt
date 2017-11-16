@@ -8,3 +8,8 @@ D:\GIT\DAWinform\DTO\bin\Debug\DTO.pdb
 D:\GIT\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\GIT\DAWinform\DTO\obj\Debug\DTO.dll
 D:\GIT\DAWinform\DTO\obj\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\bin\Debug\DTO.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\DTO\obj\Debug\DTO.pdb

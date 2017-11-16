@@ -237,6 +237,7 @@
             // picHinh
             // 
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picHinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHinh.Image = global::GUI.Properties.Resources.ThemHinhAnh;
             this.picHinh.Location = new System.Drawing.Point(12, 9);
             this.picHinh.Name = "picHinh";

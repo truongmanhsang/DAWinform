@@ -134,7 +134,7 @@ namespace GUI
 
         private void themNV()
         {
-            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text=="")
+            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text=="" || picHinhAnh.Image == null)
             {
                 FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -153,8 +153,8 @@ namespace GUI
             nhanvien.Quyen = cbbChucVu.SelectedIndex==0 ? 1: 0;
             try
             {
-                File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);
-                nhanvien.Hinh = @"\data\images\users\" + TenHinh;
+                File.Copy(DuongDanHinh, Application.StartupPath + @"data\images\users\" + TenHinh, true);
+                nhanvien.Hinh = @"data\images\users\" + TenHinh;
             }
             catch
             {

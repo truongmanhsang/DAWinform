@@ -91,7 +91,8 @@ namespace GUI
            if(bus.ThemNhanVien(nhanvien))
             {
                 FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                loadDataViewNV();
+                loaddgvNhanVien();
             }
             else
             {
@@ -111,7 +112,8 @@ namespace GUI
             if (bus.SuaNhanVien(nhanvien))
             {
                 FormMessage.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                loadDataViewNV();
+                loaddgvNhanVien();
             }
             else
             {
@@ -155,6 +157,10 @@ namespace GUI
                 {
                     e.Value = "Nhân viên";
                 }
+            }
+            if(dgvNhanVien.Columns[e.ColumnIndex].Name == "colHinhDaiDien")
+            {
+                e.Value = new Bitmap(e.Value.ToString());
             }
         }
 
