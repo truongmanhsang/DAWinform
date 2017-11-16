@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGhiSP = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -100,8 +100,8 @@
             // colThanhTien
             // 
             this.colThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Format = "#,### VNĐ";
-            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Format = "#,### VNĐ";
+            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle13;
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
@@ -111,7 +111,7 @@
             // 
             this.btnGhiSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGhiSP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGhiSP.Location = new System.Drawing.Point(415, 28);
+            this.btnGhiSP.Location = new System.Drawing.Point(413, 28);
             this.btnGhiSP.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhiSP.Name = "btnGhiSP";
             this.btnGhiSP.Size = new System.Drawing.Size(142, 60);
@@ -140,7 +140,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(155, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(153, 26);
             this.txtDonGia.TabIndex = 5;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -153,7 +153,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(320, 26);
+            this.txtTenSP.Size = new System.Drawing.Size(318, 26);
             this.txtTenSP.TabIndex = 1;
             // 
             // label9
@@ -191,7 +191,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(565, 129);
+            this.groupBox3.Size = new System.Drawing.Size(563, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông nhà cung cấp";
@@ -200,7 +200,7 @@
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(416, 26);
+            this.btnThem.Location = new System.Drawing.Point(414, 26);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 60);
@@ -229,7 +229,7 @@
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.ReadOnly = true;
-            this.txtTenNCC.Size = new System.Drawing.Size(270, 26);
+            this.txtTenNCC.Size = new System.Drawing.Size(268, 26);
             this.txtTenNCC.TabIndex = 1;
             // 
             // txtDiaChi
@@ -241,7 +241,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(270, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(268, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -264,7 +264,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(270, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(268, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -287,33 +287,35 @@
             this.panel1.Controls.Add(this.txtTongCong);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 571);
+            this.panel1.Location = new System.Drawing.Point(0, 569);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 77);
+            this.panel1.Size = new System.Drawing.Size(581, 79);
             this.panel1.TabIndex = 7;
             // 
             // cboHinhThucTra
             // 
             this.cboHinhThucTra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboHinhThucTra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboHinhThucTra.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHinhThucTra.FormattingEnabled = true;
             this.cboHinhThucTra.Items.AddRange(new object[] {
             "Tiền mặt",
             "Công nợ"});
-            this.cboHinhThucTra.Location = new System.Drawing.Point(251, 43);
+            this.cboHinhThucTra.Location = new System.Drawing.Point(251, 41);
             this.cboHinhThucTra.Margin = new System.Windows.Forms.Padding(4);
             this.cboHinhThucTra.Name = "cboHinhThucTra";
-            this.cboHinhThucTra.Size = new System.Drawing.Size(99, 26);
+            this.cboHinhThucTra.Size = new System.Drawing.Size(106, 32);
             this.cboHinhThucTra.TabIndex = 4;
             // 
             // btnLuu
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLuu.Location = new System.Drawing.Point(365, 41);
+            this.btnLuu.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(366, 39);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(101, 30);
+            this.btnLuu.Size = new System.Drawing.Size(101, 36);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -322,10 +324,11 @@
             // btnHuy
             // 
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuy.Location = new System.Drawing.Point(474, 41);
+            this.btnHuy.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(475, 39);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(101, 30);
+            this.btnHuy.Size = new System.Drawing.Size(101, 36);
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -371,7 +374,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(5, 137);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(566, 95);
+            this.groupBox4.Size = new System.Drawing.Size(564, 95);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thêm sản phẩm vào đơn hàng";
@@ -541,8 +544,8 @@
             // colGiaMua
             // 
             this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle2.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle14;
             this.colGiaMua.HeaderText = "Giá mua";
             this.colGiaMua.Name = "colGiaMua";
             this.colGiaMua.ReadOnly = true;
@@ -557,7 +560,7 @@
             this.groupBox2.Controls.Add(this.dgvNhaCungCap);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(482, 298);
+            this.groupBox2.Size = new System.Drawing.Size(482, 296);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm nhà cung cấp";
@@ -597,7 +600,7 @@
             this.dgvNhaCungCap.RowTemplate.ReadOnly = true;
             this.dgvNhaCungCap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 231);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(467, 229);
             this.dgvNhaCungCap.TabIndex = 2;
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             // 
@@ -640,7 +643,7 @@
             this.groupBox5.Controls.Add(this.dgvNhapHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 238);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(564, 326);
+            this.groupBox5.Size = new System.Drawing.Size(562, 273);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách sản phẩm mua";
@@ -667,7 +670,7 @@
             this.dgvNhapHang.RowTemplate.ReadOnly = true;
             this.dgvNhapHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhapHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhapHang.Size = new System.Drawing.Size(558, 301);
+            this.dgvNhapHang.Size = new System.Drawing.Size(556, 248);
             this.dgvNhapHang.TabIndex = 6;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
             this.dgvNhapHang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dgvNhapHang_KeyUp);
@@ -688,8 +691,8 @@
             // colDonGia
             // 
             this.colDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Format = "#,### VNĐ";
-            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Format = "#,### VNĐ";
+            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle15;
             this.colDonGia.HeaderText = "Đơn giá";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.ReadOnly = true;

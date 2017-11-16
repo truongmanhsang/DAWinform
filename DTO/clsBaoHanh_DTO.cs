@@ -12,8 +12,6 @@ namespace DTO
         private string _maKhachHang;
         private string _maNhanVien;
         private string _ngayBaoHanh;
-        private decimal _tongTien;
-        private int _loaiBaoHanh;
         private int _trangThai;
 
         public string MaBaoHanh
@@ -65,32 +63,6 @@ namespace DTO
             set
             {
                 _ngayBaoHanh = value;
-            }
-        }
-
-        public decimal TongTien
-        {
-            get
-            {
-                return _tongTien;
-            }
-
-            set
-            {
-                _tongTien = value;
-            }
-        }
-
-        public int LoaiBaoHanh
-        {
-            get
-            {
-                return _loaiBaoHanh;
-            }
-
-            set
-            {
-                _loaiBaoHanh = value;
             }
         }
 

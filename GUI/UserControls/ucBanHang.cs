@@ -292,9 +292,18 @@ namespace GUI
             //=== Thêm phiếu xuất
             clsPhieuXuat_DTO phieuXuat = new clsPhieuXuat_DTO();
             phieuXuat.MaKhachHang = strMaKH;
-            if (cboHinhThucTra.SelectedIndex == 1) // 0 là tiền mặt, 1 là công nợ
+            if (cboHinhThucTra.SelectedIndex == 1) //
             {
                 phieuXuat.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
+                phieuXuat.TinhTrang = 1;
+            }
+            else if (cboHinhThucTra.SelectedIndex == 3)
+            {
+                phieuXuat.TinhTrang = 2;
+            }
+            else
+            {
+                phieuXuat.TinhTrang = 1;
             }
             phieuXuat.TongTien = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = TienIch.LayNgayThangHienTaiQuocTe();
@@ -333,6 +342,20 @@ namespace GUI
             if (e.KeyCode == Keys.Delete && dgvBanHang.Rows.Count > 0)
             {
                 TinhTongTien();
+            }
+        }
+
+        private void cboHinhThucTra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboHinhThucTra.SelectedIndex == 2)
+            {
+                lblTongCong.Visible = false;
+                txtTongCong.Visible = false;
+            }
+            else
+            {
+                lblTongCong.Visible = true;
+                txtTongCong.Visible = true;
             }
         }
     }

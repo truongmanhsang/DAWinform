@@ -68,16 +68,14 @@ namespace GUI
                     dgvRow.Cells[0].Value = txtTenHang.Text;
                     dgvRow.Cells[1].Value = txtSerial.Text;
                     dgvRow.Cells[2].Value = txtMoTaLoi.Text;
-                    dgvRow.Cells[3].Value = Convert.ToDecimal(txtGiaSua.Text == "" ? "0" : txtGiaSua.Text);
-                    dgvRow.Cells[4].Value = dtpNgayHenTra.Value.ToString();
-                    dgvRow.Cells[5].Value = txtGhiChu.Text;
-                    TinhTongCong();
+                    dgvRow.Cells[3].Value = dtpNgayHenTra.Value.ToString();
+                    dgvRow.Cells[4].Value = txtGhiChu.Text;
+                    dgvRow.Cells[5].Value = chkDoiHang.Checked ? 2 : chkTraHang.Checked ? 3 : 0;
                     return;
                 }
             }
 
-            dgvChiTietBH.Rows.Add(txtTenHang.Text, txtSerial.Text, txtMoTaLoi.Text,Convert.ToDecimal(txtGiaSua.Text == "" ? "0" : txtGiaSua.Text), dtpNgayHenTra.Value.ToString(), txtGhiChu.Text);
-            TinhTongCong();
+            dgvChiTietBH.Rows.Add(txtTenHang.Text, txtSerial.Text, txtMoTaLoi.Text, dtpNgayHenTra.Value.ToString(), txtGhiChu.Text, chkDoiHang.Checked ? 2 : chkTraHang.Checked ? 3 : 0);
         }
 
         private void btnTimKH_Click(object sender, EventArgs e)
@@ -119,9 +117,7 @@ namespace GUI
             txtTenHang.Text = "";
             txtMoTaLoi.Text = "";
             txtGhiChu.Text = "";
-            txtGiaSua.Text = "";
             txtSerial.Text = "";
-            txtTongCong.Text = "0 VNĐ";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -145,8 +141,6 @@ namespace GUI
             baoHanh.MaKhachHang = strMaKH;
             baoHanh.MaNhanVien = Program.MA_NV;
             baoHanh.NgayBaoHanh = TienIch.LayNgayThangHienTaiQuocTe();
-            baoHanh.TongTien = Convert.ToDecimal(TienIch.ChuyenVNDSangSo(txtTongCong.Text));
-            baoHanh.LoaiBaoHanh = 0;
             string strMaBH = _BaoHanhBUS.ThemBaoHanh(baoHanh);
 
             List<clsChiTietBaoHanh_DTO> dsChiTiet = new List<clsChiTietBaoHanh_DTO>();
@@ -155,11 +149,11 @@ namespace GUI
                 clsChiTietBaoHanh_DTO chiTiet = new clsChiTietBaoHanh_DTO();
                 chiTiet.MaBaoHanh = strMaBH;
                 chiTiet.MaSerial = _SerialBUS.LayMaSerial(dgvRow.Cells[1].Value.ToString());
-                chiTiet.NgayHenTra = TienIch.LayNgayThangQuocTe(Convert.ToDateTime(dgvRow.Cells[4].Value.ToString()));
-                chiTiet.GiaSuaChua = Convert.ToDecimal(TienIch.HuyDinhDangSo(dgvRow.Cells[3].Value.ToString()));
-                chiTiet.TraHang = 0;
+                chiTiet.NgayHenTra = TienIch.LayNgayThangQuocTe(Convert.ToDateTime(dgvRow.Cells[3].Value.ToString()));
+                int iTinhTrang = dgvRow.Cells[5].Value.ToString() == "Chưa trả hàng" ? 0 : dgvRow.Cells[5].Value.ToString() == "Đổi hàng" ? 2 : 3;
+                chiTiet.TinhTrang = Convert.ToInt16(dgvRow.Cells[5].Value);
                 chiTiet.MotaLoi = dgvRow.Cells[2].Value.ToString();
-                chiTiet.GhiChu = dgvRow.Cells[5].Value.ToString();
+                chiTiet.GhiChu = dgvRow.Cells[4].Value.ToString();
 
                 dsChiTiet.Add(chiTiet);
             }
@@ -175,35 +169,31 @@ namespace GUI
                 txtTenHang.Text = dgvChiTietBH.SelectedRows[0].Cells[0].Value.ToString();
                 txtSerial.Text = dgvChiTietBH.SelectedRows[0].Cells[1].Value.ToString();
                 txtMoTaLoi.Text = dgvChiTietBH.SelectedRows[0].Cells[2].Value.ToString();
-                txtGiaSua.Text = dgvChiTietBH.SelectedRows[0].Cells[3].Value.ToString();
-                dtpNgayHenTra.Value = Convert.ToDateTime(dgvChiTietBH.SelectedRows[0].Cells[4].Value);
-                txtGhiChu.Text = dgvChiTietBH.SelectedRows[0].Cells[5].Value.ToString();
+                dtpNgayHenTra.Value = Convert.ToDateTime(dgvChiTietBH.SelectedRows[0].Cells[3].Value);
+                txtGhiChu.Text = dgvChiTietBH.SelectedRows[0].Cells[4].Value.ToString();
             }
         }
 
         private void dgvChiTietBH_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            if (dgvChiTietBH.Columns[e.ColumnIndex].Name == "colTinhTrang")
             {
-                e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
+                if (e.Value.ToString() == "0")
+                {
+                    e.Value = "Chưa trả hàng";
+                }else if (e.Value.ToString() == "2")
+                {
+                    e.Value = "Đổi hàng";
+                }
+                else if (e.Value.ToString() == "3")
+                {
+                    e.Value = "Trả lại hàng";
+                }
             }
-        }
-        private void TinhTongCong()
-        {
-            decimal dTongCong = 0;
-            foreach (DataGridViewRow dgvRow in dgvChiTietBH.Rows)
-            {
-                dTongCong += Convert.ToDecimal(dgvRow.Cells[3].Value.ToString());
-            }
-            txtTongCong.Text = TienIch.ChuyenSoSangVND(dTongCong);
         }
 
         private void dgvChiTietBH_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            if (dgvChiTietBH.Rows.Count == 0)
-                txtTongCong.Text = "0";
-            else
-                TinhTongCong();
         }
 
         private void txtGiaSua_KeyPress(object sender, KeyPressEventArgs e)
@@ -213,11 +203,22 @@ namespace GUI
 
         private void txtGiaSua_TextChanged(object sender, EventArgs e)
         {
-            TienIch.DinhDangSoTextBox(txtGiaSua);
         }
 
         private void txtTongCong_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void chkDoiHang_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTraHang.Checked)
+                chkTraHang.Checked = false;
+        }
+
+        private void chkTraHang_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDoiHang.Checked)
+                chkDoiHang.Checked = false;
         }
     }
 }

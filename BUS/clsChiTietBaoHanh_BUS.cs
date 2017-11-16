@@ -20,5 +20,13 @@ namespace BUS
         {
             return dao.LayBangChiTietBH(strMaBH);
         }
+        public DataTable LayBangChiTietKhoBH()
+        {
+            return dao.LayBangChiTietKhoBH();
+        }
+        public void CapNhapBaoHanh(string strSoSerial)
+        {
+            dao.CapNhapBaoHanh(strSoSerial);
+        }
     }
 }

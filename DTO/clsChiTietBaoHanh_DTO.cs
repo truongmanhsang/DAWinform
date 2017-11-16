@@ -11,8 +11,7 @@ namespace DTO
         private string _maBaoHanh;
         private string _maSerial;
         private string _ngayHenTra;
-        private decimal _giaSuaChua;
-        private int _traHang;
+        private int _tinhTrang;
         private string _motaLoi;
         private string _ghiChu;
 
@@ -55,29 +54,16 @@ namespace DTO
             }
         }
 
-        public decimal GiaSuaChua
+        public int TinhTrang
         {
             get
             {
-                return _giaSuaChua;
+                return _tinhTrang;
             }
 
             set
             {
-                _giaSuaChua = value;
-            }
-        }
-
-        public int TraHang
-        {
-            get
-            {
-                return _traHang;
-            }
-
-            set
-            {
-                _traHang = value;
+                _tinhTrang = value;
             }
         }
 

@@ -123,12 +123,6 @@
     <Compile Include="UserControls\ucDoanhThu.Designer.cs">
       <DependentUpon>ucDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucGuiBaoHanh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucGuiBaoHanh.Designer.cs">
-      <DependentUpon>ucGuiBaoHanh.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucHangHoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +140,12 @@
     </Compile>
     <Compile Include="UserControls\ucKhachHang.Designer.cs">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucKhoBaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucKhoBaoHanh.Designer.cs">
+      <DependentUpon>ucKhoBaoHanh.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucLoai.cs">
       <SubType>UserControl</SubType>
@@ -177,11 +177,11 @@
     <Compile Include="UserControls\ucNhaCungCap.Designer.cs">
       <DependentUpon>ucNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucNhanBaoHanh.cs">
+    <Compile Include="UserControls\ucBaoHanh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\ucNhanBaoHanh.Designer.cs">
-      <DependentUpon>ucNhanBaoHanh.cs</DependentUpon>
+    <Compile Include="UserControls\ucBaoHanh.Designer.cs">
+      <DependentUpon>ucBaoHanh.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -277,9 +277,6 @@
     <EmbeddedResource Include="UserControls\ucDoanhThu.resx">
       <DependentUpon>ucDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucGuiBaoHanh.resx">
-      <DependentUpon>ucGuiBaoHanh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHangHoa.resx">
       <DependentUpon>ucHangHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucKhachHang.resx">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucKhoBaoHanh.resx">
+      <DependentUpon>ucKhoBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLoai.resx">
       <DependentUpon>ucLoai.cs</DependentUpon>
@@ -304,8 +304,8 @@
     <EmbeddedResource Include="UserControls\ucNhaCungCap.resx">
       <DependentUpon>ucNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucNhanBaoHanh.resx">
-      <DependentUpon>ucNhanBaoHanh.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\ucBaoHanh.resx">
+      <DependentUpon>ucBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucNhanVien.resx">
       <DependentUpon>ucNhanVien.cs</DependentUpon>
@@ -360,6 +360,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\bg1.jpg" />
     <None Include="Resources\ThemHinhAnh.jpg" />
     <None Include="Resources\LoiNhuan.png" />
     <None Include="Resources\DoanhSo.png" />

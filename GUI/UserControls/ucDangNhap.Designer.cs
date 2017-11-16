@@ -55,6 +55,7 @@
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTaiKhoan.Location = new System.Drawing.Point(207, 188);
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
@@ -98,6 +99,8 @@
             // btnDangNhap
             // 
             this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDangNhap.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Location = new System.Drawing.Point(206, 280);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDangNhap.Name = "btnDangNhap";
@@ -110,6 +113,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.picAnh, 0, 0);
@@ -119,7 +123,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtTaiKhoan, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnDangNhap, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblTinNhan, 0, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 39);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 32);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -130,7 +134,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(676, 370);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(676, 386);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTinNhan
@@ -150,6 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucDangNhap";

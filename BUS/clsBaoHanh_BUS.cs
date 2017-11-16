@@ -20,5 +20,9 @@ namespace BUS
         {
             return dao.LayBangBaoHanh();
         }
+        public bool XoaPhieuBaoHanh(string strMaBH)
+        {
+            return dao.XoaPhieuBaoHanh(strMaBH);
+        }
     }
 }
