@@ -10,7 +10,7 @@ namespace DAO
 {
     public class ThaoTacDuLieu
     {
-        public static string strConnection = @"Data Source=DESKTOP-0T6UI6A;Initial Catalog=QLBH;Integrated Security=True";
+        public static string strConnection = @"Data Source=FPT-PC\SQLEXPRESS;Initial Catalog=QLBH;Integrated Security=True";
         public static SqlConnection TaoVaMoKetNoi()
         {
             try

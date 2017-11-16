@@ -12,3 +12,10 @@ D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.frmMessage.resources
 D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
 D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\GIT\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.frmMessage.resources
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.csproj.GenerateResource.Cache
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\tai lieu hoc tap\DoAn\DAWinform\ClassLibrary\obj\Debug\ClassLibrary.pdb

@@ -36,9 +36,8 @@ namespace GUI
 
         private void loadDuLieu()
         {
-            
-            dgvDuLieu.DataSource = _PhieuXuatBUS.LayBangPhieuXuat();
-            dgvDuLieu.DataSource = _PhieuNhapBUS.LayBangPhieuNhap();
+           
+
         }
     }
 }

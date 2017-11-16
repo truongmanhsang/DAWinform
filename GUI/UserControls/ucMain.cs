@@ -69,6 +69,10 @@ namespace GUI
 
         private void ucMain_Load(object sender, EventArgs e)
         {
+            if (Program.QUYEN == 0)
+                btnNhanVien.Enabled = false;
+            else
+                btnNhanVien.Enabled = true;
             // lấy thông tin cho phần thông tin panel trái
             picHinhDaiDien.Image = new Bitmap(Program.HINH_NV);
             lblTenNV.Text = Program.TEN_NV;
