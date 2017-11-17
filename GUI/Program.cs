@@ -8,6 +8,8 @@ using System.Windows.Forms;
 namespace GUI
 {
     public delegate void XuLyTaiLaiDuLieu();
+    public delegate void XuLyThoat();
+
     static class Program
     {
         /// <summary>
@@ -22,11 +24,17 @@ namespace GUI
         }
 
         public static event XuLyTaiLaiDuLieu xuLyTaiLaiDuLieu;
+        public static event XuLyThoat xuLyThoat;
 
         public static void TaiLaiDuLieu()
         {
             if (xuLyTaiLaiDuLieu != null)
                 xuLyTaiLaiDuLieu();
+        }
+        public static void Thoat()
+        {
+            if (xuLyThoat != null)
+                xuLyThoat();
         }
 
         // Thông tin nhân viên

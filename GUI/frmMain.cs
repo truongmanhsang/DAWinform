@@ -26,6 +26,9 @@ namespace GUI
             ucDN.xuLyDangNhap += XuLyDangNhapThanhCong;
             this.Controls.Add(ucDN);
             ucDN.Dock = DockStyle.Fill;
+
+            // ==
+            Program.xuLyThoat += Thoat;
         }
 
         private void XuLyDangNhapThanhCong()
@@ -45,11 +48,15 @@ namespace GUI
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = FormMessage.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //DialogResult result = FormMessage.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void Thoat()
+        {
+            this.Close();
         }
     }
 }

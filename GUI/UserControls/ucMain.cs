@@ -14,7 +14,9 @@ namespace GUI
     public partial class ucMain : UserControl
     {
         public delegate void XuLyDangXuat();
+
         public event XuLyDangXuat xuLyDangXuat;
+
         private static ucMain _instance = null;
 
         // khai báo image cho close button tabpage
@@ -69,6 +71,10 @@ namespace GUI
 
         private void ucMain_Load(object sender, EventArgs e)
         {
+            if (Program.QUYEN == 0)
+                btnNhanVien.Enabled = false;
+            else
+                btnNhanVien.Enabled = true;
             // lấy thông tin cho phần thông tin panel trái
             picHinhDaiDien.Image = new Bitmap(Program.HINH_NV);
             lblTenNV.Text = Program.TEN_NV;
@@ -91,6 +97,9 @@ namespace GUI
 
             // Cài đặt hàm tải lại toàn bộ dữ liệu
             Program.xuLyTaiLaiDuLieu += TaiLaiDuLieu;
+            // cài đặt selectedtab
+            lastTabIndex = 1;
+            tabControlMenu.SelectedIndex = lastTabIndex;
         }
 
         private void TaiLaiDuLieu()
@@ -590,6 +599,43 @@ namespace GUI
         private void btnKhoBaoHanh_Click(object sender, EventArgs e)
         {
             TaoTabpage(ChucNang.KhoBaoHanh);
+        }
+
+        private void tabControlMenu_TabIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        int lastTabIndex = 0;
+        private void tabControlMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlMenu.SelectedIndex == 0)
+            {
+                tabControlMenu.SelectedIndex = lastTabIndex;
+                Rectangle rect = tabControlMenu.GetTabRect(0);
+                conHeThong.Show(tabControlMenu,rect.X - 2, rect.Height + 3);
+            }
+        }
+
+        private void tabControlMenu_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < tabControlMenu.TabCount; i++)
+            {
+                if (tabControlMenu.SelectedTab == tabControlMenu.TabPages[i])
+                {
+                    lastTabIndex = i;
+                }
+            }
+        }
+
+        private void tbtnThoat_Click(object sender, EventArgs e)
+        {
+            Program.Thoat();
+        }
+
+        private void tbtnThongTinCongTy_Click(object sender, EventArgs e)
+        {
+            frmThongTinCongTy frm = new frmThongTinCongTy();
+            frm.ShowDialog();
         }
     }
 }

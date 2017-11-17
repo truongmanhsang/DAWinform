@@ -25,5 +25,13 @@ namespace GUI
             panMain.Controls.Add(_ucLoiNhuanTongQuan);
             _ucLoiNhuanTongQuan.Dock = DockStyle.Fill;
         }
+
+        private void ucLoiNhuan_Load(object sender, EventArgs e)
+        {
+            panMain.Controls.Clear();
+            _ucLoiNhuanTongQuan = new ucLoiNhuanTongQuan();
+            panMain.Controls.Add(_ucLoiNhuanTongQuan);
+            _ucLoiNhuanTongQuan.Dock = DockStyle.Fill;
+        }
     }
 }

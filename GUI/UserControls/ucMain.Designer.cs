@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControlMenu = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPageBanHang = new System.Windows.Forms.TabPage();
             this.btnBaoCaoBanHang = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
@@ -58,7 +60,11 @@
             this.lblTenNV = new System.Windows.Forms.Label();
             this.picHinhDaiDien = new System.Windows.Forms.PictureBox();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.panMain = new System.Windows.Forms.Panel();
+            this.conHeThong = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tbtnThongTinCongTy = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbtnThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.tabControlMenu.SuspendLayout();
             this.tabPageBanHang.SuspendLayout();
@@ -69,7 +75,7 @@
             this.tabPageThongKe.SuspendLayout();
             this.panInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
-            this.panMain.SuspendLayout();
+            this.conHeThong.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -92,6 +98,7 @@
             // 
             // tabControlMenu
             // 
+            this.tabControlMenu.Controls.Add(this.tabPage1);
             this.tabControlMenu.Controls.Add(this.tabPageBanHang);
             this.tabControlMenu.Controls.Add(this.tabPageNhapHang);
             this.tabControlMenu.Controls.Add(this.tabPageHangHoa);
@@ -104,8 +111,22 @@
             this.tabControlMenu.Name = "tabControlMenu";
             this.tabControlMenu.SelectedIndex = 0;
             this.tabControlMenu.Size = new System.Drawing.Size(998, 130);
-            this.tabControlMenu.TabIndex = 4;
+            this.tabControlMenu.TabIndex = 0;
+            this.tabControlMenu.SelectedIndexChanged += new System.EventHandler(this.tabControlMenu_SelectedIndexChanged);
+            this.tabControlMenu.TabIndexChanged += new System.EventHandler(this.tabControlMenu_TabIndexChanged);
+            this.tabControlMenu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControlMenu_MouseClick);
             this.tabControlMenu.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tabControlMenu_MouseDoubleClick);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(990, 99);
+            this.tabPage1.TabIndex = 7;
+            this.tabPage1.Text = "Hệ Thống";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPageBanHang
             // 
@@ -457,7 +478,7 @@
             // 
             this.lblQuyen.BackColor = System.Drawing.SystemColors.WindowText;
             this.lblQuyen.ForeColor = System.Drawing.Color.White;
-            this.lblQuyen.Location = new System.Drawing.Point(14, 249);
+            this.lblQuyen.Location = new System.Drawing.Point(14, 248);
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.Size = new System.Drawing.Size(165, 23);
             this.lblQuyen.TabIndex = 2;
@@ -465,8 +486,10 @@
             // 
             // lblTenNV
             // 
+            this.lblTenNV.BackColor = System.Drawing.Color.ForestGreen;
             this.lblTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.ForeColor = System.Drawing.Color.White;
             this.lblTenNV.Location = new System.Drawing.Point(-2, 35);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(197, 35);
@@ -488,7 +511,7 @@
             this.tabControlMain.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Location = new System.Drawing.Point(196, 130);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(802, 441);
@@ -498,21 +521,48 @@
             this.tabControlMain.TabIndexChanged += new System.EventHandler(this.tabControlMain_TabIndexChanged);
             this.tabControlMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControlMain_MouseClick);
             // 
-            // panMain
+            // conHeThong
             // 
-            this.panMain.Controls.Add(this.tabControlMain);
-            this.panMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panMain.Location = new System.Drawing.Point(196, 130);
-            this.panMain.Name = "panMain";
-            this.panMain.Size = new System.Drawing.Size(802, 441);
-            this.panMain.TabIndex = 7;
+            this.conHeThong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conHeThong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbtnThongTinCongTy,
+            this.thôngTinChươngTrìnhToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.tbtnThoat});
+            this.conHeThong.Name = "contextMenuStrip1";
+            this.conHeThong.Size = new System.Drawing.Size(243, 98);
+            // 
+            // tbtnThongTinCongTy
+            // 
+            this.tbtnThongTinCongTy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbtnThongTinCongTy.Name = "tbtnThongTinCongTy";
+            this.tbtnThongTinCongTy.Size = new System.Drawing.Size(242, 22);
+            this.tbtnThongTinCongTy.Text = "Thông Tin Công Ty";
+            this.tbtnThongTinCongTy.Click += new System.EventHandler(this.tbtnThongTinCongTy_Click);
+            // 
+            // thôngTinChươngTrìnhToolStripMenuItem
+            // 
+            this.thôngTinChươngTrìnhToolStripMenuItem.Name = "thôngTinChươngTrìnhToolStripMenuItem";
+            this.thôngTinChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.thôngTinChươngTrìnhToolStripMenuItem.Text = "Thông Tin Chương Trình";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(239, 6);
+            // 
+            // tbtnThoat
+            // 
+            this.tbtnThoat.Name = "tbtnThoat";
+            this.tbtnThoat.Size = new System.Drawing.Size(242, 22);
+            this.tbtnThoat.Text = "Thoát";
+            this.tbtnThoat.Click += new System.EventHandler(this.tbtnThoat_Click);
             // 
             // ucMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panMain);
+            this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.panInfo);
             this.Controls.Add(this.tabControlMenu);
             this.Controls.Add(this.statusStrip1);
@@ -532,7 +582,7 @@
             this.tabPageThongKe.ResumeLayout(false);
             this.panInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
-            this.panMain.ResumeLayout(false);
+            this.conHeThong.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +606,6 @@
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Panel panMain;
         private System.Windows.Forms.Button btnNhapHang;
         private System.Windows.Forms.Button btnNhaCungCap;
         private System.Windows.Forms.Button btnBaoCaoBanHang;
@@ -570,5 +619,11 @@
         private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button btnAnHien;
         private System.Windows.Forms.Button btnKhoBaoHanh;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ContextMenuStrip conHeThong;
+        private System.Windows.Forms.ToolStripMenuItem tbtnThongTinCongTy;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem tbtnThoat;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinChươngTrìnhToolStripMenuItem;
     }
 }

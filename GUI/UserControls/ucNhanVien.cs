@@ -91,7 +91,8 @@ namespace GUI
            if(bus.ThemNhanVien(nhanvien))
             {
                 FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                loadDataViewNV();
+                loaddgvNhanVien();
             }
             else
             {
@@ -111,7 +112,8 @@ namespace GUI
             if (bus.SuaNhanVien(nhanvien))
             {
                 FormMessage.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                loadDataViewNV();
+                loaddgvNhanVien();
             }
             else
             {
@@ -156,6 +158,10 @@ namespace GUI
                     e.Value = "Nhân viên";
                 }
             }
+            if(dgvNhanVien.Columns[e.ColumnIndex].Name == "colHinhDaiDien")
+            {
+                e.Value = new Bitmap(e.Value.ToString());
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -163,7 +169,7 @@ namespace GUI
            
                 if (dgvNhanVien.SelectedRows.Count > 0)
                 {
-                if (FormMessage.Show("Ban co muon xoa", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (FormMessage.Show("Bạn có muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
                     if (bus.XoaNhanVien(MaNV))
@@ -179,7 +185,7 @@ namespace GUI
             }
             else
             {
-                FormMessage.Show("Vui long chon nhan vien", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormMessage.Show("vui lòng chọn nnhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }
