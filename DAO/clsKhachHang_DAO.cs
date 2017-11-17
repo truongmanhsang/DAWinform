@@ -56,7 +56,7 @@ namespace DAO
         public bool XoaKhachHang(string MaKH)
         {
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
-            string query = string.Format("update KhachHang set TrangThai=0");
+            string query = string.Format("update KhachHang set TrangThai=0 where MaKhachHang='{0}'",MaKH);
             SqlCommand cmd = new SqlCommand(query, conn);
             int thucthi = cmd.ExecuteNonQuery();
             ThaoTacDuLieu.DongKetNoi(conn);

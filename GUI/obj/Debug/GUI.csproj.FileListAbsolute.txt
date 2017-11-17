@@ -85,7 +85,6 @@ D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucNhanVien.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucNhapHang.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucSanPham.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucSerial.resources
-D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucThongKe.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucTimKiemKH.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucTimKiemNCC.resources
 D:\GIT\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
@@ -135,3 +134,4 @@ D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucTimKiemKH.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucTimKiemNCC.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.ucTonKho.resources
 D:\tai lieu hoc tap\DoAn\DAWinform\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\GIT\DAWinform\GUI\obj\Debug\GUI.frmThemSuaKH.resources

@@ -95,26 +95,25 @@ namespace GUI
 
         private void btnThemKhachHang_Click(object sender, EventArgs e)
         {
-            if (txtCNTenKhachHang.Text != "")
-            {
-                clsKhachHang_DTO khdto = new clsKhachHang_DTO();
-                khdto.MaKhachHang = MaKH;
-                khdto.TenKhachHang = txtCNTenKhachHang.Text;
-                khdto.CMND = txtCNCMND.Text;
-                khdto.SoDT = txtCNSDT.Text;
-                khdto.DiaChi = txtCNDiaChi.Text;
-                if (bus.ThemKhachHang(khdto) != "")
-                {
-                    FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    FormMessage.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+           
+                frmThemSuaKH frm = new frmThemSuaKH();
+                frm.themkhachhang += HamThemKhachHang;
+                frm.ShowDialog();
+               
 
+            
+        }
+        void HamThemKhachHang(clsKhachHang_DTO khachhang)
+        {
+            if (bus.ThemKhachHang(khachhang) != "")
+            {
+                FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FormMessage.Show("Thêm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
