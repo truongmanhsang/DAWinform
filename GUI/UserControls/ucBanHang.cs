@@ -295,11 +295,11 @@ namespace GUI
             if (cboHinhThucTra.SelectedIndex == 1) //
             {
                 phieuXuat.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
-                phieuXuat.TinhTrang = 1;
+                phieuXuat.TinhTrang = 2;
             }
             else if (cboHinhThucTra.SelectedIndex == 3)
             {
-                phieuXuat.TinhTrang = 2;
+                phieuXuat.TinhTrang = 3;
             }
             else
             {

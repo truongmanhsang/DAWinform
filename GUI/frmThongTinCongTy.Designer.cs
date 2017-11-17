@@ -177,6 +177,7 @@
             this.Name = "frmThongTinCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin công ty";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmThongTinCongTy_FormClosed);
             this.Load += new System.EventHandler(this.frmThongTinCongTy_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

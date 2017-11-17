@@ -65,6 +65,21 @@ namespace GUI
             {
                 e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
             }
+            if (dgvPhieuXuat.Columns[e.ColumnIndex].Name == "colTinhTrang")
+            {
+                if (e.Value.ToString() == "1")
+                {
+                    e.Value = "Hoàn tất";
+                }
+                if (e.Value.ToString() == "2")
+                {
+                    e.Value = "Đang chuyển";
+                }
+                if (e.Value.ToString() == "3")
+                {
+                    e.Value = "Hàng đổi";
+                }
+            }
         }
 
         private void dgvPhieuXuat_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -138,7 +153,7 @@ namespace GUI
                 if (lTienNo > 0)
                 {
                     string strMaPhieu = dgvPhieuXuat.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
-                    if (FormMessage.Show("Bạn chắc chắn muốn trả tiền nợ cho hoá đơn này?", "Xác nhận trả tiền", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (FormMessage.Show("Bạn chắc chắn muốn trả tiền cho hoá đơn này?", "Xác nhận trả tiền", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (_PhieuXuatBUS.TraTienNo(strMaPhieu))
                         {
@@ -175,6 +190,13 @@ namespace GUI
             frmTim frm = new frmTim(frmTim.Loai.KhachHang);
             frm.ShowDialog();
             txtMaKH.Text = frm.LayMa();
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            string strMaPhieu = dgvPhieuXuat.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
+            frmInPhieuXuat frm = new frmInPhieuXuat(strMaPhieu);
+            frm.Show();
         }
     }
 }

@@ -14,6 +14,12 @@ namespace GUI
 {
     public partial class frmThongTinCongTy : Form
     {
+        private string strDuongDanTuyetDoi;
+        private string strTenHinh;
+        private string strDuongDanTuongDoi;
+
+        private List<string> lstThongTinCaiDat;
+
         public frmThongTinCongTy()
         {
             InitializeComponent();
@@ -26,30 +32,46 @@ namespace GUI
 
         private void frmThongTinCongTy_Load(object sender, EventArgs e)
         {
-            string[] strThongTinCaiDat = File.ReadAllLines("settings.ini");
-            foreach (string str in strThongTinCaiDat)
+            lstThongTinCaiDat = new List<string>();
+            try
             {
-                if (str.Split('=')[0] == "tenCongTy")
+                using (StreamReader sr = new StreamReader("settings.ini"))
                 {
-                    txtTenCongTy.Text = str.Split('=')[1];
-                }
-                if (str.Split('=')[0] == "diaChi")
-                {
-                    txtDiaChi.Text = str.Split('=')[1];
-                }
-                if (str.Split('=')[0] == "dienThoai")
-                {
-                    txtDienThoai.Text = str.Split('=')[1];
-                }
-                if (str.Split('=')[0] == "website")
-                {
-                    txtWebsite.Text = str.Split('=')[1];
-                }
-                if (str.Split('=')[0] == "logo")
-                {
-                    picLogo.Image = new Bitmap(str.Split('=')[1]);
+                    string str = "";
+                    while ((str = sr.ReadLine()) != null)
+                    {
+                        lstThongTinCaiDat.Add(str);
+
+                        if (str.Split('=')[0] == "tenCongTy")
+                        {
+                            txtTenCongTy.Text = str.Split('=')[1];
+                        }
+                        if (str.Split('=')[0] == "diaChi")
+                        {
+                            txtDiaChi.Text = str.Split('=')[1];
+                        }
+                        if (str.Split('=')[0] == "dienThoai")
+                        {
+                            txtDienThoai.Text = str.Split('=')[1];
+                        }
+                        if (str.Split('=')[0] == "website")
+                        {
+                            txtWebsite.Text = str.Split('=')[1];
+                        }
+                        if (str.Split('=')[0] == "logo")
+                        {
+                            picLogo.Image = new Bitmap(str.Split('=')[1]);
+                            strDuongDanTuongDoi = str.Split('=')[1];
+                        }
+                    }
+                    sr.Close();
                 }
             }
+            catch
+            {
+                FormMessage.Show("Không tìm thấy file cấu hình!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void picLogo_Click(object sender, EventArgs e)
@@ -63,9 +85,9 @@ namespace GUI
             {
                 try
                 {
-                   // picHinh.Image = new Bitmap(openFileDialog.FileName);
-                    //strDuongDanHinh = openFileDialog.FileName;
-                    //strTenHinh = openFileDialog.SafeFileName;
+                    picLogo.Image = new Bitmap(openFileDialog.FileName);
+                    strDuongDanTuyetDoi = openFileDialog.FileName;
+                    strTenHinh = openFileDialog.SafeFileName;
                 }
                 catch
                 {
@@ -77,7 +99,72 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //string strThongTinCaiDat
+            string temp = string.Empty;
+            if (picLogo.Image != null && strDuongDanTuyetDoi != null)
+            {
+                try
+                {
+                    File.Copy(strDuongDanTuyetDoi, Application.StartupPath + @"\data\images\logo\" + strTenHinh, true);
+                }
+                catch
+                {
+
+                }
+                strDuongDanTuongDoi = @"data\images\logo\" + strTenHinh;
+            }
+            else
+            {
+                if (picLogo.Image == null)
+                    strDuongDanTuongDoi = @"data\images\empty.png";
+            }
+            for (int i = 0; i < lstThongTinCaiDat.Count; i++)
+            {
+                if (lstThongTinCaiDat[i].Split('=')[0] == "tenCongTy")
+                {
+                    temp = "tenCongTy=" + txtTenCongTy.Text;
+                    lstThongTinCaiDat[i] = temp;
+                }
+                if (lstThongTinCaiDat[i].Split('=')[0] == "diaChi")
+                {
+                    temp = "diaChi=" + txtDiaChi.Text;
+                    lstThongTinCaiDat[i] = temp;
+                }
+                if (lstThongTinCaiDat[i].Split('=')[0] == "dienThoai")
+                {
+                    temp = "dienThoai=" + txtDienThoai.Text;
+                    lstThongTinCaiDat[i] = temp;
+                }
+                if (lstThongTinCaiDat[i].Split('=')[0] == "website")
+                {
+                    temp = "website=" + txtWebsite.Text;
+                    lstThongTinCaiDat[i] = temp;
+                }
+                if (lstThongTinCaiDat[i].Split('=')[0] == "logo")
+                {
+                    temp = "logo=" + strDuongDanTuongDoi;
+                    lstThongTinCaiDat[i] = temp;
+                }
+            }
+            try
+            {
+                using (StreamWriter sw = new StreamWriter("settings.ini"))
+                {
+                    foreach (string sr in lstThongTinCaiDat)
+                    {
+                        sw.WriteLine(sr);
+                    }
+                    sw.Close();
+                }
+                FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                FormMessage.Show("Không thể lưu!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void frmThongTinCongTy_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

@@ -530,7 +530,7 @@
             this.toolStripMenuItem2,
             this.tbtnThoat});
             this.conHeThong.Name = "contextMenuStrip1";
-            this.conHeThong.Size = new System.Drawing.Size(243, 98);
+            this.conHeThong.Size = new System.Drawing.Size(243, 76);
             // 
             // tbtnThongTinCongTy
             // 
@@ -566,6 +566,7 @@
             this.Controls.Add(this.panInfo);
             this.Controls.Add(this.tabControlMenu);
             this.Controls.Add(this.statusStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMain";

@@ -35,8 +35,11 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsQuanLyBanHang.cs">
+      <DependentUpon>dsQuanLyBanHang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsQuanLyBanHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQuanLyBanHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmHangSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +76,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPhieuXuat.Designer.cs">
+      <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemSuaKH.cs">
       <SubType>Form</SubType>
@@ -246,6 +263,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInPhieuXuat.resx">
+      <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThemSuaKH.resx">
       <DependentUpon>frmThemSuaKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +291,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptPhieuXuat.rdlc" />
     <EmbeddedResource Include="UserControls\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +361,17 @@
     <EmbeddedResource Include="UserControls\ucTonKho.resx">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsQuanLyBanHang.xsc">
+      <DependentUpon>dsQuanLyBanHang.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuanLyBanHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQuanLyBanHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsQuanLyBanHang.xss">
+      <DependentUpon>dsQuanLyBanHang.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -120,10 +120,7 @@ namespace GUI
                 if (e.RowIndex != -1)
                 {
                     MaKH = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value.ToString();
-                    txtCNTenKhachHang.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colTenKhachHang"].Value.ToString();
-                    txtCNCMND.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colCMND"].Value.ToString();
-                    txtCNSDT.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colSoDT"].Value.ToString();
-                    txtCNDiaChi.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colDiaChi"].Value.ToString();
+                   
                 }
            
            
@@ -131,17 +128,23 @@ namespace GUI
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)
         {
-            clsKhachHang_DTO khdto = new clsKhachHang_DTO();
-            khdto.MaKhachHang = MaKH;
-            khdto.TenKhachHang = txtCNTenKhachHang.Text;
-            khdto.CMND = txtCNCMND.Text;
-            khdto.SoDT = txtCNSDT.Text;
-            khdto.DiaChi = txtCNDiaChi.Text;
-            if (bus.SuaKhachHang(khdto))
+
+            frmThemSuaKH frm = new frmThemSuaKH();
+            frm.suakhachhang += HamSuaKhachHang;
+            frm.ShowDialog();
+           
+        }
+
+       
+
+        void HamSuaKhachHang(clsKhachHang_DTO khachhang)
+        {
+            khachhang.MaKhachHang = MaKH;
+            if (bus.SuaKhachHang(khachhang))
             {
                 FormMessage.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loaddgvKhachHang();
-                
+
             }
             else
             {
@@ -167,11 +170,7 @@ namespace GUI
             txtSDT.Text = "";
             txtCMND.Text = "";
             //------------------
-            txtCNTenKhachHang.Text="";
-            txtCNSDT.Text = "";
-            txtCNCMND.Text = "";
-            txtCNDiaChi.Text = "";
-            MaKH = "";
+         
         }
     }
 }
