@@ -43,17 +43,6 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.cbTenKH = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtCNDiaChi = new System.Windows.Forms.RichTextBox();
-            this.txtCNSDT = new System.Windows.Forms.TextBox();
-            this.txtCNCMND = new System.Windows.Forms.TextBox();
-            this.txtCNTenKhachHang = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSuaKhachHang = new System.Windows.Forms.Button();
             this.btnXoaKhachHang = new System.Windows.Forms.Button();
             this.btnThemKhachHang = new System.Windows.Forms.Button();
@@ -227,17 +216,6 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.btnHuy);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.txtCNDiaChi);
-            this.groupBox2.Controls.Add(this.txtCNSDT);
-            this.groupBox2.Controls.Add(this.txtCNCMND);
-            this.groupBox2.Controls.Add(this.txtCNTenKhachHang);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnSuaKhachHang);
             this.groupBox2.Controls.Add(this.btnXoaKhachHang);
             this.groupBox2.Controls.Add(this.btnThemKhachHang);
@@ -248,113 +226,10 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin / Chức năng";
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(6, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(336, 1);
-            this.label5.TabIndex = 13;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuy.Location = new System.Drawing.Point(250, 273);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(92, 34);
-            this.btnHuy.TabIndex = 12;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(133, 273);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 34);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Lưu";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // txtCNDiaChi
-            // 
-            this.txtCNDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCNDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCNDiaChi.Location = new System.Drawing.Point(149, 126);
-            this.txtCNDiaChi.Name = "txtCNDiaChi";
-            this.txtCNDiaChi.Size = new System.Drawing.Size(193, 71);
-            this.txtCNDiaChi.TabIndex = 10;
-            this.txtCNDiaChi.Text = "";
-            // 
-            // txtCNSDT
-            // 
-            this.txtCNSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCNSDT.Location = new System.Drawing.Point(149, 94);
-            this.txtCNSDT.Name = "txtCNSDT";
-            this.txtCNSDT.Size = new System.Drawing.Size(193, 26);
-            this.txtCNSDT.TabIndex = 9;
-            // 
-            // txtCNCMND
-            // 
-            this.txtCNCMND.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCNCMND.Location = new System.Drawing.Point(149, 62);
-            this.txtCNCMND.Name = "txtCNCMND";
-            this.txtCNCMND.Size = new System.Drawing.Size(193, 26);
-            this.txtCNCMND.TabIndex = 8;
-            // 
-            // txtCNTenKhachHang
-            // 
-            this.txtCNTenKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCNTenKhachHang.Location = new System.Drawing.Point(149, 30);
-            this.txtCNTenKhachHang.Name = "txtCNTenKhachHang";
-            this.txtCNTenKhachHang.Size = new System.Drawing.Size(193, 26);
-            this.txtCNTenKhachHang.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Địa chỉ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Số ĐT";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CMND";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tên khách hàng";
-            // 
             // btnSuaKhachHang
             // 
             this.btnSuaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSuaKhachHang.Location = new System.Drawing.Point(245, 210);
+            this.btnSuaKhachHang.Location = new System.Drawing.Point(244, 38);
             this.btnSuaKhachHang.Name = "btnSuaKhachHang";
             this.btnSuaKhachHang.Size = new System.Drawing.Size(98, 34);
             this.btnSuaKhachHang.TabIndex = 2;
@@ -365,7 +240,7 @@
             // btnXoaKhachHang
             // 
             this.btnXoaKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoaKhachHang.Location = new System.Drawing.Point(127, 210);
+            this.btnXoaKhachHang.Location = new System.Drawing.Point(126, 38);
             this.btnXoaKhachHang.Name = "btnXoaKhachHang";
             this.btnXoaKhachHang.Size = new System.Drawing.Size(98, 34);
             this.btnXoaKhachHang.TabIndex = 1;
@@ -376,7 +251,7 @@
             // btnThemKhachHang
             // 
             this.btnThemKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemKhachHang.Location = new System.Drawing.Point(9, 210);
+            this.btnThemKhachHang.Location = new System.Drawing.Point(8, 38);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
             this.btnThemKhachHang.Size = new System.Drawing.Size(98, 34);
             this.btnThemKhachHang.TabIndex = 0;
@@ -401,7 +276,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,14 +285,6 @@
         private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox txtCNDiaChi;
-        private System.Windows.Forms.TextBox txtCNSDT;
-        private System.Windows.Forms.TextBox txtCNCMND;
-        private System.Windows.Forms.TextBox txtCNTenKhachHang;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSuaKhachHang;
         private System.Windows.Forms.Button btnXoaKhachHang;
         private System.Windows.Forms.Button btnThemKhachHang;
@@ -429,9 +295,6 @@
         private System.Windows.Forms.CheckBox cbCMND;
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.CheckBox cbTenKH;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCMND;

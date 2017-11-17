@@ -70,7 +70,19 @@ namespace GUI
         }
         private void VoidSuaKhachHang()
         {
-
+            clsKhachHang_DTO khachhang = new clsKhachHang_DTO();
+            if (txtTenKH.Text == "" || txtCMND.Text == "" || txtSDT.Text == "")
+            {
+                FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            khachhang.MaKhachHang = MaKH;
+            khachhang.TenKhachHang = txtTenKH.Text;
+            khachhang.CMND = txtCMND.Text;
+            khachhang.SoDT = txtSDT.Text;
+            khachhang.DiaChi = txtDiaChi.Text;
+            suakhachhang(khachhang);
+            this.Close();
         }
 
         private void VoidThemKhachHang()
@@ -104,6 +116,11 @@ namespace GUI
                 }
 
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
