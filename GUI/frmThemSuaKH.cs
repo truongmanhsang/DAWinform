@@ -19,7 +19,7 @@ namespace GUI
     {
         clsKhachHang_BUS bus = new clsKhachHang_BUS();
         DataTable dt = new DataTable();
-        DataView dav;
+        
         string MaKH = "";
 
         public event XuLyThemKhachHang themkhachhang;

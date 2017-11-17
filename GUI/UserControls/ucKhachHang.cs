@@ -157,6 +157,7 @@ namespace GUI
             if (bus.XoaKhachHang(MaKH))
             {
                 FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loaddgvKhachHang();
             }
             else
             {

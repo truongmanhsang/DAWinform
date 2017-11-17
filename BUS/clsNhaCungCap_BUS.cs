@@ -20,5 +20,13 @@ namespace BUS
         {
             return dao.ThemNCC(NCC);
         }
+        public DataTable LayBangNhaCungCapTheoMa(string MaNCC)
+        {
+            return dao.LayBangNhaCungCapTheoMa(MaNCC);
+        }
+        public bool SuaNCC(clsNhaCungCap_DTO NCC)
+        {
+            return dao.SuaNCC(NCC);
+        }
     }
 }
