@@ -29,8 +29,16 @@
         private void InitializeComponent()
         {
             this.dgvChiTietBH = new System.Windows.Forms.DataGridView();
+            this.colTenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMoTaLoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkTraHang = new System.Windows.Forms.CheckBox();
+            this.chkDoiHang = new System.Windows.Forms.CheckBox();
             this.dtpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnGhi = new System.Windows.Forms.Button();
@@ -54,14 +62,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.chkDoiHang = new System.Windows.Forms.CheckBox();
-            this.chkTraHang = new System.Windows.Forms.CheckBox();
-            this.colTenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMoTaLoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietBH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -99,6 +99,52 @@
             this.dgvChiTietBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietBH_CellClick);
             this.dgvChiTietBH.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvChiTietBH_CellFormatting);
             this.dgvChiTietBH.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvChiTietBH_RowsRemoved);
+            // 
+            // colTenSanPham
+            // 
+            this.colTenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenSanPham.HeaderText = "Tên Sản Phẩm";
+            this.colTenSanPham.Name = "colTenSanPham";
+            this.colTenSanPham.ReadOnly = true;
+            // 
+            // colSoSerial
+            // 
+            this.colSoSerial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoSerial.HeaderText = "Số Serial";
+            this.colSoSerial.Name = "colSoSerial";
+            this.colSoSerial.ReadOnly = true;
+            this.colSoSerial.Width = 90;
+            // 
+            // colMoTaLoi
+            // 
+            this.colMoTaLoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colMoTaLoi.HeaderText = "Mô Tả Lỗi";
+            this.colMoTaLoi.Name = "colMoTaLoi";
+            this.colMoTaLoi.ReadOnly = true;
+            this.colMoTaLoi.Width = 95;
+            // 
+            // colNgayHenTra
+            // 
+            this.colNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNgayHenTra.HeaderText = "Ngày Hẹn Trả";
+            this.colNgayHenTra.Name = "colNgayHenTra";
+            this.colNgayHenTra.ReadOnly = true;
+            this.colNgayHenTra.Width = 96;
+            // 
+            // colGhiChu
+            // 
+            this.colGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colGhiChu.HeaderText = "Ghi Chú";
+            this.colGhiChu.Name = "colGhiChu";
+            this.colGhiChu.ReadOnly = true;
+            this.colGhiChu.Width = 82;
+            // 
+            // colTinhTrang
+            // 
+            this.colTinhTrang.DataPropertyName = "TinhTrang";
+            this.colTinhTrang.HeaderText = "Tình Trạng";
+            this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.ReadOnly = true;
             // 
             // splitContainer1
             // 
@@ -144,10 +190,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản phẩm bảo hành";
             // 
+            // chkTraHang
+            // 
+            this.chkTraHang.AutoSize = true;
+            this.chkTraHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTraHang.Location = new System.Drawing.Point(212, 184);
+            this.chkTraHang.Name = "chkTraHang";
+            this.chkTraHang.Size = new System.Drawing.Size(95, 23);
+            this.chkTraHang.TabIndex = 16;
+            this.chkTraHang.Text = "Trả hàng";
+            this.chkTraHang.UseVisualStyleBackColor = true;
+            this.chkTraHang.CheckedChanged += new System.EventHandler(this.chkTraHang_CheckedChanged);
+            // 
+            // chkDoiHang
+            // 
+            this.chkDoiHang.AutoSize = true;
+            this.chkDoiHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDoiHang.Location = new System.Drawing.Point(109, 184);
+            this.chkDoiHang.Name = "chkDoiHang";
+            this.chkDoiHang.Size = new System.Drawing.Size(97, 23);
+            this.chkDoiHang.TabIndex = 15;
+            this.chkDoiHang.Text = "Đổi hàng";
+            this.chkDoiHang.UseVisualStyleBackColor = true;
+            this.chkDoiHang.CheckedChanged += new System.EventHandler(this.chkDoiHang_CheckedChanged);
+            // 
             // dtpNgayHenTra
             // 
             this.dtpNgayHenTra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpNgayHenTra.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayHenTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayHenTra.Location = new System.Drawing.Point(109, 152);
             this.dtpNgayHenTra.Name = "dtpNgayHenTra";
             this.dtpNgayHenTra.Size = new System.Drawing.Size(284, 26);
@@ -376,76 +448,6 @@
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // chkDoiHang
-            // 
-            this.chkDoiHang.AutoSize = true;
-            this.chkDoiHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDoiHang.Location = new System.Drawing.Point(109, 184);
-            this.chkDoiHang.Name = "chkDoiHang";
-            this.chkDoiHang.Size = new System.Drawing.Size(97, 23);
-            this.chkDoiHang.TabIndex = 15;
-            this.chkDoiHang.Text = "Đổi hàng";
-            this.chkDoiHang.UseVisualStyleBackColor = true;
-            this.chkDoiHang.CheckedChanged += new System.EventHandler(this.chkDoiHang_CheckedChanged);
-            // 
-            // chkTraHang
-            // 
-            this.chkTraHang.AutoSize = true;
-            this.chkTraHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTraHang.Location = new System.Drawing.Point(212, 184);
-            this.chkTraHang.Name = "chkTraHang";
-            this.chkTraHang.Size = new System.Drawing.Size(95, 23);
-            this.chkTraHang.TabIndex = 16;
-            this.chkTraHang.Text = "Trả hàng";
-            this.chkTraHang.UseVisualStyleBackColor = true;
-            this.chkTraHang.CheckedChanged += new System.EventHandler(this.chkTraHang_CheckedChanged);
-            // 
-            // colTenSanPham
-            // 
-            this.colTenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenSanPham.HeaderText = "Tên Sản Phẩm";
-            this.colTenSanPham.Name = "colTenSanPham";
-            this.colTenSanPham.ReadOnly = true;
-            // 
-            // colSoSerial
-            // 
-            this.colSoSerial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colSoSerial.HeaderText = "Số Serial";
-            this.colSoSerial.Name = "colSoSerial";
-            this.colSoSerial.ReadOnly = true;
-            this.colSoSerial.Width = 98;
-            // 
-            // colMoTaLoi
-            // 
-            this.colMoTaLoi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colMoTaLoi.HeaderText = "Mô Tả Lỗi";
-            this.colMoTaLoi.Name = "colMoTaLoi";
-            this.colMoTaLoi.ReadOnly = true;
-            this.colMoTaLoi.Width = 103;
-            // 
-            // colNgayHenTra
-            // 
-            this.colNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colNgayHenTra.HeaderText = "Ngày Hẹn Trả";
-            this.colNgayHenTra.Name = "colNgayHenTra";
-            this.colNgayHenTra.ReadOnly = true;
-            this.colNgayHenTra.Width = 127;
-            // 
-            // colGhiChu
-            // 
-            this.colGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colGhiChu.HeaderText = "Ghi Chú";
-            this.colGhiChu.Name = "colGhiChu";
-            this.colGhiChu.ReadOnly = true;
-            this.colGhiChu.Width = 89;
-            // 
-            // colTinhTrang
-            // 
-            this.colTinhTrang.DataPropertyName = "TinhTrang";
-            this.colTinhTrang.HeaderText = "Tình Trạng";
-            this.colTinhTrang.Name = "colTinhTrang";
-            this.colTinhTrang.ReadOnly = true;
             // 
             // ucNhanBaoHanh
             // 

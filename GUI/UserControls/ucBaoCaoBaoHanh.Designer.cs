@@ -83,7 +83,7 @@
             this.groupBox1.Controls.Add(this.btnTim);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(289, 157);
+            this.groupBox1.Size = new System.Drawing.Size(325, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -102,7 +102,7 @@
             // 
             this.llblTim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.llblTim.AutoSize = true;
-            this.llblTim.Location = new System.Drawing.Point(246, 92);
+            this.llblTim.Location = new System.Drawing.Point(281, 93);
             this.llblTim.Name = "llblTim";
             this.llblTim.Size = new System.Drawing.Size(33, 18);
             this.llblTim.TabIndex = 13;
@@ -115,7 +115,7 @@
             this.txtMaKH.Location = new System.Drawing.Point(83, 88);
             this.txtMaKH.MaxLength = 10;
             this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(200, 26);
+            this.txtMaKH.Size = new System.Drawing.Size(236, 26);
             this.txtMaKH.TabIndex = 12;
             // 
             // chkNV
@@ -141,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(176, 31);
+            this.label2.Location = new System.Drawing.Point(194, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 18);
             this.label2.TabIndex = 9;
@@ -153,28 +153,32 @@
             this.cboNV.FormattingEnabled = true;
             this.cboNV.Location = new System.Drawing.Point(83, 57);
             this.cboNV.Name = "cboNV";
-            this.cboNV.Size = new System.Drawing.Size(200, 26);
+            this.cboNV.Size = new System.Drawing.Size(236, 26);
             this.cboNV.TabIndex = 5;
             // 
             // dtpNgayCuoi
             // 
-            this.dtpNgayCuoi.Location = new System.Drawing.Point(195, 25);
+            this.dtpNgayCuoi.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayCuoi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayCuoi.Location = new System.Drawing.Point(213, 25);
             this.dtpNgayCuoi.Name = "dtpNgayCuoi";
-            this.dtpNgayCuoi.Size = new System.Drawing.Size(88, 26);
+            this.dtpNgayCuoi.Size = new System.Drawing.Size(106, 26);
             this.dtpNgayCuoi.TabIndex = 2;
             // 
             // dtpNgayDau
             // 
+            this.dtpNgayDau.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayDau.Location = new System.Drawing.Point(83, 25);
             this.dtpNgayDau.Name = "dtpNgayDau";
-            this.dtpNgayDau.Size = new System.Drawing.Size(88, 26);
+            this.dtpNgayDau.Size = new System.Drawing.Size(106, 26);
             this.dtpNgayDau.TabIndex = 1;
             // 
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(6, 120);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(277, 31);
+            this.btnTim.Size = new System.Drawing.Size(313, 31);
             this.btnTim.TabIndex = 6;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -184,7 +188,7 @@
             // 
             this.btnXoa.Location = new System.Drawing.Point(6, 99);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(277, 31);
+            this.btnXoa.Size = new System.Drawing.Size(313, 31);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -194,7 +198,7 @@
             // 
             this.btnTra.Location = new System.Drawing.Point(6, 25);
             this.btnTra.Name = "btnTra";
-            this.btnTra.Size = new System.Drawing.Size(277, 31);
+            this.btnTra.Size = new System.Drawing.Size(313, 31);
             this.btnTra.TabIndex = 7;
             this.btnTra.Text = "Trả cho khách";
             this.btnTra.UseVisualStyleBackColor = true;
@@ -206,7 +210,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Location = new System.Drawing.Point(298, 3);
+            this.splitContainer1.Location = new System.Drawing.Point(334, 3);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -217,7 +221,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(538, 534);
+            this.splitContainer1.Size = new System.Drawing.Size(502, 534);
             this.splitContainer1.SplitterDistance = 276;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -229,7 +233,7 @@
             this.groupBox4.Controls.Add(this.dgvBaoHanh);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(530, 268);
+            this.groupBox4.Size = new System.Drawing.Size(494, 268);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách bảo hành";
@@ -255,7 +259,7 @@
             this.dgvBaoHanh.RowTemplate.ReadOnly = true;
             this.dgvBaoHanh.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBaoHanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBaoHanh.Size = new System.Drawing.Size(524, 243);
+            this.dgvBaoHanh.Size = new System.Drawing.Size(488, 243);
             this.dgvBaoHanh.TabIndex = 0;
             this.dgvBaoHanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBaoHanh_CellClick);
             this.dgvBaoHanh.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBaoHanh_CellFormatting);
@@ -300,7 +304,7 @@
             this.groupBox2.Controls.Add(this.dgvChiTietBaoHanh);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(533, 246);
+            this.groupBox2.Size = new System.Drawing.Size(497, 246);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết bảo hành";
@@ -327,7 +331,7 @@
             this.dgvChiTietBaoHanh.RowTemplate.ReadOnly = true;
             this.dgvChiTietBaoHanh.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvChiTietBaoHanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChiTietBaoHanh.Size = new System.Drawing.Size(527, 221);
+            this.dgvChiTietBaoHanh.Size = new System.Drawing.Size(491, 221);
             this.dgvChiTietBaoHanh.TabIndex = 0;
             this.dgvChiTietBaoHanh.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvChiTietBaoHanh_CellFormatting);
             // 
@@ -384,7 +388,7 @@
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Location = new System.Drawing.Point(3, 166);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(289, 371);
+            this.groupBox3.Size = new System.Drawing.Size(325, 371);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
@@ -393,7 +397,7 @@
             // 
             this.btnTraHet.Location = new System.Drawing.Point(6, 62);
             this.btnTraHet.Name = "btnTraHet";
-            this.btnTraHet.Size = new System.Drawing.Size(277, 31);
+            this.btnTraHet.Size = new System.Drawing.Size(313, 31);
             this.btnTraHet.TabIndex = 10;
             this.btnTraHet.Text = "Trả hết cho khách";
             this.btnTraHet.UseVisualStyleBackColor = true;

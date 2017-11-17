@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPhieuXuat = new System.Windows.Forms.DataGridView();
             this.colMaPhieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +43,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTraTienNo = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.llblTim = new System.Windows.Forms.LinkLabel();
             this.chkNo = new System.Windows.Forms.CheckBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.txtMaKH = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.llblTim = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuXuat)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -133,8 +133,8 @@
             // 
             this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colNo.DataPropertyName = "TienNo";
-            dataGridViewCellStyle1.Format = "#,##0 VNĐ";
-            this.colNo.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "#,##0 VNĐ";
+            this.colNo.DefaultCellStyle = dataGridViewCellStyle5;
             this.colNo.HeaderText = "Nợ";
             this.colNo.Name = "colNo";
             this.colNo.ReadOnly = true;
@@ -144,8 +144,8 @@
             // 
             this.colTongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colTongTien.DataPropertyName = "TongTien";
-            dataGridViewCellStyle2.Format = "#,### VNĐ";
-            this.colTongTien.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "#,### VNĐ";
+            this.colTongTien.DefaultCellStyle = dataGridViewCellStyle6;
             this.colTongTien.HeaderText = "Tổng Tiền";
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.ReadOnly = true;
@@ -205,6 +205,18 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
+            // 
+            // llblTim
+            // 
+            this.llblTim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llblTim.AutoSize = true;
+            this.llblTim.Location = new System.Drawing.Point(292, 90);
+            this.llblTim.Name = "llblTim";
+            this.llblTim.Size = new System.Drawing.Size(33, 18);
+            this.llblTim.TabIndex = 10;
+            this.llblTim.TabStop = true;
+            this.llblTim.Text = "Tìm";
+            this.llblTim.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblTim_LinkClicked);
             // 
             // chkNo
             // 
@@ -274,6 +286,8 @@
             // 
             // dtpCuoi
             // 
+            this.dtpCuoi.CustomFormat = "dd/MM/yyyy";
+            this.dtpCuoi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCuoi.Location = new System.Drawing.Point(257, 22);
             this.dtpCuoi.Name = "dtpCuoi";
             this.dtpCuoi.Size = new System.Drawing.Size(157, 26);
@@ -281,6 +295,8 @@
             // 
             // dtpDau
             // 
+            this.dtpDau.CustomFormat = "dd/MM/yyyy";
+            this.dtpDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDau.Location = new System.Drawing.Point(75, 22);
             this.dtpDau.Name = "dtpDau";
             this.dtpDau.Size = new System.Drawing.Size(157, 26);
@@ -366,8 +382,8 @@
             // 
             this.colGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGia.DataPropertyName = "Gia";
-            dataGridViewCellStyle3.Format = "#,### VNĐ";
-            this.colGia.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Format = "#,### VNĐ";
+            this.colGia.DefaultCellStyle = dataGridViewCellStyle7;
             this.colGia.HeaderText = "Giá";
             this.colGia.Name = "colGia";
             this.colGia.ReadOnly = true;
@@ -377,24 +393,12 @@
             // 
             this.colThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle4.Format = "#,### VNĐ";
-            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Format = "#,### VNĐ";
+            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle8;
             this.colThanhTien.HeaderText = "Thành Tiền";
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
             this.colThanhTien.Width = 108;
-            // 
-            // llblTim
-            // 
-            this.llblTim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.llblTim.AutoSize = true;
-            this.llblTim.Location = new System.Drawing.Point(292, 90);
-            this.llblTim.Name = "llblTim";
-            this.llblTim.Size = new System.Drawing.Size(33, 18);
-            this.llblTim.TabIndex = 10;
-            this.llblTim.TabStop = true;
-            this.llblTim.Text = "Tìm";
-            this.llblTim.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblTim_LinkClicked);
             // 
             // ucBaoCaoBanHang
             // 

@@ -207,12 +207,6 @@
     <Compile Include="UserControls\ucSerial.Designer.cs">
       <DependentUpon>ucSerial.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucThongKe.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucThongKe.Designer.cs">
-      <DependentUpon>ucThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucTimKiemKH.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucSerial.resx">
       <DependentUpon>ucSerial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucThongKe.resx">
-      <DependentUpon>ucThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTimKiemKH.resx">
       <DependentUpon>ucTimKiemKH.cs</DependentUpon>
