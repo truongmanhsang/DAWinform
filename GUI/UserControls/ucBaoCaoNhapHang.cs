@@ -174,5 +174,12 @@ namespace GUI
             frm.ShowDialog();
             txtMaNCC.Text = frm.LayMa();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            string strMaPhieu = dgvPhieuNhap.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
+            frmInPhieuNhap frm = new frmInPhieuNhap(strMaPhieu);
+            frm.ShowDialog();
+        }
     }
 }

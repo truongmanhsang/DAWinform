@@ -11,6 +11,19 @@ namespace DAO
 {
     public class clsPhieuNhap_DAO
     {
+        public DataTable LayBangInPhieuNhap(string strMaPhieu)
+        {
+            return ThaoTacDuLieu.LayBang(string.Format(@"select sp.TenSanPham, sp.BaoHanh, sp.DonViTinh, ct.SoLuong, ct.Gia, (ct.SoLuong * ct.Gia) as ThanhTien
+                from SanPham sp, ChiTietPhieuNhap ct
+                where sp.MaSanPham = ct.MaSanPham and ct.MaPhieuNhap = '{0}'", strMaPhieu));
+        }
+        public DataTable LayBangNCCPhieuNhap(string strMaPhieu)
+        {
+            return ThaoTacDuLieu.LayBang(string.Format(@"select *
+            from ChiTietPhieuNhap ct, PhieuNhap pn, NhaCungCap ncc
+            where ct.MaPhieuNhap = pn.MaPhieuNhap and pn.MaNhaCungCap = ncc.MaNhaCungCap
+            and pn.MaPhieuNhap = '{0}'", strMaPhieu));
+        }
         public string TaoPhieuNhap(clsPhieuNhap_DTO phieuNhap)
         {
             string strMaPhieu = "PN" + (ThaoTacDuLieu.DemSoDongCuaBang("PhieuNhap") + 1);

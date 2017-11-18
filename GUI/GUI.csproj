@@ -65,6 +65,12 @@
     <Compile Include="frmHangSanXuat.Designer.cs">
       <DependentUpon>frmHangSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInPhieuNhap.Designer.cs">
+      <DependentUpon>frmInPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     <EmbeddedResource Include="frmHangSanXuat.resx">
       <DependentUpon>frmHangSanXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInPhieuNhap.resx">
+      <DependentUpon>frmInPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +318,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptPhieuNhap.rdlc" />
     <EmbeddedResource Include="rptPhieuXuat.rdlc" />
     <EmbeddedResource Include="UserControls\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>

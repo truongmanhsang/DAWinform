@@ -28,5 +28,13 @@ namespace BUS
         {
             return dao.XoaPhieuNhap(strMaPhieu);
         }
+        public DataTable LayBangInPhieuNhap(string strMaPhieu)
+        {
+            return dao.LayBangInPhieuNhap(strMaPhieu);
+        }
+        public DataTable LayBangNCCPhieuNhap(string strMaPhieu)
+        {
+            return dao.LayBangNCCPhieuNhap(strMaPhieu);
+        }
     }
 }

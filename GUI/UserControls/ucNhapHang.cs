@@ -30,7 +30,6 @@ namespace GUI
         DataTable dtNhaCungCap;
         DataTable dtSanPham;
 
-        Hashtable htSanPham;
         private string strMaNCC;
         private string strMaSP;
 
@@ -61,17 +60,6 @@ namespace GUI
             dtSanPham = _SanPhamBUS.LayBangSanPham();
             dgvSanPham.DataSource = dtSanPham;
 
-            TaiHashtableSP();
-        }
-
-        private void TaiHashtableSP()
-        {
-            htSanPham = new Hashtable();
-            foreach (DataRow dr in dtSanPham.Rows)
-            {
-                string strMa = dr["MaSanPham"].ToString();
-                htSanPham[strMa] = dr;
-            }
         }
 
         private void dgvSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -144,8 +132,8 @@ namespace GUI
                         dgvRow.Cells[2].Value = iDonGia;
                         dgvRow.Cells[3].Value = iSoLuong;
                         dgvRow.Cells[4].Value = iThanhTien;
-                        TinhTongTien();
-                        TinhTongTien();
+                        TinhTongTienVaCongNo();
+                        TinhTongTienVaCongNo();
                         return;
                     }
                 }
@@ -153,16 +141,44 @@ namespace GUI
 
 
             dgvNhapHang.Rows.Add(strMaSP, strTenSP, iDonGia, iSoLuong, iThanhTien); 
-            TinhTongTien();
+            TinhTongTienVaCongNo();
         }
-        private void TinhTongTien()
+        private decimal TinhTongTienVaCongNo()
         {
-            long ltongTien = 0;
+            decimal ltongTien = 0;
+            if (dgvNhapHang.Rows.Count == 0)
+            {
+                txtTongCong.Text = TienIch.ChuyenSoSangVND(ltongTien);
+                return ltongTien;
+            }
             foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
             {
-                ltongTien += Convert.ToInt64(dgvRow.Cells[4].Value.ToString());
+                ltongTien += Convert.ToDecimal(dgvRow.Cells[4].Value.ToString());
+            }
+            if (cboHinhThucTra.SelectedIndex == 1)
+            {
+                if (Convert.ToDecimal(TienIch.HuyDinhDangSo(txtTraTruoc.Text == "" ? "0" : txtTraTruoc.Text)) <= ltongTien)
+                {
+                    ltongTien -= Convert.ToDecimal(TienIch.HuyDinhDangSo(txtTraTruoc.Text == "" ? "0" : txtTraTruoc.Text));
+                    txtTongCong.Text = TienIch.ChuyenSoSangVND(ltongTien);
+                    return ltongTien;
+                }
             }
             txtTongCong.Text = TienIch.ChuyenSoSangVND(ltongTien);
+            return ltongTien;
+        }
+        private decimal TinhTongTien()
+        {
+            decimal ltongTien = 0;
+            if (dgvNhapHang.Rows.Count == 0)
+            {
+                return ltongTien;
+            }
+            foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
+            {
+                ltongTien += Convert.ToDecimal(dgvRow.Cells[4].Value.ToString());
+            }
+            return ltongTien;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -182,6 +198,14 @@ namespace GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (cboHinhThucTra.SelectedIndex == 1)
+            {
+                if (Convert.ToDecimal(TienIch.HuyDinhDangSo(txtTraTruoc.Text == "" ? "0" : txtTraTruoc.Text)) > TinhTongTien())
+                {
+                    FormMessage.Show("Tiền trả trước không thể lớn hơn tổng thành tiền!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             if (txtTenNCC.Text != "" && txtSoDT.Text != "" && txtDiaChi.Text != "")
             {
                 if (dgvNhapHang.Rows.Count > 0)
@@ -216,8 +240,10 @@ namespace GUI
             clsPhieuNhap_DTO phieuNhap = new clsPhieuNhap_DTO();
             phieuNhap.MaNhaCungCap = strMaNCC;
             if (cboHinhThucTra.SelectedIndex == 1)
+            {
                 phieuNhap.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
-            phieuNhap.TongTien = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
+            }
+            phieuNhap.TongTien = TinhTongTien();
             phieuNhap.NgayLap = DateTime.Now.ToString("MM/dd/yyyy");
             phieuNhap.MaNVLap = Program.MA_NV;
 
@@ -227,8 +253,6 @@ namespace GUI
             List<clsChiTietPhieuNhap_DTO> dsChiTietSP = new List<clsChiTietPhieuNhap_DTO>(); // danh sách các sản phẩm trong hoá đơn
             foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
             {
-                DataRow drSP = (DataRow)htSanPham[dgvRow.Cells[0].Value.ToString()]; // lấy mã sp của từng dòng trong dgvBanHang
-
                 clsChiTietPhieuNhap_DTO chitiet = new clsChiTietPhieuNhap_DTO();
                 chitiet.MaSanPham = dgvRow.Cells[0].Value.ToString();
                 chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
@@ -258,6 +282,7 @@ namespace GUI
             txtDiaChi.Text = "";
 
             txtTongCong.Text = "";
+            txtTraTruoc.Text = "0";
 
             dgvNhapHang.Rows.Clear();
         }
@@ -332,12 +357,19 @@ namespace GUI
 
         private void dgvNhapHang_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            TinhTongTien();
+            TinhTongTienVaCongNo();
+            if (cboHinhThucTra.SelectedIndex == 1)
+                txtTraTruoc.ReadOnly = false;
         }
 
         private void dgvNhapHang_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            TinhTongTien();
+            TinhTongTienVaCongNo();
+            if (dgvNhapHang.Rows.Count == 0)
+            {
+                txtTraTruoc.ReadOnly = true;
+                txtTraTruoc.Text = "0";
+            }
         }
 
         private void dgvSanPham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -348,6 +380,41 @@ namespace GUI
                 frmThemSuaSanPham frm = new frmThemSuaSanPham(strMaSP);
                 frm.ShowDialog();
             }
+        }
+
+        private void cboHinhThucTra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboHinhThucTra.SelectedIndex == 1)
+            {
+                txtTraTruoc.ReadOnly = false;
+                lblTraTruoc.Visible = true;
+                txtTraTruoc.Visible = true;
+                lblVND.Visible = true;
+                lblTongCong.Text = "Còn nợ";
+            }
+            else
+            {
+                txtTraTruoc.ReadOnly = true;
+                lblTraTruoc.Visible = false;
+                txtTraTruoc.Visible = false;
+                lblVND.Visible = false;
+                lblTongCong.Text = "Tổng cộng";
+            }
+            TinhTongTienVaCongNo();
+        }
+
+        private void txtTraTruoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtTraTruoc_KeyUp(object sender, KeyEventArgs e)
+        {
+            TienIch.DinhDangSoTextBox(txtTraTruoc);
+        }
+
+        private void txtTraTruoc_TextChanged(object sender, EventArgs e)
+        {
+            TinhTongTienVaCongNo();
         }
     }
 }
