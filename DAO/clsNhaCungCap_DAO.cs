@@ -35,6 +35,11 @@ namespace DAO
             string query = string.Format("update NhaCungCap set TenNhaCungCap='{0}',DiaChi='{1}',SoDT='{2}',GhiChu='{3}' where MaNhaCungCap='{4}'", NCC.TenNhaCungCap, NCC.DiaChi, NCC.SoDT, NCC.GhiChu, NCC.MaNhaCungCap);
             return ThaoTacDuLieu.ThucThi(query);
         }
+        public bool XoaNCC(string MaNCC)
+        {
+            string query = string.Format("update NhaCungCap set TrangThai=0 where MaNhaCungCap='{0}'",MaNCC);
+            return ThaoTacDuLieu.ThucThi(query);
+        }
 
     }
 }

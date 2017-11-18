@@ -28,5 +28,9 @@ namespace BUS
         {
             return dao.SuaNCC(NCC);
         }
+        public bool XoaNCC(string MaNCC)
+        {
+            return dao.XoaNCC(MaNCC);
+        }
     }
 }

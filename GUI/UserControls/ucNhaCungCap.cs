@@ -108,5 +108,30 @@ namespace GUI
         {
             MaNCC = dgvNhaCungCap.Rows[e.RowIndex].Cells["colMaNCC"].Value.ToString();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+            if (dgvNhaCungCap.SelectedRows.Count > 0)
+            {
+                if (FormMessage.Show("Bạn có muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                   
+                    if (bus.XoaNCC(MaNCC))
+                    {
+                        FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                FormMessage.Show("vui lòng chọn nhà cung cấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
