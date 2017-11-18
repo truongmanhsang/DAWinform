@@ -182,11 +182,11 @@ namespace GUI
                         FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-            else
-            {
-                FormMessage.Show("vui lòng chọn nnhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                }
+                else
+                {
+                    FormMessage.Show("vui lòng chọn nnhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
            
         }
 
