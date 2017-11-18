@@ -11,13 +11,12 @@ namespace DTO
         private string _maPhieuXuat;
         private string _maKhachHang;
         private decimal _tongTien;
-        private decimal _tienNo;
         private float _chietKhau;
         private float _thue;
         private string _ngayLap;
         private string _maNVLap;
         private string _ghiChu;
-        private int _tinhTrang;
+        private int _loai;
         private int _trangThai;
 
         public string MaPhieuXuat
@@ -56,19 +55,6 @@ namespace DTO
             set
             {
                 _tongTien = value;
-            }
-        }
-
-        public decimal TienNo
-        {
-            get
-            {
-                return _tienNo;
-            }
-
-            set
-            {
-                _tienNo = value;
             }
         }
 
@@ -137,16 +123,16 @@ namespace DTO
             }
         }
 
-        public int TinhTrang
+        public int Loai
         {
             get
             {
-                return _tinhTrang;
+                return _loai;
             }
 
             set
             {
-                _tinhTrang = value;
+                _loai = value;
             }
         }
 

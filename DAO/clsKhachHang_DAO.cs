@@ -47,7 +47,7 @@ namespace DAO
         public bool SuaKhachHang(clsKhachHang_DTO khdto)
         {
             SqlConnection conn = ThaoTacDuLieu.TaoVaMoKetNoi();
-            string query = string.Format("update KhachHang set TenKhachHang='{0}',CMND={1},SoDT={2},DiaChi='{3}' where MaKhachHang='{4}'",khdto.TenKhachHang,khdto.CMND,khdto.SoDT,khdto.DiaChi,khdto.MaKhachHang);
+            string query = string.Format("update KhachHang set TenKhachHang=N'{0}',CMND={1},SoDT={2},DiaChi=N'{3}' where MaKhachHang='{4}'",khdto.TenKhachHang,khdto.CMND,khdto.SoDT,khdto.DiaChi,khdto.MaKhachHang);
             SqlCommand cmd = new SqlCommand(query, conn);
             int thucthi = cmd.ExecuteNonQuery();
             ThaoTacDuLieu.DongKetNoi(conn);

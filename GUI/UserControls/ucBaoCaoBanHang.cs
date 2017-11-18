@@ -57,6 +57,7 @@ namespace GUI
         {
             dgvPhieuXuat.AutoGenerateColumns = false;
             dgvCTPhieuXuat.AutoGenerateColumns = false;
+            cboLoai.SelectedIndex = 0;
         }
 
         private void dgvPhieuXuat_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -67,18 +68,32 @@ namespace GUI
             }
             if (dgvPhieuXuat.Columns[e.ColumnIndex].Name == "colTinhTrang")
             {
-                if (e.Value.ToString() == "1")
+                try
                 {
-                    e.Value = "Hoàn tất";
+                    if (e.Value.ToString() == "1")
+                    {
+
+                        e.Value = "Hoàn tất";
+                        e.CellStyle.BackColor = Color.Green;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                    if (e.Value.ToString() == "2")
+                    {
+                        e.Value = "Đang chuyển";
+                        e.CellStyle.BackColor = Color.Yellow;
+                    }
+                    if (e.Value.ToString() == "3")
+                    {
+                        e.Value = "Hàng đổi";
+                        e.CellStyle.BackColor = Color.OrangeRed;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
                 }
-                if (e.Value.ToString() == "2")
+                catch
                 {
-                    e.Value = "Đang chuyển";
+
                 }
-                if (e.Value.ToString() == "3")
-                {
-                    e.Value = "Hàng đổi";
-                }
+                
             }
         }
 
@@ -99,7 +114,7 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (chkNgay.Checked || chkNV.Checked || chkMaKH.Checked || chkNo.Checked)
+            if (chkNgay.Checked || chkNV.Checked || chkMaKH.Checked || chkLoai.Checked)
             {
                 dvPhieuXuat.RowFilter = TaoTruyVan();
             }
@@ -134,13 +149,13 @@ namespace GUI
                 }
                 strTruyVan += string.Format("MaKhachHang='{0}'", txtMaKH.Text);
             }
-            if (chkNo.Checked)
+            if (chkLoai.Checked)
             {
                 if (strTruyVan != string.Empty)
                 {
                     strTruyVan += " AND ";
                 }
-                strTruyVan += string.Format("TienNo > 0");
+                strTruyVan += string.Format("Loai='{0}'", cboLoai.SelectedIndex + 1);
             }
             return strTruyVan;
         }
@@ -149,22 +164,22 @@ namespace GUI
         {
             if (dgvPhieuXuat.SelectedRows[0].Index != -1)
             {
-                long lTienNo = Convert.ToInt64(dgvPhieuXuat.SelectedRows[0].Cells["colNo"].Value.ToString());
-                if (lTienNo > 0)
+                long lTinhTrang = Convert.ToInt64(dgvPhieuXuat.SelectedRows[0].Cells["colTinhTrang"].Value.ToString());
+                if (lTinhTrang == 2)
                 {
                     string strMaPhieu = dgvPhieuXuat.SelectedRows[0].Cells["colMaPhieu"].Value.ToString();
-                    if (FormMessage.Show("Bạn chắc chắn muốn trả tiền cho hoá đơn này?", "Xác nhận trả tiền", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (FormMessage.Show("Bạn chắc chắn muốn hoàn tất chuyển hàng cho hoá đơn này?", "Xác nhận hoàn tất", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (_PhieuXuatBUS.TraTienNo(strMaPhieu))
+                        if (_PhieuXuatBUS.HoanTatChuyenHang(strMaPhieu))
                         {
-                            FormMessage.Show("Trả tiền thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FormMessage.Show("Thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             TaiDuLieu();
                         }
                     }
                 }
                 else
                 {
-                    FormMessage.Show("Hoá đơn này không nợ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormMessage.Show("Hoá đơn này đã hoàn tất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

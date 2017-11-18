@@ -20,7 +20,7 @@ namespace DAO
         public string ThemNCC(clsNhaCungCap_DTO NCC)
         {
             string strMaNCC = "NCC" + (ThaoTacDuLieu.DemSoDongCuaBang("NhaCungCap") + 1);
-            string query = string.Format("insert into NhaCungCap values('{0}','{1}','{2}','{3}','{4}',1)", strMaNCC, NCC.TenNhaCungCap, NCC.DiaChi, NCC.SoDT, NCC.GhiChu);
+            string query = string.Format("insert into NhaCungCap values('{0}',N'{1}',N'{2}',N'{3}',N'{4}',1)", strMaNCC, NCC.TenNhaCungCap, NCC.DiaChi, NCC.SoDT, NCC.GhiChu);
             ThaoTacDuLieu.ThucThi(query);
             return strMaNCC;
         }
@@ -32,7 +32,7 @@ namespace DAO
         }
         public bool SuaNCC(clsNhaCungCap_DTO NCC)
         {
-            string query = string.Format("update NhaCungCap set TenNhaCungCap='{0}',DiaChi='{1}',SoDT='{2}',GhiChu='{3}' where MaNhaCungCap='{4}'", NCC.TenNhaCungCap, NCC.DiaChi, NCC.SoDT, NCC.GhiChu, NCC.MaNhaCungCap);
+            string query = string.Format("update NhaCungCap set TenNhaCungCap=N'{0}',DiaChi=N'{1}',SoDT='{2}',GhiChu=N'{3}' where MaNhaCungCap='{4}'", NCC.TenNhaCungCap, NCC.DiaChi, NCC.SoDT, NCC.GhiChu, NCC.MaNhaCungCap);
             return ThaoTacDuLieu.ThucThi(query);
         }
 

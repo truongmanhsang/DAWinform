@@ -49,17 +49,15 @@ namespace GUI
 
         private void CaiDat()
         {
-            dgvNhaCungCap.AutoGenerateColumns = false;
             dgvSanPham.AutoGenerateColumns = false;
+            dgvSanPham.Columns["colMaSP"].Visible = false;
+            dgvNhapHang.Columns["colMaSanPham"].Visible = false;
 
             cboHinhThucTra.SelectedIndex = 0;
         }
 
         private void TaiDuLieu()
         {
-            dtNhaCungCap = _NhaCungCapBUS.LayBangNhaCungCap();
-            dgvNhaCungCap.DataSource = dtNhaCungCap;
-
             dtSanPham = _SanPhamBUS.LayBangSanPham();
             dgvSanPham.DataSource = dtSanPham;
 
@@ -85,16 +83,22 @@ namespace GUI
                     e.Value = new Bitmap(e.Value.ToString());
                 }
             }
-        }
-
-        private void dgvNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
+            if (dgvSanPham.Columns[e.ColumnIndex].Name == "colThem")
             {
-                strMaNCC = dgvNhaCungCap.Rows[e.RowIndex].Cells["colMaNhaCungCap"].Value.ToString();
-                txtTenNCC.Text = dgvNhaCungCap.Rows[e.RowIndex].Cells["colTenNhaCungCap"].Value.ToString();
-                txtSoDT.Text = dgvNhaCungCap.Rows[e.RowIndex].Cells["colSoDT"].Value.ToString();
-                txtDiaChi.Text = dgvNhaCungCap.Rows[e.RowIndex].Cells["colDiaChi"].Value.ToString();
+                e.Value = "Thêm";
+            }
+            if (dgvSanPham.Columns[e.ColumnIndex].Name == "colSoLuong")
+            {
+                if (Convert.ToInt16(e.Value.ToString()) > 0)
+                {
+                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.Gray;
+                    e.CellStyle.ForeColor = Color.White;
+                }
             }
         }
 
@@ -102,11 +106,11 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                numSL.Value = 1;
-                txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
-                long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaMua"].Value.ToString());
-                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
-                strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                //numSL.Value = 1;
+                //txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
+                //long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaMua"].Value.ToString());
+                //txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
+                //strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
 
@@ -114,41 +118,19 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                txtTenSP.Text = dgvNhapHang.Rows[e.RowIndex].Cells[1].Value.ToString();
-                long lDonGia = Convert.ToInt64(dgvNhapHang.Rows[e.RowIndex].Cells[2].Value.ToString());
-                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
-                numSL.Value = Convert.ToDecimal(dgvNhapHang.Rows[e.RowIndex].Cells[3].Value.ToString());
-                strMaSP = dgvNhapHang.SelectedRows[0].Cells[0].Value.ToString();
+                //txtTenSP.Text = dgvNhapHang.Rows[e.RowIndex].Cells[1].Value.ToString();
+                //long lDonGia = Convert.ToInt64(dgvNhapHang.Rows[e.RowIndex].Cells[2].Value.ToString());
+                //txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
+                //numSL.Value = Convert.ToDecimal(dgvNhapHang.Rows[e.RowIndex].Cells[3].Value.ToString());
+                //strMaSP = dgvNhapHang.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
 
-        private void btnGhiSP_Click(object sender, EventArgs e)
+        private void ThemSanPhamVaoHoaDon(string strMaSP, int iSL)
         {
-            if (txtTenSP.Text != string.Empty)
-            {
-                if (numSL.Value > 0)
-                {
-                    ThemSanPhamVaoHoaDon();
-                    TinhTongTien();
-                }
-                else
-                {
-                    FormMessage.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                FormMessage.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-        private void ThemSanPhamVaoHoaDon()
-        {
-            DataRow dr = (DataRow)htSanPham[strMaSP];
-
-            string strTenSP = txtTenSP.Text;
-            long iDonGia = Convert.ToInt64(dr["GiaBan"]);
-            decimal iSoLuong = numSL.Value;
-            long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
+            string strTenSP = dgvSanPham.SelectedRows[0].Cells["colTenSanPham"].Value.ToString();
+            decimal iDonGia = Convert.ToDecimal(dgvSanPham.SelectedRows[0].Cells["colGiaMua"].Value.ToString());
+            decimal iSoLuong = iSL;
             decimal iThanhTien = iDonGia * iSoLuong;
 
             if (dgvNhapHang.Rows.Count > 0)
@@ -162,13 +144,16 @@ namespace GUI
                         dgvRow.Cells[2].Value = iDonGia;
                         dgvRow.Cells[3].Value = iSoLuong;
                         dgvRow.Cells[4].Value = iThanhTien;
+                        TinhTongTien();
+                        TinhTongTien();
                         return;
                     }
                 }
             }
 
 
-            dgvNhapHang.Rows.Add(strMaSP, strTenSP, iDonGia, iSoLuong, iThanhTien);
+            dgvNhapHang.Rows.Add(strMaSP, strTenSP, iDonGia, iSoLuong, iThanhTien); 
+            TinhTongTien();
         }
         private void TinhTongTien()
         {
@@ -272,10 +257,6 @@ namespace GUI
             txtSoDT.Text = "";
             txtDiaChi.Text = "";
 
-            txtTenSP.Text = "";
-            txtDonGia.Text = "";
-            numSL.Value = 1;
-
             txtTongCong.Text = "";
 
             dgvNhapHang.Rows.Clear();
@@ -283,11 +264,89 @@ namespace GUI
 
         private void dgvNhapHang_KeyUp(object sender, KeyEventArgs e)
         {
-            if (dgvNhapHang.Rows.Count == 0)
-                txtTongCong.Text = "";
-            if (e.KeyCode == Keys.Delete && dgvNhapHang.Rows.Count > 0)
+        }
+
+        private void btnNCCCu_Click(object sender, EventArgs e)
+        {
+            frmTim frm = new frmTim(frmTim.Loai.NhaCungCap);
+            frm.ShowDialog();
+            if (frm.LayMa() != null)
             {
-                TinhTongTien();
+                strMaNCC = frm.LayMa();
+                dtNhaCungCap = _NhaCungCapBUS.LayBangNhaCungCapTheoMa(strMaNCC);
+                txtTenNCC.Text = dtNhaCungCap.Rows[0]["TenNhaCungCap"].ToString();
+                txtSoDT.Text = dtNhaCungCap.Rows[0]["SoDT"].ToString();
+                txtDiaChi.Text = dtNhaCungCap.Rows[0]["DiaChi"].ToString();
+            }
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSanPham.Columns[e.ColumnIndex].Name == "colThem" && e.RowIndex != -1)
+            {
+                int iSLMua = 0;
+                string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                foreach (DataGridViewRow dgvRow in dgvNhapHang.Rows)
+                {
+                    if (dgvRow.Cells["colMaSanPham"].Value.ToString() == strMaSP)
+                    {
+                        iSLMua = Convert.ToInt16(dgvRow.Cells["colSL"].Value.ToString());
+                    }
+                }
+                frmThemSLSP frm = new frmThemSLSP(strMaSP, iSLMua, frmThemSLSP.Loai.Mua);
+                frm.ShowDialog();
+                if (frm.LaySoLuong() > 0)
+                    ThemSanPhamVaoHoaDon(strMaSP, frm.LaySoLuong());
+
+            }
+        }
+
+        private void dgvNhapHang_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvNhapHang.Columns[e.ColumnIndex].Name == "colChinhSua")
+            {
+                e.Value = "Sửa";
+            }
+            if (dgvNhapHang.Columns[e.ColumnIndex].Name == "colXoa")
+            {
+                e.Value = "Xoá";
+            }
+        }
+
+        private void dgvNhapHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvNhapHang.Columns[e.ColumnIndex].Name == "colChinhSua")
+            {
+                int iSL = Convert.ToUInt16(dgvNhapHang.SelectedRows[0].Cells["colSL"].Value.ToString());
+                string strMaSP = dgvNhapHang.SelectedRows[0].Cells["colMaSanPham"].Value.ToString();
+                frmThemSLSP frm = new frmThemSLSP(strMaSP, iSL, frmThemSLSP.Loai.ChinhSuaMua);
+                frm.ShowDialog();
+                if (frm.LaySoLuong() > 0)
+                    ThemSanPhamVaoHoaDon(strMaSP, frm.LaySoLuong());
+            }
+            if (dgvNhapHang.Columns[e.ColumnIndex].Name == "colXoa")
+            {
+                dgvNhapHang.Rows.RemoveAt(dgvNhapHang.SelectedRows[0].Index);
+            }
+        }
+
+        private void dgvNhapHang_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            TinhTongTien();
+        }
+
+        private void dgvNhapHang_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            TinhTongTien();
+        }
+
+        private void dgvSanPham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSanPham.SelectedRows[0].Index != -1)
+            {
+                string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                frmThemSuaSanPham frm = new frmThemSuaSanPham(strMaSP);
+                frm.ShowDialog();
             }
         }
     }

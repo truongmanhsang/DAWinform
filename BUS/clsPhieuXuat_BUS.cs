@@ -28,9 +28,9 @@ namespace BUS
         {
             return dao.LayBangPhieuXuat();
         }
-        public bool TraTienNo(string strMaPhieu)
+        public bool HoanTatChuyenHang(string strMaPhieu)
         {
-            return dao.TraTienNo(strMaPhieu);
+            return dao.HoanTatChuyenHang(strMaPhieu);
         }
         public bool XoaPhieuXuat(string strMaPhieu)
         {

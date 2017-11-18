@@ -46,7 +46,13 @@ namespace GUI
             if (dgvSerial.Columns[e.ColumnIndex].Name == "colNgayHetBH")
             {
                 if (e.Value.ToString() != "")
+                {
                     e.Value = TienIch.LayNgayThangVN(Convert.ToDateTime(e.Value.ToString()));
+                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+                else
+                    e.CellStyle.BackColor = Color.Gray;
             }
         }
 

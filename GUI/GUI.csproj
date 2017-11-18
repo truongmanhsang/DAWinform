@@ -83,6 +83,12 @@
     <Compile Include="frmInPhieuXuat.Designer.cs">
       <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemSLSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemSLSP.Designer.cs">
+      <DependentUpon>frmThemSLSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemSuaKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInPhieuXuat.resx">
       <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemSLSP.resx">
+      <DependentUpon>frmThemSLSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemSuaKH.resx">
       <DependentUpon>frmThemSuaKH.cs</DependentUpon>

@@ -35,11 +35,7 @@ namespace GUI
         // khai báo các datatable cần thiết để lấy dữ liệu
         DataTable dtKhachHang;
         DataTable dtSanPham;
-        DataView dvKhachHang;
         DataView dvSanPham;
-
-        // Chuyển dtSanPham thành htSanPham cho việc truy xuất dễ hơn
-        Hashtable htSanPham;
 
         bool bThemKH = false; // Mặc định không thêm khách hàng
 
@@ -57,14 +53,11 @@ namespace GUI
         private void CaiDat()
         {
             // cài đặt datagrid
-            dgvKhachHang.AutoGenerateColumns = false;
             dgvSanPham.AutoGenerateColumns = false;
 
             // ẩn cột không cần thiết
             dgvSanPham.Columns["colMaSP"].Visible = false;
             dgvBanHang.Columns["colMaSanPham"].Visible = false;
-            dgvKhachHang.Columns["colMaKH"].Visible = false;
-            dgvKhachHang.Columns["colDiaChi"].Visible = false;
 
             // cài đặt mặt định cbo
             cboHinhThucTra.SelectedIndex = 0;
@@ -72,23 +65,13 @@ namespace GUI
 
         private void TaiDuLieu()
         {
-            dtKhachHang = _KhachHangBUS.LayBangKhachHang();
-            dvKhachHang = new DataView(dtKhachHang);
-            dgvKhachHang.DataSource = dvKhachHang;
             dtSanPham = _SanPhamBUS.LayBangSanPham();
-            dvSanPham = new DataView(dtSanPham);
-            dgvSanPham.DataSource = dvSanPham;
-            TaiHashTableSP();
-        }
-
-        private void TaiHashTableSP()
-        {
-            htSanPham = new Hashtable();
             foreach (DataRow dr in dtSanPham.Rows)
             {
-                string strMa = dr["MaSanPham"].ToString();
-                htSanPham[strMa] = dr;
+                dr["GiaBan"] = Convert.ToDecimal(dr["GiaBan"]) - (Convert.ToDecimal(dr["GiaBan"]) / 100 * Convert.ToInt16(dr["KhuyenMai"])); 
             }
+            dvSanPham = new DataView(dtSanPham);
+            dgvSanPham.DataSource = dvSanPham;
         }
 
         private void dgvSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -99,12 +82,27 @@ namespace GUI
                 {
                     e.Value = new Bitmap(e.Value.ToString());
                 }
+                if (dgvSanPham.Columns[e.ColumnIndex].Name == "colSoLuong")
+                {
+                    if (Convert.ToInt16(e.Value.ToString()) > 0)
+                    {
+                        e.CellStyle.BackColor = Color.Green;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = Color.Gray;
+                        e.CellStyle.ForeColor = Color.White;
+                    }
+                }
+                if (dgvSanPham.Columns[e.ColumnIndex].Name == "colMua")
+                {
+                    //DataGridViewButtonColumn b = (DataGridViewButtonColumn)dgvSanPham.Columns[e.ColumnIndex];
+                    e.Value = "Thêm";
+                    //b.Text = "Thêm";
+                    //b.FlatStyle = FlatStyle.Flat;
+                }
             }
-        }
-
-        private void txtTimKhachHang_TextChanged(object sender, EventArgs e)
-        {
-            dvKhachHang.RowFilter = string.Format("TenKhachHang like '%{0}%'", txtTimKhachHang.Text);
         }
 
         private void txtTimSP_TextChanged(object sender, EventArgs e)
@@ -116,50 +114,18 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                numSL.Value = 1;
-                txtTenSP.Text = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value.ToString();
                 long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaTien"].Value.ToString());
-                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
                 strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
 
-        private void btnGhiSP_Click(object sender, EventArgs e)
+
+        private void ThemSanPhamVaoHoaDon(string strMaSP, int iSL)
         {
-            if (txtTenSP.Text != string.Empty)
-            {
-                if (numSL.Value > 0)
-                {
-                    ThemSanPhamVaoHoaDon();
-                    TinhTongTien();
-                }
-                else
-                {
-                    FormMessage.Show("Vui lòng Nhập số lượng sản phẩm lớn hơn 0!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                FormMessage.Show("Vui lòng chọn 1 sản phẩm ở mục bên trái để mua!", "Nhắc nhở", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
-        private void ThemSanPhamVaoHoaDon()
-        {
-            DataRow dr = (DataRow)htSanPham[strMaSP];
-
-            string strTenSP = txtTenSP.Text;
-            long iDonGia = Convert.ToInt64(dr["GiaBan"]);
-            decimal iSoLuong = numSL.Value;
-            long iSoLuongConLai = Convert.ToInt64(dr["SoLuong"]);
+            string strTenSP = dgvSanPham.SelectedRows[0].Cells["colTenSanPham"].Value.ToString();
+            decimal iDonGia = Convert.ToDecimal(dgvSanPham.SelectedRows[0].Cells["colGiaTien"].Value.ToString());
+            decimal iSoLuong = iSL;
             decimal iThanhTien = iDonGia * iSoLuong;
-
-            if (iSoLuong > iSoLuongConLai)
-            {
-                FormMessage.Show(string.Format("Số lượng sản phẩm còn trong kho không đủ!\nCòn: {0}", iSoLuongConLai), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
             if (dgvBanHang.Rows.Count > 0)
             {
@@ -172,6 +138,7 @@ namespace GUI
                         dgvRow.Cells[2].Value = iDonGia;
                         dgvRow.Cells[3].Value = iSoLuong;
                         dgvRow.Cells[4].Value = iThanhTien;
+                        TinhTongTien();
                         return;
                     }
                 }
@@ -179,6 +146,7 @@ namespace GUI
 
 
             dgvBanHang.Rows.Add(strMaSP, strTenSP, iDonGia, iSoLuong, iThanhTien);
+            TinhTongTien();
         }
 
         private void txtDonGia_TextChanged(object sender, EventArgs e)
@@ -189,28 +157,14 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                txtTenSP.Text = dgvBanHang.Rows[e.RowIndex].Cells[1].Value.ToString();
-                long lDonGia = Convert.ToInt64(dgvBanHang.Rows[e.RowIndex].Cells[2].Value.ToString());
-                txtDonGia.Text = TienIch.ChuyenSoSangVND(lDonGia);
-                numSL.Value = Convert.ToDecimal(dgvBanHang.Rows[e.RowIndex].Cells[3].Value.ToString());
                 strMaSP = dgvBanHang.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
 
-        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                strMaKH = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKH"].Value.ToString();
-                txtTenKH.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colTenKhachHang"].Value.ToString();
-                txtSoDT.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colSoDT"].Value.ToString();
-                txtDiaChi.Text = dgvKhachHang.Rows[e.RowIndex].Cells["colDiaChi"].Value.ToString();
-            }
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            btnThem.Text = btnThem.Text == "Thêm" ? "Huỷ" : "Thêm";
+            btnThem.Text = btnThem.Text == "Khách mới" ? "Huỷ" : "Khách mới";
             txtTenKH.Focus();
             txtTenKH.Text = "";
             txtSoDT.Text = "";
@@ -248,9 +202,6 @@ namespace GUI
             txtSoDT.Text = "";
             txtDiaChi.Text = "";
 
-            txtTenSP.Text = "";
-            txtDonGia.Text = "";
-            numSL.Value = 1;
 
             txtTongCong.Text = "";
 
@@ -292,18 +243,17 @@ namespace GUI
             //=== Thêm phiếu xuất
             clsPhieuXuat_DTO phieuXuat = new clsPhieuXuat_DTO();
             phieuXuat.MaKhachHang = strMaKH;
-            if (cboHinhThucTra.SelectedIndex == 1) //
+            if (cboHinhThucTra.SelectedIndex == 0) //
             {
-                phieuXuat.TienNo = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
-                phieuXuat.TinhTrang = 2;
+                phieuXuat.Loai = 1;
             }
-            else if (cboHinhThucTra.SelectedIndex == 3)
+            else if (cboHinhThucTra.SelectedIndex == 1)
             {
-                phieuXuat.TinhTrang = 3;
+                phieuXuat.Loai = 2;
             }
-            else
+            else if (cboHinhThucTra.SelectedIndex == 2)
             {
-                phieuXuat.TinhTrang = 1;
+                phieuXuat.Loai = 3;
             }
             phieuXuat.TongTien = TienIch.ChuyenVNDSangSo(txtTongCong.Text);
             phieuXuat.NgayLap = TienIch.LayNgayThangHienTaiQuocTe();
@@ -315,8 +265,6 @@ namespace GUI
             List<clsChiTietPhieuXuat_DTO> dsChiTietSP = new List<clsChiTietPhieuXuat_DTO>(); // danh sách các sản phẩm trong hoá đơn
             foreach (DataGridViewRow dgvRow in dgvBanHang.Rows)
             {
-                DataRow drSP = (DataRow)htSanPham[dgvRow.Cells[0].Value.ToString()]; // lấy mã sp của từng dòng trong dgvBanHang
-
                 clsChiTietPhieuXuat_DTO chitiet = new clsChiTietPhieuXuat_DTO();
                 chitiet.MaSanPham = dgvRow.Cells[0].Value.ToString();
                 chitiet.SoLuong = Convert.ToInt16(dgvRow.Cells[3].Value.ToString());
@@ -330,19 +278,16 @@ namespace GUI
 
             _ChiTietPhieuXuatBUS.TaoChiTieuPhieuXuat(dsChiTietSP, strMaPhieuXuat);
 
-            FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (FormMessage.Show("Lưu thành công!, bạn có muốn in hoá đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes){
+                frmInPhieuXuat frm = new frmInPhieuXuat(strMaPhieuXuat);
+                frm.ShowDialog();
+            }
             LamSach(); // làm sạch controls
             Program.TaiLaiDuLieu(); // tải lại toàn bộ dữ liệu
         }
 
         private void dgvBanHang_KeyUp(object sender, KeyEventArgs e)
         {
-            if (dgvBanHang.Rows.Count == 0)
-                txtTongCong.Text = "";
-            if (e.KeyCode == Keys.Delete && dgvBanHang.Rows.Count > 0)
-            {
-                TinhTongTien();
-            }
         }
 
         private void cboHinhThucTra_SelectedIndexChanged(object sender, EventArgs e)
@@ -357,6 +302,114 @@ namespace GUI
                 lblTongCong.Visible = true;
                 txtTongCong.Visible = true;
             }
+        }
+
+        private void btnKhachCu_Click(object sender, EventArgs e)
+        {
+            if (bThemKH)
+            {
+                btnThem.Text = btnThem.Text == "Khách mới" ? "Huỷ" : "Khách mới";
+                txtTenKH.Focus();
+                txtTenKH.Text = "";
+                txtSoDT.Text = "";
+                txtDiaChi.Text = "";
+
+                txtTenKH.ReadOnly = bThemKH;
+                txtSoDT.ReadOnly = bThemKH;
+                txtDiaChi.ReadOnly = bThemKH;
+
+                bThemKH = !bThemKH;
+            }
+
+            frmTim frm = new frmTim(frmTim.Loai.KhachHang);
+            frm.ShowDialog();
+            if (frm.LayMa() != null)
+            {
+                strMaKH = frm.LayMa();
+                dtKhachHang = _KhachHangBUS.LayBangKhachHang(strMaKH);
+                txtTenKH.Text = dtKhachHang.Rows[0]["TenKhachHang"].ToString();
+                txtSoDT.Text = dtKhachHang.Rows[0]["SoDT"].ToString();
+                txtDiaChi.Text = dtKhachHang.Rows[0]["DiaChi"].ToString();
+
+            }
+        }
+
+        private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSanPham.Columns[e.ColumnIndex].Name == "colMua" && e.RowIndex != -1)
+            {
+                int iSL = Convert.ToInt16(dgvSanPham.SelectedRows[0].Cells["colSoLuong"].Value.ToString());
+
+                if (iSL > 0)
+                {
+                    int iSLMua = 0;
+                    string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                    foreach (DataGridViewRow dgvRow in dgvBanHang.Rows)
+                    {
+                        if (dgvRow.Cells["colMaSanPham"].Value.ToString() == strMaSP)
+                        {
+                            iSLMua = Convert.ToInt16(dgvRow.Cells["colSL"].Value.ToString());
+                        }
+                    }
+                    frmThemSLSP frm = new frmThemSLSP(strMaSP, iSLMua, frmThemSLSP.Loai.Them);
+                    frm.ShowDialog();
+                    if (frm.LaySoLuong() > 0)
+                        ThemSanPhamVaoHoaDon(strMaSP, frm.LaySoLuong());
+                }
+                else
+                {
+                    FormMessage.Show("Sản phẩm không đủ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgvBanHang_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvBanHang.Columns[e.ColumnIndex].Name == "colChinhSua")
+            {
+                e.Value = "Sửa";
+            }
+            if (dgvBanHang.Columns[e.ColumnIndex].Name == "colXoa")
+            {
+                e.Value = "Xoá";
+            }
+        }
+
+        private void dgvBanHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBanHang.Columns[e.ColumnIndex].Name == "colChinhSua")
+            {
+                int iSL = Convert.ToUInt16(dgvBanHang.SelectedRows[0].Cells["colSL"].Value.ToString());
+                string strMaSP = dgvBanHang.SelectedRows[0].Cells["colMaSanPham"].Value.ToString();
+                frmThemSLSP frm = new frmThemSLSP(strMaSP, iSL, frmThemSLSP.Loai.ChinhSua);
+                frm.ShowDialog();
+                if (frm.LaySoLuong() > 0)
+                    ThemSanPhamVaoHoaDon(strMaSP, frm.LaySoLuong());
+            }
+            if (dgvBanHang.Columns[e.ColumnIndex].Name == "colXoa")
+            {
+                dgvBanHang.Rows.RemoveAt(dgvBanHang.SelectedRows[0].Index);
+            }
+        }
+
+        private void dgvSanPham_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvSanPham.SelectedRows[0].Index != -1)
+            {
+                string strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
+                frmThemSuaSanPham frm = new frmThemSuaSanPham(strMaSP);
+                frm.ShowDialog();
+            }
+        }
+
+        private void dgvBanHang_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            TinhTongTien();
+        }
+
+        private void dgvBanHang_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            TinhTongTien();
         }
     }
 }
