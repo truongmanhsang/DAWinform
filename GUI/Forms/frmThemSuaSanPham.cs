@@ -284,5 +284,10 @@ namespace GUI
         {
             TienIch.BuocNhapSo(e);
         }
+
+        private void txtKhuyenMai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TienIch.BuocNhapSo(e);
+        }
     }
 }

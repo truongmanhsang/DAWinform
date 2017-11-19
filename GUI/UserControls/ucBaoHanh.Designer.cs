@@ -249,9 +249,9 @@
             // 
             this.btnTimSoSerial.Location = new System.Drawing.Point(109, 212);
             this.btnTimSoSerial.Name = "btnTimSoSerial";
-            this.btnTimSoSerial.Size = new System.Drawing.Size(109, 30);
+            this.btnTimSoSerial.Size = new System.Drawing.Size(111, 30);
             this.btnTimSoSerial.TabIndex = 10;
-            this.btnTimSoSerial.Text = "Tìm số Serial";
+            this.btnTimSoSerial.Text = "Tìm Số Serial";
             this.btnTimSoSerial.UseVisualStyleBackColor = true;
             this.btnTimSoSerial.Click += new System.EventHandler(this.btnTimSoSerial_Click);
             // 
@@ -356,7 +356,7 @@
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(109, 30);
             this.btnThemMoi.TabIndex = 16;
-            this.btnThemMoi.Text = "Khách mới";
+            this.btnThemMoi.Text = "Khách Mới";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
@@ -366,7 +366,7 @@
             this.btnTimKH.Name = "btnTimKH";
             this.btnTimKH.Size = new System.Drawing.Size(109, 30);
             this.btnTimKH.TabIndex = 15;
-            this.btnTimKH.Text = "Khách cũ";
+            this.btnTimKH.Text = "Khách Cũ";
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
             // 

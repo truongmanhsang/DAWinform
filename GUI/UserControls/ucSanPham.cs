@@ -224,5 +224,25 @@ namespace GUI
                 }
             }
         }
+
+        private void txtGiaMuaTu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TienIch.BuocNhapSo(e);
+        }
+
+        private void txtGiaMuaDen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TienIch.BuocNhapSo(e);
+        }
+
+        private void txtGiaBanTu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TienIch.BuocNhapSo(e);
+        }
+
+        private void txtGiaBanDen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TienIch.BuocNhapSo(e);
+        }
     }
 }

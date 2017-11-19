@@ -31,15 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTonKho = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTongSL = new System.Windows.Forms.TextBox();
-            this.txtTongTriGia = new System.Windows.Forms.TextBox();
             this.colTenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTriGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTongSL = new System.Windows.Forms.TextBox();
+            this.txtTongTriGia = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTonKho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,17 +69,67 @@
             this.dgvTonKho.Size = new System.Drawing.Size(801, 470);
             this.dgvTonKho.TabIndex = 0;
             // 
+            // colTenSanPham
+            // 
+            this.colTenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenSanPham.DataPropertyName = "TenSanPham";
+            this.colTenSanPham.HeaderText = "Tên Sản Phẩm";
+            this.colTenSanPham.Name = "colTenSanPham";
+            this.colTenSanPham.ReadOnly = true;
+            // 
+            // colDonViTinh
+            // 
+            this.colDonViTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colDonViTinh.DataPropertyName = "DonViTinh";
+            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
+            this.colDonViTinh.Name = "colDonViTinh";
+            this.colDonViTinh.ReadOnly = true;
+            this.colDonViTinh.Width = 80;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoLuong.DataPropertyName = "SoLuong";
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.ReadOnly = true;
+            this.colSoLuong.Width = 96;
+            // 
+            // colGiaMua
+            // 
+            this.colGiaMua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colGiaMua.DataPropertyName = "GiaMua";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colGiaMua.HeaderText = "Giá Mua Vào";
+            this.colGiaMua.Name = "colGiaMua";
+            this.colGiaMua.ReadOnly = true;
+            this.colGiaMua.Width = 114;
+            // 
+            // colTriGia
+            // 
+            this.colTriGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTriGia.DataPropertyName = "TongTriGia";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "#,##0 VNĐ";
+            this.colTriGia.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colTriGia.HeaderText = "Trị Giá";
+            this.colTriGia.Name = "colTriGia";
+            this.colTriGia.ReadOnly = true;
+            this.colTriGia.Width = 73;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(119, 484);
+            this.label1.Location = new System.Drawing.Point(108, 484);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
+            this.label1.Size = new System.Drawing.Size(162, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tổng số lượng:";
+            this.label1.Text = "Tổng Số Lượng:";
             // 
             // label2
             // 
@@ -87,11 +137,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(440, 484);
+            this.label2.Location = new System.Drawing.Point(430, 484);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 24);
+            this.label2.Size = new System.Drawing.Size(130, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tổng trị giá:";
+            this.label2.Text = "Tổng Trị Giá:";
             // 
             // txtTongSL
             // 
@@ -116,56 +166,6 @@
             this.txtTongTriGia.Size = new System.Drawing.Size(238, 32);
             this.txtTongTriGia.TabIndex = 4;
             this.txtTongTriGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // colTenSanPham
-            // 
-            this.colTenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenSanPham.DataPropertyName = "TenSanPham";
-            this.colTenSanPham.HeaderText = "Tên Sản Phẩm";
-            this.colTenSanPham.Name = "colTenSanPham";
-            this.colTenSanPham.ReadOnly = true;
-            // 
-            // colDonViTinh
-            // 
-            this.colDonViTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colDonViTinh.DataPropertyName = "DonViTinh";
-            this.colDonViTinh.HeaderText = "Đơn Vị Tính";
-            this.colDonViTinh.Name = "colDonViTinh";
-            this.colDonViTinh.ReadOnly = true;
-            this.colDonViTinh.Width = 115;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colSoLuong.DataPropertyName = "SoLuong";
-            this.colSoLuong.HeaderText = "Số Lượng";
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.ReadOnly = true;
-            this.colSoLuong.Width = 105;
-            // 
-            // colGiaMua
-            // 
-            this.colGiaMua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle1;
-            this.colGiaMua.HeaderText = "Giá Mua Vào";
-            this.colGiaMua.Name = "colGiaMua";
-            this.colGiaMua.ReadOnly = true;
-            this.colGiaMua.Width = 125;
-            // 
-            // colTriGia
-            // 
-            this.colTriGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colTriGia.DataPropertyName = "TongTriGia";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "#,##0 VNĐ";
-            this.colTriGia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colTriGia.HeaderText = "Trị Giá";
-            this.colTriGia.Name = "colTriGia";
-            this.colTriGia.ReadOnly = true;
-            this.colTriGia.Width = 79;
             // 
             // ucTonKho
             // 

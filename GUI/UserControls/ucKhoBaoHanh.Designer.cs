@@ -45,11 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpNgayCuoi = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayDau = new System.Windows.Forms.DateTimePicker();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGuiTra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamBH)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvSanPhamBH
@@ -67,7 +64,7 @@
             this.colMoTaLoi,
             this.colTinhTrang,
             this.colTenNhaCungCap});
-            this.dgvSanPhamBH.Location = new System.Drawing.Point(353, 3);
+            this.dgvSanPhamBH.Location = new System.Drawing.Point(3, 171);
             this.dgvSanPhamBH.MultiSelect = false;
             this.dgvSanPhamBH.Name = "dgvSanPhamBH";
             this.dgvSanPhamBH.ReadOnly = true;
@@ -75,7 +72,7 @@
             this.dgvSanPhamBH.RowTemplate.ReadOnly = true;
             this.dgvSanPhamBH.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSanPhamBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSanPhamBH.Size = new System.Drawing.Size(439, 499);
+            this.dgvSanPhamBH.Size = new System.Drawing.Size(789, 331);
             this.dgvSanPhamBH.TabIndex = 0;
             this.dgvSanPhamBH.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSanPhamBH_CellFormatting);
             // 
@@ -123,6 +120,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.chkMaNCC);
             this.groupBox1.Controls.Add(this.llblTim);
             this.groupBox1.Controls.Add(this.txtMaNCC);
@@ -135,7 +134,7 @@
             this.groupBox1.Controls.Add(this.dtpNgayDau);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 162);
+            this.groupBox1.Size = new System.Drawing.Size(789, 162);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -152,9 +151,8 @@
             // 
             // llblTim
             // 
-            this.llblTim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.llblTim.AutoSize = true;
-            this.llblTim.Location = new System.Drawing.Point(300, 90);
+            this.llblTim.Location = new System.Drawing.Point(299, 90);
             this.llblTim.Name = "llblTim";
             this.llblTim.Size = new System.Drawing.Size(33, 18);
             this.llblTim.TabIndex = 16;
@@ -210,7 +208,7 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(330, 35);
             this.btnTimKiem.TabIndex = 4;
-            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -241,33 +239,11 @@
             this.dtpNgayDau.Size = new System.Drawing.Size(105, 26);
             this.dtpNgayDau.TabIndex = 1;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox2.Controls.Add(this.btnGuiTra);
-            this.groupBox2.Location = new System.Drawing.Point(3, 171);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(344, 331);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
-            // 
-            // btnGuiTra
-            // 
-            this.btnGuiTra.Location = new System.Drawing.Point(6, 25);
-            this.btnGuiTra.Name = "btnGuiTra";
-            this.btnGuiTra.Size = new System.Drawing.Size(330, 35);
-            this.btnGuiTra.TabIndex = 8;
-            this.btnGuiTra.Text = "Gửi trả nhà cung cấp";
-            this.btnGuiTra.UseVisualStyleBackColor = true;
-            // 
             // ucKhoBaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvSanPhamBH);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,7 +254,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPhamBH)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,11 +266,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpNgayCuoi;
         private System.Windows.Forms.DateTimePicker dtpNgayDau;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox chkLoai;
         private System.Windows.Forms.ComboBox cboLoai;
         private System.Windows.Forms.CheckBox chkNgayGui;
-        private System.Windows.Forms.Button btnGuiTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoSerial;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTaLoi;

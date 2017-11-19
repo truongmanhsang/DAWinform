@@ -200,7 +200,7 @@
             this.btnTra.Name = "btnTra";
             this.btnTra.Size = new System.Drawing.Size(313, 31);
             this.btnTra.TabIndex = 7;
-            this.btnTra.Text = "Trả cho khách";
+            this.btnTra.Text = "Trả Cho Khách";
             this.btnTra.UseVisualStyleBackColor = true;
             this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
             // 
@@ -399,7 +399,7 @@
             this.btnTraHet.Name = "btnTraHet";
             this.btnTraHet.Size = new System.Drawing.Size(313, 31);
             this.btnTraHet.TabIndex = 10;
-            this.btnTraHet.Text = "Trả hết cho khách";
+            this.btnTraHet.Text = "Trả Hết Cho Khách";
             this.btnTraHet.UseVisualStyleBackColor = true;
             this.btnTraHet.Click += new System.EventHandler(this.btnTraHet_Click);
             // 

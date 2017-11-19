@@ -162,6 +162,10 @@ namespace GUI
             {
                 e.Value = new Bitmap(e.Value.ToString());
             }
+            if (dgvNhanVien.Columns[e.ColumnIndex].Name == "colMatKhau")
+            {
+                e.Value = new String('*', e.Value.ToString().Length);
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -200,6 +204,13 @@ namespace GUI
         private void dgvNhanVien_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
+            frmThemSuaNV frm = new frmThemSuaNV(MaNV);
+            frm.ShowDialog();
         }
     }
 }

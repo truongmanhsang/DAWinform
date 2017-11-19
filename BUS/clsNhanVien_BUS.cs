@@ -20,6 +20,10 @@ namespace BUS
         {
             return dao.LayThongTinNV(strTenDN, strMatKhau);
         }
+        public DataTable LayThongTinNVTheoMa(string strMaNV)
+        {
+            return dao.LayThongTinNVTheoMa(strMaNV);
+        }
         public DataTable LayBangNhanVien()
         {
             return dao.LayBangNhanVien();

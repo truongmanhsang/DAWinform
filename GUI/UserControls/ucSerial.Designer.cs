@@ -33,14 +33,14 @@
             this.colSoSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayHetBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panMain = new System.Windows.Forms.Panel();
             this.cboLoai = new System.Windows.Forms.ComboBox();
+            this.panMain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtSoSerial = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSerial)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,26 +107,7 @@
             this.groupBox1.Size = new System.Drawing.Size(440, 393);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm Kiếm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Loại";
-            // 
-            // panMain
-            // 
-            this.panMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panMain.Location = new System.Drawing.Point(10, 55);
-            this.panMain.Name = "panMain";
-            this.panMain.Size = new System.Drawing.Size(424, 332);
-            this.panMain.TabIndex = 1;
+            this.groupBox1.Text = "Tìm kiếm";
             // 
             // cboLoai
             // 
@@ -141,6 +122,25 @@
             this.cboLoai.Size = new System.Drawing.Size(382, 26);
             this.cboLoai.TabIndex = 2;
             this.cboLoai.SelectedIndexChanged += new System.EventHandler(this.cboLoai_SelectedIndexChanged);
+            // 
+            // panMain
+            // 
+            this.panMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panMain.Location = new System.Drawing.Point(10, 55);
+            this.panMain.Name = "panMain";
+            this.panMain.Size = new System.Drawing.Size(424, 332);
+            this.panMain.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Loại";
             // 
             // groupBox2
             // 
@@ -157,14 +157,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
-            // label2
+            // txtSoSerial
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên sản phẩm";
+            this.txtSoSerial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSoSerial.Location = new System.Drawing.Point(122, 55);
+            this.txtSoSerial.Name = "txtSoSerial";
+            this.txtSoSerial.ReadOnly = true;
+            this.txtSoSerial.Size = new System.Drawing.Size(312, 26);
+            this.txtSoSerial.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Số serial";
             // 
             // txtTenSP
             // 
@@ -176,24 +186,14 @@
             this.txtTenSP.Size = new System.Drawing.Size(312, 26);
             this.txtTenSP.TabIndex = 1;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Số serial";
-            // 
-            // txtSoSerial
-            // 
-            this.txtSoSerial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoSerial.Location = new System.Drawing.Point(122, 55);
-            this.txtSoSerial.Name = "txtSoSerial";
-            this.txtSoSerial.ReadOnly = true;
-            this.txtSoSerial.Size = new System.Drawing.Size(312, 26);
-            this.txtSoSerial.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên sản phẩm";
             // 
             // ucSerial
             // 

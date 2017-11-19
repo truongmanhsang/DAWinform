@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -203,9 +203,11 @@
             this.txtGiaBanDen.Location = new System.Drawing.Point(168, 149);
             this.txtGiaBanDen.MaxLength = 20;
             this.txtGiaBanDen.Name = "txtGiaBanDen";
+            this.txtGiaBanDen.ShortcutsEnabled = false;
             this.txtGiaBanDen.Size = new System.Drawing.Size(110, 26);
             this.txtGiaBanDen.TabIndex = 10;
             this.txtGiaBanDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaBanDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBanDen_KeyPress);
             this.txtGiaBanDen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaBanDen_KeyUp);
             // 
             // txtGiaBanTu
@@ -213,9 +215,11 @@
             this.txtGiaBanTu.Location = new System.Drawing.Point(168, 118);
             this.txtGiaBanTu.MaxLength = 20;
             this.txtGiaBanTu.Name = "txtGiaBanTu";
+            this.txtGiaBanTu.ShortcutsEnabled = false;
             this.txtGiaBanTu.Size = new System.Drawing.Size(110, 26);
             this.txtGiaBanTu.TabIndex = 9;
             this.txtGiaBanTu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaBanTu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBanTu_KeyPress);
             this.txtGiaBanTu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaBanTu_KeyUp);
             // 
             // label4
@@ -251,9 +255,11 @@
             this.txtGiaMuaDen.Location = new System.Drawing.Point(168, 87);
             this.txtGiaMuaDen.MaxLength = 20;
             this.txtGiaMuaDen.Name = "txtGiaMuaDen";
+            this.txtGiaMuaDen.ShortcutsEnabled = false;
             this.txtGiaMuaDen.Size = new System.Drawing.Size(110, 26);
             this.txtGiaMuaDen.TabIndex = 5;
             this.txtGiaMuaDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMuaDen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaMuaDen_KeyPress);
             this.txtGiaMuaDen.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMuaDen_KeyUp);
             // 
             // txtGiaMuaTu
@@ -261,9 +267,11 @@
             this.txtGiaMuaTu.Location = new System.Drawing.Point(168, 56);
             this.txtGiaMuaTu.MaxLength = 20;
             this.txtGiaMuaTu.Name = "txtGiaMuaTu";
+            this.txtGiaMuaTu.ShortcutsEnabled = false;
             this.txtGiaMuaTu.Size = new System.Drawing.Size(110, 26);
             this.txtGiaMuaTu.TabIndex = 4;
             this.txtGiaMuaTu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGiaMuaTu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaMuaTu_KeyPress);
             this.txtGiaMuaTu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGiaMuaTu_KeyUp);
             // 
             // label1
@@ -435,8 +443,8 @@
             // 
             this.colGiaMua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle3.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle9;
             this.colGiaMua.HeaderText = "Giá Mua";
             this.colGiaMua.Name = "colGiaMua";
             this.colGiaMua.ReadOnly = true;
@@ -446,8 +454,8 @@
             // 
             this.colGiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGiaBan.DataPropertyName = "GiaBan";
-            dataGridViewCellStyle4.Format = "#,### VNĐ";
-            this.colGiaBan.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Format = "#,### VNĐ";
+            this.colGiaBan.DefaultCellStyle = dataGridViewCellStyle10;
             this.colGiaBan.HeaderText = "Giá Bán";
             this.colGiaBan.Name = "colGiaBan";
             this.colGiaBan.ReadOnly = true;

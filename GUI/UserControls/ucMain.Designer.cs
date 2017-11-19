@@ -71,6 +71,7 @@
             this.tbtnThongTinCongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tbtnThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnChinhSuaThongTin = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.tabControlMenu.SuspendLayout();
             this.tabPageBanHang.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 573);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 629);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
             this.statusStrip1.Size = new System.Drawing.Size(998, 24);
@@ -438,6 +439,7 @@
             // panInfo
             // 
             this.panInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panInfo.Controls.Add(this.btnChinhSuaThongTin);
             this.panInfo.Controls.Add(this.groupBox1);
             this.panInfo.Controls.Add(this.btnAnHien);
             this.panInfo.Controls.Add(this.btnDangXuat);
@@ -447,7 +449,7 @@
             this.panInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panInfo.Location = new System.Drawing.Point(0, 130);
             this.panInfo.Name = "panInfo";
-            this.panInfo.Size = new System.Drawing.Size(196, 443);
+            this.panInfo.Size = new System.Drawing.Size(196, 499);
             this.panInfo.TabIndex = 5;
             // 
             // groupBox1
@@ -459,7 +461,7 @@
             this.groupBox1.Controls.Add(this.lblBanHang);
             this.groupBox1.Controls.Add(this.lblNhapHang);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 289);
+            this.groupBox1.Location = new System.Drawing.Point(14, 322);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(165, 90);
             this.groupBox1.TabIndex = 11;
@@ -547,7 +549,7 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(14, 387);
+            this.btnDangXuat.Location = new System.Drawing.Point(14, 443);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(165, 41);
             this.btnDangXuat.TabIndex = 3;
@@ -597,7 +599,7 @@
             this.tabControlMain.Location = new System.Drawing.Point(196, 130);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(802, 443);
+            this.tabControlMain.Size = new System.Drawing.Size(802, 499);
             this.tabControlMain.TabIndex = 6;
             this.tabControlMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControlMain_DrawItem);
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
@@ -634,6 +636,19 @@
             this.tbtnThoat.Text = "Thoát";
             this.tbtnThoat.Click += new System.EventHandler(this.tbtnThoat_Click);
             // 
+            // btnChinhSuaThongTin
+            // 
+            this.btnChinhSuaThongTin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnChinhSuaThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSuaThongTin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSuaThongTin.Location = new System.Drawing.Point(14, 274);
+            this.btnChinhSuaThongTin.Name = "btnChinhSuaThongTin";
+            this.btnChinhSuaThongTin.Size = new System.Drawing.Size(165, 29);
+            this.btnChinhSuaThongTin.TabIndex = 12;
+            this.btnChinhSuaThongTin.Text = "Chỉnh Sửa";
+            this.btnChinhSuaThongTin.UseVisualStyleBackColor = true;
+            this.btnChinhSuaThongTin.Click += new System.EventHandler(this.btnChinhSuaThongTin_Click);
+            // 
             // ucMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -646,7 +661,7 @@
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucMain";
-            this.Size = new System.Drawing.Size(998, 597);
+            this.Size = new System.Drawing.Size(998, 653);
             this.Load += new System.EventHandler(this.ucMain_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -710,5 +725,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnChinhSuaThongTin;
     }
 }

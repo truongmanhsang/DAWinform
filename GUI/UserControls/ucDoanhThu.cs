@@ -31,7 +31,6 @@ namespace GUI
         private void CaiDat()
         {
             dgvThongKeDoanhThu.AutoGenerateColumns = false;
-            radNgay.Checked = true;
         }
 
         private void TaiDuLieu()
@@ -75,10 +74,8 @@ namespace GUI
         private string TaoCauTruyVan()
         {
             string strTruyVan = string.Empty;
-            if (radNgay.Checked)
-            {
-                strTruyVan += string.Format("NgayLap >= #{0}# and NgayLap <= #{1}#", TienIch.LayNgayThangQuocTe(dtpNgayDau.Value), TienIch.LayNgayThangQuocTe(dtpNgayCuoi.Value));
-            }
+            strTruyVan += string.Format("NgayLap >= #{0}# and NgayLap <= #{1}#", TienIch.LayNgayThangQuocTe(dtpNgayDau.Value), TienIch.LayNgayThangQuocTe(dtpNgayCuoi.Value));
+
             return strTruyVan;
         }
     }

@@ -112,10 +112,13 @@
             // txtKhuyenMai
             // 
             this.txtKhuyenMai.Location = new System.Drawing.Point(365, 145);
+            this.txtKhuyenMai.MaxLength = 2;
             this.txtKhuyenMai.Name = "txtKhuyenMai";
+            this.txtKhuyenMai.ShortcutsEnabled = false;
             this.txtKhuyenMai.Size = new System.Drawing.Size(228, 26);
             this.txtKhuyenMai.TabIndex = 39;
             this.txtKhuyenMai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtKhuyenMai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKhuyenMai_KeyPress);
             // 
             // label9
             // 
@@ -167,6 +170,7 @@
             this.txtGiaBan.Location = new System.Drawing.Point(365, 111);
             this.txtGiaBan.MaxLength = 20;
             this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.ShortcutsEnabled = false;
             this.txtGiaBan.Size = new System.Drawing.Size(228, 26);
             this.txtGiaBan.TabIndex = 32;
             this.txtGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -186,6 +190,7 @@
             this.txtGiaMua.Location = new System.Drawing.Point(365, 77);
             this.txtGiaMua.MaxLength = 20;
             this.txtGiaMua.Name = "txtGiaMua";
+            this.txtGiaMua.ShortcutsEnabled = false;
             this.txtGiaMua.Size = new System.Drawing.Size(228, 26);
             this.txtGiaMua.TabIndex = 30;
             this.txtGiaMua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

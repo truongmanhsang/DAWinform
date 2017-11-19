@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary;
 using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -33,7 +34,7 @@ namespace GUI
             NhanBaoHanh, GuiBaoHanh, BaoCaoBaoHanh, KhoBaoHanh,
             ThuChi,
             NhanVien,
-            DoanhThu,DoanhSo,LoiNhuan
+            DoanhThu, DoanhSo, LoiNhuan
         }
 
         // khai báo tất cả tabpage chức năng
@@ -58,6 +59,12 @@ namespace GUI
         }
 
         private void ucMain_Load(object sender, EventArgs e)
+        {
+            CaiDat();
+            TaiDuLieu();
+        }
+
+        private void CaiDat()
         {
             if (Program.QUYEN == 0)
                 btnNhanVien.Enabled = false;
@@ -100,7 +107,6 @@ namespace GUI
             tabControlMenu.SelectedIndex = lastTabIndex;
 
             // tải dữ liệu thống kê
-            TaiDuLieu();
         }
 
 
@@ -193,7 +199,7 @@ namespace GUI
                 e.Graphics.DrawString(tabControlMain.TabPages[e.Index].Text,
                     f, br, rectString, strF);
             }
-           
+
         }
 
         private void tabControlMain_MouseClick(object sender, MouseEventArgs e)
@@ -573,11 +579,11 @@ namespace GUI
 
         private void tabControlMain_TabIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
-        {       
+        {
         }
 
         private void BatTabTimSoSerial()
@@ -622,7 +628,7 @@ namespace GUI
             {
                 tabControlMenu.SelectedIndex = lastTabIndex;
                 Rectangle rect = tabControlMenu.GetTabRect(0);
-                conHeThong.Show(tabControlMenu,rect.X - 2, rect.Height + 3);
+                conHeThong.Show(tabControlMenu, rect.X - 2, rect.Height + 3);
             }
         }
 
@@ -646,6 +652,34 @@ namespace GUI
         {
             frmThongTinCongTy frm = new frmThongTinCongTy();
             frm.ShowDialog();
+        }
+
+        private void btnChinhSuaThongTin_Click(object sender, EventArgs e)
+        {
+            frmThemSuaNV frm = new frmThemSuaNV(Program.MA_NV);
+            frm.suanhanvien += XuLySuaNhanVien;
+            frm.ShowDialog();
+            CaiDat();
+        }
+        private void XuLySuaNhanVien(clsNhanVien_DTO nhanvien)
+        {
+            clsNhanVien_BUS _NhanVienBUS = new clsNhanVien_BUS();
+
+
+            if (_NhanVienBUS.SuaNhanVien(nhanvien))
+            {
+                FormMessage.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataTable dtNV = _NhanVienBUS.LayThongTinNVTheoMa(Program.MA_NV);
+                Program.MA_NV = dtNV.Rows[0]["MaNhanVien"].ToString(); // Lấy mã nv làm biến tĩnh toàn chương trình
+                Program.TEN_NV = dtNV.Rows[0]["TenNhanVien"].ToString();
+                Program.HINH_NV = dtNV.Rows[0]["HinhDaiDien"].ToString();
+                Program.QUYEN = Convert.ToInt16(dtNV.Rows[0]["Quyen"].ToString());
+                CaiDat();
+            }
+            else
+            {
+                FormMessage.Show("Sửa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -42,6 +42,7 @@ namespace GUI
         private void frmThemSuaNV_Load(object sender, EventArgs e)
         {
             loadDuLieu();
+            loadNV();
 
             if (themnhanvien != null)
             {
@@ -64,6 +65,7 @@ namespace GUI
                     txtTenDangNhap.ReadOnly = true;
                     txtTenNV.ReadOnly = true;
                     txtMK.UseSystemPasswordChar = true;
+                    txtMK.ReadOnly = true;
                     txtSoDT.ReadOnly = true;
                     txtEmail.ReadOnly = true;
                     txtDiaChi.ReadOnly = true;
@@ -71,6 +73,7 @@ namespace GUI
                     cbbChucVu.Enabled = false;
                     btnLuu.Visible = false;
                     btnHuy.Text = "Đóng";
+                    picHinhAnh.Enabled = false;
                 }
             }
         }
@@ -145,7 +148,7 @@ namespace GUI
             nhanvien.MaNV = MaNV;
             nhanvien.TenNV = txtTenNV.Text;
             nhanvien.TenDangNhap = txtTenDangNhap.Text;
-            nhanvien.MatKhau = TienIch.MaHoaMatKhau(txtMK.Text);
+            nhanvien.MatKhau = dt.Rows[0]["MatKhau"].ToString() == txtMK.Text ? txtMK.Text : TienIch.MaHoaMatKhau(txtMK.Text);
             nhanvien.SDT = txtSoDT.Text;
             nhanvien.Email = txtEmail.Text;
             nhanvien.CMND = txtCMND.Text;
