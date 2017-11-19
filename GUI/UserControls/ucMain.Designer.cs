@@ -546,14 +546,12 @@
             this.btnDangXuat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Image = global::GUI.Properties.Resources.DangXuat;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(14, 387);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(165, 41);
             this.btnDangXuat.TabIndex = 3;
             this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
@@ -620,19 +618,19 @@
             // 
             this.tbtnThongTinCongTy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbtnThongTinCongTy.Name = "tbtnThongTinCongTy";
-            this.tbtnThongTinCongTy.Size = new System.Drawing.Size(242, 22);
+            this.tbtnThongTinCongTy.Size = new System.Drawing.Size(204, 22);
             this.tbtnThongTinCongTy.Text = "Thông Tin Công Ty";
             this.tbtnThongTinCongTy.Click += new System.EventHandler(this.tbtnThongTinCongTy_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(239, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(201, 6);
             // 
             // tbtnThoat
             // 
             this.tbtnThoat.Name = "tbtnThoat";
-            this.tbtnThoat.Size = new System.Drawing.Size(242, 22);
+            this.tbtnThoat.Size = new System.Drawing.Size(204, 22);
             this.tbtnThoat.Text = "Thoát";
             this.tbtnThoat.Click += new System.EventHandler(this.tbtnThoat_Click);
             // 
