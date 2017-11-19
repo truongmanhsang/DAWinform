@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemSuaNCC));
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,35 +45,39 @@
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSDT.Location = new System.Drawing.Point(152, 39);
+            this.txtSDT.Location = new System.Drawing.Point(151, 40);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(285, 20);
+            this.txtSDT.Size = new System.Drawing.Size(325, 26);
             this.txtSDT.TabIndex = 67;
             // 
             // txtTenNCC
             // 
             this.txtTenNCC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTenNCC.Location = new System.Drawing.Point(152, 8);
+            this.txtTenNCC.Location = new System.Drawing.Point(151, 6);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(285, 20);
+            this.txtTenNCC.Size = new System.Drawing.Size(325, 26);
             this.txtTenNCC.TabIndex = 65;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 42);
+            this.label3.Location = new System.Drawing.Point(13, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(100, 18);
             this.label3.TabIndex = 63;
             this.label3.Text = "Số điện thoại";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(130, 18);
             this.label1.TabIndex = 61;
             this.label1.Text = "Tên nhà cung cấp";
             // 
@@ -82,14 +87,17 @@
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnThemLuu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 178);
+            this.panel1.Location = new System.Drawing.Point(0, 214);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 54);
+            this.panel1.Size = new System.Drawing.Size(489, 62);
             this.panel1.TabIndex = 60;
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(330, 8);
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.Location = new System.Drawing.Point(368, 11);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(108, 38);
             this.btnHuy.TabIndex = 0;
@@ -99,7 +107,9 @@
             // 
             // btnThemLuu
             // 
-            this.btnThemLuu.Location = new System.Drawing.Point(216, 8);
+            this.btnThemLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemLuu.Location = new System.Drawing.Point(252, 11);
+            this.btnThemLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemLuu.Name = "btnThemLuu";
             this.btnThemLuu.Size = new System.Drawing.Size(108, 38);
             this.btnThemLuu.TabIndex = 0;
@@ -110,9 +120,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 74);
+            this.label4.Location = new System.Drawing.Point(13, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(57, 18);
             this.label4.TabIndex = 64;
             this.label4.Text = "Địa chỉ";
             // 
@@ -121,17 +132,19 @@
             this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiaChi.Location = new System.Drawing.Point(152, 71);
+            this.txtDiaChi.Location = new System.Drawing.Point(151, 74);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(285, 71);
+            this.txtDiaChi.Size = new System.Drawing.Size(325, 132);
             this.txtDiaChi.TabIndex = 68;
             this.txtDiaChi.Text = "";
             // 
             // frmThemSuaNCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 232);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(489, 276);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtTenNCC);
@@ -139,7 +152,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmThemSuaNCC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThemSuaNCC";
             this.Load += new System.EventHandler(this.frmThemSuaNCC_Load);
             this.panel1.ResumeLayout(false);

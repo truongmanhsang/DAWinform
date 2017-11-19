@@ -28,121 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvLoiNhuanTongQuan = new System.Windows.Forms.DataGridView();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dtpNgayCuoi = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayDau = new System.Windows.Forms.DateTimePicker();
+            this.radNgay = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTongLoiNhuan = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.colThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBanHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNhapHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.colTriGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoiNhuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoiNhuanTongQuan)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvLoiNhuanTongQuan
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvLoiNhuanTongQuan.AllowUserToAddRows = false;
+            this.dgvLoiNhuanTongQuan.AllowUserToDeleteRows = false;
+            this.dgvLoiNhuanTongQuan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLoiNhuanTongQuan.BackgroundColor = System.Drawing.Color.White;
+            this.dgvLoiNhuanTongQuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoiNhuanTongQuan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colThoiGian,
-            this.colBanHang,
-            this.colNhapHang,
-            this.colDoanhThu});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 164);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 366);
-            this.dataGridView1.TabIndex = 3;
+            this.colDoanhThu,
+            this.colTriGia,
+            this.colLoiNhuan});
+            this.dgvLoiNhuanTongQuan.Location = new System.Drawing.Point(3, 102);
+            this.dgvLoiNhuanTongQuan.MultiSelect = false;
+            this.dgvLoiNhuanTongQuan.Name = "dgvLoiNhuanTongQuan";
+            this.dgvLoiNhuanTongQuan.ReadOnly = true;
+            this.dgvLoiNhuanTongQuan.RowHeadersVisible = false;
+            this.dgvLoiNhuanTongQuan.RowTemplate.ReadOnly = true;
+            this.dgvLoiNhuanTongQuan.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLoiNhuanTongQuan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLoiNhuanTongQuan.Size = new System.Drawing.Size(743, 390);
+            this.dgvLoiNhuanTongQuan.TabIndex = 3;
             // 
-            // button1
+            // btnTimKiem
             // 
-            this.button1.Location = new System.Drawing.Point(114, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 33);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(256, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 18);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "-";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(275, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 26);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(114, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 26);
-            this.textBox4.TabIndex = 9;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 81);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(99, 22);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Theo  năm";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(256, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "-";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(275, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 26);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(114, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 26);
-            this.textBox1.TabIndex = 5;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 52);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(107, 22);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Theo  tháng";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Location = new System.Drawing.Point(114, 53);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(297, 33);
+            this.btnTimKiem.TabIndex = 12;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label1
             // 
@@ -153,116 +92,148 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "-";
             // 
-            // dateTimePicker2
+            // dtpNgayCuoi
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(275, 21);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(136, 26);
-            this.dateTimePicker2.TabIndex = 2;
+            this.dtpNgayCuoi.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayCuoi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayCuoi.Location = new System.Drawing.Point(275, 21);
+            this.dtpNgayCuoi.Name = "dtpNgayCuoi";
+            this.dtpNgayCuoi.Size = new System.Drawing.Size(136, 26);
+            this.dtpNgayCuoi.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtpNgayDau
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 21);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 26);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpNgayDau.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayDau.Location = new System.Drawing.Point(114, 21);
+            this.dtpNgayDau.Name = "dtpNgayDau";
+            this.dtpNgayDau.Size = new System.Drawing.Size(136, 26);
+            this.dtpNgayDau.TabIndex = 1;
             // 
-            // radioButton1
+            // radNgay
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(102, 22);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Theo  ngày";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radNgay.AutoSize = true;
+            this.radNgay.Location = new System.Drawing.Point(6, 23);
+            this.radNgay.Name = "radNgay";
+            this.radNgay.Size = new System.Drawing.Size(98, 22);
+            this.radNgay.TabIndex = 0;
+            this.radNgay.TabStop = true;
+            this.radNgay.Text = "Theo ngày";
+            this.radNgay.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.dtpNgayCuoi);
+            this.groupBox1.Controls.Add(this.dtpNgayDau);
+            this.groupBox1.Controls.Add(this.radNgay);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 155);
+            this.groupBox1.Size = new System.Drawing.Size(743, 93);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // txtTongLoiNhuan
+            // 
+            this.txtTongLoiNhuan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTongLoiNhuan.BackColor = System.Drawing.Color.Moccasin;
+            this.txtTongLoiNhuan.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongLoiNhuan.Location = new System.Drawing.Point(443, 497);
+            this.txtTongLoiNhuan.Name = "txtTongLoiNhuan";
+            this.txtTongLoiNhuan.Size = new System.Drawing.Size(303, 32);
+            this.txtTongLoiNhuan.TabIndex = 5;
+            this.txtTongLoiNhuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(279, 500);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tổng Lợi Nhuận";
+            // 
             // colThoiGian
             // 
             this.colThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colThoiGian.DataPropertyName = "NgayLap";
             this.colThoiGian.HeaderText = "Thời Gian";
             this.colThoiGian.Name = "colThoiGian";
+            this.colThoiGian.ReadOnly = true;
             this.colThoiGian.Width = 102;
-            // 
-            // colBanHang
-            // 
-            this.colBanHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colBanHang.HeaderText = "Doanh Thu Bán Hàng";
-            this.colBanHang.Name = "colBanHang";
-            // 
-            // colNhapHang
-            // 
-            this.colNhapHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNhapHang.HeaderText = "Trị Giá Nhập Hàng";
-            this.colNhapHang.Name = "colNhapHang";
             // 
             // colDoanhThu
             // 
             this.colDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDoanhThu.HeaderText = "Lợi Nhuận";
+            this.colDoanhThu.DataPropertyName = "DoanhThu";
+            dataGridViewCellStyle1.Format = "#,##0 VNĐ";
+            this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colDoanhThu.HeaderText = "Doanh Thu Bán Hàng";
             this.colDoanhThu.Name = "colDoanhThu";
+            this.colDoanhThu.ReadOnly = true;
+            // 
+            // colTriGia
+            // 
+            this.colTriGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTriGia.DataPropertyName = "TriGia";
+            dataGridViewCellStyle2.Format = "#,##0 VNĐ";
+            this.colTriGia.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colTriGia.HeaderText = "Trị Giá Nhập Hàng";
+            this.colTriGia.Name = "colTriGia";
+            this.colTriGia.ReadOnly = true;
+            // 
+            // colLoiNhuan
+            // 
+            this.colLoiNhuan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colLoiNhuan.DataPropertyName = "LoiNhuan";
+            dataGridViewCellStyle3.Format = "#,##0 VNĐ";
+            this.colLoiNhuan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colLoiNhuan.HeaderText = "Lợi Nhuận";
+            this.colLoiNhuan.Name = "colLoiNhuan";
+            this.colLoiNhuan.ReadOnly = true;
             // 
             // ucLoiNhuanTongQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtTongLoiNhuan);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dgvLoiNhuanTongQuan);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucLoiNhuanTongQuan";
             this.Size = new System.Drawing.Size(749, 533);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ucLoiNhuanTongQuan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoiNhuanTongQuan)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridView dgvLoiNhuanTongQuan;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker dtpNgayCuoi;
+        private System.Windows.Forms.DateTimePicker dtpNgayDau;
+        private System.Windows.Forms.RadioButton radNgay;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtTongLoiNhuan;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGian;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBanHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNhapHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDoanhThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTriGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoiNhuan;
     }
 }

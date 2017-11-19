@@ -356,7 +356,7 @@
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(109, 30);
             this.btnThemMoi.TabIndex = 16;
-            this.btnThemMoi.Text = "Thêm mới";
+            this.btnThemMoi.Text = "Khách mới";
             this.btnThemMoi.UseVisualStyleBackColor = true;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
@@ -366,7 +366,7 @@
             this.btnTimKH.Name = "btnTimKH";
             this.btnTimKH.Size = new System.Drawing.Size(109, 30);
             this.btnTimKH.TabIndex = 15;
-            this.btnTimKH.Text = "Tìm KH";
+            this.btnTimKH.Text = "Khách cũ";
             this.btnTimKH.UseVisualStyleBackColor = true;
             this.btnTimKH.Click += new System.EventHandler(this.btnTimKH_Click);
             // 

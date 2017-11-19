@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary;
+using BUS;
 
 namespace GUI
 {
@@ -18,6 +19,8 @@ namespace GUI
         public event XuLyDangXuat xuLyDangXuat;
 
         private static ucMain _instance = null;
+
+        clsThongKe_BUS _ThongKeBUS = new clsThongKe_BUS();
 
         // khai báo image cho close button tabpage
         Image imgCloseButtonActive;
@@ -100,6 +103,17 @@ namespace GUI
             // cài đặt selectedtab
             lastTabIndex = 1;
             tabControlMenu.SelectedIndex = lastTabIndex;
+
+            // tải dữ liệu thống kê
+            TaiDuLieu();
+        }
+
+
+        private void TaiDuLieu()
+        {
+            lblBanHang.Text = _ThongKeBUS.LaySLBan(TienIch.LayNgayThangHienTaiQuocTe()).ToString();
+            lblNhapHang.Text = _ThongKeBUS.LaySLNhap(TienIch.LayNgayThangHienTaiQuocTe()).ToString();
+
         }
 
         private void TaiLaiDuLieu()
@@ -117,6 +131,7 @@ namespace GUI
                     }
                 }
             }
+            TaiDuLieu();
         }
 
         private void tabControlMenu_MouseDoubleClick(object sender, MouseEventArgs e)

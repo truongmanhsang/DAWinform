@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemSLSP));
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnChon = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -112,7 +113,7 @@
             0,
             0});
             // 
-            // frmMuaSP
+            // frmThemSLSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,10 +126,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMuaSP";
+            this.Name = "frmThemSLSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm sản phẩm vào đơn hàng";
             this.Load += new System.EventHandler(this.frmMuaSP_Load);

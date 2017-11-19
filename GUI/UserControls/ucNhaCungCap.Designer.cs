@@ -53,9 +53,9 @@
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(149, 105);
+            this.btnSua.Location = new System.Drawing.Point(7, 105);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(193, 34);
+            this.btnSua.Size = new System.Drawing.Size(335, 34);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -64,9 +64,9 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(149, 65);
+            this.btnXoa.Location = new System.Drawing.Point(7, 65);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(193, 34);
+            this.btnXoa.Size = new System.Drawing.Size(335, 34);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(149, 25);
+            this.btnThem.Location = new System.Drawing.Point(7, 25);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(193, 34);
+            this.btnThem.Size = new System.Drawing.Size(335, 34);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // 
             this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimKiem.Location = new System.Drawing.Point(149, 136);
+            this.btnTimKiem.Location = new System.Drawing.Point(7, 136);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(193, 34);
+            this.btnTimKiem.Size = new System.Drawing.Size(335, 34);
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             this.cbMaNCC.AutoSize = true;
             this.cbMaNCC.Location = new System.Drawing.Point(7, 71);
             this.cbMaNCC.Name = "cbMaNCC";
-            this.cbMaNCC.Size = new System.Drawing.Size(149, 22);
+            this.cbMaNCC.Size = new System.Drawing.Size(145, 22);
             this.cbMaNCC.TabIndex = 2;
-            this.cbMaNCC.Text = "Mã  nhà cung cấp";
+            this.cbMaNCC.Text = "Mã nhà cung cấp";
             this.cbMaNCC.UseVisualStyleBackColor = true;
             // 
             // txtTenNCC

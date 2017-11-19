@@ -31,6 +31,7 @@ namespace DAO
             and ct.MaSerial = sr.MaSerial
             and sr.MaPhieuNhap = pn.MaPhieuNhap
             and sr.MaSanPham = sp.MaSanPham
+            and pn.MaNhaCungCap = ncc.MaNhaCungCap
             and (ct.TinhTrang = 0 or ct.TinhTrang = 2 or ct.TinhTrang = 3)");
         }
         public void CapNhapBaoHanh(string strSoSerial)

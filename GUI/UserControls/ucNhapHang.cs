@@ -266,7 +266,11 @@ namespace GUI
 
             _ChiTietPhieuNhapBUS.TaoChiTieuPhieuNhap(dsChiTietSP, strMaPhieuXuat);
 
-            FormMessage.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (FormMessage.Show("Lưu thành công!, bạn có muốn in hoá đơn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                frmInPhieuNhap frm = new frmInPhieuNhap(strMaPhieuXuat);
+                frm.Show();
+            }
             LamSach(); // làm sạch controls
             Program.TaiLaiDuLieu(); // tải lại dữ liệu toàn bộ
         }

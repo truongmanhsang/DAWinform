@@ -52,6 +52,7 @@
     <Compile Include="clsNhanVien_BUS.cs" />
     <Compile Include="clsPhieuNhap_BUS.cs" />
     <Compile Include="clsPhieuXuat_BUS.cs" />
+    <Compile Include="clsThongKe_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="clsSanPham_BUS.cs" />
     <Compile Include="clsSerial_BUS.cs" />
