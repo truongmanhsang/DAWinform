@@ -114,7 +114,6 @@ namespace GUI
         {
             if (e.RowIndex != -1)
             {
-                long lDonGia = Convert.ToInt64(dgvSanPham.Rows[e.RowIndex].Cells["colGiaTien"].Value.ToString());
                 strMaSP = dgvSanPham.SelectedRows[0].Cells["colMaSP"].Value.ToString();
             }
         }
@@ -203,7 +202,7 @@ namespace GUI
             txtDiaChi.Text = "";
 
 
-            txtTongCong.Text = "";
+            txtTongCong.Text = "0";
 
             dgvBanHang.Rows.Clear();
         }

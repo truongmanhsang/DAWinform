@@ -48,6 +48,7 @@
             // 
             // btnTongQuan
             // 
+            this.btnTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTongQuan.Location = new System.Drawing.Point(6, 25);
             this.btnTongQuan.Name = "btnTongQuan";
             this.btnTongQuan.Size = new System.Drawing.Size(188, 32);

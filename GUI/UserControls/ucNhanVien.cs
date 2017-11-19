@@ -17,7 +17,7 @@ namespace GUI
     {
         private static ucNhanVien _instance = null;
         clsNhanVien_BUS bus = new clsNhanVien_BUS();
-        DataTable dt ;
+        DataTable dt;
         DataView dav;
         public static ucNhanVien GetInstance
         {
@@ -78,7 +78,7 @@ namespace GUI
         {
             dgvNhanVien.AutoGenerateColumns = false;
             dgvNhanVien.DataSource = dav;
-            
+
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace GUI
         }
         void XulyThemNhanVien(clsNhanVien_DTO nhanvien)
         {
-           if(bus.ThemNhanVien(nhanvien))
+            if (bus.ThemNhanVien(nhanvien))
             {
                 FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadDataViewNV();
@@ -132,7 +132,7 @@ namespace GUI
 
             if (cbChucVu.Checked == true)
             {
-              
+
                 lenh += string.Format("and  Quyen='{0}'", cbbChucVu.SelectedValue.ToString());
             }
             return lenh;
@@ -144,7 +144,7 @@ namespace GUI
             dav.RowFilter = string.Format(len);
             loaddgvNhanVien();
         }
-      
+
         private void dgvNhanVien_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvNhanVien.Columns[e.ColumnIndex].Name == "colQuyen")
@@ -158,7 +158,7 @@ namespace GUI
                     e.Value = "Nhân viên";
                 }
             }
-            if(dgvNhanVien.Columns[e.ColumnIndex].Name == "colHinhDaiDien")
+            if (dgvNhanVien.Columns[e.ColumnIndex].Name == "colHinhDaiDien")
             {
                 e.Value = new Bitmap(e.Value.ToString());
             }
@@ -166,33 +166,40 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
-                if (dgvNhanVien.SelectedRows.Count > 0)
+            if (dgvNhanVien.SelectedRows.Count > 0)
+            {
+                string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
+                if (MaNV != Program.MA_NV)
                 {
-                if (FormMessage.Show("Bạn có muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    string MaNV = dgvNhanVien.SelectedRows[0].Cells["colMaNhanVien"].Value.ToString();
-                    if (bus.XoaNhanVien(MaNV))
+                    if (FormMessage.Show("Bạn có muốn xóa tài khoản này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (bus.XoaNhanVien(MaNV))
+                        {
+                            FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        }
+                        else
+                        {
+                            FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
-                    {
-                        FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
                 }
                 else
                 {
-                    FormMessage.Show("vui lòng chọn nnhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FormMessage.Show("Tài khoản đang được xử dụng, không thể xoá!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-           
+
+            }
+            else
+            {
+                FormMessage.Show("vui lòng chọn nnhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void dgvNhanVien_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,12 +38,12 @@
             this.dtpNgayDau = new System.Windows.Forms.DateTimePicker();
             this.radNgay = new System.Windows.Forms.RadioButton();
             this.dgvThongKeDoanhThu = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
             this.colThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBanHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNhapHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKeDoanhThu)).BeginInit();
             this.SuspendLayout();
@@ -138,45 +138,6 @@
             this.dgvThongKeDoanhThu.TabIndex = 1;
             this.dgvThongKeDoanhThu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvThongKeDoanhThu_CellFormatting);
             // 
-            // colThoiGian
-            // 
-            this.colThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colThoiGian.DataPropertyName = "NgayLap";
-            this.colThoiGian.HeaderText = "Thời Gian";
-            this.colThoiGian.Name = "colThoiGian";
-            this.colThoiGian.ReadOnly = true;
-            this.colThoiGian.Width = 102;
-            // 
-            // colBanHang
-            // 
-            this.colBanHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colBanHang.DataPropertyName = "BanHang";
-            dataGridViewCellStyle4.Format = "#,##0 VNĐ";
-            this.colBanHang.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colBanHang.HeaderText = "Bán Hàng";
-            this.colBanHang.Name = "colBanHang";
-            this.colBanHang.ReadOnly = true;
-            // 
-            // colNhapHang
-            // 
-            this.colNhapHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNhapHang.DataPropertyName = "NhapHang";
-            dataGridViewCellStyle5.Format = "#,##0 VNĐ";
-            this.colNhapHang.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colNhapHang.HeaderText = "Nhập Hàng";
-            this.colNhapHang.Name = "colNhapHang";
-            this.colNhapHang.ReadOnly = true;
-            // 
-            // colDoanhThu
-            // 
-            this.colDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDoanhThu.DataPropertyName = "DoanhThu";
-            dataGridViewCellStyle6.Format = "#,##0 VNĐ";
-            this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colDoanhThu.HeaderText = "DoanhThu";
-            this.colDoanhThu.Name = "colDoanhThu";
-            this.colDoanhThu.ReadOnly = true;
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,6 +160,48 @@
             this.txtTongDoanhThu.Size = new System.Drawing.Size(303, 32);
             this.txtTongDoanhThu.TabIndex = 3;
             this.txtTongDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // colThoiGian
+            // 
+            this.colThoiGian.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colThoiGian.DataPropertyName = "NgayLap";
+            this.colThoiGian.HeaderText = "Thời Gian";
+            this.colThoiGian.Name = "colThoiGian";
+            this.colThoiGian.ReadOnly = true;
+            this.colThoiGian.Width = 102;
+            // 
+            // colBanHang
+            // 
+            this.colBanHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colBanHang.DataPropertyName = "BanHang";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "#,##0 VNĐ";
+            this.colBanHang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colBanHang.HeaderText = "Bán Hàng";
+            this.colBanHang.Name = "colBanHang";
+            this.colBanHang.ReadOnly = true;
+            // 
+            // colNhapHang
+            // 
+            this.colNhapHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNhapHang.DataPropertyName = "NhapHang";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "#,##0 VNĐ";
+            this.colNhapHang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colNhapHang.HeaderText = "Nhập Hàng";
+            this.colNhapHang.Name = "colNhapHang";
+            this.colNhapHang.ReadOnly = true;
+            // 
+            // colDoanhThu
+            // 
+            this.colDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDoanhThu.DataPropertyName = "DoanhThu";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "#,##0 VNĐ";
+            this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDoanhThu.HeaderText = "DoanhThu";
+            this.colDoanhThu.Name = "colDoanhThu";
+            this.colDoanhThu.ReadOnly = true;
             // 
             // ucDoanhThu
             // 
@@ -231,11 +234,11 @@
         private System.Windows.Forms.RadioButton radNgay;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.DataGridView dgvThongKeDoanhThu;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtTongDoanhThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGian;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBanHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNhapHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDoanhThu;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTongDoanhThu;
     }
 }

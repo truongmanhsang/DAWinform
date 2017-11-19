@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnNCCCu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -42,6 +42,9 @@
             this.txtSoDT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblVND = new System.Windows.Forms.Label();
+            this.txtTraTruoc = new System.Windows.Forms.TextBox();
+            this.lblTraTruoc = new System.Windows.Forms.Label();
             this.cboHinhThucTra = new System.Windows.Forms.ComboBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -67,9 +70,6 @@
             this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colThem = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.txtTraTruoc = new System.Windows.Forms.TextBox();
-            this.lblTraTruoc = new System.Windows.Forms.Label();
-            this.lblVND = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -96,7 +96,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(5, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(571, 129);
+            this.groupBox3.Size = new System.Drawing.Size(569, 129);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin nhà cung cấp";
@@ -105,7 +105,7 @@
             // 
             this.btnNCCCu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNCCCu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNCCCu.Location = new System.Drawing.Point(423, 25);
+            this.btnNCCCu.Location = new System.Drawing.Point(421, 25);
             this.btnNCCCu.Margin = new System.Windows.Forms.Padding(4);
             this.btnNCCCu.Name = "btnNCCCu";
             this.btnNCCCu.Size = new System.Drawing.Size(142, 47);
@@ -118,7 +118,7 @@
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(423, 75);
+            this.btnThem.Location = new System.Drawing.Point(421, 75);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 47);
@@ -147,7 +147,7 @@
             this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.ReadOnly = true;
-            this.txtTenNCC.Size = new System.Drawing.Size(276, 26);
+            this.txtTenNCC.Size = new System.Drawing.Size(274, 26);
             this.txtTenNCC.TabIndex = 1;
             // 
             // txtDiaChi
@@ -159,7 +159,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(276, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(274, 26);
             this.txtDiaChi.TabIndex = 5;
             // 
             // label3
@@ -182,7 +182,7 @@
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.ReadOnly = true;
-            this.txtSoDT.Size = new System.Drawing.Size(276, 26);
+            this.txtSoDT.Size = new System.Drawing.Size(274, 26);
             this.txtSoDT.TabIndex = 3;
             // 
             // label4
@@ -213,6 +213,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(581, 108);
             this.panel1.TabIndex = 7;
+            // 
+            // lblVND
+            // 
+            this.lblVND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVND.AutoSize = true;
+            this.lblVND.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVND.Location = new System.Drawing.Point(533, 8);
+            this.lblVND.Name = "lblVND";
+            this.lblVND.Size = new System.Drawing.Size(44, 19);
+            this.lblVND.TabIndex = 7;
+            this.lblVND.Text = "VNĐ";
+            this.lblVND.Visible = false;
+            // 
+            // txtTraTruoc
+            // 
+            this.txtTraTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTraTruoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTraTruoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraTruoc.Location = new System.Drawing.Point(251, 4);
+            this.txtTraTruoc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTraTruoc.Name = "txtTraTruoc";
+            this.txtTraTruoc.ReadOnly = true;
+            this.txtTraTruoc.Size = new System.Drawing.Size(275, 26);
+            this.txtTraTruoc.TabIndex = 6;
+            this.txtTraTruoc.Text = "0";
+            this.txtTraTruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTraTruoc.Visible = false;
+            this.txtTraTruoc.TextChanged += new System.EventHandler(this.txtTraTruoc_TextChanged);
+            this.txtTraTruoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTraTruoc_KeyPress);
+            this.txtTraTruoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTraTruoc_KeyUp);
+            // 
+            // lblTraTruoc
+            // 
+            this.lblTraTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTraTruoc.AutoSize = true;
+            this.lblTraTruoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTraTruoc.Location = new System.Drawing.Point(163, 7);
+            this.lblTraTruoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTraTruoc.Name = "lblTraTruoc";
+            this.lblTraTruoc.Size = new System.Drawing.Size(80, 19);
+            this.lblTraTruoc.TabIndex = 5;
+            this.lblTraTruoc.Text = "Trả trước";
+            this.lblTraTruoc.Visible = false;
             // 
             // cboHinhThucTra
             // 
@@ -386,7 +429,7 @@
             this.groupBox5.Controls.Add(this.dgvNhapHang);
             this.groupBox5.Location = new System.Drawing.Point(6, 137);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(570, 343);
+            this.groupBox5.Size = new System.Drawing.Size(568, 396);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Đơn hàng";
@@ -416,7 +459,7 @@
             this.dgvNhapHang.RowTemplate.ReadOnly = true;
             this.dgvNhapHang.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhapHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhapHang.Size = new System.Drawing.Size(564, 318);
+            this.dgvNhapHang.Size = new System.Drawing.Size(562, 371);
             this.dgvNhapHang.TabIndex = 6;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
             this.dgvNhapHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellContentClick);
@@ -441,8 +484,8 @@
             // colDonGia
             // 
             this.colDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle37.Format = "#,### VNĐ";
-            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle5.Format = "#,### VNĐ";
+            this.colDonGia.DefaultCellStyle = dataGridViewCellStyle5;
             this.colDonGia.HeaderText = "Đơn giá";
             this.colDonGia.Name = "colDonGia";
             this.colDonGia.ReadOnly = true;
@@ -459,8 +502,8 @@
             // colThanhTien
             // 
             this.colThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle38.Format = "#,### VNĐ";
-            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle6.Format = "#,### VNĐ";
+            this.colThanhTien.DefaultCellStyle = dataGridViewCellStyle6;
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.ReadOnly = true;
@@ -517,8 +560,9 @@
             // 
             this.colSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colSoLuong.DataPropertyName = "SoLuong";
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colSoLuong.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colSoLuong.DefaultCellStyle = dataGridViewCellStyle7;
             this.colSoLuong.HeaderText = "Số lượng";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.ReadOnly = true;
@@ -528,8 +572,8 @@
             // 
             this.colGiaMua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGiaMua.DataPropertyName = "GiaMua";
-            dataGridViewCellStyle40.Format = "#,### VNĐ";
-            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle8.Format = "#,### VNĐ";
+            this.colGiaMua.DefaultCellStyle = dataGridViewCellStyle8;
             this.colGiaMua.HeaderText = "Giá mua";
             this.colGiaMua.Name = "colGiaMua";
             this.colGiaMua.ReadOnly = true;
@@ -544,49 +588,6 @@
             this.colThem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colThem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colThem.Width = 19;
-            // 
-            // txtTraTruoc
-            // 
-            this.txtTraTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTraTruoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTraTruoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTraTruoc.Location = new System.Drawing.Point(251, 4);
-            this.txtTraTruoc.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTraTruoc.Name = "txtTraTruoc";
-            this.txtTraTruoc.ReadOnly = true;
-            this.txtTraTruoc.Size = new System.Drawing.Size(275, 26);
-            this.txtTraTruoc.TabIndex = 6;
-            this.txtTraTruoc.Text = "0";
-            this.txtTraTruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTraTruoc.Visible = false;
-            this.txtTraTruoc.TextChanged += new System.EventHandler(this.txtTraTruoc_TextChanged);
-            this.txtTraTruoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTraTruoc_KeyPress);
-            this.txtTraTruoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTraTruoc_KeyUp);
-            // 
-            // lblTraTruoc
-            // 
-            this.lblTraTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTraTruoc.AutoSize = true;
-            this.lblTraTruoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTraTruoc.Location = new System.Drawing.Point(163, 7);
-            this.lblTraTruoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTraTruoc.Name = "lblTraTruoc";
-            this.lblTraTruoc.Size = new System.Drawing.Size(80, 19);
-            this.lblTraTruoc.TabIndex = 5;
-            this.lblTraTruoc.Text = "Trả trước";
-            this.lblTraTruoc.Visible = false;
-            // 
-            // lblVND
-            // 
-            this.lblVND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVND.AutoSize = true;
-            this.lblVND.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVND.Location = new System.Drawing.Point(533, 8);
-            this.lblVND.Name = "lblVND";
-            this.lblVND.Size = new System.Drawing.Size(44, 19);
-            this.lblVND.TabIndex = 7;
-            this.lblVND.Text = "VNĐ";
-            this.lblVND.Visible = false;
             // 
             // ucNhapHang
             // 
@@ -645,14 +646,14 @@
         private System.Windows.Forms.DataGridViewButtonColumn colChinhSua;
         private System.Windows.Forms.DataGridViewButtonColumn colXoa;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVND;
+        private System.Windows.Forms.TextBox txtTraTruoc;
+        private System.Windows.Forms.Label lblTraTruoc;
         private System.Windows.Forms.DataGridViewImageColumn colHinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaMua;
         private System.Windows.Forms.DataGridViewButtonColumn colThem;
-        private System.Windows.Forms.Label lblVND;
-        private System.Windows.Forms.TextBox txtTraTruoc;
-        private System.Windows.Forms.Label lblTraTruoc;
     }
 }

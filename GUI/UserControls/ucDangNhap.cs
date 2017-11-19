@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using ClassLibrary;
 
 namespace GUI
 {
@@ -33,7 +34,7 @@ namespace GUI
 
         private void DangNhap()
         {
-            DataTable dtNV = _NhanVienBUS.LayThongTinNV(txtTaiKhoan.Text, txtMatKhau.Text);
+            DataTable dtNV = _NhanVienBUS.LayThongTinNV(txtTaiKhoan.Text, TienIch.MaHoaMatKhau(txtMatKhau.Text));
             if (dtNV != null)
             {
                 if (dtNV.Rows.Count > 0)

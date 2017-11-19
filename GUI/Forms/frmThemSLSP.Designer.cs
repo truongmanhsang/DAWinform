@@ -36,6 +36,7 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numSL = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSL)).BeginInit();
@@ -76,6 +77,7 @@
             // 
             // picHinh
             // 
+            this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picHinh.Location = new System.Drawing.Point(12, 12);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(150, 150);
@@ -85,6 +87,7 @@
             // 
             // lblTenSP
             // 
+            this.lblTenSP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.Location = new System.Drawing.Point(168, 12);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(246, 74);
@@ -107,11 +110,20 @@
             this.numSL.Name = "numSL";
             this.numSL.Size = new System.Drawing.Size(166, 26);
             this.numSL.TabIndex = 83;
+            this.numSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numSL.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(172, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 1);
+            this.label1.TabIndex = 84;
             // 
             // frmThemSLSP
             // 
@@ -119,6 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(424, 230);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.numSL);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTenSP);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numSL;
+        private System.Windows.Forms.Label label1;
     }
 }

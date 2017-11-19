@@ -24,7 +24,7 @@ namespace GUI
         string MaNV;
         string DuongDanHinh;
         string TenHinh;
-       
+
 
         DataTable dt;
         public frmThemSuaNV()
@@ -36,17 +36,19 @@ namespace GUI
             InitializeComponent();
             MaNV = strMaNV;
         }
-        
-       
+
+
 
         private void frmThemSuaNV_Load(object sender, EventArgs e)
         {
+            loadDuLieu();
+
             if (themnhanvien != null)
             {
 
                 Text = "Thêm nhân viên";
                 btnLuu.Text = "Thêm";
-               
+
             }
             else
             {
@@ -66,13 +68,11 @@ namespace GUI
                     txtEmail.ReadOnly = true;
                     txtDiaChi.ReadOnly = true;
                     txtCMND.ReadOnly = true;
-                    cbbChucVu.Enabled=false;
+                    cbbChucVu.Enabled = false;
                     btnLuu.Visible = false;
                     btnHuy.Text = "Đóng";
-
                 }
             }
-            loadDuLieu();
         }
 
         private void loadNV()
@@ -87,13 +87,16 @@ namespace GUI
                 txtEmail.Text = dt.Rows[0]["Email"].ToString();
                 txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
                 txtCMND.Text = dt.Rows[0]["CMND"].ToString();
+                picHinhAnh.Image = new Bitmap(dt.Rows[0]["HinhDaiDien"].ToString());
+                int iQuyen = Convert.ToInt16(dt.Rows[0]["Quyen"].ToString());
+                cbbChucVu.SelectedIndex = iQuyen == 0 ? 1 : 0;
             }
         }
 
         private void loadDuLieu()
         {
-           cbbChucVu.SelectedIndex=0;
-          
+            cbbChucVu.SelectedIndex = 0;
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -113,15 +116,36 @@ namespace GUI
 
         private void suaNV()
         {
-            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text == "")
+            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "")
             {
                 FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             clsNhanVien_DTO nhanvien = new clsNhanVien_DTO();
+
+            if (DuongDanHinh != null)
+            {
+                try
+                {
+                    File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);
+                    nhanvien.Hinh = @"data\images\users\" + TenHinh;
+                }
+
+                catch
+                {
+
+                }
+            }
+            else
+            {
+                nhanvien.Hinh = dt.Rows[0]["HinhDaiDien"].ToString();
+            }
+
+            nhanvien.MaNV = MaNV;
             nhanvien.TenNV = txtTenNV.Text;
             nhanvien.TenDangNhap = txtTenDangNhap.Text;
-            nhanvien.MatKhau = txtMK.Text;
+            nhanvien.MatKhau = TienIch.MaHoaMatKhau(txtMK.Text);
             nhanvien.SDT = txtSoDT.Text;
             nhanvien.Email = txtEmail.Text;
             nhanvien.CMND = txtCMND.Text;
@@ -134,32 +158,42 @@ namespace GUI
 
         private void themNV()
         {
-            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "" || txtSoDT.Text == "" || txtCMND.Text=="" || picHinhAnh.Image == null)
+            if (txtTenNV.Text == "" || txtTenDangNhap.Text == "" || txtMK.Text == "")
             {
                 FormMessage.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-         
-            
+
+
             clsNhanVien_DTO nhanvien = new clsNhanVien_DTO();
             nhanvien.TenNV = txtTenNV.Text;
             nhanvien.TenDangNhap = txtTenDangNhap.Text;
-            nhanvien.MatKhau = txtMK.Text;
+            nhanvien.MatKhau = TienIch.MaHoaMatKhau(txtMK.Text);
             nhanvien.SDT = txtSoDT.Text;
             nhanvien.Email = txtEmail.Text;
             nhanvien.CMND = txtCMND.Text;
             nhanvien.DiaChi = txtDiaChi.Text;
 
-            nhanvien.Quyen = cbbChucVu.SelectedIndex==0 ? 1: 0;
-            try
-            {
-                File.Copy(DuongDanHinh, Application.StartupPath + @"data\images\users\" + TenHinh, true);
-                nhanvien.Hinh = @"data\images\users\" + TenHinh;
-            }
-            catch
-            {
+            nhanvien.Quyen = cbbChucVu.SelectedIndex == 0 ? 1 : 0;
 
+            if (DuongDanHinh != null)
+            {
+                try
+                {
+                    File.Copy(DuongDanHinh, Application.StartupPath + @"\data\images\users\" + TenHinh, true);
+                    nhanvien.Hinh = @"data\images\users\" + TenHinh;
+                }
+
+                catch
+                {
+
+                }
             }
+            else
+            {
+                nhanvien.Hinh = @"data\images\empty.png";
+            }
+            
 
             themnhanvien(nhanvien);
             this.Close();
@@ -183,8 +217,8 @@ namespace GUI
                 DuongDanHinh = openFileDialog.FileName;
                 TenHinh = openFileDialog.SafeFileName;
             }
-            
-            picHinhAnh.ImageLocation =DuongDanHinh;
+
+            picHinhAnh.ImageLocation = DuongDanHinh;
         }
     }
 }

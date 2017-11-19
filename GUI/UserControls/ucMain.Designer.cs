@@ -54,6 +54,13 @@
             this.btnLoiNhuan = new System.Windows.Forms.Button();
             this.btnDoanhThu = new System.Windows.Forms.Button();
             this.panInfo = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblBanHang = new System.Windows.Forms.Label();
+            this.lblNhapHang = new System.Windows.Forms.Label();
             this.btnAnHien = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.lblQuyen = new System.Windows.Forms.Label();
@@ -62,16 +69,8 @@
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.conHeThong = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tbtnThongTinCongTy = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tbtnThoat = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBanHang = new System.Windows.Forms.Label();
-            this.lblNhapHang = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.tabControlMenu.SuspendLayout();
             this.tabPageBanHang.SuspendLayout();
@@ -81,28 +80,28 @@
             this.tabPageNhanVien.SuspendLayout();
             this.tabPageThongKe.SuspendLayout();
             this.panInfo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).BeginInit();
             this.conHeThong.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 571);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 573);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(998, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(998, 24);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(60, 21);
-            this.toolStripStatusLabel1.Text = "ver. 0.1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(204, 19);
+            this.toolStripStatusLabel1.Text = "Phiên bản thử nghiệm 0.1";
             // 
             // tabControlMenu
             // 
@@ -448,8 +447,84 @@
             this.panInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panInfo.Location = new System.Drawing.Point(0, 130);
             this.panInfo.Name = "panInfo";
-            this.panInfo.Size = new System.Drawing.Size(196, 441);
+            this.panInfo.Size = new System.Drawing.Size(196, 443);
             this.panInfo.TabIndex = 5;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblBanHang);
+            this.groupBox1.Controls.Add(this.lblNhapHang);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(14, 289);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(165, 90);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thống kê hôm nay";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(122, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 19);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "SP";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(122, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "SP";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 19);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Bán:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Nhập:";
+            // 
+            // lblBanHang
+            // 
+            this.lblBanHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanHang.ForeColor = System.Drawing.Color.Red;
+            this.lblBanHang.Location = new System.Drawing.Point(57, 33);
+            this.lblBanHang.Name = "lblBanHang";
+            this.lblBanHang.Size = new System.Drawing.Size(59, 19);
+            this.lblBanHang.TabIndex = 7;
+            this.lblBanHang.Text = "0";
+            this.lblBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNhapHang
+            // 
+            this.lblNhapHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNhapHang.ForeColor = System.Drawing.Color.Red;
+            this.lblNhapHang.Location = new System.Drawing.Point(57, 60);
+            this.lblNhapHang.Name = "lblNhapHang";
+            this.lblNhapHang.Size = new System.Drawing.Size(59, 19);
+            this.lblNhapHang.TabIndex = 8;
+            this.lblNhapHang.Text = "0";
+            this.lblNhapHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAnHien
             // 
@@ -473,7 +548,7 @@
             this.btnDangXuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Image = global::GUI.Properties.Resources.DangXuat;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangXuat.Location = new System.Drawing.Point(14, 385);
+            this.btnDangXuat.Location = new System.Drawing.Point(14, 387);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(165, 41);
             this.btnDangXuat.TabIndex = 3;
@@ -524,7 +599,7 @@
             this.tabControlMain.Location = new System.Drawing.Point(196, 130);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(802, 441);
+            this.tabControlMain.Size = new System.Drawing.Size(802, 443);
             this.tabControlMain.TabIndex = 6;
             this.tabControlMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControlMain_DrawItem);
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
@@ -536,11 +611,10 @@
             this.conHeThong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conHeThong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbtnThongTinCongTy,
-            this.thôngTinChươngTrìnhToolStripMenuItem,
             this.toolStripMenuItem2,
             this.tbtnThoat});
             this.conHeThong.Name = "contextMenuStrip1";
-            this.conHeThong.Size = new System.Drawing.Size(243, 76);
+            this.conHeThong.Size = new System.Drawing.Size(205, 54);
             // 
             // tbtnThongTinCongTy
             // 
@@ -549,12 +623,6 @@
             this.tbtnThongTinCongTy.Size = new System.Drawing.Size(242, 22);
             this.tbtnThongTinCongTy.Text = "Thông Tin Công Ty";
             this.tbtnThongTinCongTy.Click += new System.EventHandler(this.tbtnThongTinCongTy_Click);
-            // 
-            // thôngTinChươngTrìnhToolStripMenuItem
-            // 
-            this.thôngTinChươngTrìnhToolStripMenuItem.Name = "thôngTinChươngTrìnhToolStripMenuItem";
-            this.thôngTinChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-            this.thôngTinChươngTrìnhToolStripMenuItem.Text = "Thông Tin Chương Trình";
             // 
             // toolStripMenuItem2
             // 
@@ -567,82 +635,6 @@
             this.tbtnThoat.Size = new System.Drawing.Size(242, 22);
             this.tbtnThoat.Text = "Thoát";
             this.tbtnThoat.Click += new System.EventHandler(this.tbtnThoat_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Bán:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nhập:";
-            // 
-            // lblBanHang
-            // 
-            this.lblBanHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBanHang.ForeColor = System.Drawing.Color.Red;
-            this.lblBanHang.Location = new System.Drawing.Point(57, 33);
-            this.lblBanHang.Name = "lblBanHang";
-            this.lblBanHang.Size = new System.Drawing.Size(59, 19);
-            this.lblBanHang.TabIndex = 7;
-            this.lblBanHang.Text = "0";
-            this.lblBanHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNhapHang
-            // 
-            this.lblNhapHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhapHang.ForeColor = System.Drawing.Color.Red;
-            this.lblNhapHang.Location = new System.Drawing.Point(57, 60);
-            this.lblNhapHang.Name = "lblNhapHang";
-            this.lblNhapHang.Size = new System.Drawing.Size(59, 19);
-            this.lblNhapHang.TabIndex = 8;
-            this.lblNhapHang.Text = "0";
-            this.lblNhapHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lblBanHang);
-            this.groupBox1.Controls.Add(this.lblNhapHang);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 289);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 90);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thống kê";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(122, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "SP";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(122, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "SP";
             // 
             // ucMain
             // 
@@ -668,10 +660,10 @@
             this.tabPageNhanVien.ResumeLayout(false);
             this.tabPageThongKe.ResumeLayout(false);
             this.panInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
-            this.conHeThong.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhDaiDien)).EndInit();
+            this.conHeThong.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,7 +705,6 @@
         private System.Windows.Forms.ToolStripMenuItem tbtnThongTinCongTy;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem tbtnThoat;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinChươngTrìnhToolStripMenuItem;
         private System.Windows.Forms.Label lblNhapHang;
         private System.Windows.Forms.Label lblBanHang;
         private System.Windows.Forms.Label label2;

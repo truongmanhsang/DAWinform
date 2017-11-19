@@ -25,7 +25,7 @@ namespace DAO
         public bool ThemSanPham(clsSanPham_DTO sanPham)
         {
             string strMaSP = "SP" + (ThaoTacDuLieu.DemSoDongCuaBang("SanPham") + 1);
-            string query = string.Format("insert into SanPham values('{0}',N{1}','{2}','{3}','{4}','{5}',N'{6}','{7}','{8}','{9}','{10}','{11}',N'{12}','{13}')", strMaSP, sanPham.TenSanPham, sanPham.Hinh, sanPham.GiaMua, sanPham.GiaBan, sanPham.KhuyenMai, sanPham.MoTa, sanPham.BaoHanh, sanPham.SoLuong, sanPham.DonViTinh, sanPham.MaLoaiSanPham, sanPham.MaHangSanXuat, sanPham.GhiChu, 1);
+            string query = string.Format("insert into SanPham values('{0}',N'{1}','{2}','{3}','{4}','{5}',N'{6}','{7}','{8}','{9}','{10}','{11}',N'{12}','{13}')", strMaSP, sanPham.TenSanPham, sanPham.Hinh, sanPham.GiaMua, sanPham.GiaBan, sanPham.KhuyenMai, sanPham.MoTa, sanPham.BaoHanh, sanPham.SoLuong, sanPham.DonViTinh, sanPham.MaLoaiSanPham, sanPham.MaHangSanXuat, sanPham.GhiChu, 1);
             return ThaoTacDuLieu.ThucThi(query);
         }
         public DataTable LayBangSanPham()

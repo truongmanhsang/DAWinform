@@ -30,10 +30,10 @@
         {
             this.panMain = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSerial = new System.Windows.Forms.Button();
             this.btnHangSanXuat = new System.Windows.Forms.Button();
             this.btnLoai = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnSerial = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +63,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
             // 
+            // btnSerial
+            // 
+            this.btnSerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSerial.Location = new System.Drawing.Point(6, 139);
+            this.btnSerial.Name = "btnSerial";
+            this.btnSerial.Size = new System.Drawing.Size(188, 32);
+            this.btnSerial.TabIndex = 3;
+            this.btnSerial.Text = "Serial";
+            this.btnSerial.UseVisualStyleBackColor = true;
+            this.btnSerial.Click += new System.EventHandler(this.btnSerial_Click);
+            // 
             // btnHangSanXuat
             // 
+            this.btnHangSanXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHangSanXuat.Location = new System.Drawing.Point(6, 101);
             this.btnHangSanXuat.Name = "btnHangSanXuat";
             this.btnHangSanXuat.Size = new System.Drawing.Size(188, 32);
@@ -75,6 +87,7 @@
             // 
             // btnLoai
             // 
+            this.btnLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoai.Location = new System.Drawing.Point(6, 63);
             this.btnLoai.Name = "btnLoai";
             this.btnLoai.Size = new System.Drawing.Size(188, 32);
@@ -85,6 +98,7 @@
             // 
             // btnSanPham
             // 
+            this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham.Location = new System.Drawing.Point(6, 25);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(188, 32);
@@ -92,16 +106,6 @@
             this.btnSanPham.Text = "Sản Phẩm";
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // btnSerial
-            // 
-            this.btnSerial.Location = new System.Drawing.Point(6, 139);
-            this.btnSerial.Name = "btnSerial";
-            this.btnSerial.Size = new System.Drawing.Size(188, 32);
-            this.btnSerial.TabIndex = 3;
-            this.btnSerial.Text = "Serial";
-            this.btnSerial.UseVisualStyleBackColor = true;
-            this.btnSerial.Click += new System.EventHandler(this.btnSerial_Click);
             // 
             // ucHangHoa
             // 

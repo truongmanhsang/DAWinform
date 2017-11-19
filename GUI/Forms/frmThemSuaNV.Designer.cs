@@ -133,6 +133,7 @@
             // 
             this.txtMK.Location = new System.Drawing.Point(364, 69);
             this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(284, 26);
             this.txtMK.TabIndex = 82;
             // 

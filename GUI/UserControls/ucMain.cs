@@ -18,8 +18,6 @@ namespace GUI
 
         public event XuLyDangXuat xuLyDangXuat;
 
-        private static ucMain _instance = null;
-
         clsThongKe_BUS _ThongKeBUS = new clsThongKe_BUS();
 
         // khai báo image cho close button tabpage
@@ -54,20 +52,7 @@ namespace GUI
         TabPage tabNhapHang;
         TabPage tabKhoBaoHanh;
 
-
-
-        public static ucMain GetInstance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ucMain();
-                }
-                return _instance;
-            }
-        }
-        private ucMain()
+        public ucMain()
         {
             InitializeComponent();
         }
@@ -82,9 +67,19 @@ namespace GUI
             picHinhDaiDien.Image = new Bitmap(Program.HINH_NV);
             lblTenNV.Text = Program.TEN_NV;
             if (Program.QUYEN == 1)
-                lblQuyen.Text = "Quản lý";
+            {
+                lblQuyen.Text = "Quản lý";
+                if (!tabControlMenu.TabPages.Contains(tabPageNhanVien))
+                {
+                    tabControlMenu.TabPages.Insert(5, tabPageNhanVien);
+                }
+            }
             else
-                lblQuyen.Text = "Nhân viên";
+            {
+                lblQuyen.Text = "Nhân viên";
+                tabControlMenu.TabPages.Remove(tabPageNhanVien);
+            }
+
             // ===
 
             // Cài đặt tabpage close button size

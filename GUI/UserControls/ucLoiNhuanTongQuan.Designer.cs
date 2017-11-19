@@ -173,6 +173,7 @@
             // 
             this.colDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colDoanhThu.DataPropertyName = "DoanhThu";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.Format = "#,##0 VNĐ";
             this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle1;
             this.colDoanhThu.HeaderText = "Doanh Thu Bán Hàng";
@@ -183,6 +184,7 @@
             // 
             this.colTriGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTriGia.DataPropertyName = "TriGia";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "#,##0 VNĐ";
             this.colTriGia.DefaultCellStyle = dataGridViewCellStyle2;
             this.colTriGia.HeaderText = "Trị Giá Nhập Hàng";
@@ -193,6 +195,7 @@
             // 
             this.colLoiNhuan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colLoiNhuan.DataPropertyName = "LoiNhuan";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "#,##0 VNĐ";
             this.colLoiNhuan.DefaultCellStyle = dataGridViewCellStyle3;
             this.colLoiNhuan.HeaderText = "Lợi Nhuận";

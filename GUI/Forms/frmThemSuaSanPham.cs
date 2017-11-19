@@ -138,12 +138,6 @@ namespace GUI
                 FormMessage.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (picHinh.Image == null)
-            {
-                FormMessage.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
 
             clsSanPham_DTO sanPham = new clsSanPham_DTO();
 
@@ -194,14 +188,27 @@ namespace GUI
                 FormMessage.Show("Tháng bảo hành phải lớn hơn 0!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (picHinh.Image == null)
+
+            clsSanPham_DTO sanPham = new clsSanPham_DTO();
+
+            if (strDuongDanHinh != null && strTenHinh != null)
             {
-                FormMessage.Show("Vui lòng chọn hình cho sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                try
+                {
+                    File.Copy(strDuongDanHinh, Application.StartupPath + @"\data\images\products\" + strTenHinh, true);
+                    sanPham.Hinh = @"data\images\products\" + strTenHinh;
+                }
+                catch
+                {
+
+                }
+
+            }
+            else
+            {
+                sanPham.Hinh = @"data\images\empty.png";
             }
 
-            File.Copy(strDuongDanHinh, Application.StartupPath + @"\data\images\products\" + strTenHinh, true);
-            clsSanPham_DTO sanPham = new clsSanPham_DTO();
             sanPham.TenSanPham = txtTenSP.Text;
             sanPham.DonViTinh = txtDonViTinh.Text;
             sanPham.GiaMua = Convert.ToDecimal(TienIch.HuyDinhDangSo(txtGiaMua.Text));
@@ -212,7 +219,6 @@ namespace GUI
             sanPham.MaHangSanXuat = cboHSX.SelectedValue.ToString();
             sanPham.MoTa = rtbMota.Text;
             sanPham.GhiChu = txtGhiChu.Text;
-            sanPham.Hinh = @"data\images\products\" + strTenHinh;
 
             themSanPham(sanPham);
 

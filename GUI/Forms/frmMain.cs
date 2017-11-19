@@ -33,7 +33,8 @@ namespace GUI
 
         private void XuLyDangNhapThanhCong()
         {
-            ucManHinhChinh = ucMain.GetInstance;
+            this.Controls.Clear();
+            ucManHinhChinh = new ucMain();
             ucManHinhChinh.xuLyDangXuat += XuLyDangXuat;
             this.Controls.Add(ucManHinhChinh);
             ucManHinhChinh.Dock = DockStyle.Fill;
@@ -42,7 +43,11 @@ namespace GUI
 
         private void XuLyDangXuat()
         {
-            ucDN.BringToFront();
+            this.Controls.Clear();
+            ucDN = new ucDangNhap();
+            ucDN.xuLyDangNhap += XuLyDangNhapThanhCong;
+            this.Controls.Add(ucDN);
+            ucDN.Dock = DockStyle.Fill;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)

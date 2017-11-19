@@ -59,76 +59,76 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsQuanLyBanHang.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmHangSanXuat.cs">
+    <Compile Include="Forms\frmHangSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHangSanXuat.Designer.cs">
+    <Compile Include="Forms\frmHangSanXuat.Designer.cs">
       <DependentUpon>frmHangSanXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInPhieuNhap.cs">
+    <Compile Include="Forms\frmInPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInPhieuNhap.Designer.cs">
+    <Compile Include="Forms\frmInPhieuNhap.Designer.cs">
       <DependentUpon>frmInPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoai.cs">
+    <Compile Include="Forms\frmLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoai.Designer.cs">
+    <Compile Include="Forms\frmLoai.Designer.cs">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInPhieuXuat.cs">
+    <Compile Include="Forms\frmInPhieuXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInPhieuXuat.Designer.cs">
+    <Compile Include="Forms\frmInPhieuXuat.Designer.cs">
       <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSLSP.cs">
+    <Compile Include="Forms\frmThemSLSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSLSP.Designer.cs">
+    <Compile Include="Forms\frmThemSLSP.Designer.cs">
       <DependentUpon>frmThemSLSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSuaKH.cs">
+    <Compile Include="Forms\frmThemSuaKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSuaKH.Designer.cs">
+    <Compile Include="Forms\frmThemSuaKH.Designer.cs">
       <DependentUpon>frmThemSuaKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSuaNCC.cs">
+    <Compile Include="Forms\frmThemSuaNCC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSuaNCC.Designer.cs">
+    <Compile Include="Forms\frmThemSuaNCC.Designer.cs">
       <DependentUpon>frmThemSuaNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSuaNV.cs">
+    <Compile Include="Forms\frmThemSuaNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSuaNV.Designer.cs">
+    <Compile Include="Forms\frmThemSuaNV.Designer.cs">
       <DependentUpon>frmThemSuaNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSuaSanPham.cs">
+    <Compile Include="Forms\frmThemSuaSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSuaSanPham.Designer.cs">
+    <Compile Include="Forms\frmThemSuaSanPham.Designer.cs">
       <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinCongTy.cs">
+    <Compile Include="Forms\frmThongTinCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinCongTy.Designer.cs">
+    <Compile Include="Forms\frmThongTinCongTy.Designer.cs">
       <DependentUpon>frmThongTinCongTy.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTim.cs">
+    <Compile Include="Forms\frmTim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTim.Designer.cs">
+    <Compile Include="Forms\frmTim.Designer.cs">
       <DependentUpon>frmTim.cs</DependentUpon>
     </Compile>
     <Compile Include="IDieuKhien.cs" />
@@ -272,40 +272,40 @@
     <Compile Include="UserControls\ucTonKho.Designer.cs">
       <DependentUpon>ucTonKho.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmHangSanXuat.resx">
+    <EmbeddedResource Include="Forms\frmHangSanXuat.resx">
       <DependentUpon>frmHangSanXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInPhieuNhap.resx">
+    <EmbeddedResource Include="Forms\frmInPhieuNhap.resx">
       <DependentUpon>frmInPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoai.resx">
+    <EmbeddedResource Include="Forms\frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInPhieuXuat.resx">
+    <EmbeddedResource Include="Forms\frmInPhieuXuat.resx">
       <DependentUpon>frmInPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSLSP.resx">
+    <EmbeddedResource Include="Forms\frmThemSLSP.resx">
       <DependentUpon>frmThemSLSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSuaKH.resx">
+    <EmbeddedResource Include="Forms\frmThemSuaKH.resx">
       <DependentUpon>frmThemSuaKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSuaNCC.resx">
+    <EmbeddedResource Include="Forms\frmThemSuaNCC.resx">
       <DependentUpon>frmThemSuaNCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSuaNV.resx">
+    <EmbeddedResource Include="Forms\frmThemSuaNV.resx">
       <DependentUpon>frmThemSuaNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSuaSanPham.resx">
+    <EmbeddedResource Include="Forms\frmThemSuaSanPham.resx">
       <DependentUpon>frmThemSuaSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinCongTy.resx">
+    <EmbeddedResource Include="Forms\frmThongTinCongTy.resx">
       <DependentUpon>frmThongTinCongTy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTim.resx">
+    <EmbeddedResource Include="Forms\frmTim.resx">
       <DependentUpon>frmTim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -429,6 +429,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\X.png" />
     <None Include="Resources\bg1.jpg" />
     <None Include="Resources\ThemHinhAnh.jpg" />
     <None Include="Resources\LoiNhuan.png" />
