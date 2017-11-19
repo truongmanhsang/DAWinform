@@ -53,7 +53,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(7, 105);
+            this.btnSua.Location = new System.Drawing.Point(7, 65);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(335, 34);
             this.btnSua.TabIndex = 2;
@@ -64,7 +64,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(7, 65);
+            this.btnXoa.Location = new System.Drawing.Point(6, 105);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(335, 34);
             this.btnXoa.TabIndex = 1;

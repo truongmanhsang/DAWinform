@@ -26,6 +26,7 @@ namespace GUI
 
         private void ucKhachHang_Load(object sender, EventArgs e)
         {
+            CaiDat();
             loaddgvKhachHang();
         }
         private void loaddgvKhachHang()
@@ -33,11 +34,12 @@ namespace GUI
             dt = bus.LayBangKhachHang();
             dav = new DataView(dt);
             dgvKhachHang.DataSource = dav;
-            dgvKhachHang.AutoGenerateColumns = false;
         }
 
         private void CaiDat()
         {
+            dgvKhachHang.AutoGenerateColumns = false;
+
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -51,20 +53,20 @@ namespace GUI
             {
                 dav.RowFilter = "true";
             }
-                        //dt = bus.TimKiemKhachHang(LenhTimKiem());
+            //dt = bus.TimKiemKhachHang(LenhTimKiem());
             dgvKhachHang.DataSource = dav;
         }
         private string LenhTimKiem()
         {
             dgvKhachHang.DataSource = null;
-            
+
             string lenh = "TrangThai=1 and";
             if (cbTenKH.Checked == true)
             {
                 lenh += string.Format(" TenKhachHang like '%{0}%'", txtTenKH.Text);
             }
-            
-          
+
+
             if (cbCMND.Checked == true)
             {
                 if (cbTenKH.Checked == true)
@@ -73,14 +75,14 @@ namespace GUI
                 }
                 lenh += string.Format(" CMND like '%{0}%'", txtCMND.Text);
             }
-           
+
             if (cbSDT.Checked == true)
             {
                 if (cbTenKH.Checked == true || cbCMND.Checked == true)
                 {
                     lenh += " and ";
                 }
-                    lenh += string.Format(" SoDT= '{0}'", txtSDT.Text);
+                lenh += string.Format(" SoDT= '{0}'", txtSDT.Text);
             }
             return lenh;
         }
@@ -95,19 +97,20 @@ namespace GUI
 
         private void btnThemKhachHang_Click(object sender, EventArgs e)
         {
-           
-                frmThemSuaKH frm = new frmThemSuaKH();
-                frm.themkhachhang += HamThemKhachHang;
-                frm.ShowDialog();
-               
 
-            
+            frmThemSuaKH frm = new frmThemSuaKH();
+            frm.themkhachhang += HamThemKhachHang;
+            frm.ShowDialog();
+
+
+
         }
         void HamThemKhachHang(clsKhachHang_DTO khachhang)
         {
             if (bus.ThemKhachHang(khachhang) != "")
             {
                 FormMessage.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loaddgvKhachHang();
             }
             else
             {
@@ -116,26 +119,17 @@ namespace GUI
         }
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-                if (e.RowIndex != -1)
-                {
-                    MaKH = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value.ToString();
-                   
-                }
-           
-           
         }
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)
         {
-
-            frmThemSuaKH frm = new frmThemSuaKH();
+            MaKH = dgvKhachHang.SelectedRows[0].Cells["colMaKhachHang"].Value.ToString();
+            frmThemSuaKH frm = new frmThemSuaKH(MaKH);
             frm.suakhachhang += HamSuaKhachHang;
             frm.ShowDialog();
-           
         }
 
-       
+
 
         void HamSuaKhachHang(clsKhachHang_DTO khachhang)
         {
@@ -154,14 +148,18 @@ namespace GUI
 
         private void btnXoaKhachHang_Click(object sender, EventArgs e)
         {
-            if (bus.XoaKhachHang(MaKH))
+            if (FormMessage.Show("Bạn muốn xoá khách hàng này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loaddgvKhachHang();
-            }
-            else
-            {
-                FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MaKH = dgvKhachHang.SelectedRows[0].Cells["colMaKhachHang"].Value.ToString();
+                if (bus.XoaKhachHang(MaKH))
+                {
+                    loaddgvKhachHang();
+                    FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    FormMessage.Show("Xóa thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -171,7 +169,7 @@ namespace GUI
             txtSDT.Text = "";
             txtCMND.Text = "";
             //------------------
-         
+
         }
     }
 }

@@ -87,6 +87,7 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            MaNCC = dgvNhaCungCap.SelectedRows[0].Cells["colMaNCC"].Value.ToString();
             frmThemSuaNCC frm = new frmThemSuaNCC(MaNCC);
             frm.suanhacungcap += HamSuaNCC;
             frm.ShowDialog();
@@ -106,7 +107,6 @@ namespace GUI
 
         private void dgvNhaCungCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MaNCC = dgvNhaCungCap.Rows[e.RowIndex].Cells["colMaNCC"].Value.ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -116,10 +116,11 @@ namespace GUI
             {
                 if (FormMessage.Show("Bạn có muốn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                   
+                    MaNCC = dgvNhaCungCap.SelectedRows[0].Cells["colMaNCC"].Value.ToString();
                     if (bus.XoaNCC(MaNCC))
                     {
                         FormMessage.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDVDL();
 
                     }
                     else
